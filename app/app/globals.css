@@ -67,3 +67,80 @@ body {
     print-color-adjust: exact;
   }
 }
+
+/* ---------- Dostępność i mobile ---------- */
+body {
+  overflow-x: clip; /* zabezpieczenie: brak poziomego scrolla strony na wąskich ekranach (sticky dalej działa) */
+}
+:focus-visible {
+  outline: 3px solid var(--color-brand-600);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+:focus:not(:focus-visible) {
+  outline: none;
+}
+html {
+  scroll-behavior: smooth;
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+.prose-md img,
+.prose-md pre {
+  max-width: 100%;
+}
+.prose-md pre {
+  overflow-x: auto;
+}
+.prose-md blockquote {
+  border-left: 4px solid var(--color-brand-100);
+  padding-left: 0.75rem;
+  color: #334155;
+  margin: 0.75rem 0;
+}
+.prose-md li:has(> input[type="checkbox"]) {
+  list-style: none;
+  margin-left: -1.25rem;
+}
+.prose-md input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+  vertical-align: -0.15rem;
+}
+.prose-md :is(td, th) {
+  word-break: normal;
+  overflow-wrap: anywhere;
+}
+
+@media print {
+  .checklist-print .prose-md {
+    font-size: 10pt;
+  }
+  .checklist-print .prose-md input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    border: 1.5px solid #000;
+    width: 0.9rem;
+    height: 0.9rem;
+  }
+  .checklist-print .prose-md table {
+    break-inside: auto;
+  }
+  .checklist-print .prose-md tr {
+    break-inside: avoid;
+  }
+  .checklist-print .prose-md td {
+    height: 1.6em;
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "plik": "a-pelny-wynik.txt",
+  "hipotetyczny_format": false,
+  "opis": "Pełny wynik w układzie „oś czasu”: dane pojazdu, aktualny stan, badania techniczne z rosnącymi przebiegami (schemat 3–2–1 dla nowego auta), jedna zmiana właściciela, zaprzeczenie kradzieży.",
+  "vin": "TESTSK0A1B2C34567",
+  "odczyty": [
+    {
+      "data": "2019-05-10",
+      "km": 61234
+    },
+    {
+      "data": "2021-05-11",
+      "km": 104905
+    },
+    {
+      "data": "2022-05-09",
+      "km": 128004
+    },
+    {
+      "data": "2023-05-15",
+      "km": 149870
+    },
+    {
+      "data": "2024-05-13",
+      "km": 171220
+    },
+    {
+      "data": "2025-05-12",
+      "km": 190455
+    },
+    {
+      "data": "2026-05-11",
+      "km": 208930
+    }
+  ],
+  "pierwszaRejestracja": "2016-05-12",
+  "pierwszaRejestracjaPl": "2016-05-12",
+  "cofniecia": [],
+  "sygnaly": [
+    "zmiana_wlasciciela",
+    "wlasciciel_firma"
+  ],
+  "uwagi": [
+    "Przebiegi rosną przy każdym badaniu – brak spadków.",
+    "Średnio ok. 20 tys. km rocznie – typowo dla diesla, wcześniej auto należało do firmy (osoba prawna).",
+    "Linia „pojazd nie figuruje jako kradziony” to zaprzeczenie – nie może generować uwagi o kradzieży.",
+    "Daty bez przebiegu (raport wygenerowany, ważność badania, zmiana właściciela) nie są odczytami.",
+    "„150 KM” w linii mocy silnika to konie mechaniczne, nie przebieg – nie może dać odczytu (wielkość liter „KM” vs „km” ma znaczenie)."
+  ]
+}

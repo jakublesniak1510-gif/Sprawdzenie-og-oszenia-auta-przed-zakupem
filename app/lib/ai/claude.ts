@@ -2,7 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import type { BetaMessageStreamParams } from "@anthropic-ai/sdk/resources/beta/messages/messages";
 import { ReportSchema, reportJsonSchema, type Report } from "../report-schema";
 import { buildUserText, loadSystemPrompt } from "./prompt";
-import type { AiProvider, AiReportRequest } from "./types";
+import type { AiProvider, AiReportRequest, GenerateOptions } from "./types";
 
 /**
  * Cienka warstwa nad Claude API (Messages API, @anthropic-ai/sdk).
@@ -12,6 +12,9 @@ import type { AiProvider, AiReportRequest } from "./types";
  *   `tool_choice` (any/tool → 400), więc używamy `auto` + polecenie w prompcie + walidacja zod po stronie serwera.
  * - Przy błędzie walidacji (lub braku wywołania narzędzia) – jedna ponowna próba w tej samej rozmowie.
  * - Odmowa (`stop_reason: "refusal"`): włączony serwerowy fallback `fallbacks: "default"` (wyłącz: ANTHROPIC_FALLBACK=0).
+ * - Prompt caching: `cache_control: ephemeral` na definicji narzędzia i na prompcie systemowym (kolejność renderowania:
+ *   tools → system → messages, więc oba są stałym prefiksem). Wiadomość użytkownika (ogłoszenie, wpis bazy modelu,
+ *   zdjęcia) jest zmienna i NIE jest cache'owana. Zużycie (`usage`) trafia do `opts.onUsage` → tabela `ai_usage`.
  */
 
 export const DEFAULT_MODEL = "claude-sonnet-5-5";
@@ -49,6 +52,7 @@ function buildTool(): Anthropic.Beta.BetaTool {
       "Zapisuje gotowy raport o ogłoszeniu samochodowym. Wywołaj dokładnie raz, z kompletem sekcji. Wszystkie opisy po polsku, neutralnie (bez oskarżania sprzedawcy).",
     input_schema: reportJsonSchema() as Anthropic.Beta.BetaTool.InputSchema,
     strict: true,
+    cache_control: { type: "ephemeral" },
   };
 }
 
@@ -115,11 +119,20 @@ export class ClaudeProvider implements AiProvider {
     }
   }
 
-  async generate(req: AiReportRequest): Promise<Report> {
+  async generate(req: AiReportRequest, opts: GenerateOptions = {}): Promise<Report> {
     const messages: Anthropic.Beta.BetaMessageParam[] = [{ role: "user", content: buildUserContent(req) }];
 
     for (let attempt = 0; attempt < 2; attempt++) {
       const msg = await this.call(messages);
+      if (msg.usage && opts.onUsage) {
+        opts.onUsage({
+          model: msg.model ?? config().model,
+          input_tokens: msg.usage.input_tokens ?? 0,
+          cache_read_input_tokens: msg.usage.cache_read_input_tokens ?? 0,
+          cache_creation_input_tokens: msg.usage.cache_creation_input_tokens ?? 0,
+          output_tokens: msg.usage.output_tokens ?? 0,
+        });
+      }
 
       if (msg.stop_reason === "refusal") {
         throw new AiError("Model odmówił przygotowania raportu dla tych danych.");

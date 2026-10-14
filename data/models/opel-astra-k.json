@@ -1,0 +1,402 @@
+{
+  "id": "opel-astra-k",
+  "make": "Opel",
+  "model": "Astra",
+  "generation": "K (2015–2021)",
+  "years": [
+    2015,
+    2021
+  ],
+  "aliases": [
+    "astra k",
+    "astra v",
+    "astra 5",
+    "opel astra k",
+    "opel astra v",
+    "opel astra 5",
+    "astra k kombi",
+    "astra k sports tourer",
+    "astra sports tourer k",
+    "astra k lift",
+    "astra k hatchback"
+  ],
+  "market_note": "Popularny kompakt, dużo aut z polskich salonów i flot (zwłaszcza Sports Tourer z 1.6 CDTI). Ceny orientacyjnie ok. 31–64 tys. zł (2026). Po liftingu (2019) nowe silniki 1.2 Turbo i 1.5 Diesel.",
+  "price_ranges": [
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        31000,
+        40000
+      ],
+      "note": "1.0 Turbo najtańszy; Sports Tourer zbliżony do hatchbacka."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        37000,
+        48000
+      ],
+      "note": "1.6 CDTI 136/160 KM i wersje Elite/Dynamic w górnej części widełek."
+    },
+    {
+      "years": [
+        2019,
+        2021
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        46000,
+        64000
+      ],
+      "note": "Po liftingu (2019) z silnikami 1.2 Turbo/1.5 Diesel; automat CVT/9-biegowy drożej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 250–400 zł. Hamulce przód z tarczami ok. 500–900 zł z montażem."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 Turbo 125/150 KM lub 1.6 CDTI 136 KM z polskiego salonu z historią w ASO.",
+    "avoid": "Poflotowe 1.6 CDTI bez dokumentacji przebiegu i eksploatowane głównie w mieście (DPF).",
+    "sweet_spot_years": [
+      2017,
+      2021
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.4 Turbo 125/150 KM (benzyna, rodzina SGE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        125,
+        150
+      ],
+      "aliases": [
+        "1.4 turbo",
+        "1,4 turbo",
+        "1.4t",
+        "1.4 t",
+        "1.4 turbo 150",
+        "1.4 turbo 125",
+        "1.4 ecotec",
+        "b14xft"
+      ],
+      "timing": "w tej rodzinie silników producent stosuje pasek zębaty pracujący w oleju (do potwierdzenia po VIN w ASO) – kontrola stanu i wymiana wg producenta",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Turbosprężarka – zawór upustowy (wastegate) i wycieki oleju",
+          "symptoms": "Grzechotanie z okolic turbosprężarki przy odpuszczaniu gazu, spadek mocy, wycieki oleju z przewodów zasilających.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Nasłuchiwać grzechotania przy odpuszczaniu gazu na ciepłym silniku; sprawdzić wycieki przy turbinie."
+        },
+        {
+          "title": "Wycieki płynu chłodzącego – pompa wody, termostat, przewody",
+          "symptoms": "Ubytek płynu chłodzącego, zapach płynu po jeździe, wilgotne ślady przy pompie lub obudowie termostatu, kontrolka temperatury.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            1600
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu na zimnym silniku i ślady zaschniętego płynu przy pompie i przewodach; obserwować temperaturę na jeździe próbnej."
+        },
+        {
+          "title": "Moduł zapłonowy (listwa cewek)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, praca na trzech cylindrach – często po deszczu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów; obejrzeć moduł pod kątem pęknięć i śladów przebicia."
+        },
+        {
+          "title": "Wycieki oleju – pokrywa zaworów i odma",
+          "symptoms": "Zapach spalonego oleju, zawilgocona pokrywa zaworów, syczenie przy korku wlewu oleju, zwiększone zużycie oleju.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1200
+          ],
+          "check_at_inspection": "Obejrzeć pokrywę zaworów i okolice turbosprężarki pod kątem wycieków; na wolnych obrotach posłuchać syczenia przy korku wlewu oleju."
+        }
+      ]
+    },
+    {
+      "code": "1.0 Turbo 105 KM (3-cylindrowy, do 2019)",
+      "fuel": "benzyna",
+      "power_hp": [
+        105
+      ],
+      "aliases": [
+        "1.0 turbo",
+        "1,0 turbo",
+        "1.0t",
+        "1.0 t",
+        "1.0 ecotec",
+        "1.0 turbo 105",
+        "b10xft"
+      ],
+      "timing": "w tej rodzinie silników producent stosuje pasek zębaty pracujący w oleju (do potwierdzenia po VIN w ASO) – kontrola stanu i wymiana wg producenta",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Drgania i poduszki silnika (3-cylindrowy)",
+          "symptoms": "Wyczuwalne drgania na biegu jałowym, nasilone przy zużytych poduszkach.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z włączoną klimatyzacją."
+        },
+        {
+          "title": "Turbosprężarka – zawór upustowy (wastegate) i wycieki oleju",
+          "symptoms": "Grzechotanie z okolic turbosprężarki przy odpuszczaniu gazu, spadek mocy, wycieki oleju z przewodów zasilających.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Nasłuchiwać grzechotania przy odpuszczaniu gazu na ciepłym silniku; sprawdzić wycieki przy turbinie."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "1.6 CDTI 110/136/160 KM (B16DTH/B16DTL, „Whisper Diesel”)",
+      "fuel": "diesel",
+      "power_hp": [
+        95,
+        110,
+        136,
+        160
+      ],
+      "aliases": [
+        "1.6 cdti",
+        "1,6 cdti",
+        "1.6cdti",
+        "1.6 cdti 136",
+        "1.6 cdti 110",
+        "1.6 biturbo",
+        "1.6 cdti biturbo",
+        "b16dth",
+        "b16dtl"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały przy regularnych wymianach oleju",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Układ AdBlue (SCR) – w wersjach, które go mają",
+          "symptoms": "Komunikat o awarii AdBlue i odliczanie do blokady uruchomienia, błędy czujników NOx.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            5000
+          ],
+          "check_at_inspection": "Sprawdzić, czy auto ma wlew AdBlue; diagnostyka błędów SCR i czujników NOx."
+        }
+      ]
+    },
+    {
+      "code": "1.5 Diesel 105/122 KM (3-cylindrowy, od 2019)",
+      "fuel": "diesel",
+      "power_hp": [
+        105,
+        122
+      ],
+      "aliases": [
+        "1.5 diesel",
+        "1,5 diesel",
+        "1.5 d",
+        "1.5 cdti",
+        "1,5 cdti",
+        "1.5d"
+      ],
+      "timing": "pasek zębaty – wymiana wg producenta",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Układ AdBlue (SCR) – pompa, grzałka zbiornika, czujniki NOx",
+          "symptoms": "Komunikat o awarii AdBlue i odliczanie kilometrów do blokady uruchomienia, kontrolka silnika, błędy czujników NOx.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            5000
+          ],
+          "check_at_inspection": "Diagnostyka – błędy SCR, czujników NOx i pompy AdBlue. Sprawdzić, czy na zegarach nie ma komunikatu o AdBlue. Zapytać o naprawy układu."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Multimedia IntelliLink i ekran – zawieszanie się, Android Auto/CarPlay",
+      "symptoms": "Restart systemu, zawieszający się ekran, brak dźwięku, problemy z połączeniem telefonu; część usterek usuwa aktualizacja oprogramowania.",
+      "severity": "niska",
+      "cost_pln": [
+        0,
+        2500
+      ],
+      "check_at_inspection": "Przetestować ekran, Bluetooth, Android Auto/CarPlay, kamerę i nawigację; zapytać o aktualizacje w ASO."
+    },
+    {
+      "title": "Reflektory matrycowe IntelliLux LED i elektronika wyposażenia",
+      "symptoms": "Komunikaty o usterce oświetlenia, niedziałające segmenty LED, błędy asystentów (kamera przednia) po wymianie szyby bez kalibracji.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        6000
+      ],
+      "check_at_inspection": "Sprawdzić wszystkie światła i komunikaty; przejechać trasę z włączonymi asystentami; zapytać o kalibrację kamery po wymianie szyby."
+    },
+    {
+      "title": "Automat 6-biegowy (wersje benzynowe i diesel) – szarpnięcia",
+      "symptoms": "Twarde zmiany 1–2–3, szarpnięcia przy redukcji, opóźnione włączanie biegu. Część wersji po liftingu ma skrzynię CVT (1.4 Turbo 145 KM) lub 9-biegowy automat (1.5 Diesel).",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna w mieście i trasie, ruszanie i hamowanie do zera; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Zawieszenie – tuleje belki tylnej, łączniki, amortyzatory",
+      "symptoms": "Stuki na nierównościach, pływanie tyłu, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        2000
+      ],
+      "check_at_inspection": "Jazda po nierównościach, na podnośniku sprawdzić tuleje belki i amortyzatory."
+    },
+    {
+      "title": "Elektryka – czujniki parkowania, Start/Stop, akumulator",
+      "symptoms": "Niedziałający system Start/Stop, komunikaty o słabym akumulatorze, błędy czujników parkowania.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Sprawdzić datę i stan akumulatora (w autach ze Start/Stop – akumulator AGM/EFB), przetestować czujniki parkowania."
+    },
+    {
+      "title": "Klimatyzacja – skraplacz i sprężarka",
+      "symptoms": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Włączyć klimatyzację na maksimum i sprawdzić temperaturę z nawiewów po kilku minutach; obejrzeć skraplacz przez grill."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić, czy auto pochodzi z polskiego salonu i floty – w aucie flotowym poprosić o historię serwisową z ASO po VIN.",
+    "Diagnostyką porównać przebieg z licznika z zapisami w modułach; w 1.6 CDTI flotowych przebiegi 200+ tys. km są typowe.",
+    "W 1.6 CDTI sprawdzić stan DPF (masa sadzy, liczba regeneracji) i poziom oleju (rozcieńczanie paliwem).",
+    "Uruchomić silnik na zimno – 1.0 Turbo pracuje z wyczuwalnymi drganiami, ale nie powinien klekotać ani falować obrotami.",
+    "Przetestować IntelliLink, kamerę, czujniki i matrycowe LED – naprawy elektroniki są kosztowne.",
+    "Zmierzyć lakier, zwłaszcza przedni pas, maskę i błotniki; sprawdzić datę produkcji szyby czołowej.",
+    "Sprawdzić, czy w wersji z AdBlue nie ma komunikatu o odliczaniu kilometrów do blokady uruchomienia."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu? Czy było w leasingu lub flocie?",
+    "Czy jest historia serwisowa w ASO lub faktury? Jak często wymieniano olej?",
+    "Czy były naprawy turbosprężarki, DPF lub układu AdBlue?",
+    "Czy auto miało szkody komunikacyjne i które elementy lakierowano?",
+    "Czy wykonywano kontrolę lub wymianę paska rozrządu (benzyna)?"
+  ],
+  "summary": "Astra K jest lżejsza i nowocześniejsza od poprzedniczki, a 1.4 Turbo i 1.6 CDTI dobrze sprawdzają się przy regularnym serwisie. Najbezpieczniejszym wyborem jest auto z polskiego salonu z historią w ASO. Główne ryzyka to egzemplarze poflotowe z niepotwierdzonym przebiegiem, DPF w dieslach jeżdżących po mieście i drogie naprawy elektroniki.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

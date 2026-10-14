@@ -1,0 +1,445 @@
+{
+  "id": "opel-corsa-d-e",
+  "make": "Opel",
+  "model": "Corsa",
+  "generation": "D (2006–2014) i E (2014–2019)",
+  "years": [
+    2006,
+    2019
+  ],
+  "aliases": [
+    "corsa d",
+    "corsa e",
+    "opel corsa d",
+    "opel corsa e",
+    "corsa d lift",
+    "corsa e lift",
+    "corsa d opc",
+    "corsa e opc",
+    "corsa d van",
+    "corsa d 3d",
+    "corsa d 5d",
+    "corsa e 3d",
+    "corsa e 5d"
+  ],
+  "market_note": "Jedno z najpopularniejszych aut miejskich w Polsce, często pierwsze auto lub auto do dojazdów. Corsa E (2014–2019) to głęboka modernizacja Corsy D na tej samej płycie podłogowej. Ceny orientacyjnie ok. 6–34 tys. zł (2026). Często z LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2006,
+        2009
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        6000,
+        11000
+      ],
+      "note": "Corsa D przed liftingiem; LPG zbliżone do benzyny, korozja mocno obniża cenę."
+    },
+    {
+      "years": [
+        2010,
+        2014
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        9000,
+        17000
+      ],
+      "note": "Corsa D po liftingu; wersje 5-drzwiowe nieznacznie drożej."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        18000,
+        26000
+      ],
+      "note": "Corsa E; 1.0 Turbo i wyższe wersje w górnej części widełek."
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "km_max": 140000,
+      "price_pln": [
+        23000,
+        34000
+      ],
+      "note": "OPC poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 450–900 zł/rok; AC opłacalne raczej dla młodszych roczników (ok. 700–1500 zł/rok).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 200–330 zł. Łańcuch rozrządu 1.2/1.4 ok. 1,2–2,5 tys. zł; przy LPG kontrola i filtry co ok. 15 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "Corsa E 1.4 lub 1.0 Turbo z manualem; w budżecie Corsa D po liftingu z 1.2/1.4 i udokumentowanym łańcuchem.",
+    "avoid": "Easytronic bez historii napraw, mocno skorodowane egzemplarze i 1.3 CDTI z nieznaną historią oleju.",
+    "sweet_spot_years": [
+      2011,
+      2019
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.2 16V 70–86 KM / 1.4 16V 87–100 KM (Twinport Z12XEP/Z14XEP, od ok. 2009 A12XER/A14XER)",
+      "fuel": "benzyna",
+      "power_hp": [
+        70,
+        75,
+        80,
+        86,
+        87,
+        90,
+        100
+      ],
+      "aliases": [
+        "1.2 16v",
+        "1,2 16v",
+        "1.4 16v",
+        "1,4 16v",
+        "1.2 twinport",
+        "1.4 twinport",
+        "1.2 ecotec",
+        "1.4 ecotec",
+        "1.2 benzyna",
+        "1.4 benzyna",
+        "z12xep",
+        "z14xep",
+        "a12xer",
+        "a14xer"
+      ],
+      "timing": "łańcuch rozrządu – rozciąga się, często przy 120–200 tys. km; wymiana z napinaczem ok. 1,2–2,5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu i napinacz",
+          "symptoms": "Grzechotanie po zimnym starcie przez kilka sekund, kontrolka silnika, błędy położenia wałka rozrządu; zaniedbanie grozi przeskoczeniem łańcucha.",
+          "mileage_km": "120–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1200,
+            2500
+          ],
+          "check_at_inspection": "Uruchomić zimny silnik (poprosić, by nie był rozgrzany przed wizytą) i nasłuchiwać grzechotania od strony rozrządu; zapytać o fakturę za wymianę łańcucha."
+        },
+        {
+          "title": "Klapy Twinport w kolektorze dolotowym",
+          "symptoms": "Kontrolka silnika, nierówna praca, spadek mocy.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce."
+        },
+        {
+          "title": "Moduł zapłonowy (listwa cewek)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, praca na trzech cylindrach – często po deszczu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów; obejrzeć moduł pod kątem pęknięć i śladów przebicia."
+        },
+        {
+          "title": "Obudowa termostatu i termostat (silniki XER)",
+          "symptoms": "Ubytek płynu chłodzącego, wilgotne ślady przy obudowie termostatu, wahania temperatury, kontrolka.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu (prawa strona głowicy); obserwować temperaturę na jeździe próbnej."
+        }
+      ]
+    },
+    {
+      "code": "1.2/1.4 16V z instalacją LPG (także fabryczną)",
+      "fuel": "lpg",
+      "power_hp": [
+        70,
+        85,
+        87,
+        90
+      ],
+      "aliases": [
+        "1.2 lpg",
+        "1,2 lpg",
+        "1.4 lpg",
+        "1,4 lpg",
+        "1.2 gaz",
+        "1.4 gaz",
+        "1.2 16v lpg",
+        "1.4 16v lpg",
+        "1.2 b+lpg",
+        "1.2 benzyna+gaz",
+        "1.4 b+lpg",
+        "1.4 benzyna+gaz"
+      ],
+      "timing": "łańcuch rozrządu (jak w wersji benzynowej)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.3 CDTI 75/90/95 KM (Multijet)",
+      "fuel": "diesel",
+      "power_hp": [
+        75,
+        90,
+        95
+      ],
+      "aliases": [
+        "1.3 cdti",
+        "1,3 cdti",
+        "1.3cdti",
+        "1.3 cdti 90",
+        "1.3 cdti 75",
+        "1.3 cdti 95",
+        "1.3 multijet",
+        "1.3 diesel"
+      ],
+      "timing": "łańcuch rozrządu – rozciąga się przy zaniedbanych wymianach oleju; wymiana ok. 1,5–3 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu (1.3 Multijet)",
+          "symptoms": "Grzechotanie na zimnym silniku, błędy synchronizacji wałków, trudny rozruch; przyspiesza go olej wymieniany zbyt rzadko.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3000
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuch od strony rozrządu; odczyt błędów synchronizacji. Zapytać o wymianę łańcucha i interwały wymiany oleju."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, rosnący poziom oleju (rozcieńczanie paliwem przy przerwanych regeneracjach). Filtr występuje w części wersji (głównie 90/95 KM). Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki; wtryskiwacze elektromagnetyczne w tym silniku zwykle dają się regenerować.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt dawek wtryskiwaczy, test przelewów u mechanika."
+        }
+      ]
+    },
+    {
+      "code": "1.0 Turbo 90/115 KM (3-cylindrowy, Corsa E)",
+      "fuel": "benzyna",
+      "power_hp": [
+        90,
+        115
+      ],
+      "aliases": [
+        "1.0 turbo",
+        "1,0 turbo",
+        "1.0t",
+        "1.0 t",
+        "1.0 ecotec",
+        "1.0 turbo 90",
+        "1.0 turbo 115"
+      ],
+      "timing": "w tej rodzinie silników producent stosuje pasek zębaty pracujący w oleju (do potwierdzenia po VIN w ASO)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Drgania i poduszki silnika (3-cylindrowy)",
+          "symptoms": "Wyczuwalne drgania na biegu jałowym, nasilone przy zużytych poduszkach.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z włączoną klimatyzacją."
+        },
+        {
+          "title": "Turbosprężarka – zawór upustowy (wastegate) i wycieki oleju",
+          "symptoms": "Grzechotanie z okolic turbosprężarki przy odpuszczaniu gazu, spadek mocy, wycieki oleju z przewodów zasilających.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Nasłuchiwać grzechotania przy odpuszczaniu gazu na ciepłym silniku; sprawdzić wycieki przy turbinie."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Elektryczne wspomaganie kierownicy (kolumna) – Corsa D",
+      "symptoms": "Kontrolka wspomagania, nagły zanik wspomagania lub ciężka kierownica, stuki w kolumnie. Częsta usterka Corsy D.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        2500
+      ],
+      "check_at_inspection": "Na postoju i w czasie jazdy kręcić kierownicą od oporu do oporu; obserwować kontrolkę i opór. Zapytać o regenerację kolumny."
+    },
+    {
+      "title": "Skrzynia Easytronic (zautomatyzowana manualna)",
+      "symptoms": "Szarpanie, długie zmiany biegów, problem z wrzuceniem biegu, błędy aktuatora sprzęgła.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4000
+      ],
+      "check_at_inspection": "Jazda próbna w korku i pod górkę; diagnostyka; zapytać o adaptację i wymianę aktuatora."
+    },
+    {
+      "title": "Wysprzęglik (centralny) i sprzęgło",
+      "symptoms": "Sprzęgło „zostaje” w podłodze, trudności z wrzuceniem biegu, wyciek płynu hamulcowego w okolice skrzyni. Wymiana wymaga demontażu skrzyni – zwykle razem ze sprzęgłem.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        900,
+        2200
+      ],
+      "check_at_inspection": "Wrzucanie biegów na postoju i w ruchu, kontrola poziomu płynu hamulcowego; ocena punktu „łapania” sprzęgła."
+    },
+    {
+      "title": "Korozja – tylne nadkola, progi, dolne krawędzie drzwi i klapy",
+      "symptoms": "Bąble lakieru i ogniska rdzy na tylnych nadkolach, progach i krawędziach drzwi, szczególnie w Corsie D.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        4000
+      ],
+      "check_at_inspection": "Obejrzeć nadkola od środka i z zewnątrz, progi i dolne krawędzie drzwi; zmierzyć lakier w miejscach napraw."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, tuleje, amortyzatory, łożyska kół",
+      "symptoms": "Stuki na nierównościach, szumy łożysk, pływanie przodu.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach i z prędkością 50–100 km/h (szum łożysk); kontrola na podnośniku."
+    },
+    {
+      "title": "Elektryka – stacyjka, czujniki, oświetlenie, centralny zamek",
+      "symptoms": "Niedziałające elementy oświetlenia, przerwy w działaniu centralnego zamka, błędy czujników ABS.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        1200
+      ],
+      "check_at_inspection": "Sprawdzić działanie wszystkich świateł, szyb, zamka i kontrolek po uruchomieniu."
+    }
+  ],
+  "inspection_tips": [
+    "Zimny rozruch w benzynie – posłuchać, czy łańcuch rozrządu nie grzechocze.",
+    "Sprawdzić działanie wspomagania kierownicy (Corsa D) – kręcić kierownicą na postoju.",
+    "Obejrzeć tylne nadkola, progi i krawędzie drzwi pod kątem korozji.",
+    "W wersji z LPG sprawdzić wpis w dowodzie, datę ważności butli i pracę na gazie po rozgrzaniu.",
+    "W Easytronic sprawdzić płynność zmian biegów i ruszania; to skrzynia wrażliwa na zużycie sprzęgła i siłownika.",
+    "Sprawdzić przebieg w historii badań technicznych – auta miejskie często mają mały, ale realny przebieg; bardzo zużyte wnętrze przy niskim przebiegu do wyjaśnienia.",
+    "W 1.3 CDTI sprawdzić, czy poziom oleju nie przekracza maksimum (rozcieńczanie paliwem)."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy to Corsa D czy Corsa E i z jakim silnikiem (kod lub dokładna pojemność i moc)?",
+    "Kiedy wymieniano łańcuch rozrządu i olej? Czy są faktury?",
+    "Czy instalacja LPG jest wpisana w dowodzie i kiedy była serwisowana?",
+    "Czy były naprawy wspomagania kierownicy lub sprzęgła?",
+    "Czy auto miało szkody i czy były naprawy blacharskie (korozja)?"
+  ],
+  "summary": "Corsa D/E to tanie w utrzymaniu auto miejskie z łatwo dostępnymi częściami. Najrozsądniejsze są proste benzyny 1.2/1.4 (także z dobrze serwisowanym LPG) i 1.0 Turbo w Corsie E. Kluczowe do sprawdzenia: łańcuch rozrządu, wspomaganie kierownicy w Corsie D, korozja i Easytronic.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

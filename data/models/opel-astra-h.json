@@ -22,6 +22,57 @@
     "astra h twintop"
   ],
   "market_note": "Bardzo popularne tanie auto, często z LPG. Ceny orientacyjnie ok. 7–18 tys. zł (2026). Wiele egzemplarzy z wysokimi przebiegami i drobnymi usterkami elektryki.",
+  "price_ranges": [
+    {
+      "years": [
+        2004,
+        2006
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        5500,
+        9500
+      ],
+      "note": "Korozja nadkoli i progów mocno obniża cenę."
+    },
+    {
+      "years": [
+        2007,
+        2009
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        7500,
+        13000
+      ],
+      "note": "Po liftingu; fabryczne LPG zbliżone do benzyny."
+    },
+    {
+      "years": [
+        2010,
+        2014
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        10000,
+        17000
+      ],
+      "note": "Astra Classic III (sedan) z tych lat zwykle z polskiego salonu; GTC/OPC poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 550–1100 zł/rok; AC przy wartości auta poniżej ok. 20 tys. zł zwykle nieopłacalne.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 200–350 zł, rozrząd 1.4/1.6 z pompą ok. 700–1200 zł. Moduł CIM i pompa wspomagania to najczęstsze wydatki elektryczne."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 16V 115 KM (Z16XER) lub 1.4 Twinport z udokumentowanym rozrządem; z LPG tylko z regularnym serwisem instalacji.",
+    "avoid": "Easytronic i egzemplarze z korozją nadkoli oraz 1.9 CDTI bez historii klap wirowych.",
+    "sweet_spot_years": [
+      2007,
+      2010
+    ]
+  },
   "engines": [
     {
       "code": "1.6 16V Twinport 105 KM (Z16XEP) / 1.6 115 KM (Z16XER)",

@@ -1,6 +1,8 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { QUICK_PREFILL_KEY } from "@/components/site/config";
+import { Icon } from "@/components/ui/icons";
 import { formatPln, type Offer } from "@/lib/offers";
 
 /* ---------- typy ---------- */
@@ -35,14 +37,23 @@ interface Draft {
   historia: string;
   reczne: ManualRow[];
   podobne: SimilarRow[];
-  oferta: Offer["id"];
+  oferta: OfferChoice;
 }
+type OfferChoice = Offer["id"] | "pakiet5";
+export interface PackageInfo {
+  nazwa: string;
+  cenaGr: number;
+  zawiera: string[];
+}
+type CouponState = { state: "idle" | "checking" | "valid" | "invalid" | "unavailable"; message: string | null };
 
 const MAX_PHOTOS = 8;
 const MAX_SIDE = 1280;
 const JPEG_QUALITY = 0.8;
 const MIN_TEXT = 100;
-const DRAFT_KEY = "sprawdz-draft-v1";
+const MAX_TEXT = 30000;
+/** Szkic formularza (bez zdjęć) – localStorage, przetrwa zamknięcie karty i powrót z płatności/zakupu pakietu. */
+const DRAFT_KEY = "sprawdz-draft-v2";
 const STEPS = ["Ogłoszenie", "Historia", "Podobne oferty", "Model i płatność"] as const;
 
 const emptyDraft: Draft = {
@@ -118,9 +129,36 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
 
 /* ---------- formularz ---------- */
 
-export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[]; skipPayment: boolean; cancelled: boolean }) {
+/** Komunikat błędu z API → zrozumiały tekst. */
+function friendlyError(status: number, j: { error?: string }): string {
+  if (status === 413) return j.error || "Zdjęcia są za duże. Usuń część zdjęć albo dodaj zrzuty ekranu zamiast oryginałów.";
+  if (status === 429) return "Za dużo prób w krótkim czasie. Odczekaj minutę i spróbuj ponownie.";
+  if (status === 400 && j.error) return `Popraw dane: ${j.error}`;
+  if (status >= 500) return j.error || "Wystąpił błąd po naszej stronie. Twoje dane są zapisane w tej przeglądarce – spróbuj ponownie za chwilę.";
+  return j.error || "Coś poszło nie tak. Spróbuj ponownie.";
+}
+
+export function CheckForm({
+  offers,
+  skipPayment,
+  cancelled,
+  initialOffer,
+  initialCoupon = "",
+  pkg,
+}: {
+  offers: Offer[];
+  skipPayment: boolean;
+  cancelled: boolean;
+  initialOffer?: OfferChoice | null;
+  initialCoupon?: string;
+  pkg: PackageInfo;
+}) {
   const [step, setStep] = useState(0);
   const [d, setD] = useState<Draft>(emptyDraft);
+  const [loaded, setLoaded] = useState(false);
+  const [fromQuickTest, setFromQuickTest] = useState(false);
+  const [kupon, setKupon] = useState(initialCoupon);
+  const [kuponState, setKuponState] = useState<CouponState>({ state: "idle", message: null });
   const [photos, setPhotos] = useState<string[]>([]);
   const [photoBusy, setPhotoBusy] = useState(false);
   const [photoError, setPhotoError] = useState<string | null>(null);
@@ -138,24 +176,90 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
   const [error, setError] = useState<string | null>(null);
   const topRef = useRef<HTMLDivElement>(null);
 
-  // Szkic (bez zdjęć) w sessionStorage – przydaje się po powrocie z anulowanej płatności.
+  // Start: szkic z localStorage; dane z szybkiego testu (sessionStorage) mają pierwszeństwo – to nowe ogłoszenie.
   useEffect(() => {
+    let next: Draft = emptyDraft;
     try {
-      const raw = sessionStorage.getItem(DRAFT_KEY);
-      if (raw) setD({ ...emptyDraft, ...(JSON.parse(raw) as Partial<Draft>) });
+      const raw = localStorage.getItem(DRAFT_KEY);
+      if (raw) next = { ...emptyDraft, ...(JSON.parse(raw) as Partial<Draft>) };
     } catch {
       /* brak dostępu do storage – OK */
     }
-  }, []);
-  useEffect(() => {
     try {
-      sessionStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+      const quick = sessionStorage.getItem(QUICK_PREFILL_KEY);
+      if (quick) {
+        const q = JSON.parse(quick) as Partial<Pick<Draft, "tekst" | "cena" | "przebieg" | "rocznik">>;
+        next = { ...emptyDraft, oferta: next.oferta, tekst: q.tekst ?? "", cena: q.cena ?? "", przebieg: q.przebieg ?? "", rocznik: q.rocznik ?? "" };
+        setFromQuickTest(true); // klucz usuwamy dopiero po zapisie szkicu (efekt może się wykonać 2× w StrictMode)
+      }
     } catch {
       /* ignoruj */
     }
-  }, [d]);
+    if (initialOffer) next = { ...next, oferta: initialOffer };
+    setD(next);
+    setLoaded(true);
+    // tylko przy wejściu na stronę
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  useEffect(() => {
+    if (!loaded) return;
+    try {
+      localStorage.setItem(DRAFT_KEY, JSON.stringify(d));
+      sessionStorage.removeItem(QUICK_PREFILL_KEY);
+    } catch {
+      /* ignoruj (tryb prywatny, brak miejsca) */
+    }
+  }, [d, loaded]);
+
+  function clearDraft() {
+    if (!confirm("Wyczyścić formularz? Wpisane dane zostaną usunięte z tej przeglądarki.")) return;
+    setD(emptyDraft);
+    setPhotos([]);
+    try {
+      localStorage.removeItem(DRAFT_KEY);
+    } catch {
+      /* ignoruj */
+    }
+  }
+
+  /* --- kupon --- */
+  async function checkCoupon() {
+    const code = kupon.trim();
+    if (!code) {
+      setKuponState({ state: "invalid", message: "Wpisz kod kuponu." });
+      return;
+    }
+    setKuponState({ state: "checking", message: null });
+    try {
+      const res = await fetch("/api/coupons/check", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ code, oferta: d.oferta === "pakiet5" ? "raport" : d.oferta }),
+      });
+      if (res.status === 404) {
+        setKuponState({ state: "unavailable", message: "Sprawdzanie kodów jest chwilowo niedostępne – kod sprawdzimy przy wysyłce formularza." });
+        return;
+      }
+      if (res.status === 429) {
+        setKuponState({ state: "invalid", message: "Za dużo prób. Odczekaj chwilę i spróbuj ponownie." });
+        return;
+      }
+      const j = (await res.json().catch(() => ({}))) as { valid?: boolean; message?: string };
+      setKuponState(
+        j.valid
+          ? { state: "valid", message: j.message || "Kod jest ważny." }
+          : { state: "invalid", message: j.message || "Ten kod jest nieprawidłowy albo wygasł." },
+      );
+    } catch {
+      setKuponState({ state: "unavailable", message: "Brak połączenia – kod sprawdzimy przy wysyłce formularza." });
+    }
+  }
 
   const set = <K extends keyof Draft>(k: K, v: Draft[K]) => setD((p) => ({ ...p, [k]: v }));
+  const chooseOffer = (o: OfferChoice) => {
+    set("oferta", o);
+    if (kuponState.state === "valid" || kuponState.state === "invalid") setKuponState({ state: "idle", message: null });
+  };
   const textLen = d.tekst.trim().length;
 
   const goTo = (s: number) => {
@@ -213,11 +317,22 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
   }, [step]);
 
   const selectedModel = useMemo(() => models?.find((m) => m.id === modelId) ?? null, [models, modelId]);
-  const offer = offers.find((o) => o.id === d.oferta)!;
+  const isPackage = d.oferta === "pakiet5";
+  const offer = offers.find((o) => o.id === d.oferta) ?? offers[0];
+  const hasCoupon = kupon.trim().length > 0;
+  const emailOk = !email.trim() || /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 
   /* --- wysyłka --- */
   async function submit() {
     setError(null);
+    if (isPackage) {
+      window.location.assign("/pakiet");
+      return;
+    }
+    if (!emailOk) {
+      setError("Adres e-mail wygląda na niepoprawny. Popraw go albo zostaw pole puste.");
+      return;
+    }
     if (!zgodaTresc || !zgodaRegulamin) {
       setError("Zaznacz obie zgody, aby kontynuować.");
       return;
@@ -246,12 +361,24 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
         zgoda_tresc_cyfrowa: zgodaTresc,
         zgoda_regulamin: zgodaRegulamin,
         email: email.trim() || null,
+        coupon: kupon.trim() || null,
       };
-      const res = await fetch("/api/reports", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
-      const j = (await res.json().catch(() => ({}))) as { redirect?: string; error?: string };
-      if (!res.ok || !j.redirect) throw new Error(j.error || "Coś poszło nie tak. Spróbuj ponownie.");
+      let res: Response;
       try {
-        sessionStorage.removeItem(DRAFT_KEY);
+        res = await fetch("/api/reports", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) });
+      } catch {
+        throw new Error("Brak połączenia z serwerem. Sprawdź internet – dane formularza są zapisane w tej przeglądarce.");
+      }
+      const j = (await res.json().catch(() => ({}))) as { redirect?: string; error?: string; field?: string };
+      if (!res.ok || !j.redirect) {
+        if (j.field === "coupon") {
+          setKuponState({ state: "invalid", message: j.error ?? "Kod jest nieprawidłowy." });
+          throw new Error(`Kod kuponu: ${j.error ?? "nieprawidłowy"}. Popraw kod albo usuń go, aby zapłacić.`);
+        }
+        throw new Error(friendlyError(res.status, j));
+      }
+      try {
+        localStorage.removeItem(DRAFT_KEY);
       } catch {
         /* ignoruj */
       }
@@ -266,8 +393,14 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
   return (
     <div ref={topRef} className="scroll-mt-4 space-y-5">
       {cancelled && (
-        <div className="rounded-xl border border-slate-300 bg-white p-3 text-sm">
+        <div className="rounded-xl border border-slate-300 bg-white p-3 text-sm" role="status">
           Płatność została anulowana. Twoje dane z formularza zostały zachowane (bez zdjęć) – możesz spróbować ponownie.
+        </div>
+      )}
+      {fromQuickTest && (
+        <div className="flex items-start gap-2 rounded-xl border border-brand-100 bg-brand-50 p-3 text-sm text-brand-900" role="status">
+          <Icon name="check" className="mt-0.5 h-4 w-4" />
+          Przenieśliśmy tekst ogłoszenia z szybkiego testu. Dodaj zrzuty ekranu i przejdź dalej.
         </div>
       )}
 
@@ -294,15 +427,30 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
       {step === 0 && (
         <section className="space-y-4 rounded-2xl bg-white p-4 shadow-sm sm:p-5">
           <h2 className="text-xl font-bold">1. Wklej ogłoszenie</h2>
-          <Field label="Tekst ogłoszenia *" hint={`Skopiuj cały opis z portalu. Min. ${MIN_TEXT} znaków (teraz: ${textLen}). Telefony, e-maile i nr rejestracyjne usuniemy automatycznie.`}>
+          <div>
+            <label htmlFor="cf-tekst" className="mb-1 block text-sm font-semibold text-slate-800">
+              Tekst ogłoszenia <span aria-hidden>*</span>
+            </label>
             <textarea
+              id="cf-tekst"
               className={`${inputCls} min-h-48`}
               value={d.tekst}
+              maxLength={MAX_TEXT}
               onChange={(e) => set("tekst", e.target.value)}
               placeholder="np. Sprzedam VW Golf VII 1.6 TDI, 2015 r., przebieg 185 000 km, serwisowany w ASO…"
+              aria-describedby="cf-tekst-hint cf-tekst-count"
+              aria-invalid={textLen > 0 && textLen < MIN_TEXT}
               required
             />
-          </Field>
+            <div className="mt-1 flex items-start justify-between gap-3 text-xs">
+              <span id="cf-tekst-hint" className="text-slate-600">
+                Skopiuj cały opis z portalu. Telefony, e-maile i nr rejestracyjne usuniemy automatycznie.
+              </span>
+              <span id="cf-tekst-count" className={`shrink-0 tabular-nums ${textLen < MIN_TEXT ? "font-semibold text-amber-800" : "text-emerald-800"}`} aria-live="polite">
+                {textLen < MIN_TEXT ? `${textLen}/${MIN_TEXT} min.` : `${textLen.toLocaleString("pl-PL")} znaków ✓`}
+              </span>
+            </div>
+          </div>
           <div className="grid grid-cols-3 gap-3">
             <Field label="Cena (zł)">
               <input className={inputCls} inputMode="numeric" value={d.cena} onChange={(e) => set("cena", e.target.value)} placeholder="32900" />
@@ -327,10 +475,10 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
                     <button
                       type="button"
                       onClick={() => setPhotos((ps) => ps.filter((_, j) => j !== i))}
-                      className="absolute right-1 top-1 rounded-full bg-black/70 px-2 text-sm text-white"
+                      className="absolute right-1 top-1 flex h-8 w-8 items-center justify-center rounded-full bg-black/75 text-white hover:bg-black"
                       aria-label={`Usuń zdjęcie ${i + 1}`}
                     >
-                      ×
+                      <Icon name="x" className="h-4 w-4" strokeWidth={3} />
                     </button>
                   </li>
                 ))}
@@ -352,19 +500,27 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
                 />
               </label>
             )}
-            {photoError && <p className="mt-1 text-sm text-red-700">{photoError}</p>}
+            {photoError && (
+              <p className="mt-1 text-sm text-red-700" role="alert">
+                {photoError}
+              </p>
+            )}
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex flex-col-reverse gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <button type="button" onClick={clearDraft} className="rounded-xl px-4 py-3 text-sm font-semibold text-slate-600 hover:bg-slate-100">
+              Wyczyść formularz
+            </button>
             <button
               type="button"
               disabled={textLen < MIN_TEXT || photoBusy}
               onClick={() => goTo(1)}
-              className="w-full rounded-xl bg-brand-700 px-6 py-3 font-bold text-white disabled:cursor-not-allowed disabled:bg-slate-300 sm:w-auto"
+              className="w-full rounded-xl bg-brand-700 px-6 py-3 font-bold text-white disabled:cursor-not-allowed disabled:bg-slate-400 sm:w-auto"
             >
-              Dalej
+              {textLen < MIN_TEXT ? `Dalej (jeszcze ${MIN_TEXT - textLen} znaków)` : "Dalej"}
             </button>
           </div>
+          <p className="text-xs text-slate-600">Szkic zapisujemy tylko w Twojej przeglądarce (bez zdjęć), żeby nic nie zginęło.</p>
         </section>
       )}
 
@@ -543,40 +699,117 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
           </div>
 
           <fieldset>
-            <legend className="mb-2 text-sm font-semibold text-slate-800">Pakiet</legend>
-            <div className="grid gap-2 sm:grid-cols-2">
-              {offers.map((o) => (
-                <label
-                  key={o.id}
-                  className={`cursor-pointer rounded-xl border-2 p-3 ${d.oferta === o.id ? "border-brand-600 bg-brand-50" : "border-slate-200"}`}
-                >
-                  <input type="radio" name="oferta" value={o.id} checked={d.oferta === o.id} onChange={() => set("oferta", o.id)} className="sr-only" />
-                  <span className="flex items-baseline justify-between">
-                    <span className="font-bold">{o.nazwa}</span>
-                    <span className="text-lg font-extrabold text-brand-700">{formatPln(o.cenaGr)}</span>
-                  </span>
-                  <span className="mt-1 block text-xs text-slate-600">{o.zawiera.join(" · ")}</span>
-                </label>
-              ))}
+            <legend className="mb-2 text-sm font-semibold text-slate-800">Wybierz ofertę</legend>
+            <div className="grid gap-2 sm:grid-cols-3">
+              {[...offers.map((o) => ({ id: o.id as OfferChoice, nazwa: o.nazwa, cenaGr: o.cenaGr, zawiera: o.zawiera })), { id: "pakiet5" as OfferChoice, ...pkg }].map((o) => {
+                const active = d.oferta === o.id;
+                return (
+                  <label
+                    key={o.id}
+                    className={`relative flex cursor-pointer flex-col rounded-xl border-2 p-3 has-[:focus-visible]:ring-2 has-[:focus-visible]:ring-brand-600 ${active ? "border-brand-600 bg-brand-50" : "border-slate-200 bg-white hover:border-slate-400"}`}
+                  >
+                    <input type="radio" name="oferta" value={o.id} checked={active} onChange={() => chooseOffer(o.id)} className="sr-only" />
+                    <span className="flex items-start justify-between gap-2">
+                      <span className="font-bold">{o.nazwa}</span>
+                      {active && <Icon name="check" className="h-5 w-5 text-brand-700" strokeWidth={3} />}
+                    </span>
+                    <span className="text-xl font-extrabold text-brand-700">{formatPln(o.cenaGr)}</span>
+                    <ul className="mt-1 space-y-0.5 text-xs text-slate-700">
+                      {o.zawiera.map((z) => (
+                        <li key={z}>• {z}</li>
+                      ))}
+                    </ul>
+                  </label>
+                );
+              })}
             </div>
             {d.oferta === "raport" && d.podobne.length > 0 && (
               <p className="mt-2 text-xs text-amber-800">Dodane podobne oferty zostaną pominięte – porównanie cen jest tylko w Raport+.</p>
             )}
+            {isPackage && (
+              <p className="mt-2 rounded-lg border border-brand-100 bg-brand-50 p-3 text-sm text-brand-900">
+                Pakiet to kod na kilka raportów. Najpierw kupisz kod, a potem wrócisz tutaj – formularz zostanie zachowany – i wpiszesz go
+                w polu „Kod kuponu”. Ten raport nie będzie Cię już nic kosztował.
+              </p>
+            )}
           </fieldset>
 
-          <Field label="E-mail (opcjonalnie)" hint="Do potwierdzenia płatności. Nie wysyłamy reklam.">
-            <input type="email" className={inputCls} value={email} onChange={(e) => setEmail(e.target.value)} placeholder="ty@example.com" autoComplete="email" />
+          {!isPackage && (
+            <div>
+              <label htmlFor="cf-kupon" className="mb-1 block text-sm font-semibold text-slate-800">
+                Kod kuponu (opcjonalnie)
+              </label>
+              <div className="flex gap-2">
+                <input
+                  id="cf-kupon"
+                  className={`${inputCls} font-mono uppercase`}
+                  value={kupon}
+                  onChange={(e) => {
+                    setKupon(e.target.value);
+                    setKuponState({ state: "idle", message: null });
+                  }}
+                  placeholder="np. ABCD-EFGH"
+                  autoComplete="off"
+                  autoCapitalize="characters"
+                  spellCheck={false}
+                  maxLength={20}
+                  aria-describedby="cf-kupon-msg"
+                  aria-invalid={kuponState.state === "invalid"}
+                />
+                <button
+                  type="button"
+                  onClick={checkCoupon}
+                  disabled={!hasCoupon || kuponState.state === "checking"}
+                  className="shrink-0 rounded-lg border-2 border-brand-600 px-4 font-semibold text-brand-700 hover:bg-brand-50 disabled:border-slate-300 disabled:text-slate-500"
+                >
+                  {kuponState.state === "checking" ? "Sprawdzam…" : "Sprawdź"}
+                </button>
+              </div>
+              <p
+                id="cf-kupon-msg"
+                aria-live="polite"
+                className={`mt-1 text-xs ${kuponState.state === "valid" ? "font-semibold text-emerald-800" : kuponState.state === "invalid" ? "font-semibold text-red-700" : "text-slate-600"}`}
+              >
+                {kuponState.message ?? "Masz kod z pakietu 5 raportów lub kod promocyjny? Wpisz go tutaj."}
+              </p>
+            </div>
+          )}
+
+          <Field label="E-mail (zalecany)" hint="Wyślemy link do raportu, żeby nie zginął – raport jest dostępny przez 30 dni. Nie wysyłamy reklam.">
+            <input
+              type="email"
+              className={inputCls}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="ty@example.com"
+              autoComplete="email"
+              inputMode="email"
+              aria-invalid={!emailOk}
+            />
           </Field>
+          {!emailOk && <p className="-mt-3 text-xs font-semibold text-red-700">Sprawdź adres e-mail (np. ty@example.com).</p>}
 
           <div className="space-y-3 text-sm">
             <label className="flex items-start gap-3">
-              <input type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={zgodaTresc} onChange={(e) => setZgodaTresc(e.target.checked)} />
-              <span>
-                Żądam natychmiastowego dostarczenia treści cyfrowej i przyjmuję do wiadomości utratę prawa odstąpienia od umowy. *
-              </span>
+              <input
+                type="checkbox"
+                className="mt-0.5 h-5 w-5 shrink-0"
+                checked={zgodaTresc}
+                onChange={(e) => setZgodaTresc(e.target.checked)}
+                aria-required="true"
+              />
+              {/* Treść 1:1 z docs/regulamin.md § 6 ust. 3 – nie zmieniać bez zmiany regulaminu. */}
+              <span>Żądam natychmiastowego dostarczenia raportu. Wiem, że po jego dostarczeniu tracę prawo odstąpienia od umowy.</span>
+              <span className="sr-only">(wymagane)</span>
             </label>
             <label className="flex items-start gap-3">
-              <input type="checkbox" className="mt-0.5 h-5 w-5 shrink-0" checked={zgodaRegulamin} onChange={(e) => setZgodaRegulamin(e.target.checked)} />
+              <input
+                type="checkbox"
+                className="mt-0.5 h-5 w-5 shrink-0"
+                checked={zgodaRegulamin}
+                onChange={(e) => setZgodaRegulamin(e.target.checked)}
+                aria-required="true"
+              />
               <span>
                 Akceptuję{" "}
                 <a href="/regulamin" target="_blank" className="font-semibold text-brand-700 underline">
@@ -591,12 +824,16 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
             </label>
           </div>
 
-          <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-600">
-            Raport jest pomocą, nie ekspertyzą. Przed zakupem zrób oględziny auta u niezależnego mechanika.
+          <p className="rounded-lg bg-slate-50 p-3 text-xs text-slate-700">
+            Raport tworzy automatycznie sztuczna inteligencja na podstawie tego, co wkleisz – to pomoc w decyzji, nie ekspertyza ani gwarancja
+            stanu auta, więc przed zakupem pokaż auto mechanikowi.
           </p>
 
+          {!isPackage && (!zgodaTresc || !zgodaRegulamin) && !error && (
+            <p className="text-xs text-slate-600">Zaznacz oba oświadczenia, aby przejść dalej.</p>
+          )}
           {error && (
-            <p className="rounded-lg bg-red-50 p-3 text-sm text-red-800" role="alert">
+            <p className="rounded-lg border border-red-200 bg-red-50 p-3 text-sm text-red-800" role="alert">
               {error}
             </p>
           )}
@@ -608,10 +845,18 @@ export function CheckForm({ offers, skipPayment, cancelled }: { offers: Offer[];
             <button
               type="button"
               onClick={submit}
-              disabled={submitting || !zgodaTresc || !zgodaRegulamin || (models === null && !detectError)}
-              className="rounded-xl bg-brand-700 px-6 py-4 text-lg font-bold text-white disabled:cursor-not-allowed disabled:bg-slate-300"
+              disabled={submitting || (!isPackage && (!zgodaTresc || !zgodaRegulamin)) || (models === null && !detectError)}
+              className="rounded-xl bg-brand-700 px-6 py-4 text-lg font-bold text-white disabled:cursor-not-allowed disabled:bg-slate-400"
             >
-              {submitting ? "Przetwarzam…" : skipPayment ? `Generuj raport (tryb testowy)` : `Zapłać ${formatPln(offer.cenaGr)} – BLIK`}
+              {submitting
+                ? "Przetwarzam…"
+                : isPackage
+                  ? `Kup pakiet ${formatPln(pkg.cenaGr)} →`
+                  : hasCoupon
+                    ? "Generuj raport z kodu"
+                    : skipPayment
+                      ? `Generuj raport (tryb testowy)`
+                      : `Zapłać ${formatPln(offer.cenaGr)} – BLIK`}
             </button>
           </div>
         </section>

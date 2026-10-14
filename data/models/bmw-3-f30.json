@@ -23,6 +23,69 @@
     "f31 lci"
   ],
   "market_note": "Bardzo popularna w Polsce, sporo aut z importu i polskich leasingów. Ceny orientacyjnie ok. 40–85 tys. zł (2026). Dominuje 320d/318d z automatem.",
+  "price_ranges": [
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 260000,
+      "price_pln": [
+        37000,
+        50000
+      ],
+      "note": "N47 z tych lat i 316i/320i N13 zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 240000,
+      "price_pln": [
+        44000,
+        60000
+      ],
+      "note": "B47 (od ok. 2014) i automat ZF 8HP podnoszą cenę."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        54000,
+        75000
+      ],
+      "note": "Po liftingu (LCI, od 2015); M Sport i xDrive +10–15%."
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        68000,
+        92000
+      ],
+      "note": "330d/340i i Touring xDrive powyżej widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 800–1800 zł/rok (duża moc podnosi składkę); AC ok. 2200–5000 zł/rok, wyraźnie wyżej w dużych miastach i dla wersji 4x4/mocnych.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem ok. 450–700 zł; fabryczny interwał do 30 tys. km warto skrócić do 15 tys. km. Hamulce przód ok. 900–1500 zł z montażem, opony run-flat droższe. Olej w ZF 8HP ok. 1200–1800 zł (zalecany co 80–100 tys. km)."
+  },
+  "buy_advice": {
+    "best_pick": "320d/318d B47 lub 320i/330i B48 (od ok. 2015/2016) z automatem i historią w ASO.",
+    "avoid": "316i/320i N13 i 320d N47 z lat 2012–2013 bez dowodu wymiany łańcucha.",
+    "sweet_spot_years": [
+      2015,
+      2019
+    ]
+  },
   "engines": [
     {
       "code": "318d/320d N47 (2012–2014)",

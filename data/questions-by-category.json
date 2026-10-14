@@ -1,0 +1,107 @@
+{
+  "_opis": "Uniwersalne pytania do sprzedawcy pogrupowane według kategorii z schema/red-flags.schema.json. Aplikacja dobiera po kilka pytań z kategorii trafionych flag, pomijając te, które już padły w question_for_seller, żeby raport się nie powtarzał.",
+  "kategorie": {
+    "handlarz": {
+      "etykieta": "Sprzedawca i pochodzenie oferty",
+      "pytania": [
+        "Czy jest Pan/Pani właścicielem auta wpisanym w dowodzie rejestracyjnym? Jeśli nie – na jakiej podstawie Pan/Pani je sprzedaje?",
+        "Kto będzie stroną umowy sprzedaży i czy dane w umowie będą zgodne z dowodem rejestracyjnym?",
+        "Od kiedy ma Pan/Pani to auto i od kogo zostało kupione?",
+        "Czy mogę zobaczyć dokument, na podstawie którego nabył(a) Pan/Pani auto (umowa, faktura)?",
+        "Czy sprzedaje Pan/Pani auto prywatnie, czy w ramach działalności gospodarczej (z fakturą)?",
+        "Gdzie auto było użytkowane i serwisowane przez ostatnie lata?"
+      ]
+    },
+    "historia": {
+      "etykieta": "Historia i szkody",
+      "pytania": [
+        "Czy auto miało jakiekolwiek szkody komunikacyjne lub parkingowe? Jeśli tak – jakie elementy naprawiano i gdzie?",
+        "Które elementy nadwozia były lakierowane lub wymieniane i dlaczego?",
+        "Czy wystrzeliły kiedyś poduszki powietrzne lub napinacze pasów?",
+        "Czy jest historia serwisowa (książka, faktury, wydruk z ASO po VIN) i przy jakim przebiegu był ostatni wpis?",
+        "Czy auto było używane jako taksówka, w nauce jazdy, wypożyczalni lub flocie?",
+        "Czy auto było sprowadzone z zagranicy? Jeśli tak – z jakiego kraju i czy są dokumenty z kraju pochodzenia?",
+        "Czy szkody były likwidowane z OC lub AC i czy mogę zobaczyć kosztorys?"
+      ]
+    },
+    "przebieg": {
+      "etykieta": "Przebieg i licznik",
+      "pytania": [
+        "Jaki jest aktualny przebieg na liczniku i czy może Pan/Pani przesłać jego zdjęcie przy uruchomionym silniku?",
+        "Czy licznik lub zestaw wskaźników był kiedykolwiek wymieniany lub naprawiany? Czy jest na to dokument?",
+        "Czy przebieg potwierdzają wpisy serwisowe lub faktury z przebiegiem?",
+        "Czy przebiegi z badań technicznych w Historii Pojazdu zgadzają się z licznikiem?",
+        "Jak auto było użytkowane – głównie trasa czy miasto, ile kilometrów rocznie?",
+        "Czy zgodzi się Pan/Pani na odczyt przebiegu z modułów sterujących w diagnostyce?",
+        "Czy mogę wpisać deklarowany przebieg do umowy sprzedaży?"
+      ]
+    },
+    "stan_techniczny": {
+      "etykieta": "Stan techniczny",
+      "pytania": [
+        "Jakie usterki są Panu/Pani znane i czy na desce świecą się jakieś kontrolki?",
+        "Kiedy wymieniano rozrząd, olej (także w skrzyni automatycznej), sprzęgło i hamulce? Czy są faktury?",
+        "Czy silnik bierze olej lub płyn chłodzący między wymianami?",
+        "Czy auto było modyfikowane (chiptuning, wydech, zawieszenie, usunięte DPF/EGR)?",
+        "Czy mogę przyjechać na zimny silnik (niegrzany przed wizytą)?",
+        "Czy możliwa jest jazda próbna i sprawdzenie auta w niezależnym warsztacie lub na stacji kontroli pojazdów?",
+        "Jakie naprawy będą potrzebne w najbliższym czasie według Pana/Pani wiedzy?"
+      ]
+    },
+    "dokumenty": {
+      "etykieta": "Dokumenty i formalności",
+      "pytania": [
+        "Jaki jest pełny numer VIN, numer rejestracyjny i data pierwszej rejestracji (potrzebne do Historii Pojazdu)?",
+        "Jakie dokumenty otrzymam przy zakupie (dowód rejestracyjny, karta pojazdu jeśli była wydana, dokument nabycia, polisa OC)?",
+        "Czy auto ma ważne badanie techniczne i OC? Do kiedy?",
+        "Czy auto jest obciążone kredytem, leasingiem, zastawem rejestrowym lub przewłaszczeniem?",
+        "Czy w dowodzie jest więcej współwłaścicieli i czy wszyscy podpiszą umowę lub udzielą pełnomocnictwa?",
+        "Czy instalacja LPG, hak lub inne zmiany są wpisane w dowodzie rejestracyjnym?",
+        "Czy wszystkie numery VIN (tabliczka, nadwozie, szyba, dowód) są zgodne?"
+      ]
+    },
+    "cena": {
+      "etykieta": "Cena i płatność",
+      "pytania": [
+        "Z czego wynika cena i jakie usterki lub koszty zostały w niej uwzględnione?",
+        "Czy cena podlega negocjacji i od czego to zależy?",
+        "Czy możliwa jest płatność przelewem w dniu podpisania umowy?",
+        "Czy cena obejmuje wszystkie opłaty (akcyza, rejestracja, tłumaczenia) w przypadku auta sprowadzonego?",
+        "Czy w cenie są dodatkowe koła, opony lub wyposażenie wymienione w ogłoszeniu?",
+        "Czy będzie faktura, a jeśli tak – VAT 23% czy VAT marża?"
+      ]
+    },
+    "sprzecznosc": {
+      "etykieta": "Niespójności w ogłoszeniu",
+      "pytania": [
+        "Czy może Pan/Pani potwierdzić silnik, skrzynię biegów i wersję wyposażenia (np. zdjęciem dowodu z zasłoniętymi danymi osobowymi)?",
+        "Dlaczego opis różni się od parametrów ogłoszenia lub zdjęć – która informacja jest aktualna?",
+        "Czy elementy wnętrza (kierownica, gałka, pedały, fotel) były wymieniane lub odnawiane?",
+        "Czy wyposażenie było dokładane po zakupie auta (np. nawigacja, kamera, reflektory)?",
+        "Czy rocznik w ogłoszeniu to rok produkcji czy rok pierwszej rejestracji?",
+        "Czy zdjęcia przedstawiają dokładnie ten egzemplarz i kiedy zostały zrobione?"
+      ]
+    },
+    "zdjecia": {
+      "etykieta": "Zdjęcia",
+      "pytania": [
+        "Czy może Pan/Pani przesłać aktualne zdjęcia tego egzemplarza, w tym licznika przy uruchomionym silniku?",
+        "Czy mogę prosić o zdjęcia progów, nadkoli, podwozia i komory silnika?",
+        "Czy może Pan/Pani przesłać zdjęcie tabliczki znamionowej lub numeru VIN pod szybą?",
+        "Kiedy i gdzie zostały zrobione zdjęcia z ogłoszenia?",
+        "Czy na zdjęciach widać wszystkie uszkodzenia i ślady użytkowania?"
+      ]
+    },
+    "inne": {
+      "etykieta": "Kontakt, oględziny i transakcja",
+      "pytania": [
+        "Gdzie i kiedy mogę obejrzeć auto osobiście?",
+        "Czy mogę przyjechać z mechanikiem lub sprawdzić auto na stacji kontroli pojazdów?",
+        "Czy auto jest dostępne od ręki i czy ktoś inny jest umówiony na oględziny?",
+        "Ile kompletów kluczyków jest w zestawie?",
+        "Czy zgodzi się Pan/Pani wpisać do umowy deklarowany przebieg, bezwypadkowość i znane wady?",
+        "Czy oczekuje Pan/Pani zaliczki? (bezpieczniej nie płacić przed obejrzeniem auta i dokumentów)"
+      ]
+    }
+  }
+}

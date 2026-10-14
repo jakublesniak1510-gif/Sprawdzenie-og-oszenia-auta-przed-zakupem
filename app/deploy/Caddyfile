@@ -1,0 +1,20 @@
+# Caddy jako reverse proxy z automatycznym HTTPS (Let's Encrypt).
+# Skopiuj do /etc/caddy/Caddyfile, zamień domenę i: sudo systemctl reload caddy
+# Rekordy DNS A/AAAA domeny muszą wskazywać na VPS, porty 80 i 443 otwarte.
+
+twojadomena.pl, www.twojadomena.pl {
+	# Zdjęcia w formularzu: limit aplikacji to 6 MB – trochę zapasu dla nagłówków.
+	request_body {
+		max_size 8MB
+	}
+	encode zstd gzip
+
+	# Caddy nadpisuje X-Forwarded-For prawdziwym IP klienta – aplikacja ufa mu dzięki TRUST_PROXY=1.
+	reverse_proxy 127.0.0.1:3000 {
+		# Generowanie raportu trwa w tle – żądania HTTP są krótkie, domyślne timeouty wystarczą.
+		health_uri /api/health
+		health_interval 30s
+	}
+
+	# Bez logów dostępowych (adresy IP) – Caddy domyślnie loguje tylko błędy do journald.
+}

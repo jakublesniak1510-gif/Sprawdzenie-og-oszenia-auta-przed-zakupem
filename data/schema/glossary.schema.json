@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "glossary.schema.json",
+  "title": "Słowniczek pojęć z ogłoszeń i raportów (tooltipy)",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["term", "aliases", "category", "short", "explanation"],
+    "additionalProperties": false,
+    "properties": {
+      "term": { "type": "string", "description": "nazwa wyświetlana, np. 'DSG / S tronic'" },
+      "aliases": { "type": "array", "items": { "type": "string" }, "minItems": 1, "description": "małe litery – warianty, po których aplikacja rozpoznaje pojęcie w tekście" },
+      "category": { "type": "string", "enum": ["skrzynia", "naped", "silnik", "lpg", "serwis", "elektryka", "dokumenty", "ubezpieczenie", "podatki", "ogloszenie", "historia", "ogledziny"] },
+      "short": { "type": "string", "maxLength": 120, "description": "jedno zdanie do tooltipa" },
+      "explanation": { "type": "string", "description": "2–3 zdania prostym językiem" }
+    }
+  }
+}

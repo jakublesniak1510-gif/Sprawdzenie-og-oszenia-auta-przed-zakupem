@@ -20,6 +20,69 @@
     "allroad b8"
   ],
   "market_note": "Bardzo popularna na rynku wtórnym, głównie z importu. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Dużo egzemplarzy z 2.0 TDI, Multitronikiem i przebiegami 250+ tys. km.",
+  "price_ranges": [
+    {
+      "years": [
+        2008,
+        2009
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        20000,
+        32000
+      ],
+      "note": "Wersje z 1.8/2.0 TFSI sprzed ok. 2011 (ryzyko zużycia oleju) zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        27000,
+        40000
+      ],
+      "note": "Avant i sedan zbliżone cenowo; quattro +10–15%."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        37000,
+        52000
+      ],
+      "note": "Po liftingu (B8.5) wyraźnie drożej; 3.0 TDI quattro i S line nawet +15–20%."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        46000,
+        65000
+      ],
+      "note": "Allroad i 3.0 TDI powyżej widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 800–1800 zł/rok (duża moc podnosi składkę); AC ok. 2200–5000 zł/rok, wyraźnie wyżej w dużych miastach i dla wersji 4x4/mocnych.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne (wiele wspólnych z grupą VW), ale robocizna droższa niż w VW; komplet tarcz z klockami na przód ok. 700–1200 zł z montażem. Olej w Multitronic/S tronic co ok. 60 tys. km (ok. 800–1500 zł)."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 TDI 143/177 KM po liftingu (2012–2015) z manualem lub S tronic z udokumentowaną wymianą oleju i wałka pompy oleju.",
+    "avoid": "1.8/2.0 TFSI z lat 2008–2011 bez faktury za wymianę tłoków/pierścieni oraz Multitronic bez historii serwisu.",
+    "sweet_spot_years": [
+      2012,
+      2015
+    ]
+  },
   "engines": [
     {
       "code": "2.0 TDI CR 120–177 KM (EA189, m.in. CAGA/CAHA/CJCA/CGLC)",

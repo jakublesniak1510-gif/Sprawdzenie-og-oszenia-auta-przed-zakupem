@@ -1,0 +1,53 @@
+{
+  "plik": "c-przerwa-w-badaniach.txt",
+  "hipotetyczny_format": false,
+  "opis": "Wynik w układzie tabeli (data, wynik, stan drogomierza). Przerwa w badaniach technicznych ok. 3 lata i 5 miesięcy oraz okres bez polisy OC.",
+  "vin": "TESTFD0C1D2345678",
+  "odczyty": [
+    {
+      "data": "2014-04-10",
+      "km": 45200
+    },
+    {
+      "data": "2015-04-14",
+      "km": 62800
+    },
+    {
+      "data": "2016-04-12",
+      "km": 80100
+    },
+    {
+      "data": "2019-09-23",
+      "km": 101500
+    },
+    {
+      "data": "2020-09-21",
+      "km": 118300
+    },
+    {
+      "data": "2021-09-20",
+      "km": 134000
+    },
+    {
+      "data": "2022-09-26",
+      "km": 150700
+    },
+    {
+      "data": "2023-09-25",
+      "km": 166900
+    }
+  ],
+  "pierwszaRejestracja": "2011-04-21",
+  "pierwszaRejestracjaPl": "2011-04-21",
+  "cofniecia": [],
+  "sygnaly": [
+    "przerwa_w_badaniach",
+    "brak_oc_w_okresie"
+  ],
+  "uwagi": [
+    "Przerwa w badaniach technicznych między 12.04.2016 a 23.09.2019 (ok. 3 lata i 5 miesięcy).",
+    "W czasie przerwy przybyło tylko 21 400 km, a w historii jest okres bez polisy OC (13.04.2017 – 22.09.2019) – auto mogło stać lub być wycofane z ruchu; do wyjaśnienia ze sprzedawcą.",
+    "Przebiegi rosną – brak spadków.",
+    "Data w linii o okresie bez OC nie jest odczytem przebiegu."
+  ]
+}

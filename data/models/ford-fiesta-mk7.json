@@ -1,0 +1,452 @@
+{
+  "id": "ford-fiesta-mk7",
+  "make": "Ford",
+  "model": "Fiesta",
+  "generation": "Mk7 (2008–2017)",
+  "years": [
+    2008,
+    2017
+  ],
+  "aliases": [
+    "fiesta mk7",
+    "fiesta mk 7",
+    "ford fiesta mk7",
+    "ford fiesta mk 7",
+    "fiesta mk7 lift",
+    "fiesta mk7.5",
+    "fiesta mk 7.5",
+    "fiesta st mk7",
+    "fiesta mk7 st"
+  ],
+  "market_note": "Bardzo popularne auto miejskie (w polskiej numeracji generacji bywa nazywane Fiestą VI; nowsza generacja z 2017 r. to Mk8). Ceny orientacyjnie ok. 9–30 tys. zł (2026). Dużo aut z LPG i z importu.",
+  "price_ranges": [
+    {
+      "years": [
+        2008,
+        2010
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        9000,
+        14000
+      ],
+      "note": "LPG zbliżone do benzyny; korozja obniża cenę."
+    },
+    {
+      "years": [
+        2011,
+        2013
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        12000,
+        20000
+      ],
+      "note": "Po liftingu (2012/2013) drożej."
+    },
+    {
+      "years": [
+        2014,
+        2017
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        18000,
+        30000
+      ],
+      "note": "1.0 EcoBoost i Titanium w górnej części; ST poza widełkami; Powershift zwykle taniej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 450–900 zł/rok; AC opłacalne raczej dla młodszych roczników (ok. 700–1500 zł/rok).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 200–330 zł, rozrząd Sigma ok. 700–1200 zł. 1.0 EcoBoost wymaga oleju zgodnego z normą Forda."
+  },
+  "buy_advice": {
+    "best_pick": "1.25 82 KM lub 1.4 96 KM z manualem (także z LPG) po liftingu.",
+    "avoid": "1.0 EcoBoost bez historii układu chłodzenia i paska oraz Powershift bez historii napraw.",
+    "sweet_spot_years": [
+      2012,
+      2017
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.25 Duratec 60/82 KM / 1.4 Duratec 96 KM (Sigma)",
+      "fuel": "benzyna",
+      "power_hp": [
+        60,
+        82,
+        96
+      ],
+      "aliases": [
+        "1.25",
+        "1,25",
+        "1.25 duratec",
+        "1.4 duratec",
+        "1,4 duratec",
+        "1.25 benzyna",
+        "1.4 benzyna",
+        "1.4 16v",
+        "1.25 16v"
+      ],
+      "timing": "pasek zębaty – co ok. 120–160 tys. km lub wg wieku; ok. 700–1200 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewka zapłonowa (moduł) i świece",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, często przy wilgotnej pogodzie.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            800
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów."
+        },
+        {
+          "title": "Obudowa termostatu (plastik) i termostat",
+          "symptoms": "Ubytek płynu, wilgotne ślady przy obudowie, słabe ogrzewanie.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu."
+        },
+        {
+          "title": "Luzy zaworowe (silnik bez hydraulicznej kasacji luzów)",
+          "symptoms": "Klekotanie z głowicy lub, przy zbyt małych luzach, wypalanie zaworów – szczególnie istotne przy LPG.",
+          "mileage_km": "co ok. 100 tys. km (z LPG częściej)",
+          "severity": "srednia",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Zapytać o regulację luzów zaworowych; nasłuchiwać klekotania na ciepłym silniku."
+        }
+      ]
+    },
+    {
+      "code": "1.25/1.4 Duratec z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        82,
+        96
+      ],
+      "aliases": [
+        "1.25 lpg",
+        "1,25 lpg",
+        "1.4 lpg",
+        "1,4 lpg",
+        "1.25 gaz",
+        "1.4 gaz",
+        "1.25 b+lpg",
+        "1.25 benzyna+gaz",
+        "1.4 b+lpg",
+        "1.4 benzyna+gaz"
+      ],
+      "timing": "pasek zębaty (jak w wersji benzynowej)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.0 EcoBoost 100/125/140 KM (3-cylindrowy turbo, od 2013)",
+      "fuel": "benzyna",
+      "power_hp": [
+        100,
+        125,
+        140
+      ],
+      "aliases": [
+        "1.0 ecoboost",
+        "1,0 ecoboost",
+        "1.0 eco",
+        "1.0 ecoboost 100",
+        "1.0 ecoboost 125",
+        "1.0 scti"
+      ],
+      "timing": "pasek zębaty pracujący w oleju – wymiana wg producenta; ok. 2–4,5 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Przegrzanie silnika przez wyciek płynu chłodzącego (przewody, zbiorniczek)",
+          "symptoms": "Kontrolka temperatury, ubytek płynu, w skrajnym przypadku pęknięcie lub odkształcenie głowicy. Producent prowadził akcje serwisowe dotyczące przewodów chłodzenia.",
+          "mileage_km": "40–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            500,
+            12000
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieków przy zbiorniczku i przewodach; zapytać o akcje serwisowe w ASO i ewentualne przegrzanie silnika."
+        },
+        {
+          "title": "Pasek rozrządu w kąpieli olejowej – degradacja",
+          "symptoms": "Fragmenty paska w misce olejowej mogą zatkać smok pompy oleju – spadek ciśnienia oleju i ryzyko uszkodzenia silnika.",
+          "mileage_km": "100–200 tys. km lub ok. 8–10 lat",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            4500
+          ],
+          "check_at_inspection": "Zapytać o stan i wymianę paska; zwrócić uwagę na kontrolkę ciśnienia oleju; mechanik może ocenić stan paska."
+        },
+        {
+          "title": "Drgania i poduszki silnika (3-cylindrowy)",
+          "symptoms": "Wyczuwalne drgania na biegu jałowym, nasilone przy zużytych poduszkach.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z włączoną klimatyzacją."
+        }
+      ]
+    },
+    {
+      "code": "1.4 TDCi 68/70 KM (DV4)",
+      "fuel": "diesel",
+      "power_hp": [
+        68,
+        70
+      ],
+      "aliases": [
+        "1.4 tdci",
+        "1,4 tdci",
+        "1.4tdci",
+        "1.4 diesel"
+      ],
+      "timing": "pasek zębaty – co ok. 150–240 tys. km wg wersji; ok. 800–1400 zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki; wtryskiwacze są wrażliwe na jakość paliwa i wodę w paliwie.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt dawek wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Turbosprężarka",
+          "symptoms": "Gwizd, spadek mocy, niebieski dym, olej w dolocie.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2000,
+            4500
+          ],
+          "check_at_inspection": "Pełne przyspieszenie, nasłuchiwanie gwizdu, ocena dymu."
+        }
+      ]
+    },
+    {
+      "code": "1.6 TDCi 90/95 KM (DV6)",
+      "fuel": "diesel",
+      "power_hp": [
+        90,
+        95
+      ],
+      "aliases": [
+        "1.6 tdci",
+        "1,6 tdci",
+        "1.6tdci",
+        "1.6 tdci 95",
+        "1.6 tdci 90"
+      ],
+      "timing": "pasek zębaty – co ok. 150–240 tys. km wg wersji; ok. 900–1500 zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Turbosprężarka – niedostateczne smarowanie (zapchane sitko/śruba przewodu olejowego)",
+          "symptoms": "Gwizd, spadek mocy, niebieski dym, olej w dolocie; nowe turbo potrafi szybko ulec awarii, jeśli nie wymieniono przewodu zasilającego z sitkiem.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            4500
+          ],
+          "check_at_inspection": "Pełne przyspieszenie, nasłuchiwanie gwizdu, ocena dymu. Zapytać, czy przy wymianie turbo wymieniono przewód zasilający olejem i olej z filtrem."
+        },
+        {
+          "title": "Nieszczelne podkładki wtryskiwaczy (nagar wokół wtryskiwaczy)",
+          "symptoms": "Zapach spalin w kabinie, „pykanie” spod pokrywy silnika, czarny nagar wokół wtryskiwaczy, trudny rozruch.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            2500
+          ],
+          "check_at_inspection": "Zdjąć pokrywę silnika (jeśli sprzedawca pozwoli) i obejrzeć okolice wtryskiwaczy; nasłuchiwać pykania na zimnym silniku."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2800,
+            5000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia Powershift DPS6 (6DCT250, suche sprzęgła; 1.6 i 1.0 EcoBoost z automatem)",
+      "symptoms": "Szarpanie i drgania przy ruszaniu (judder), stuki, opóźnione reakcje, komunikat o usterce skrzyni, tryb awaryjny. Wycieki oleju na sprzęgła z uszczelniaczy.",
+      "mileage_km": "50–150 tys. km",
+      "severity": "wysoka",
+      "cost_pln": [
+        2500,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna: ruszanie pod górkę, korek, cofanie, manewry parkingowe. Diagnostyka modułu TCM. Zapytać o wymianę sprzęgieł, uszczelniaczy i sterownika (faktury)."
+    },
+    {
+      "title": "Korozja – tylne nadkola, dolne krawędzie drzwi i klapy, progi",
+      "symptoms": "Bąble lakieru i ogniska rdzy na nadkolach, krawędziach drzwi i klapy bagażnika, zwłaszcza w starszych egzemplarzach i po naprawach.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        3500
+      ],
+      "check_at_inspection": "Obejrzeć nadkola, progi i dolne krawędzie drzwi oraz klapy; zmierzyć lakier w miejscach napraw."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, górne mocowania amortyzatorów, tuleje belki",
+      "symptoms": "Stuki na nierównościach, skrzypienie przy skręcaniu, pływanie tyłu.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach i skręcanie na postoju; kontrola na podnośniku."
+    },
+    {
+      "title": "Elektryka – centralny zamek, podgrzewana szyba, radio/SYNC, czujniki",
+      "symptoms": "Niedziałający zamek z pilota, przepalone ścieżki podgrzewanej szyby, zawieszanie radia lub SYNC, błędy czujników.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        1500
+      ],
+      "check_at_inspection": "Sprawdzić zamek z pilota i z kluczyka, podgrzewaną szybę (jeśli jest), radio, Bluetooth i czujniki."
+    },
+    {
+      "title": "Klimatyzacja – skraplacz i sprężarka",
+      "symptoms": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Włączyć klimatyzację na maksimum i sprawdzić temperaturę z nawiewów po kilku minutach; obejrzeć skraplacz przez grill."
+    }
+  ],
+  "inspection_tips": [
+    "Ustalić silnik i skrzynię – 1.0 EcoBoost i Powershift wymagają szczególnej ostrożności.",
+    "W 1.0 EcoBoost sprawdzić poziom płynu chłodzącego i zapytać o historię przegrzania oraz akcje serwisowe w ASO.",
+    "W silnikach Sigma zapytać o regulację luzów zaworowych (zwłaszcza z LPG).",
+    "Obejrzeć nadkola, progi i krawędzie drzwi pod kątem korozji.",
+    "W Powershift przetestować ruszanie w korku, pod górkę i cofanie – szarpanie to sygnał ostrzegawczy.",
+    "Potwierdzić przebieg w historii badań technicznych.",
+    "Przy LPG sprawdzić wpis w dowodzie, ważność butli i pracę na gazie po rozgrzaniu."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Jaki to dokładnie silnik i skrzynia (manualna czy Powershift)?",
+    "Kiedy wymieniano pasek rozrządu? Czy są faktury?",
+    "Czy silnik się przegrzewał lub był naprawiany układ chłodzenia (1.0 EcoBoost)?",
+    "Czy instalacja LPG jest wpisana w dowodzie i kiedy była serwisowana?",
+    "Czy auto miało szkody i czy były naprawy blacharskie?"
+  ],
+  "summary": "Fiesta Mk7 dobrze się prowadzi i jest tania w utrzymaniu. Najbezpieczniejsze są proste benzyny 1.25/1.4 (także z dobrze serwisowanym LPG) i 1.6 TDCi z historią. Ostrożnie z 1.0 EcoBoost (układ chłodzenia, pasek w oleju) i skrzynią Powershift.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

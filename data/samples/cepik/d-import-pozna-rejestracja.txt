@@ -1,0 +1,28 @@
+Historia Pojazdu
+DANE FIKCYJNE – próbka testowa, przybliżony układ wyniku.
+
+Dane pojazdu
+Marka: BMW
+Model: SERIA 3
+Rok produkcji: 2013
+Pojemność silnika: 1995 cm3
+Moc silnika: 135 kW
+Rodzaj paliwa: OLEJ NAPĘDOWY
+Numer VIN: TESTBM0F3A0123456
+Numer rejestracyjny: XX 00004
+
+Rejestracja
+Data pierwszej rejestracji (za granicą): 15.02.2013
+Data pierwszej rejestracji w Polsce: 18.11.2021
+Pojazd sprowadzony z zagranicy. Informacje sprzed rejestracji w Polsce nie są dostępne w Centralnej Ewidencji Pojazdów.
+
+Badania techniczne
+16.11.2021 Badanie techniczne pojazdu sprowadzonego (przed pierwszą rejestracją w kraju) – wynik pozytywny – 168 230 km
+14.11.2022 Badanie techniczne okresowe – wynik pozytywny – 184 900 km
+13.11.2023 Badanie techniczne okresowe – wynik pozytywny – 203 450 km
+12.11.2024 Badanie techniczne okresowe – wynik pozytywny – 219 800 km
+17.11.2025 Badanie techniczne okresowe – wynik pozytywny – 236 100 km
+
+Właściciele w Polsce
+18.11.2021 Rejestracja na właściciela (osoba fizyczna)
+06.05.2025 Zmiana właściciela (osoba fizyczna)

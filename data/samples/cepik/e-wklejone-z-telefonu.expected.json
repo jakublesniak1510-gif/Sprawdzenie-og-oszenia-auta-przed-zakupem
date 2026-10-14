@@ -1,0 +1,41 @@
+{
+  "plik": "e-wklejone-z-telefonu.txt",
+  "hipotetyczny_format": false,
+  "opis": "Tekst wklejony z telefonu: zlepione linie bez spacji, mieszane separatory dat (/, -, ., ISO, przyrostek „r.”), kropka i spacja nierozdzielająca jako separator tysięcy, przebieg bez spacji przed „km”, tabulatory.",
+  "vin": "TESTTY0P1A2345678",
+  "odczyty": [
+    {
+      "data": "2018-03-12",
+      "km": 41250
+    },
+    {
+      "data": "2020-03-10",
+      "km": 63900
+    },
+    {
+      "data": "2021-03-15",
+      "km": 74120
+    },
+    {
+      "data": "2022-03-14",
+      "km": 85600
+    },
+    {
+      "data": "2023-03-13",
+      "km": 96030
+    },
+    {
+      "data": "2024-03-18",
+      "km": 107400
+    }
+  ],
+  "pierwszaRejestracja": "2015-03-20",
+  "pierwszaRejestracjaPl": null,
+  "cofniecia": [],
+  "sygnaly": [],
+  "uwagi": [
+    "Data pierwszej rejestracji bez wskazania kraju – pierwszaRejestracjaPl nieustalona z tekstu (null).",
+    "Przebiegi rosną – brak spadków.",
+    "W odczycie 14-03-2022 separator tysięcy to spacja nierozdzielająca (U+00A0)."
+  ]
+}

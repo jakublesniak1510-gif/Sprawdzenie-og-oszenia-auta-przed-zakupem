@@ -1,0 +1,515 @@
+{
+  "id": "vw-polo-5",
+  "make": "Volkswagen",
+  "model": "Polo",
+  "generation": "V (6R/6C, 2009–2017)",
+  "years": [
+    2009,
+    2017
+  ],
+  "aliases": [
+    "polo 5",
+    "polo v",
+    "polo 6r",
+    "polo 6c",
+    "vw polo 5",
+    "vw polo v",
+    "vw polo 6r",
+    "volkswagen polo 5",
+    "volkswagen polo v",
+    "polo 5 lift",
+    "polo v lift",
+    "polo 6r lift",
+    "cross polo v"
+  ],
+  "market_note": "Popularne auto miejskie, dużo egzemplarzy z importu i polskich salonów. Ceny orientacyjnie ok. 11–33 tys. zł (2026). Od 2014 (6C) zmodernizowane silniki EA211 i 1.4 TDI.",
+  "price_ranges": [
+    {
+      "years": [
+        2009,
+        2011
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        11000,
+        17000
+      ],
+      "note": "1.2 12V najtańszy; 1.6 TDI i 1.2 TSI drożej."
+    },
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        15000,
+        23000
+      ],
+      "note": "Wersje 5-drzwiowe nieznacznie drożej."
+    },
+    {
+      "years": [
+        2015,
+        2017
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        21000,
+        33000
+      ],
+      "note": "Po liftingu (6C, 2014); GTI poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 450–900 zł/rok; AC opłacalne raczej dla młodszych roczników (ok. 700–1500 zł/rok).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Części bardzo tanie i dostępne; łańcuch 1.2 12V/1.2 TSI EA111 ok. 1,5–4,5 tys. zł."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 16V lub 1.0/1.2 TSI EA211 po liftingu (2014–2017) z manualem.",
+    "avoid": "1.2 12V 60 KM i 1.2 TSI EA111 bez udokumentowanej wymiany łańcucha oraz DQ200 bez historii.",
+    "sweet_spot_years": [
+      2014,
+      2017
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.2 12V 60/70 KM (3-cylindrowy, m.in. CGPA)",
+      "fuel": "benzyna",
+      "power_hp": [
+        60,
+        70
+      ],
+      "aliases": [
+        "1.2 12v",
+        "1,2 12v",
+        "1.2 60",
+        "1.2 70",
+        "1.2 benzyna",
+        "1.2 mpi",
+        "cgpa",
+        "cgpb"
+      ],
+      "timing": "łańcuch rozrządu – wrażliwy na rozciąganie; wymiana ok. 1,5–2,5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu",
+          "symptoms": "Grzechotanie po zimnym starcie, nierówna praca, kontrolka silnika; przeskoczenie łańcucha uszkadza zawory.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            1500,
+            3500
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuchiwanie od strony rozrządu; zapytać o fakturę za wymianę łańcucha."
+        },
+        {
+          "title": "Wypalone zawory / spadek kompresji",
+          "symptoms": "Nierówna praca, wypadanie zapłonów na jednym cylindrze, trudny rozruch.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            1500,
+            4000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania; obserwacja pracy na zimnym silniku; odczyt błędów wypadania zapłonów."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Drgania silnika i zużyte poduszki",
+          "symptoms": "Wyczuwalne drgania na biegu jałowym (charakterystyczne dla 3 cylindrów, ale nasilone przy zużytych poduszkach).",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z włączoną klimatyzacją i na biegu wstecznym."
+        }
+      ]
+    },
+    {
+      "code": "1.2 TSI 90/105 KM (EA111 do 2014, potem EA211)",
+      "fuel": "benzyna",
+      "power_hp": [
+        90,
+        105
+      ],
+      "aliases": [
+        "1.2 tsi",
+        "1,2 tsi",
+        "1.2tsi",
+        "1.2 tsi 105",
+        "1.2 tsi 90",
+        "cbza",
+        "cbzb",
+        "cjza"
+      ],
+      "timing": "EA111: łańcuch rozrządu (ok. 2,5–4,5 tys. zł); EA211 (od 2014): pasek zębaty",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu i napinacz (EA111)",
+          "symptoms": "Grzechotanie przez 1–3 s po uruchomieniu zimnego silnika, kontrolka silnika, błędy korelacji wałka rozrządu i wału korbowego. W skrajnym przypadku przeskoczenie łańcucha i uszkodzenie zaworów.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Uruchomić silnik zimny (poprosić sprzedawcę, by nie grzał auta przed wizytą) i słuchać od strony rozrządu. W diagnostyce sprawdzić błędy i odchyłkę faz rozrządu. Zapytać o fakturę za wymianę łańcucha z napinaczem i prowadnicami."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Nierówna praca i szarpanie na niskich obrotach (sterowanie doładowaniem / przepustnica)",
+          "symptoms": "Falujące obroty, przygasanie przy ruszaniu, chwilowe spadki mocy, błędy doładowania.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            2500
+          ],
+          "check_at_inspection": "Jazda próbna z ruszaniem i lekkim przyspieszaniem od 1200–1500 obr./min; odczyt błędów silnika. Przyczyną bywa brudna przepustnica, nieszczelność dolotu lub nastawnik zaworu upustowego turbiny."
+        }
+      ]
+    },
+    {
+      "code": "1.4 16V 85 KM (MPI)",
+      "fuel": "benzyna",
+      "power_hp": [
+        85
+      ],
+      "aliases": [
+        "1.4 16v",
+        "1,4 16v",
+        "1.4 mpi",
+        "1,4 mpi",
+        "1.4 85",
+        "1.4 benzyna",
+        "cgga"
+      ],
+      "timing": "pasek zębaty – co ok. 90–120 tys. km; ok. 800–1300 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Zwiększone zużycie oleju",
+          "symptoms": "Ubytki oleju między wymianami, niebieskawy dym po postoju.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić poziom oleju i dym po rozruchu; zapytać o dolewki."
+        },
+        {
+          "title": "Termostat i czujnik temperatury",
+          "symptoms": "Silnik długo się nagrzewa, słabe ogrzewanie, wahania wskazania temperatury.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            700
+          ],
+          "check_at_inspection": "Obserwować temperaturę płynu na jeździe próbnej i skuteczność ogrzewania."
+        }
+      ]
+    },
+    {
+      "code": "1.4 16V / 1.2 12V z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        70,
+        85
+      ],
+      "aliases": [
+        "1.4 lpg",
+        "1,4 lpg",
+        "1.2 lpg",
+        "1,2 lpg",
+        "1.4 gaz",
+        "1.4 b+lpg",
+        "1.4 benzyna+gaz",
+        "1.2 b+lpg",
+        "1.2 benzyna+gaz"
+      ],
+      "timing": "jak w wersji benzynowej",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.6 TDI CR 75/90/105 KM (EA189, do 2014) / 1.4 TDI 75/90/105 KM (3-cylindrowy, od 2014)",
+      "fuel": "diesel",
+      "power_hp": [
+        75,
+        90,
+        105
+      ],
+      "aliases": [
+        "1.6 tdi",
+        "1,6 tdi",
+        "1.6tdi",
+        "1.6 tdi cr",
+        "1.4 tdi",
+        "1,4 tdi",
+        "1.4tdi",
+        "cayc",
+        "cayb"
+      ],
+      "timing": "pasek zębaty – ok. 150–180 tys. km; ok. 1,2–2 tys. zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Przepływomierz powietrza (MAF)",
+          "symptoms": "Spadek mocy, tryb awaryjny, kontrolka silnika.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Diagnostyka – wartości przepływu powietrza; pełne przyspieszenie na 3 biegu."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2500,
+            4500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.0 MPI 60/75 KM (EA211, 3-cylindrowy, od 2014)",
+      "fuel": "benzyna",
+      "power_hp": [
+        60,
+        75
+      ],
+      "aliases": [
+        "1.0 mpi",
+        "1,0 mpi",
+        "1.0 benzyna",
+        "1.0 60",
+        "1.0 75",
+        "chya",
+        "chyb"
+      ],
+      "timing": "pasek zębaty (EA211) – wymiana wg serwisu",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Wyciek z pompy wody / obudowy termostatu (plastikowy moduł)",
+          "symptoms": "Ubytek płynu chłodzącego, zapach słodkawego płynu, osad (biały/różowy) pod modułem pompy, kontrolka temperatury lub poziomu płynu.",
+          "mileage_km": "60–160 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu w zbiorniczku i ślady zaschniętego płynu w okolicy pompy (od strony skrzyni biegów) oraz pod autem. Zapytać, czy płyn był dolewany."
+        },
+        {
+          "title": "Drgania i poduszki silnika (3-cylindrowy)",
+          "symptoms": "Wyczuwalne drgania na biegu jałowym, nasilone przy zużytych poduszkach.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z włączoną klimatyzacją."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia DSG DQ200 (7-biegowa, suche sprzęgła) – mechatronika i zespół sprzęgieł",
+      "symptoms": "Szarpanie przy ruszaniu i przy zmianie 1–2, stuki przy zwalnianiu, migająca kontrolka skrzyni/PRND, tryb awaryjny (jazda tylko na wybranych biegach), brak możliwości wrzucenia biegu.",
+      "mileage_km": "80–200 tys. km (bywa wcześniej przy jeździe miejskiej)",
+      "severity": "wysoka",
+      "cost_pln": [
+        3000,
+        9000
+      ],
+      "check_at_inspection": "Jazda próbna od zimnego: ruszanie pod górkę, jazda w korku 1–2–1, cofanie i parkowanie. Odczyt błędów skrzyni i wartości adaptacji/zużycia sprzęgieł w diagnostyce. Zapytać o faktury za mechatronikę lub sprzęgło (regeneracja mechatroniki ok. 2,5–4,5 tys. zł, sprzęgło 3,5–6 tys. zł, nowa mechatronika więcej)."
+    },
+    {
+      "title": "Zawieszenie przednie – łączniki stabilizatora, poduszki amortyzatorów, tuleje wahaczy",
+      "symptoms": "Stuki na nierównościach i przy skręcaniu, skrzypienie, nierówne zużycie opon.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, skręcanie na postoju; kontrola na podnośniku."
+    },
+    {
+      "title": "Elektryka – centralny zamek, szyby, czujniki, podgrzewanie foteli",
+      "symptoms": "Niedziałające zamki (mikrostyki), szyby, czujniki parkowania, przepalone podgrzewanie foteli, błędy ABS.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        1200
+      ],
+      "check_at_inspection": "Sprawdzić wszystkie zamki, szyby i przełączniki; odczyt błędów ABS i komfortu."
+    },
+    {
+      "title": "Klimatyzacja – skraplacz i sprężarka",
+      "symptoms": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Włączyć klimatyzację na maksimum i sprawdzić temperaturę z nawiewów po kilku minutach; obejrzeć skraplacz przez grill."
+    },
+    {
+      "title": "Woda w kabinie – zatkane odpływy podszybia i nieszczelności",
+      "symptoms": "Mokre dywaniki z przodu, zaparowane szyby, zapach stęchlizny, korozja złączy elektrycznych pod fotelami.",
+      "severity": "srednia",
+      "cost_pln": [
+        200,
+        1500
+      ],
+      "check_at_inspection": "Podnieść dywaniki przód i tył, sprawdzić wnękę koła zapasowego. Zapytać o czyszczenie odpływów."
+    }
+  ],
+  "inspection_tips": [
+    "Zimny rozruch 1.2 12V i 1.2 TSI EA111 – grzechotanie łańcucha przez kilka sekund to sygnał do wymiany.",
+    "W DSG DQ200 jazda w korku, ruszanie pod górkę i cofanie; odczyt adaptacji sprzęgieł.",
+    "Potwierdzić przebieg w historii badań i w modułach – wiele aut z importu.",
+    "Zmierzyć lakier, zwłaszcza przedni pas, maskę i błotniki.",
+    "Sprawdzić wilgoć pod dywanikami i odpływy podszybia.",
+    "W 1.2 12V obserwować pracę na wolnych obrotach (wypalone zawory, drgania).",
+    "W dieslu sprawdzić stan DPF i ślady ingerencji w wydech."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu czy z importu?",
+    "Kiedy wymieniano rozrząd (łańcuch lub pasek)? Czy są faktury?",
+    "Czy były naprawy skrzyni DSG?",
+    "Czy auto miało szkody i które elementy lakierowano?",
+    "Czy jest książka serwisowa lub historia z ASO?"
+  ],
+  "summary": "Polo V to solidne auto miejskie z tanimi częściami. Najlepiej wypadają 1.4 16V, 1.0 MPI (od 2014) i diesle 1.6/1.4 TDI z historią. Ostrożnie z 1.2 12V i 1.2 TSI EA111 (łańcuch rozrządu) oraz DSG DQ200 bez historii.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

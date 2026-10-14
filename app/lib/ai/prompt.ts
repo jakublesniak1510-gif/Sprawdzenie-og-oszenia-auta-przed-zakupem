@@ -48,6 +48,13 @@ liczba_zdjec: ${req.zdjecia.length}
           ostatni_odczyt: req.analizaPrzebiegu.ostatni,
           deklarowany_nizszy_od_ostatniego_odczytu: req.analizaPrzebiegu.deklarowanyNizszyOdOstatniego,
         },
+        ...(req.cepik
+          ? {
+              pierwsza_rejestracja: req.cepik.pierwszaRejestracja,
+              pierwsza_rejestracja_w_polsce: req.cepik.pierwszaRejestracjaPl,
+              uwagi_z_historii_pojazdu: req.cepik.uwagi,
+            }
+          : {}),
       },
       null,
       1,

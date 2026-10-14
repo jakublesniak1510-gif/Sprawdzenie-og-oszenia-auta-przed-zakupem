@@ -1,0 +1,49 @@
+Historia Pojazdu
+Raport wygenerowany: 14.10.2026, 12:31
+DANE FIKCYJNE – próbka testowa, przybliżony układ wyniku.
+
+Dane pojazdu
+Marka: SKODA
+Model: OCTAVIA
+Rodzaj pojazdu: SAMOCHÓD OSOBOWY
+Rok produkcji: 2016
+Pojemność silnika: 1968 cm3
+Moc silnika: 110 kW (150 KM)
+Rodzaj paliwa: OLEJ NAPĘDOWY
+Numer rejestracyjny: XX 00001
+Numer VIN: TESTSK0A1B2C34567
+Data pierwszej rejestracji: 12.05.2016
+
+Aktualny stan
+Status rejestracji: ZAREJESTROWANY
+Ubezpieczenie OC: AKTUALNE
+Badanie techniczne: AKTUALNE (ważne do 11.05.2027)
+Kradzież: pojazd nie figuruje jako kradziony
+Liczba właścicieli: 2
+
+Oś czasu
+12.05.2016  Pierwsza rejestracja w Polsce
+            Właściciel: osoba prawna
+10.05.2019  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 61 234 km
+11.05.2021  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 104 905 km
+02.03.2022  Zmiana właściciela
+            Właściciel: osoba fizyczna
+09.05.2022  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 128 004 km
+15.05.2023  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 149 870 km
+13.05.2024  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 171 220 km
+12.05.2025  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 190 455 km
+11.05.2026  Badanie techniczne
+            Wynik: POZYTYWNY
+            Stan licznika: 208 930 km

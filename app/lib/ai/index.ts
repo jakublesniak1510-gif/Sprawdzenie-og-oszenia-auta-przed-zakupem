@@ -3,6 +3,7 @@ import { normalize, type Fault } from "../models";
 import { ClaudeProvider } from "./claude";
 import { MockProvider } from "./mock";
 import type { AiProvider, AiReportRequest } from "./types";
+import { recordAiUsage } from "./usage";
 
 export type { AiReportRequest } from "./types";
 
@@ -79,8 +80,8 @@ export function postProcess(report: Report, req: AiReportRequest): Report {
   return r;
 }
 
-export async function generateReport(req: AiReportRequest): Promise<Report> {
+export async function generateReport(req: AiReportRequest, opts: { reportId?: string } = {}): Promise<Report> {
   const provider = getProvider();
-  const raw = await provider.generate(req);
+  const raw = await provider.generate(req, { onUsage: (u) => recordAiUsage(opts.reportId ?? null, u) });
   return postProcess(raw, req);
 }

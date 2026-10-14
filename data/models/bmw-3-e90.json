@@ -27,6 +27,57 @@
     "e91 lci"
   ],
   "market_note": "Bardzo popularna, często sprowadzana z Niemiec; ceny orientacyjnie ok. 18–45 tys. zł (2026). Dużo egzemplarzy po intensywnej eksploatacji, tuningu i z cofniętymi licznikami.",
+  "price_ranges": [
+    {
+      "years": [
+        2005,
+        2007
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        15000,
+        25000
+      ],
+      "note": "Coupe E92 i cabrio E93 droższe o 20–40%."
+    },
+    {
+      "years": [
+        2008,
+        2010
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        20000,
+        33000
+      ],
+      "note": "Po liftingu (LCI) drożej; 330d/335i powyżej widełek."
+    },
+    {
+      "years": [
+        2011,
+        2012
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        28000,
+        43000
+      ],
+      "note": "xDrive +5–10%; M-pakiet i automat podnoszą cenę."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 800–1800 zł/rok (duża moc podnosi składkę); AC ok. 2200–5000 zł/rok, wyraźnie wyżej w dużych miastach i dla wersji 4x4/mocnych.",
+    "service_interval_km": 12000,
+    "typical_parts_note": "Części szeroko dostępne (także zamienniki), ceny wyższe niż w autach popularnych. Olej z filtrem ok. 400–650 zł; fabryczny interwał do 30 tys. km warto skrócić do 10–15 tys. km (łańcuch N47/N43). Opony run-flat droższe."
+  },
+  "buy_advice": {
+    "best_pick": "320i/325i N46/N52 lub 320d M47 (do 2007) z historią serwisową; spośród diesli N47 tylko z fakturą za łańcuch rozrządu.",
+    "avoid": "318d/320d N47 z lat 2007–2010 bez dowodu wymiany łańcucha i egzemplarze po tuningu.",
+    "sweet_spot_years": [
+      2008,
+      2011
+    ]
+  },
   "engines": [
     {
       "code": "318d/320d N47 (2007–2012), 143/177/184 KM",

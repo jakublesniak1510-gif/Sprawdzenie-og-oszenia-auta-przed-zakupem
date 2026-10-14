@@ -77,4 +77,18 @@ describe("ClaudeProvider", () => {
     const { client } = fakeClient([{ stop_reason: "refusal", content: [] }]);
     await expect(new ClaudeProvider(client).generate(req)).rejects.toThrow(/odmówił/);
   });
+
+  it("prompt caching: cache_control na narzędziu i prompcie systemowym, nie na danych użytkownika; usage do onUsage", async () => {
+    const valid = await new MockProvider().generate(req);
+    const usage = { input_tokens: 900, cache_read_input_tokens: 5000, cache_creation_input_tokens: 0, output_tokens: 3000 };
+    const { client, calls } = fakeClient([{ ...toolMsg(valid), model: "claude-sonnet-5-5", usage }]);
+    const seen: unknown[] = [];
+    await new ClaudeProvider(client).generate(req, { onUsage: (u) => seen.push(u) });
+    const p = calls[0] as Record<string, any>;
+    expect(p.tools[0].cache_control).toEqual({ type: "ephemeral" });
+    expect(p.system[0].cache_control).toEqual({ type: "ephemeral" });
+    expect(JSON.stringify(p.messages)).not.toContain("cache_control");
+    expect(p.cache_control).toBeUndefined();
+    expect(seen).toEqual([{ model: "claude-sonnet-5-5", ...usage }]);
+  });
 });

@@ -18,6 +18,69 @@
     "qashqai j11 lift"
   ],
   "market_note": "Jeden z najpopularniejszych SUV-ów w Polsce, dużo aut z polskich salonów i importu. Ceny orientacyjnie ok. 45–85 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        41000,
+        51000
+      ],
+      "note": "1.2 DIG-T z wczesnych roczników w dolnej części widełek."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 170000,
+      "price_pln": [
+        48000,
+        60000
+      ],
+      "note": "Xtronic zbliżony, 4x4 +5–8%."
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "km_max": 140000,
+      "price_pln": [
+        58000,
+        73000
+      ],
+      "note": "Po liftingu (2017); 1.3 DIG-T i Tekna drożej."
+    },
+    {
+      "years": [
+        2020,
+        2021
+      ],
+      "km_max": 100000,
+      "price_pln": [
+        70000,
+        88000
+      ],
+      "note": "Wersje N-Connecta/Tekna w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 700–1400 zł/rok; AC ok. 1600–3500 zł/rok – popularne SUV-y bywają częściej kradzione, co podnosi AC w dużych miastach.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. Olej w Xtronic co ok. 60 tys. km (ok. 600–1000 zł) – często pomijany."
+  },
+  "buy_advice": {
+    "best_pick": "1.3 DIG-T lub 1.5 dCi po liftingu (2018–2021) z polskiego salonu.",
+    "avoid": "1.2 DIG-T z lat 2014–2015 bez potwierdzenia aktualizacji i stanu łańcucha oraz Xtronic bez historii oleju.",
+    "sweet_spot_years": [
+      2018,
+      2021
+    ]
+  },
   "engines": [
     {
       "code": "1.2 DIG-T 115 KM",

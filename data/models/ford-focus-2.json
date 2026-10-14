@@ -22,6 +22,57 @@
     "focus cc"
   ],
   "market_note": "Bardzo popularny kompakt w cenie ok. 7–18 tys. zł (2026). Dużo egzemplarzy z LPG i wysokimi przebiegami. Dobrze się prowadzi, ale wymaga sprawdzenia korozji.",
+  "price_ranges": [
+    {
+      "years": [
+        2004,
+        2007
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        5500,
+        10000
+      ],
+      "note": "Stan korozji i LPG mocno różnicują cenę."
+    },
+    {
+      "years": [
+        2008,
+        2009
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        8000,
+        13000
+      ],
+      "note": "Po liftingu (2008); kombi nieznacznie drożej."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        10000,
+        17000
+      ],
+      "note": "ST i 2.0 TDCi w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 550–1100 zł/rok; AC przy wartości auta poniżej ok. 20 tys. zł zwykle nieopłacalne.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 200–350 zł. Benzyny 1.6 bez hydraulicznej kasacji luzów – regulacja zaworów ok. 400–900 zł, ważna przy LPG."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 16V lub 1.8/2.0 Duratec (także z dobrze dobranym LPG) po liftingu 2008, bez korozji progów.",
+    "avoid": "Egzemplarze z korozją nadkoli i progów oraz 1.6 TDCi bez historii wymian oleju (turbo, wałek rozrządu).",
+    "sweet_spot_years": [
+      2008,
+      2011
+    ]
+  },
   "engines": [
     {
       "code": "1.6 16V Duratec 100 KM / 1.6 Ti-VCT 115 KM",

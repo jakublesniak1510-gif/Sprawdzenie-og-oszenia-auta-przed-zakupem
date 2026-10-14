@@ -6,10 +6,11 @@ import { Disclaimer } from "@/components/Disclaimer";
 import { AutoRefresh } from "@/components/report/AutoRefresh";
 import { FeedbackForm } from "@/components/report/FeedbackForm";
 import { PrintButton } from "@/components/report/PrintButton";
+import { PrintHeader } from "@/components/report/PrintHeader";
 import { ReportView } from "@/components/report/ReportView";
 import { getReport, hasFeedback, markPaid, parseInput, parseReport } from "@/lib/db";
-import { runGeneration } from "@/lib/generate";
 import { checkSessionPaid, paymentsSkipped } from "@/lib/payments";
+import { enqueueGeneration } from "@/lib/queue";
 import { retryGeneration } from "./actions";
 
 export const dynamic = "force-dynamic";
@@ -32,6 +33,9 @@ export default async function RaportPage({
 
   // Powrót ze Stripe: jeśli webhook jeszcze nie dotarł, sprawdzamy sesję bezpośrednio.
   const sessionId = typeof sp.session_id === "string" ? sp.session_id : null;
+  // Powrót z e-maila „Czy kupiłeś?” (link jednego kliknięcia) – zamiast formularza pokazujemy podziękowanie.
+  const fbRaw = sp.feedback ?? sp.kupil ?? sp.odp;
+  const feedbackParam = fbRaw === "tak" || fbRaw === "nie" ? fbRaw : null;
   if (row.status === "pending_payment" && sessionId && !paymentsSkipped() && sessionId === row.stripe_session_id) {
     try {
       const s = await checkSessionPaid(sessionId);
@@ -42,11 +46,24 @@ export default async function RaportPage({
     row = getReport(id)!;
   }
   // Opłacony, ale generowanie nie wystartowało (np. restart serwera) – uruchamiamy. Idempotentne.
-  if (row.status === "paid") after(() => runGeneration(id));
+  if (row.status === "paid") after(() => enqueueGeneration(id));
 
   const input = parseInput(row);
   const created = new Date(row.created_at).toLocaleDateString("pl-PL");
   const expires = new Date(row.expires_at).toLocaleDateString("pl-PL");
+
+  if (row.status === "expired") {
+    return (
+      <div className="space-y-4 py-8 text-center">
+        <h1 className="text-2xl font-bold">Płatność nie została dokończona</h1>
+        <p className="text-slate-700">Sesja płatności wygasła. Dane z formularza są zapisane – możesz dokończyć płatność bez ponownego wypełniania.</p>
+        <a href={`/api/reports/${id}/zaplac`} className="inline-block rounded-xl bg-brand-700 px-6 py-3 font-bold text-white hover:bg-brand-900">
+          Dokończ płatność
+        </a>
+        <p className="text-xs text-slate-600">Raport będzie dostępny pod tym adresem przez 30 dni (do {expires}).</p>
+      </div>
+    );
+  }
 
   if (row.status === "pending_payment" || row.status === "paid" || row.status === "generating") {
     const waitingForPayment = row.status === "pending_payment";
@@ -60,7 +77,15 @@ export default async function RaportPage({
             ? "Zwykle trwa to kilka sekund. Strona odświeży się sama."
             : "Analizujemy ogłoszenie, przebiegi i bazę usterek. Zwykle 1–3 minuty. Strona odświeży się sama."}
         </p>
-        <p className="text-xs text-slate-500">Zapisz ten adres – raport będzie dostępny pod nim przez 30 dni (do {expires}).</p>
+        <p className="text-xs text-slate-600">Zapisz ten adres – raport będzie dostępny pod nim przez 30 dni (do {expires}).</p>
+        {waitingForPayment && !paymentsSkipped() && (
+          <p className="text-sm">
+            Płatność przerwana?{" "}
+            <a href={`/api/reports/${id}/zaplac`} className="font-semibold text-brand-700 underline">
+              Dokończ płatność
+            </a>
+          </p>
+        )}
       </div>
     );
   }
@@ -98,6 +123,7 @@ export default async function RaportPage({
 
   return (
     <article className="space-y-4">
+      <PrintHeader title={`Raport: ${title}`} reportNo={id.slice(0, 8)} date={created} />
       <header className="space-y-3">
         <div className="flex flex-wrap items-start justify-between gap-3">
           <div>
@@ -112,10 +138,10 @@ export default async function RaportPage({
           </div>
           <PrintButton />
         </div>
-        <Disclaimer />
+        <Disclaimer className="print:hidden" />
       </header>
 
-      <ReportView report={report} offer={row.offer} />
+      <ReportView report={report} offer={row.offer} fallbackName={input.model_label ?? undefined} />
 
       {affiliates.length > 0 && (
         <section className="no-print rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5">
@@ -141,7 +167,14 @@ export default async function RaportPage({
       )}
 
       <section className="no-print rounded-2xl bg-white p-4 shadow-sm sm:p-5">
-        <FeedbackForm reportId={id} alreadySent={hasFeedback(id)} />
+        {feedbackParam ? (
+          <p className="text-sm font-semibold text-emerald-800" role="status">
+            Dziękujemy za odpowiedź{feedbackParam === "tak" ? " – powodzenia z autem!" : " – trzymamy kciuki za kolejne ogłoszenie."} To pomaga
+            nam ulepszać raporty.
+          </p>
+        ) : (
+          <FeedbackForm reportId={id} alreadySent={hasFeedback(id)} />
+        )}
       </section>
 
       <p className="no-print text-center text-sm">

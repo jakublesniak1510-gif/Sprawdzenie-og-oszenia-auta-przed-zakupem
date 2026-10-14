@@ -1,0 +1,446 @@
+{
+  "id": "kia-sportage-3",
+  "make": "Kia",
+  "model": "Sportage",
+  "generation": "III (SL, 2010–2015)",
+  "years": [
+    2010,
+    2015
+  ],
+  "aliases": [
+    "sportage iii",
+    "sportage 3",
+    "sportage sl",
+    "kia sportage iii",
+    "kia sportage 3",
+    "kia sportage sl",
+    "sportage iii lift",
+    "sportage 3 lift"
+  ],
+  "market_note": "Popularny SUV, dużo aut z polskich salonów (często z historią 7-letniej gwarancji) i z importu. Ceny orientacyjnie ok. 33–58 tys. zł (2026). Często 1.6 GDI, 2.0 benzyna (także z LPG) i 1.7/2.0 CRDi.",
+  "price_ranges": [
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        33000,
+        42000
+      ],
+      "note": "1.6 GDI 2WD najtańszy; 2.0 z LPG zbliżony."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        38000,
+        49000
+      ],
+      "note": "AWD i 2.0 CRDi 184 KM +5–10%."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        45000,
+        58000
+      ],
+      "note": "Po liftingu (2014); wersje XL/Platinum w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 700–1400 zł/rok; AC ok. 1600–3500 zł/rok – popularne SUV-y bywają częściej kradzione, co podnosi AC w dużych miastach.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. Naprawa sprzęgła kolumny kierowniczej ok. 300–1200 zł."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 CVVT (także z LPG) lub 1.7 CRDi z polskiego salonu, po liftingu 2014.",
+    "avoid": "1.6 GDI z historią dolewania oleju i AWD bez sprawnego dołączania tylnej osi.",
+    "sweet_spot_years": [
+      2013,
+      2015
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.6 GDI 135 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        135
+      ],
+      "aliases": [
+        "1.6 gdi",
+        "1,6 gdi",
+        "1.6gdi",
+        "1.6 benzyna",
+        "1,6 benzyna"
+      ],
+      "timing": "łańcuch rozrządu – kontrola przy dużych przebiegach",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Rozciągnięty łańcuch rozrządu",
+          "symptoms": "Grzechotanie po zimnym starcie, błędy faz rozrządu.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1800,
+            3500
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuchiwanie od strony rozrządu; odczyt błędów."
+        },
+        {
+          "title": "Zwiększone zużycie oleju (wtrysk bezpośredni)",
+          "symptoms": "Ubytki oleju między wymianami, kontrolka poziomu oleju.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i stan oleju; obserwować dym."
+        }
+      ]
+    },
+    {
+      "code": "2.0 CVVT 163 KM (benzyna MPI)",
+      "fuel": "benzyna",
+      "power_hp": [
+        163
+      ],
+      "aliases": [
+        "2.0 cvvt",
+        "2,0 cvvt",
+        "2.0 benzyna",
+        "2,0 benzyna",
+        "2.0 163",
+        "2.0 mpi"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Zwiększone zużycie oleju przy dużym przebiegu",
+          "symptoms": "Ubytek oleju między wymianami, niebieskawy dym po postoju.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić poziom oleju, osad na końcówce wydechu, dym po odpaleniu."
+        },
+        {
+          "title": "Wycieki oleju i płynu – pokrywa zaworów, pompa wody",
+          "symptoms": "Zapach oleju, zawilgocona pokrywa zaworów, ubytek płynu chłodzącego.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1300
+          ],
+          "check_at_inspection": "Obejrzeć silnik z góry i od spodu; sprawdzić poziom płynu i oleju."
+        }
+      ]
+    },
+    {
+      "code": "2.0 CVVT z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        163
+      ],
+      "aliases": [
+        "2.0 lpg",
+        "2,0 lpg",
+        "2.0 gaz",
+        "2.0 b+lpg",
+        "2.0 benzyna+gaz"
+      ],
+      "timing": "łańcuch rozrządu (jak w wersji benzynowej)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.7 CRDi 115 KM (U2)",
+      "fuel": "diesel",
+      "power_hp": [
+        115
+      ],
+      "aliases": [
+        "1.7 crdi",
+        "1,7 crdi",
+        "1.7crdi"
+      ],
+      "timing": "łańcuch rozrządu",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "2.0 CRDi 136/184 KM (R)",
+      "fuel": "diesel",
+      "power_hp": [
+        136,
+        184
+      ],
+      "aliases": [
+        "2.0 crdi",
+        "2,0 crdi",
+        "2.0crdi",
+        "2.0 crdi 184",
+        "2.0 crdi 136"
+      ],
+      "timing": "łańcuch rozrządu",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Automat 6-biegowy – szarpnięcia",
+      "symptoms": "Twarde zmiany, szarpnięcia przy redukcji, opóźnienia.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        7000
+      ],
+      "check_at_inspection": "Jazda próbna w mieście; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Napęd AWD – sprzęgło tylnej osi",
+      "symptoms": "Brak dołączania tylnej osi, komunikaty o napędzie, buczenie z tyłu.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        4000
+      ],
+      "check_at_inspection": "Diagnostyka modułu napędu, ruszanie na luźnym podłożu, nasłuchiwanie hałasów z tyłu; zapytać o wymianę oleju w sprzęgle i reduktorze."
+    },
+    {
+      "title": "Stuki w kolumnie kierowniczej (elastyczne sprzęgło elektrycznego wspomagania)",
+      "symptoms": "Stukanie lub klikanie w kierownicy przy skręcaniu na postoju i jeździe po nierównościach.",
+      "mileage_km": "60–150 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1200
+      ],
+      "check_at_inspection": "Na postoju poruszać kierownicą w lewo i prawo o kilka stopni – słuchać stuków w kolumnie."
+    },
+    {
+      "title": "Zawieszenie – amortyzatory, łączniki, tuleje",
+      "symptoms": "Stuki, pływanie, nierówne zużycie opon.",
+      "mileage_km": "100–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        2000
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    },
+    {
+      "title": "Korozja – elementy podwozia, wydech, krawędzie klapy i drzwi",
+      "symptoms": "Nalot rdzy na podwoziu i wydechu, ogniska korozji na krawędziach klapy bagażnika i drzwi w części egzemplarzy.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Obejrzeć podwozie na podnośniku, krawędzie klapy i drzwi."
+    },
+    {
+      "title": "Elektryka – multimedia, czujniki, kamera, klimatyzacja",
+      "symptoms": "Zawieszanie się radia/nawigacji, niedziałające czujniki parkowania lub kamera, słabe chłodzenie klimatyzacji.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Przetestować multimedia, kamerę, czujniki i klimatyzację."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić historię w ASO po VIN – auta z polskiego salonu często mają udokumentowany serwis gwarancyjny.",
+    "Na postoju poruszać kierownicą – stuki w kolumnie to znana usterka.",
+    "W 1.6 GDI zapytać o dolewki oleju i obserwować zimny rozruch.",
+    "W dieslach sprawdzić stan DPF, wtryskiwaczy i dwumasy.",
+    "W AWD wykonać ciasne manewry i ruszanie na luźnym podłożu.",
+    "Przy LPG sprawdzić wpis w dowodzie, butlę i pracę na gazie.",
+    "Obejrzeć podwozie i krawędzie klapy pod kątem korozji."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu i czy ma historię w ASO?",
+    "Czy były naprawy kolumny kierowniczej, napędu AWD lub skrzyni?",
+    "Czy silnik bierze olej między wymianami?",
+    "Czy instalacja LPG jest wpisana w dowodzie i kiedy była serwisowana?",
+    "Czy auto miało szkody i które elementy lakierowano?"
+  ],
+  "summary": "Sportage III to praktyczny SUV z dobrym stosunkiem ceny do wyposażenia. Najbezpieczniejsze są 2.0 CVVT (także z LPG) i 1.7 CRDi z historią serwisową. Typowe do sprawdzenia: stuki w kolumnie kierowniczej, zużycie oleju w 1.6 GDI i napęd AWD.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

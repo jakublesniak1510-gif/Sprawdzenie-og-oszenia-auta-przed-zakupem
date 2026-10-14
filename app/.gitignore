@@ -9,3 +9,5 @@ data/*.db-*
 .env.local
 .env*.local
 AGENTS.md
+dist-scripts/
+data/images/

@@ -4,7 +4,7 @@ import path from "node:path";
 export default defineConfig({
   resolve: { alias: { "@": path.resolve(import.meta.dirname) } },
   test: {
-    include: ["lib/**/*.test.ts"],
+    include: ["lib/**/*.test.ts", "components/**/*.test.{ts,tsx}"],
     environment: "node",
   },
 });

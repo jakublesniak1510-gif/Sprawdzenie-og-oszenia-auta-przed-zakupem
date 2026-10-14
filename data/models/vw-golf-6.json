@@ -23,6 +23,57 @@
     "golf plus 6"
   ],
   "market_note": "Jeden z najczęściej wystawianych kompaktów w Polsce, duża część sprowadzona z Niemiec i Holandii. Rynek pełen egzemplarzy po 200–300 tys. km z licznikiem budzącym wątpliwości – przebieg warto potwierdzać w historii z badań i w modułach sterujących. Ceny orientacyjnie ok. 17–35 tys. zł (2026), zależnie od silnika i stanu.",
+  "price_ranges": [
+    {
+      "years": [
+        2008,
+        2009
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        15000,
+        23000
+      ],
+      "note": "1.4/1.2 TSI bez historii łańcucha w dolnej części widełek."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        19000,
+        28000
+      ],
+      "note": "Variant i 2.0 TDI nieznacznie drożej."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        24000,
+        34000
+      ],
+      "note": "GTI/GTD/R poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 550–1100 zł/rok; AC przy wartości auta poniżej ok. 20 tys. zł zwykle nieopłacalne.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Łańcuch rozrządu 1.2/1.4 TSI EA111 ok. 2,5–5 tys. zł."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 TDI CR, 1.6 MPI lub 1.4 TSI z udokumentowaną wymianą łańcucha.",
+    "avoid": "1.4 TSI 160 KM (twincharger) i DQ200 bez historii, a także auta z niejasnym przebiegiem z importu.",
+    "sweet_spot_years": [
+      2010,
+      2013
+    ]
+  },
   "engines": [
     {
       "code": "1.4 TSI 122 KM (EA111, CAXA)",

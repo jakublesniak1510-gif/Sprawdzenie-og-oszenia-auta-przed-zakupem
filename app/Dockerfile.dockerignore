@@ -1,0 +1,14 @@
+# Używany przez BuildKit dla app/Dockerfile (kontekst = katalog główny repo).
+**/node_modules
+**/.next
+**/.git
+.git
+app/data
+app/dist-scripts
+app/.env
+app/.env.*
+!app/.env.example
+**/*.tsbuildinfo
+**/*.db
+**/*.db-*
+marketing

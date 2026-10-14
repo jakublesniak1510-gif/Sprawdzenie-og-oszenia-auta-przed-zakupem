@@ -139,5 +139,7 @@ export const CreateReportRequestSchema = z.object({
   zgoda_tresc_cyfrowa: z.literal(true, { message: "Wymagana zgoda na natychmiastowe dostarczenie treści cyfrowej" }),
   zgoda_regulamin: z.literal(true, { message: "Wymagana akceptacja regulaminu" }),
   email: z.string().email().max(200).nullable().optional(),
+  /** Kod kuponu (pakiet 5 raportów / kod promocyjny) – gdy ważny, raport bez płatności. */
+  coupon: z.string().max(40).nullable().optional(),
 });
 export type CreateReportRequest = z.infer<typeof CreateReportRequestSchema>;

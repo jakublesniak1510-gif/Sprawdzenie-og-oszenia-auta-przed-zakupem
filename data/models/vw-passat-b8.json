@@ -20,6 +20,69 @@
     "passat b8.5"
   ],
   "market_note": "Bardzo dużo aut poleasingowych z polskich salonów i flot, zwykle z 2.0 TDI i DSG; przebiegi 200–300 tys. km nie są rzadkością. Ceny orientacyjnie ok. 50–110 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        46000,
+        60000
+      ],
+      "note": "Poleasingowe 2.0 TDI z przebiegiem 250+ tys. km w dolnej części widełek."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 240000,
+      "price_pln": [
+        56000,
+        73000
+      ],
+      "note": "Variant zbliżony; Highline +5–10%."
+    },
+    {
+      "years": [
+        2019,
+        2020
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        72000,
+        98000
+      ],
+      "note": "Po liftingu (2019); 2.0 TDI 190 KM 4Motion i Alltrack drożej."
+    },
+    {
+      "years": [
+        2021,
+        2023
+      ],
+      "km_max": 140000,
+      "price_pln": [
+        92000,
+        125000
+      ],
+      "note": "GTE (hybryda plug-in) i 2.0 TSI 272 KM w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Rozrząd 2.0 TDI EA288 ok. 1,5–2,5 tys. zł. AdBlue dolewane co ok. 6–12 tys. km. Olej w DSG mokrym co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 TDI 150 KM z DSG mokrym lub manualem, z polskiego salonu i historią w ASO.",
+    "avoid": "Egzemplarze z niejasnym przebiegiem z rynku poleasingowego i 1.4/1.5 TSI z DQ200 eksploatowane w mieście.",
+    "sweet_spot_years": [
+      2017,
+      2021
+    ]
+  },
   "engines": [
     {
       "code": "2.0 TDI 150/190 KM (EA288, Euro 6 z AdBlue)",

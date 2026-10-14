@@ -1,0 +1,32 @@
+Historia Pojazdu
+DANE FIKCYJNE – próbka HIPOTETYCZNA: brzmienie komunikatów o kradzieży i wyrejestrowaniu w usłudze nie zostało potwierdzone; układ przybliżony.
+
+Dane pojazdu
+Marka: KIA
+Model: SPORTAGE
+Rok produkcji: 2014
+Rodzaj paliwa: OLEJ NAPĘDOWY
+Numer VIN: TESTKA0S1L2345678
+Numer rejestracyjny: XX 00006
+Data pierwszej rejestracji: 03.06.2014
+
+Aktualny stan
+Status rejestracji: POJAZD WYREJESTROWANY
+Data wyrejestrowania: 20.02.2024
+Ubezpieczenie OC: brak aktualnego ubezpieczenia OC
+Badanie techniczne: nieaktualne
+
+Kradzież
+02.08.2019 Pojazd zgłoszony jako kradziony
+15.10.2019 Odnalezienie pojazdu – usunięcie z wykazu pojazdów poszukiwanych
+
+Oś czasu
+03.06.2014 Pierwsza rejestracja w Polsce
+01.06.2017 Badanie techniczne – wynik pozytywny – stan licznika 45 000 km
+03.06.2019 Badanie techniczne – wynik pozytywny – stan licznika 78 300 km
+21.10.2019 Badanie techniczne dodatkowe – wynik pozytywny – stan licznika 79 100 km
+08.06.2020 Badanie techniczne – wynik pozytywny – stan licznika 92 400 km
+07.06.2021 Badanie techniczne – wynik pozytywny – stan licznika 105 800 km
+06.06.2022 Badanie techniczne – wynik pozytywny – stan licznika 118 200 km
+05.06.2023 Badanie techniczne – wynik pozytywny – stan licznika 131 000 km
+20.02.2024 Wyrejestrowanie pojazdu

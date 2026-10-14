@@ -24,6 +24,57 @@
     "w204 lift"
   ],
   "market_note": "Popularny i ceniony za komfort, głównie z importu. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Wersje z automatem 7G-Tronic przeważają.",
+  "price_ranges": [
+    {
+      "years": [
+        2007,
+        2009
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        23000,
+        34000
+      ],
+      "note": "OM646 i C 200 Kompressor zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        29000,
+        41000
+      ],
+      "note": "Avantgarde/AMG-pakiet +10%."
+    },
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        38000,
+        58000
+      ],
+      "note": "Po liftingu (2011); C 350 CDI i 4Matic powyżej widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 800–1800 zł/rok (duża moc podnosi składkę); AC ok. 2200–5000 zł/rok, wyraźnie wyżej w dużych miastach i dla wersji 4x4/mocnych.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny wyższe niż w autach popularnych; olej z filtrem ok. 400–650 zł. Olej w 7G-Tronic co ok. 60–80 tys. km (ok. 900–1500 zł). Korozja – zabezpieczenie podwozia co kilka lat."
+  },
+  "buy_advice": {
+    "best_pick": "C 200/220 CDI OM651 lub C 180/200 CGI po liftingu (2011–2014) z historią serwisową.",
+    "avoid": "Auta z ognikami korozji na klapie i drzwiach oraz M271 bez historii rozrządu.",
+    "sweet_spot_years": [
+      2011,
+      2014
+    ]
+  },
   "engines": [
     {
       "code": "C180/C200 Kompressor i CGI (M271 / M271 EVO)",

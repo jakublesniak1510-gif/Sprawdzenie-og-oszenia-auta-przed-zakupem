@@ -21,6 +21,57 @@
     "i30 coupe"
   ],
   "market_note": "Popularny kompakt, dużo aut z polskich salonów. Ceny orientacyjnie ok. 25–45 tys. zł (2026). Często z 1.4/1.6 MPI i LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        23000,
+        30000
+      ],
+      "note": "Z polskiego salonu z historią serwisową +5–10%."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        28000,
+        36000
+      ],
+      "note": "Kombi i 1.6 GDI zbliżone."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        34000,
+        45000
+      ],
+      "note": "Po liftingu (2015); DCT i wyższe wersje w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–400 zł. Silniki MPI bez hydraulicznej kasacji luzów – kontrola luzów ok. 400–1000 zł (ważne przy LPG)."
+  },
+  "buy_advice": {
+    "best_pick": "1.4/1.6 MPI (także z LPG z wyregulowanymi luzami) z polskiego salonu i książką serwisową.",
+    "avoid": "Egzemplarze z zaniedbanym katalizatorem (1.4/1.6 MPI z dużym przebiegiem bez kontroli) i DCT bez historii.",
+    "sweet_spot_years": [
+      2015,
+      2017
+    ]
+  },
   "engines": [
     {
       "code": "1.4/1.6 MPI 100/120 KM (Gamma)",

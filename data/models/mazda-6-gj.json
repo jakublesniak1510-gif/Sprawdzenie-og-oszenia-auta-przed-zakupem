@@ -1,0 +1,372 @@
+{
+  "id": "mazda-6-gj",
+  "make": "Mazda",
+  "model": "6",
+  "generation": "III (GJ 2012–2018, po liftingu GL 2018–2023)",
+  "years": [
+    2012,
+    2023
+  ],
+  "aliases": [
+    "mazda 6 gj",
+    "mazda6 gj",
+    "mazda 6 gl",
+    "mazda6 gl",
+    "mazda 6 iii",
+    "mazda6 iii",
+    "mazda 6 gj lift",
+    "mazda 6 gj kombi",
+    "mazda 6 gj sedan",
+    "mazda 6 kombi gj",
+    "mazda 6 sport kombi gj",
+    "mazda 6 skyactiv gj"
+  ],
+  "market_note": "Popularna, dobrze oceniana limuzyna/kombi, dużo aut z polskich salonów i z importu. Ceny orientacyjnie ok. 38–125 tys. zł (2026). Benzyny Skyactiv-G uchodzą za trwałe; diesel 2.2 Skyactiv-D wymaga ostrożności przy jeździe miejskiej.",
+  "price_ranges": [
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        38000,
+        50000
+      ],
+      "note": "2.2 Skyactiv-D z dużym przebiegiem w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        46000,
+        60000
+      ],
+      "note": "Po liftingu (2015); kombi i sedan zbliżone."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        57000,
+        74000
+      ],
+      "note": "SkyPassion i automat w górnej części widełek."
+    },
+    {
+      "years": [
+        2019,
+        2021
+      ],
+      "km_max": 120000,
+      "price_pln": [
+        74000,
+        98000
+      ],
+      "note": "Po liftingu (GL, 2018); 2.5 Skyactiv-G drożej."
+    },
+    {
+      "years": [
+        2022,
+        2023
+      ],
+      "km_max": 80000,
+      "price_pln": [
+        95000,
+        125000
+      ],
+      "note": "Ostatnie roczniki, często z polskiego salonu."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. 2.2 Skyactiv-D – olej co 10–15 tys. km i kontrola poziomu między wymianami. Akumulator do i-stop ok. 600–1200 zł."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 lub 2.5 Skyactiv-G z polskiego salonu, najlepiej po liftingu 2015 lub GL.",
+    "avoid": "2.2 Skyactiv-D eksploatowany w mieście, z rosnącym poziomem oleju lub bez historii serwisowej.",
+    "sweet_spot_years": [
+      2015,
+      2021
+    ]
+  },
+  "engines": [
+    {
+      "code": "2.0 Skyactiv-G 145/165 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        145,
+        165
+      ],
+      "aliases": [
+        "2.0 skyactiv-g",
+        "2,0 skyactiv-g",
+        "2.0 skyactiv",
+        "2.0 benzyna",
+        "2,0 benzyna",
+        "2.0 145",
+        "2.0 165"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy. W Skyactiv-G zdarza się rzadziej niż w wielu silnikach turbo z wtryskiem bezpośrednim, częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Wycieki płynu chłodzącego – pompa wody, termostat",
+          "symptoms": "Ubytek płynu chłodzącego, zaschnięte ślady płynu przy pompie lub obudowie termostatu, wahania temperatury.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            500,
+            1400
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu na zimnym silniku i ślady wycieków; obserwować temperaturę na jeździe próbnej."
+        }
+      ]
+    },
+    {
+      "code": "2.5 Skyactiv-G 192/194 KM (od 2018 z odłączaniem cylindrów)",
+      "fuel": "benzyna",
+      "power_hp": [
+        192,
+        194
+      ],
+      "aliases": [
+        "2.5 skyactiv-g",
+        "2,5 skyactiv-g",
+        "2.5 skyactiv",
+        "2.5 benzyna",
+        "2,5 benzyna",
+        "2.5 192",
+        "2.5 194"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy; częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Odłączanie cylindrów (wersje od 2018) – drgania przy niskim obciążeniu",
+          "symptoms": "Wyczuwalne drgania lub nierówna praca przy stałej prędkości i małym obciążeniu; zdarza się rzadko.",
+          "mileage_km": "50–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            0,
+            2000
+          ],
+          "check_at_inspection": "Jazda ze stałą prędkością 50–80 km/h na wysokim biegu; obserwować drgania; odczyt błędów."
+        }
+      ]
+    },
+    {
+      "code": "2.2 Skyactiv-D 150/175/184 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        150,
+        175,
+        184
+      ],
+      "aliases": [
+        "2.2 skyactiv-d",
+        "2,2 skyactiv-d",
+        "2.2 skyactiv",
+        "2.2 d",
+        "2.2 diesel",
+        "2,2 diesel",
+        "2.2 150",
+        "2.2 175"
+      ],
+      "timing": "łańcuch rozrządu – przy zaniedbanym oleju zdarza się rozciąganie",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Rozcieńczanie oleju paliwem przy częstych regeneracjach DPF",
+          "symptoms": "Rosnący poziom oleju, zapach paliwa w oleju, komunikat o konieczności wymiany oleju; w Skyactiv-D typowe przy jeździe miejskiej i krótkich trasach. Zaniedbanie przyspiesza zużycie panewek, turbosprężarki i łańcucha.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            300,
+            8000
+          ],
+          "check_at_inspection": "Sprawdzić bagnetem, czy poziom oleju nie jest powyżej maksimum i czy olej nie pachnie paliwem. Zapytać o interwały wymiany oleju."
+        },
+        {
+          "title": "Nagar w układzie dolotowym i zawór EGR",
+          "symptoms": "Spadek mocy, szarpanie, kontrolka silnika, tryb awaryjny; zakoksowanie dolotu i zaworów przy jeździe miejskiej.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, ciśnienie doładowania), jazda próbna z pełnym przyspieszeniem; zapytać o czyszczenie dolotu i aktualizacje oprogramowania."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Wtryskiwacze i ich uszczelnienia",
+          "symptoms": "Trudny rozruch, nierówna praca, zapach spalin w komorze silnika, nagar wokół wtryskiwaczy.",
+          "mileage_km": "120–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy; obejrzeć okolice wtryskiwaczy pod kątem nagaru."
+        },
+        {
+          "title": "Rozciągnięty łańcuch rozrządu (część egzemplarzy)",
+          "symptoms": "Grzechotanie na zimnym silniku, błędy synchronizacji wałków; ryzyko rośnie przy rozcieńczonym oleju.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch z nasłuchem rozrządu; odczyt błędów synchronizacji."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Korozja – tylne nadkola, progi, rama pomocnicza, elementy podwozia",
+      "symptoms": "Ogniska rdzy na nadkolach, progach i elementach podwozia; GJ jest lepiej zabezpieczona niż poprzednie generacje, ale korozja nadal bywa problemem w starszych egzemplarzach.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        4000
+      ],
+      "check_at_inspection": "Obejrzeć nadkola, progi i podwozie na podnośniku; zapytać o zabezpieczenie antykorozyjne."
+    },
+    {
+      "title": "Multimedia MZD Connect – samoczynne „klikanie” ekranu, zawieszanie się",
+      "symptoms": "Ekran dotykowy reaguje sam (tzw. ghost touch), restartuje się lub zawiesza; często pomaga wymiana panelu dotykowego lub aktualizacja.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Pozostawić włączony ekran przez kilka minut i obserwować, czy nie zmienia sam ustawień; przetestować nawigację, Bluetooth i kamerę."
+    },
+    {
+      "title": "System i-stop / i-ELOOP i akumulator",
+      "symptoms": "Niedziałający Start/Stop, komunikaty o usterce i-ELOOP, rozładowany akumulator; akumulator do i-stop jest droższy.",
+      "severity": "niska",
+      "cost_pln": [
+        500,
+        2500
+      ],
+      "check_at_inspection": "Sprawdzić, czy i-stop działa po rozgrzaniu, datę i stan akumulatora; odczyt błędów."
+    },
+    {
+      "title": "Hamulce – korozja tarcz i zapiekanie zacisków",
+      "symptoms": "Nierówne hamowanie, piszczenie, grzanie się koła, rdzawe tarcze, zwłaszcza z tyłu.",
+      "mileage_km": "60–150 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć tarcze i zaciski przez felgi; po jeździe sprawdzić, czy któreś koło nie jest wyraźnie cieplejsze."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, tuleje, amortyzatory",
+      "symptoms": "Stuki na nierównościach, pływanie, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        2000
+      ],
+      "check_at_inspection": "Jazda po nierównościach, kontrola na podnośniku."
+    },
+    {
+      "title": "Klimatyzacja – skraplacz i sprężarka",
+      "symptoms": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Włączyć klimatyzację na maksimum i sprawdzić temperaturę z nawiewów po kilku minutach; obejrzeć skraplacz przez grill."
+    }
+  ],
+  "inspection_tips": [
+    "Ustalić silnik – 2.0/2.5 Skyactiv-G to bezpieczniejszy wybór niż 2.2 Skyactiv-D przy jeździe miejskiej.",
+    "W 2.2 Skyactiv-D sprawdzić bagnetem, czy poziom oleju nie przekracza maksimum i czy olej nie pachnie paliwem; odczytać stan DPF.",
+    "Obejrzeć nadkola, progi i podwozie pod kątem korozji.",
+    "Przetestować ekran MZD Connect (samoczynne reakcje), kamerę i czujniki.",
+    "Sprawdzić działanie i-stop i stan akumulatora.",
+    "Obejrzeć tarcze hamulcowe i zaciski, zwłaszcza tylne.",
+    "Zmierzyć lakier – miękki lakier Mazdy łatwo się rysuje i bywa poprawiany."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu? Czy jest historia w ASO?",
+    "Jak było eksploatowane – głównie miasto czy trasa? (ważne w dieslu)",
+    "Czy w dieslu były naprawy DPF, EGR, wtryskiwaczy lub rozrządu?",
+    "Czy było zabezpieczenie antykorozyjne lub naprawy korozji?",
+    "Czy auto miało szkody i które elementy lakierowano?"
+  ],
+  "summary": "Mazda 6 GJ/GL to dopracowane auto z trwałymi benzynowymi silnikami Skyactiv-G, które są najbezpieczniejszym wyborem. Diesel 2.2 Skyactiv-D sprawdza się w trasie, ale przy jeździe miejskiej bywa kłopotliwy (rozcieńczanie oleju, nagar). Do sprawdzenia zawsze korozja i elektronika multimediów.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

@@ -20,7 +20,7 @@ export function FeedbackForm({ reportId, alreadySent }: { reportId: string; alre
           {(["tak", "nie"] as const).map((v) => (
             <label key={v} className="flex-1 cursor-pointer rounded-xl border-2 border-slate-200 px-4 py-3 text-center font-semibold has-[:checked]:border-brand-600 has-[:checked]:bg-brand-50">
               <input type="radio" name="pomogl" value={v} className="sr-only" required />
-              {v === "tak" ? "👍 Tak" : "👎 Nie"}
+              <span aria-hidden>{v === "tak" ? "👍" : "👎"}</span> {v === "tak" ? "Tak" : "Nie"}
             </label>
           ))}
         </div>

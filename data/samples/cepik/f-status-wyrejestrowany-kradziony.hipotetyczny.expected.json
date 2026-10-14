@@ -1,0 +1,52 @@
+{
+  "plik": "f-status-wyrejestrowany-kradziony.hipotetyczny.txt",
+  "hipotetyczny_format": true,
+  "opis": "HIPOTETYCZNY układ i brzmienie komunikatów: auto zgłoszone jako kradzione i odnalezione w 2019 r., wyrejestrowane w 2024 r.; brak aktualnego OC i badania.",
+  "vin": "TESTKA0S1L2345678",
+  "odczyty": [
+    {
+      "data": "2017-06-01",
+      "km": 45000
+    },
+    {
+      "data": "2019-06-03",
+      "km": 78300
+    },
+    {
+      "data": "2019-10-21",
+      "km": 79100
+    },
+    {
+      "data": "2020-06-08",
+      "km": 92400
+    },
+    {
+      "data": "2021-06-07",
+      "km": 105800
+    },
+    {
+      "data": "2022-06-06",
+      "km": 118200
+    },
+    {
+      "data": "2023-06-05",
+      "km": 131000
+    }
+  ],
+  "pierwszaRejestracja": "2014-06-03",
+  "pierwszaRejestracjaPl": "2014-06-03",
+  "cofniecia": [],
+  "sygnaly": [
+    "kradziez_w_historii",
+    "wyrejestrowany",
+    "brak_aktualnego_oc",
+    "brak_aktualnego_badania",
+    "badanie_dodatkowe"
+  ],
+  "uwagi": [
+    "Pojazd był zgłoszony jako kradziony (02.08.2019) i odnaleziony (15.10.2019) – warto sprawdzić zgodność numerów VIN na nadwoziu i szybach oraz dokumenty z odzyskania.",
+    "Status: wyrejestrowany od 20.02.2024 – do wyjaśnienia powód (np. demontaż, wywóz za granicę) i możliwość ponownej rejestracji.",
+    "Brak aktualnego OC i badania technicznego – auto nie może poruszać się po drogach.",
+    "Badanie dodatkowe 21.10.2019 po odzyskaniu pojazdu."
+  ]
+}

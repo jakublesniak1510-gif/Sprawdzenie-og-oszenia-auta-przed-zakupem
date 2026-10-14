@@ -19,6 +19,57 @@
     "avensis iii kombi"
   ],
   "market_note": "Ceniona za trwałość rodzinna limuzyna/kombi, często z polskiego salonu i po flotach. Ceny orientacyjnie ok. 25–55 tys. zł (2026). Popularne 1.8 Valvematic, także z LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2009,
+        2011
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        21000,
+        31000
+      ],
+      "note": "1.8 z LPG zbliżony do benzyny."
+    },
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        28000,
+        39000
+      ],
+      "note": "Po pierwszym liftingu (2012); kombi nieznacznie drożej."
+    },
+    {
+      "years": [
+        2015,
+        2018
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        38000,
+        56000
+      ],
+      "note": "Po liftingu 2015; diesle BMW (1.6/2.0 D-4D) zbliżone do 1.8."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. Benzyny z łańcuchem rozrządu – niskie koszty stałe; przy LPG kontrola luzów zaworowych."
+  },
+  "buy_advice": {
+    "best_pick": "1.8 Valvematic (także z dobrze dobranym LPG) z polskiego salonu.",
+    "avoid": "2.0/2.2 D-4D (1AD/2AD) z lat 2009–2011 bez dowodu naprawy i z ubytkami płynu.",
+    "sweet_spot_years": [
+      2012,
+      2018
+    ]
+  },
   "engines": [
     {
       "code": "1.8 Valvematic 147 KM (2ZR-FAE)",

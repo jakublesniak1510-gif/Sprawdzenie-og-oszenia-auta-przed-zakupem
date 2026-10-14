@@ -1,0 +1,456 @@
+{
+  "id": "toyota-rav4-4",
+  "make": "Toyota",
+  "model": "RAV4",
+  "generation": "IV (XA40, 2013–2018)",
+  "years": [
+    2013,
+    2018
+  ],
+  "aliases": [
+    "rav4 iv",
+    "rav4 4",
+    "rav 4 iv",
+    "rav-4 iv",
+    "rav4 xa40",
+    "toyota rav4 iv",
+    "toyota rav4 4",
+    "toyota rav 4 iv",
+    "rav4 iv hybrid",
+    "rav4 hybrid iv",
+    "rav4 iv lift"
+  ],
+  "market_note": "Popularny SUV, dużo aut z polskich salonów; od 2015/2016 hybryda 2.5 (także AWD). Ceny orientacyjnie ok. 55–100 tys. zł (2026). Często kradziony – warto sprawdzić historię i zabezpieczenia.",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        55000,
+        68000
+      ],
+      "note": "2.2 D-4D i 2.0 benzyna z LPG zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        64000,
+        82000
+      ],
+      "note": "Po liftingu (2015/2016); hybryda o ok. 10–15% drożej."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        77000,
+        100000
+      ],
+      "note": "Hybryda AWD i wyższe wersje wyposażenia w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 700–1400 zł/rok; AC ok. 1600–3500 zł/rok – popularne SUV-y bywają częściej kradzione, co podnosi AC w dużych miastach.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. Hybryda: brak sprzęgła, dwumasy i rozrusznika; kontrola baterii HV i czyszczenie filtra wentylatora co 1–2 lata. Warto doliczyć dodatkowe zabezpieczenie przed kradzieżą."
+  },
+  "buy_advice": {
+    "best_pick": "2.5 Hybrid (2016–2018) lub 2.0 Valvematic z polskiego salonu z historią w ASO.",
+    "avoid": "2.0/2.2 D-4D sprzed 2015 bez dowodu naprawy uszczelki i auta z niejasną historią (odzyskane po kradzieży).",
+    "sweet_spot_years": [
+      2016,
+      2018
+    ]
+  },
+  "engines": [
+    {
+      "code": "2.0 Valvematic 151/152 KM (3ZR-FAE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        151,
+        152
+      ],
+      "aliases": [
+        "2.0 valvematic",
+        "2,0 valvematic",
+        "2.0 vvt-i",
+        "2.0 benzyna",
+        "2,0 benzyna",
+        "3zr"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        },
+        {
+          "title": "Silnik/sterownik systemu Valvematic",
+          "symptoms": "Kontrolka silnika, nierówna praca, ograniczenie obrotów, tryb awaryjny.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3500
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; obserwacja pracy na biegu jałowym i przy przyspieszaniu."
+        },
+        {
+          "title": "Wyciek z pompy wody",
+          "symptoms": "Ubytek płynu chłodzącego, różowy osad przy pompie, piszczenie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1100
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady zaschniętego płynu przy pompie."
+        }
+      ]
+    },
+    {
+      "code": "2.0 Valvematic z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        151,
+        152
+      ],
+      "aliases": [
+        "2.0 lpg",
+        "2,0 lpg",
+        "2.0 gaz",
+        "2.0 b+lpg",
+        "2.0 benzyna+gaz"
+      ],
+      "timing": "łańcuch rozrządu (jak w wersji benzynowej)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "2.5 Hybrid 197 KM (2AR-FXE + e-CVT, od 2015/2016; także AWD)",
+      "fuel": "hybryda",
+      "power_hp": [
+        197
+      ],
+      "aliases": [
+        "2.5 hybrid",
+        "2,5 hybrid",
+        "2.5 hybryda",
+        "hybrid",
+        "hybryda",
+        "hybrid awd",
+        "2ar"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zapchany wentylator i kanał chłodzenia baterii trakcyjnej (HV)",
+          "symptoms": "Głośna praca wentylatora pod tylną kanapą, częstsze uruchamianie silnika spalinowego, komunikat o konieczności serwisu baterii, przegrzewanie baterii.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            200,
+            800
+          ],
+          "check_at_inspection": "Obejrzeć kratkę wlotu powietrza przy tylnej kanapie (kurz, sierść), posłuchać wentylatora; zapytać o czyszczenie. Diagnostyka – temperatury modułów baterii."
+        },
+        {
+          "title": "Degradacja baterii trakcyjnej (HV)",
+          "symptoms": "Szybkie rozładowywanie i ładowanie baterii, słabsze przyspieszenie, wyższe spalanie, komunikat o usterce układu hybrydowego.",
+          "mileage_km": "200–350 tys. km lub ok. 12–15 lat",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            15000
+          ],
+          "check_at_inspection": "Diagnostyka hybrydy – napięcia modułów baterii, różnice między blokami, kody usterek. Na jeździe próbnej obserwować wskaźnik naładowania baterii. Regeneracja ok. 3–6 tys. zł, nowa bateria znacznie drożej."
+        },
+        {
+          "title": "Pompa cieczy chłodzącej falownik (inwerter)",
+          "symptoms": "Komunikat o usterce układu hybrydowego, ograniczenie mocy, przegrzewanie falownika.",
+          "mileage_km": "120–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            1400
+          ],
+          "check_at_inspection": "Na pracującym aucie (READY) sprawdzić, czy płyn w zbiorniczku falownika krąży; odczyt błędów hybrydy."
+        },
+        {
+          "title": "Akumulator 12 V (hybryda)",
+          "symptoms": "Auto nie przechodzi w tryb READY, błędy elektroniki, rozładowanie po postoju.",
+          "mileage_km": "co ok. 5–8 lat",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Sprawdzić datę akumulatora i napięcie; zapytać o problemy z uruchamianiem po postoju."
+        }
+      ]
+    },
+    {
+      "code": "2.0 D-4D 124 KM / 2.2 D-4D 150 KM (1AD-FTV/2AD-FTV, do 2015)",
+      "fuel": "diesel",
+      "power_hp": [
+        124,
+        150
+      ],
+      "aliases": [
+        "2.0 d-4d",
+        "2,0 d-4d",
+        "2.2 d-4d",
+        "2,2 d-4d",
+        "2.0 d4d",
+        "2.2 d4d",
+        "2.2 d-cat",
+        "1ad",
+        "2ad"
+      ],
+      "timing": "łańcuch rozrządu",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Ubytek płynu chłodzącego / uszczelka pod głowicą",
+          "symptoms": "Ubytek płynu bez widocznego wycieku, bąble w zbiorniczku, przegrzewanie. Problem znany głównie ze starszych roczników diesli Toyoty; w T27 zdarza się rzadziej.",
+          "mileage_km": "150–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            7000
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i bąble po rozgrzaniu; zapytać o dolewki płynu i ewentualną wymianę uszczelki."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "2.0 D-4D 143 KM (od 2016, konstrukcja BMW)",
+      "fuel": "diesel",
+      "power_hp": [
+        143
+      ],
+      "aliases": [
+        "2.0 d-4d 143",
+        "2,0 d-4d 143",
+        "2.0 d-4d bmw"
+      ],
+      "timing": "łańcuch rozrządu",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Napęd AWD – sprzęgło tylnej osi i tylny dyferencjał (w hybrydzie AWD-i: tylny silnik elektryczny)",
+      "symptoms": "Szarpanie i zgrzyty przy ciasnych manewrach, komunikat o usterce napędu, wycie z tyłu; w hybrydzie AWD-i usterki tylnego silnika elektrycznego są rzadkie.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        5000
+      ],
+      "check_at_inspection": "Ciasne manewry na parkingu, ruszanie na luźnym podłożu; odczyt błędów napędu; zapytać o wymianę oleju w tylnym moście."
+    },
+    {
+      "title": "Skrzynia bezstopniowa Multidrive S (CVT, 2.0 benzyna)",
+      "symptoms": "Szarpnięcia, buczenie, „ślizganie” obrotów; skrzynia jest zwykle trwała, ale nie lubi zaniedbanego oleju.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna: płynne ruszanie, przyspieszanie ze stałym gazem; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Korozja i zapiekanie tylnych hamulców",
+      "symptoms": "Słabe hamowanie tylnej osi, nierówne zużycie klocków, grzanie się koła, rdzawe tarcze (częste w hybrydach, które rzadko używają hamulców ciernych).",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć tarcze i zaciski przez felgi; po jeździe próbnej sprawdzić, czy któreś koło nie jest wyraźnie cieplejsze; badanie skuteczności hamulców na stacji."
+    },
+    {
+      "title": "Korozja elementów podwozia i układu wydechowego",
+      "symptoms": "Nalot rdzy na wahaczach, ramie pomocniczej, mocowaniach i wydechu; zwykle powierzchniowy, ale w autach z regionów solonych dróg bywa zaawansowany.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Na podnośniku obejrzeć podwozie, ramę pomocniczą, mocowania zawieszenia i wydech."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, tuleje wahaczy",
+      "symptoms": "Stuki, nierówne zużycie opon.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    },
+    {
+      "title": "Elektryka – multimedia, czujniki, oświetlenie",
+      "symptoms": "Problemy z ekranem, kamerą, czujnikami parkowania.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2000
+      ],
+      "check_at_inspection": "Przetestować wszystkie funkcje."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić historię auta pod kątem kradzieży i odzyskania (RAV4 często kradziona) – numery VIN na nadwoziu, szybach i tabliczce powinny być spójne.",
+    "W hybrydzie wykonać diagnostykę baterii HV i sprawdzić filtr wentylatora baterii.",
+    "W AWD wykonać ciasne manewry i ruszanie na luźnym podłożu.",
+    "W 2.0/2.2 D-4D do 2015 sprawdzić poziom płynu chłodzącego (uszczelka pod głowicą) i stan DPF.",
+    "Obejrzeć tylne tarcze i zaciski pod kątem korozji, zwłaszcza w hybrydach.",
+    "Przy LPG sprawdzić wpis w dowodzie, butlę i pracę na gazie.",
+    "Zmierzyć lakier i obejrzeć podwozie (auta używane poza asfaltem)."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu? Czy ma historię w ASO?",
+    "Czy auto było kradzione, odzyskane lub miało wymieniane zamki/kluczyki?",
+    "Ile kompletów kluczyków jest w zestawie?",
+    "Czy w hybrydzie wykonywano kontrolę baterii HV i serwis układu hybrydowego?",
+    "Czy auto miało szkody komunikacyjne i które elementy lakierowano?"
+  ],
+  "summary": "RAV4 IV to trwały SUV – najbezpieczniejsze są 2.0 Valvematic i 2.5 Hybrid z polskiego salonu z historią serwisową. Ostrożnie z dieslami 2.0/2.2 D-4D sprzed 2015 roku. Ze względu na popularność wśród złodziei warto szczególnie dokładnie sprawdzić historię i dokumenty.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

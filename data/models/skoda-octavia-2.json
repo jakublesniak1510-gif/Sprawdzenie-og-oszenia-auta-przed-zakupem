@@ -25,6 +25,57 @@
     "octavia ii rs"
   ],
   "market_note": "Jedno z najpopularniejszych aut używanych w Polsce, często po taksówkach, flotach i z dużymi przebiegami. Ceny orientacyjnie ok. 12–30 tys. zł (2026). Popularne 1.9 TDI i 1.6 MPI z LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2004,
+        2007
+      ],
+      "km_max": 320000,
+      "price_pln": [
+        9500,
+        16000
+      ],
+      "note": "Po taxi wyraźnie taniej."
+    },
+    {
+      "years": [
+        2008,
+        2010
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        13000,
+        21000
+      ],
+      "note": "Po liftingu (2008); 1.9 TDI i 1.6 MPI z LPG zbliżone."
+    },
+    {
+      "years": [
+        2011,
+        2013
+      ],
+      "km_max": 270000,
+      "price_pln": [
+        18000,
+        29000
+      ],
+      "note": "RS, Scout i 4x4 o 15–25% drożej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 550–1100 zł/rok; AC przy wartości auta poniżej ok. 20 tys. zł zwykle nieopłacalne.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 250–400 zł, rozrząd 1.9 TDI z pompą ok. 900–1500 zł. Olej w DSG DQ250 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 MPI (także z LPG), 1.9 TDI PD lub 1.6 TDI CR po liftingu 2008 z udokumentowanym rozrządem.",
+    "avoid": "1.8 TSI z lat 2008–2011 bez dowodu naprawy zużycia oleju i 2.0 TDI PD 16V (głowica).",
+    "sweet_spot_years": [
+      2009,
+      2013
+    ]
+  },
   "engines": [
     {
       "code": "1.9 TDI PD 105 KM (m.in. BXE/BKC/BJB/BLS)",

@@ -20,6 +20,69 @@
     "insignia opc a"
   ],
   "market_note": "Bardzo popularna duża rodzinna limuzyna/kombi, często po flotach. Ceny orientacyjnie ok. 20–45 tys. zł (2026). Dominuje 2.0 CDTI, popularne też 1.8 z LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2009,
+        2011
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        16000,
+        24000
+      ],
+      "note": "Flotowe 2.0 CDTI z dużym przebiegiem w dolnej części widełek."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 260000,
+      "price_pln": [
+        22000,
+        30000
+      ],
+      "note": "1.8 z LPG zbliżony do diesli."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        28000,
+        38000
+      ],
+      "note": "Po liftingu (2013); Country Tourer i 4x4 drożej."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        34000,
+        46000
+      ],
+      "note": "OPC i 2.0 BiTurbo poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne i niedrogie; olej z filtrem ok. 300–450 zł. Łożyska skrzyni M32 i dwumasa w dieslach to typowe większe wydatki."
+  },
+  "buy_advice": {
+    "best_pick": "1.8 16V (także z LPG) lub 2.0 CDTI 130–170 KM po liftingu 2013 z historią serwisową.",
+    "avoid": "Flotowe egzemplarze bez dokumentacji przebiegu i 2.0 CDTI eksploatowane w mieście.",
+    "sweet_spot_years": [
+      2013,
+      2017
+    ]
+  },
   "engines": [
     {
       "code": "2.0 CDTI 110–170 KM",

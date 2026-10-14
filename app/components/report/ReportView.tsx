@@ -1,12 +1,17 @@
 import Link from "next/link";
 import type { Report } from "@/lib/report-schema";
+import { CopyButton } from "@/components/ui/CopyButton";
+import { Icon } from "@/components/ui/icons";
+import { ShareButton } from "@/components/ui/ShareButton";
 import { MileageChart } from "./MileageChart";
+import { ReportToc } from "./ReportToc";
+import { nextSteps, questionsMessage, reportToc, summarizeReport, vehicleName } from "./summary";
 import { Section, WagaBadge, km, pln, wagaBorder } from "./ui";
 
-const RYZYKO: Record<Report["podsumowanie"]["ocena"], { label: string; cls: string; icon: string }> = {
-  niskie: { label: "Ryzyko niskie", cls: "bg-emerald-50 border-emerald-400 text-emerald-900", icon: "●" },
-  srednie: { label: "Ryzyko średnie", cls: "bg-amber-50 border-amber-400 text-amber-900", icon: "▲" },
-  wysokie: { label: "Ryzyko wysokie", cls: "bg-red-50 border-red-500 text-red-900", icon: "■" },
+const RYZYKO: Record<Report["podsumowanie"]["ocena"], { label: string; cls: string; icon: "shield" | "alert" | "octagon" }> = {
+  niskie: { label: "Ryzyko niskie", cls: "bg-emerald-50 border-emerald-400 text-emerald-900", icon: "shield" },
+  srednie: { label: "Ryzyko średnie", cls: "bg-amber-50 border-amber-400 text-amber-900", icon: "alert" },
+  wysokie: { label: "Ryzyko wysokie", cls: "bg-red-50 border-red-500 text-red-900", icon: "octagon" },
 };
 
 const PEWNOSC = { wysoka: "wysoka", srednia: "średnia", niska: "niska" } as const;
@@ -21,20 +26,66 @@ const ZASADY_OGOLNE = [
   "Sprawdź zawieszenie na nierównościach i równomierność zużycia opon.",
 ];
 
-export function ReportView({ report: r, offer }: { report: Report; offer: "raport" | "raport_plus" }) {
+export function ReportView({
+  report: r,
+  offer,
+  fallbackName,
+  shareUrl,
+}: {
+  report: Report;
+  offer: "raport" | "raport_plus";
+  /** Nazwa auta, gdy model nie został ustalony (np. etykieta z formularza). */
+  fallbackName?: string;
+  /** Link w „Udostępnij” (domyślnie bieżący adres). */
+  shareUrl?: string;
+}) {
   const ryz = RYZYKO[r.podsumowanie.ocena];
   const v = r.rozpoznany_pojazd;
+  const name = vehicleName(r, fallbackName);
+  const summary = summarizeReport(r, fallbackName);
+  const steps = nextSteps(r);
 
   return (
     <div className="space-y-4">
+      <ReportToc entries={reportToc(r, offer)} />
+
+      {/* 0. Następny krok – wyróżniony na górze */}
+      <section id="nastepny-krok" aria-labelledby="nastepny-krok-h" className="print-card scroll-mt-16 rounded-2xl border-2 border-brand-600 bg-brand-50 p-4 sm:p-5">
+        <h2 id="nastepny-krok-h" className="flex items-center gap-2 text-lg font-extrabold text-brand-900">
+          <Icon name="arrow" className="h-5 w-5" /> Następny krok
+        </h2>
+        <ol className="mt-2 space-y-2">
+          {steps.map((s, i) => (
+            <li key={i} className="flex gap-3">
+              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-brand-700 text-xs font-bold text-white" aria-hidden>
+                {i + 1}
+              </span>
+              <span className={i === 0 ? "font-semibold" : ""}>{s}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       {/* 1. Podsumowanie */}
-      <section className={`print-card rounded-2xl border-2 p-4 sm:p-5 ${ryz.cls}`}>
-        <div className="text-sm font-semibold uppercase tracking-wide opacity-80">Podsumowanie</div>
+      <section id="podsumowanie" aria-labelledby="podsumowanie-h" className={`print-card scroll-mt-16 rounded-2xl border-2 p-4 sm:p-5 ${ryz.cls}`}>
+        <h2 id="podsumowanie-h" className="text-sm font-semibold uppercase tracking-wide opacity-80">
+          Podsumowanie
+        </h2>
         <div className="mt-1 flex items-center gap-2 text-2xl font-extrabold">
-          <span aria-hidden>{ryz.icon}</span> {ryz.label}
+          <Icon name={ryz.icon} className="h-7 w-7" strokeWidth={2.5} /> {ryz.label}
         </div>
         <p className="mt-2">{r.podsumowanie.uzasadnienie}</p>
         <p className="mt-3 font-semibold">Zalecenie: {r.podsumowanie.zalecenie}</p>
+      </section>
+
+      {/* 1a. Podsumowanie do wysłania */}
+      <section className="no-print rounded-2xl border border-slate-200 bg-white p-4 shadow-sm sm:p-5" aria-labelledby="znajomy-h">
+        <h2 id="znajomy-h" className="font-bold">Podsumowanie w 3 zdaniach – wyślij znajomemu</h2>
+        <p className="mt-2 rounded-lg bg-slate-50 p-3 text-sm text-slate-800">{summary}</p>
+        <div className="mt-3 flex flex-wrap gap-2">
+          <ShareButton title={`Raport: ${name}`} text={summary} url={shareUrl} label="Udostępnij" />
+          <CopyButton text={summary} label="Kopiuj tekst" />
+        </div>
       </section>
 
       {/* 2. Rozpoznany pojazd */}
@@ -60,7 +111,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
       </Section>
 
       {/* 3. Czerwone flagi */}
-      <Section title={`Czerwone flagi (${r.czerwone_flagi.length})`}>
+      <Section id="flagi" title={`Czerwone flagi (${r.czerwone_flagi.length})`}>
         {r.czerwone_flagi.length === 0 ? (
           <p className="text-sm text-slate-600">Nie znaleźliśmy w ogłoszeniu sygnałów wymagających wyjaśnienia. Nie zwalnia to z oględzin.</p>
         ) : (
@@ -83,7 +134,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
 
       {/* 4. Przebieg */}
       {r.przebieg && (
-        <Section title="Przebieg">
+        <Section id="przebieg" title="Przebieg">
           <p className="mb-3 text-sm">
             Deklarowany przebieg: <strong>{km(r.przebieg.deklarowany_km)}</strong>
           </p>
@@ -125,7 +176,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
       )}
 
       {/* 5. Typowe usterki */}
-      <Section title="Typowe usterki modelu i silnika">
+      <Section id="usterki" title="Typowe usterki modelu i silnika">
         {!v.w_bazie ? (
           <div className="space-y-2">
             <p className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm font-semibold text-amber-900">
@@ -169,7 +220,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
 
       {/* 6. Zdjęcia */}
       {r.zdjecia && (
-        <Section title="Zdjęcia">
+        <Section id="zdjecia" title="Zdjęcia">
           <ul className="list-disc space-y-1 pl-5 text-sm">
             {r.zdjecia.uwagi.map((u, i) => (
               <li key={i}>{u}</li>
@@ -180,7 +231,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
 
       {/* 7. Porównanie cen */}
       {r.porownanie_cen && (
-        <Section title="Porównanie cen">
+        <Section id="ceny" title="Porównanie cen">
           <div className="-mx-4 overflow-x-auto px-4 sm:mx-0 sm:px-0">
             <table className="w-full min-w-[560px] text-sm">
               <thead>
@@ -212,16 +263,21 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
       )}
 
       {/* 8. Pytania */}
-      <Section title="Pytania do sprzedawcy">
+      <Section id="pytania" title="Pytania do sprzedawcy">
         <ol className="list-decimal space-y-1.5 pl-5 text-sm">
           {r.pytania_do_sprzedawcy.map((p, i) => (
             <li key={i}>{p}</li>
           ))}
         </ol>
+        {r.pytania_do_sprzedawcy.length > 0 && (
+          <div className="no-print mt-3">
+            <CopyButton text={questionsMessage(r, fallbackName)} label="Skopiuj pytania do sprzedawcy" copiedLabel="Skopiowano – wklej w SMS lub Messengerze" className="w-full sm:w-auto" />
+          </div>
+        )}
       </Section>
 
       {/* 9. Checklista */}
-      <Section title="Checklista oględzin">
+      <Section id="checklista" title="Checklista oględzin">
         <div className="grid gap-4 sm:grid-cols-2">
           {r.checklista_ogledzin.map((c, i) => (
             <div key={i}>
@@ -240,7 +296,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
       </Section>
 
       {/* 10. Dokumenty */}
-      <Section title="Dokumenty do sprawdzenia">
+      <Section id="dokumenty" title="Dokumenty do sprawdzenia">
         <ul className="list-disc space-y-1 pl-5 text-sm">
           {r.dokumenty_do_sprawdzenia.map((d, i) => (
             <li key={i}>{d}</li>
@@ -250,7 +306,7 @@ export function ReportView({ report: r, offer }: { report: Report; offer: "rapor
 
       {offer === "raport_plus" && (
         <>
-          <Section title="Wzór umowy kupna-sprzedaży" className="no-print">
+          <Section id="umowa" title="Wzór umowy kupna-sprzedaży" className="no-print">
             <p className="text-sm">
               W pakiecie Raport+ masz wzór umowy kupna-sprzedaży samochodu do wydruku.{" "}
               <Link href="/umowa" className="font-semibold text-brand-700 underline" target="_blank">

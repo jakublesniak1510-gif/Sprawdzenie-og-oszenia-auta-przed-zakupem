@@ -21,6 +21,57 @@
     "astra j lift"
   ],
   "market_note": "Popularny kompakt w cenie ok. 18–35 tys. zł (2026). Sporo aut z polskich salonów i z importu, w tym fabryczne wersje LPG.",
+  "price_ranges": [
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        16000,
+        23000
+      ],
+      "note": "1.4 Turbo i 1.7 CDTI zbliżone."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        21000,
+        28000
+      ],
+      "note": "Po liftingu (2012); Sports Tourer i GTC nieznacznie drożej."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        25000,
+        34000
+      ],
+      "note": "Fabryczne LPG 1.4 Turbo zbliżone; 2.0 CDTI 165 KM +5–10%."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–400 zł. Łożyska skrzyni M32 – regeneracja ok. 1,5–3 tys. zł."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 Turbo 140 KM (także z fabrycznym LPG) lub 1.6 16V po liftingu 2012.",
+    "avoid": "Egzemplarze z wyjącą skrzynią M32 i 2.0 CDTI z historią jazd wyłącznie miejskich (DPF, rozcieńczanie oleju).",
+    "sweet_spot_years": [
+      2012,
+      2015
+    ]
+  },
   "engines": [
     {
       "code": "1.4 Turbo 120/140 KM (A14NET)",

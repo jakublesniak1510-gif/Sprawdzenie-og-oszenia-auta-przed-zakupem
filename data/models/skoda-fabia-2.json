@@ -23,6 +23,57 @@
     "fabia 2 rs"
   ],
   "market_note": "Popularne tanie auto miejskie, często pierwsze auto lub auto do dojazdów. Ceny orientacyjnie ok. 9–22 tys. zł (2026). Ostrożnie z najsłabszym 1.2 HTP.",
+  "price_ranges": [
+    {
+      "years": [
+        2007,
+        2009
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        7500,
+        12000
+      ],
+      "note": "1.2 HTP najtańszy; kombi nieznacznie drożej."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        10000,
+        15000
+      ],
+      "note": "Po liftingu (2010); 1.6 TDI CR i 1.2 TSI drożej."
+    },
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        13000,
+        21000
+      ],
+      "note": "RS i Scout poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 450–900 zł/rok; AC opłacalne raczej dla młodszych roczników (ok. 700–1500 zł/rok).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części bardzo tanie i dostępne; olej z filtrem ok. 200–350 zł. 1.2 HTP i 1.2 TSI (EA111) – łańcuch rozrządu ok. 1,5–3 tys. zł."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 16V 86 KM lub 1.6 TDI CR z historią serwisową.",
+    "avoid": "1.2 HTP 60 KM (słaby i z problemami łańcucha) oraz 1.4 TDI PD bez historii.",
+    "sweet_spot_years": [
+      2010,
+      2014
+    ]
+  },
   "engines": [
     {
       "code": "1.2 HTP 60/70 KM (3-cylindrowy, 6V/12V)",

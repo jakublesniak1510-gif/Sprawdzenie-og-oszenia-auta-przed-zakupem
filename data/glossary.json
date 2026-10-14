@@ -1,0 +1,574 @@
+[
+  {
+    "term": "DSG / S tronic",
+    "aliases": [
+      "dsg",
+      "s tronic",
+      "s-tronic",
+      "dq200",
+      "dq250",
+      "dq381",
+      "skrzynia dwusprzęgłowa"
+    ],
+    "category": "skrzynia",
+    "short": "Automatyczna skrzynia dwusprzęgłowa grupy VW.",
+    "explanation": "Skrzynia z dwoma sprzęgłami, która zmienia biegi bez przerwy w napędzie. Wersje „suche” (np. 7-biegowa DQ200) są wrażliwe na jazdę miejską i bywają kosztowne w naprawie (sprzęgło, mechatronika); wersje „mokre” (DQ250, DQ381) wymagają wymiany oleju co ok. 60 tys. km."
+  },
+  {
+    "term": "Mechatronika",
+    "aliases": [
+      "mechatronika",
+      "sterownik skrzyni",
+      "tcm"
+    ],
+    "category": "skrzynia",
+    "short": "Sterownik i układ hydrauliczny skrzyni automatycznej.",
+    "explanation": "Moduł łączący elektronikę i hydraulikę, który steruje zmianą biegów w skrzyniach DSG/S tronic i innych automatach. Awaria objawia się szarpaniem, trybem awaryjnym lub brakiem biegów; regeneracja kosztuje zwykle kilka tysięcy złotych."
+  },
+  {
+    "term": "Multitronic",
+    "aliases": [
+      "multitronic"
+    ],
+    "category": "skrzynia",
+    "short": "Bezstopniowa skrzynia Audi (CVT) w autach z napędem na przód.",
+    "explanation": "Skrzynia bez klasycznych biegów, stosowana w Audi A4/A6 z napędem na przód do ok. 2015 r. Wymaga regularnej wymiany oleju; zaniedbana szarpie przy ruszaniu i bywa droga w naprawie."
+  },
+  {
+    "term": "Powershift",
+    "aliases": [
+      "powershift",
+      "dps6",
+      "6dct250",
+      "6dct450"
+    ],
+    "category": "skrzynia",
+    "short": "Dwusprzęgłowa skrzynia automatyczna Forda.",
+    "explanation": "Wersja „sucha” (DPS6, m.in. Focus, Fiesta) jest znana z szarpania przy ruszaniu i usterek sterownika; wersja „mokra” (6DCT450, m.in. Mondeo, Kuga) jest trwalsza, ale wymaga wymiany oleju."
+  },
+  {
+    "term": "EDC",
+    "aliases": [
+      "edc",
+      "skrzynia edc"
+    ],
+    "category": "skrzynia",
+    "short": "Dwusprzęgłowa skrzynia automatyczna Renault/Dacii.",
+    "explanation": "Skrzynia z suchymi sprzęgłami (np. w Clio, Captur, Megane). Typowe objawy zużycia to szarpanie przy ruszaniu i drgania; przed zakupem warto sprawdzić ją w korku i odczytać błędy."
+  },
+  {
+    "term": "CVT",
+    "aliases": [
+      "cvt",
+      "skrzynia bezstopniowa",
+      "multidrive s",
+      "xtronic",
+      "e-cvt"
+    ],
+    "category": "skrzynia",
+    "short": "Skrzynia bezstopniowa – bez klasycznych biegów.",
+    "explanation": "Zmienia przełożenie płynnie (np. Toyota Multidrive S, Nissan Xtronic). Wymaga oleju właściwego typu i jego wymiany; wycie, szarpanie lub „ślizganie” są sygnałem zużycia. Układ e-CVT w hybrydach Toyoty to inna, bardzo trwała konstrukcja."
+  },
+  {
+    "term": "Easytronic / zautomatyzowana skrzynia manualna",
+    "aliases": [
+      "easytronic",
+      "easy-r",
+      "etg6",
+      "skrzynia zautomatyzowana",
+      "półautomat",
+      "polautomat"
+    ],
+    "category": "skrzynia",
+    "short": "Zwykła skrzynia manualna z automatycznie sterowanym sprzęgłem.",
+    "explanation": "Tańsze rozwiązanie niż pełny automat (np. Opel Easytronic, Dacia Easy-R). Zmienia biegi wolno i z „przerwą”; zużywa sprzęgło i siłowniki, zwłaszcza w mieście."
+  },
+  {
+    "term": "Koło dwumasowe (dwumasa)",
+    "aliases": [
+      "dwumasa",
+      "koło dwumasowe",
+      "kolo dwumasowe",
+      "dmf"
+    ],
+    "category": "naped",
+    "short": "Koło zamachowe tłumiące drgania silnika, zwykle w dieslach.",
+    "explanation": "Element między silnikiem a sprzęgłem. Zużyte powoduje stuki i drgania na biegu jałowym oraz przy ruszaniu. Wymiana razem ze sprzęgłem kosztuje zwykle ok. 3–6 tys. zł."
+  },
+  {
+    "term": "Sprzęgło Haldex / napęd 4x4",
+    "aliases": [
+      "haldex",
+      "4motion",
+      "quattro",
+      "xdrive",
+      "awd",
+      "4x4",
+      "4drive"
+    ],
+    "category": "naped",
+    "short": "Układ dołączający napęd tylnej osi w autach 4x4.",
+    "explanation": "W wielu autach (VW 4Motion, Audi quattro w mniejszych modelach, Skoda 4x4) tylna oś jest dołączana sprzęgłem Haldex, które wymaga wymiany oleju co ok. 60 tys. km. W BMW xDrive odpowiada za to skrzynia rozdzielcza – wrażliwa na różne opony na osiach."
+  },
+  {
+    "term": "DPF / FAP",
+    "aliases": [
+      "dpf",
+      "fap",
+      "filtr cząstek stałych",
+      "filtr czastek stalych",
+      "filtr dpf"
+    ],
+    "category": "silnik",
+    "short": "Filtr cząstek stałych w układzie wydechowym diesla.",
+    "explanation": "Zatrzymuje sadzę, którą okresowo wypala (regeneracja). Przy jeździe głównie miejskiej się zapycha. Usunięcie filtra jest niezgodne z przepisami i może skutkować negatywnym wynikiem badania technicznego."
+  },
+  {
+    "term": "Regeneracja DPF",
+    "aliases": [
+      "regeneracja dpf",
+      "wypalanie dpf",
+      "wypalanie filtra"
+    ],
+    "category": "silnik",
+    "short": "Wypalanie sadzy z filtra cząstek stałych.",
+    "explanation": "Odbywa się automatycznie podczas dłuższej jazdy. Przerywane regeneracje (krótkie trasy) mogą rozcieńczać olej paliwem – rośnie wtedy poziom oleju na bagnecie."
+  },
+  {
+    "term": "EGR",
+    "aliases": [
+      "egr",
+      "zawór egr",
+      "zawor egr",
+      "chłodnica egr",
+      "chlodnica egr"
+    ],
+    "category": "silnik",
+    "short": "Układ recyrkulacji spalin – zawraca część spalin do dolotu.",
+    "explanation": "Obniża emisję tlenków azotu. Zawór i chłodnica EGR zarastają nagarem (spadek mocy, szarpanie, kontrolka); nieszczelna chłodnica powoduje ubytek płynu chłodzącego. Wyłączenie EGR jest niezgodne z przepisami."
+  },
+  {
+    "term": "AdBlue / SCR",
+    "aliases": [
+      "adblue",
+      "ad blue",
+      "scr",
+      "katalizator scr"
+    ],
+    "category": "silnik",
+    "short": "Płyn i układ oczyszczania spalin w nowszych dieslach.",
+    "explanation": "AdBlue to roztwór mocznika dolewany do osobnego zbiornika. Awaria pompy, grzałki lub czujników NOx wyświetla odliczanie kilometrów, po którym silnika nie da się uruchomić. „AdBlue off” to niezgodna z przepisami ingerencja."
+  },
+  {
+    "term": "Rozrząd",
+    "aliases": [
+      "rozrząd",
+      "rozrzad",
+      "pasek rozrządu",
+      "pasek rozrzadu",
+      "łańcuch rozrządu",
+      "lancuch rozrzadu"
+    ],
+    "category": "silnik",
+    "short": "Mechanizm napędzający wałki rozrządu – pasek lub łańcuch.",
+    "explanation": "Pasek wymienia się co określony przebieg lub lata (zwykle z pompą wody). Łańcuch teoretycznie jest bezobsługowy, ale w części silników rozciąga się (grzechotanie po zimnym starcie). Zerwanie zwykle niszczy silnik – warto mieć fakturę za wymianę."
+  },
+  {
+    "term": "Pasek rozrządu w oleju",
+    "aliases": [
+      "pasek w oleju",
+      "mokry pasek",
+      "wet belt"
+    ],
+    "category": "silnik",
+    "short": "Pasek rozrządu pracujący w kąpieli olejowej.",
+    "explanation": "Rozwiązanie stosowane m.in. w Ford 1.0 EcoBoost i PSA 1.2 PureTech. Przy niewłaściwym oleju lub zbyt długich interwałach pasek się rozwarstwia, a jego fragmenty mogą zatkać smok pompy oleju."
+  },
+  {
+    "term": "Wtryskiwacze piezo",
+    "aliases": [
+      "wtryskiwacze piezo",
+      "piezo",
+      "wtryskiwacze piezoelektryczne"
+    ],
+    "category": "silnik",
+    "short": "Precyzyjne, szybkie wtryskiwacze w nowoczesnych dieslach i części benzyn.",
+    "explanation": "Pracują dokładniej niż elektromagnetyczne, ale są droższe i trudniejsze w regeneracji. Objawy zużycia to trudny rozruch, nierówna praca i dymienie; stan ocenia się odczytem korekt dawek i testem przelewów."
+  },
+  {
+    "term": "Wtrysk bezpośredni i nagar",
+    "aliases": [
+      "wtrysk bezpośredni",
+      "wtrysk bezposredni",
+      "nagar",
+      "tsi",
+      "tfsi",
+      "gdi",
+      "fsi",
+      "cgi"
+    ],
+    "category": "silnik",
+    "short": "Benzyna wtryskiwana prosto do cylindra; zawory dolotowe nie są myte paliwem.",
+    "explanation": "W silnikach TSI/TFSI/GDI na zaworach dolotowych odkłada się nagar, co daje nierówną pracę i wypadanie zapłonów. Czyszczenie dolotu kosztuje zwykle ok. 800–2000 zł. Takie silniki są też bardziej wymagające przy montażu LPG."
+  },
+  {
+    "term": "Turbosprężarka",
+    "aliases": [
+      "turbo",
+      "turbosprężarka",
+      "turbosprezarka",
+      "turbina"
+    ],
+    "category": "silnik",
+    "short": "Sprężarka napędzana spalinami, zwiększająca moc silnika.",
+    "explanation": "Zużyta turbosprężarka gwiżdże, traci doładowanie lub przepuszcza olej (niebieski dym). Regeneracja to zwykle 1,5–4 tys. zł; ważne jest usunięcie przyczyny (np. zapchany przewód olejowy)."
+  },
+  {
+    "term": "Klapy wirowe",
+    "aliases": [
+      "klapy wirowe",
+      "swirl",
+      "klapy kolektora"
+    ],
+    "category": "silnik",
+    "short": "Klapki w kolektorze dolotowym poprawiające zawirowanie powietrza.",
+    "explanation": "W części diesli (np. BMW M47, Opel 1.9 CDTI) mogą się urwać i uszkodzić silnik. Bywają usuwane lub zaślepiane – warto zapytać, czy zrobiono to fachowo."
+  },
+  {
+    "term": "Downsizing (małe silniki turbo)",
+    "aliases": [
+      "downsizing",
+      "ecoboost",
+      "tce",
+      "puretech",
+      "1.0 turbo"
+    ],
+    "category": "silnik",
+    "short": "Mała pojemność z turbodoładowaniem zamiast większego silnika.",
+    "explanation": "Silniki takie jak 1.0 EcoBoost, 1.2 TCe czy 1.2 PureTech są oszczędne, ale bardziej wrażliwe na jakość oleju, przegrzanie i zaniedbania serwisowe niż proste, wolnossące jednostki."
+  },
+  {
+    "term": "Instalacja LPG (sekwencyjna)",
+    "aliases": [
+      "lpg",
+      "gaz",
+      "sekwencja",
+      "instalacja gazowa",
+      "b+lpg"
+    ],
+    "category": "lpg",
+    "short": "Zasilanie silnika gazem płynnym obok benzyny.",
+    "explanation": "Instalacja sekwencyjna (IV generacji i nowsze) wtryskuje gaz osobno do każdego cylindra. Musi być wpisana do dowodu rejestracyjnego, wymaga corocznego badania technicznego oraz regularnej wymiany filtrów i regulacji."
+  },
+  {
+    "term": "Butla LPG – homologacja",
+    "aliases": [
+      "butla",
+      "butla lpg",
+      "homologacja butli",
+      "zbiornik lpg"
+    ],
+    "category": "lpg",
+    "short": "Butla gazowa ma ograniczony okres ważności.",
+    "explanation": "Data produkcji jest na tabliczce butli; zwykle po ok. 10 latach butlę trzeba wymienić, inaczej auto nie przejdzie badania technicznego. Wymiana kosztuje ok. 800–1800 zł."
+  },
+  {
+    "term": "Wypalone gniazda zaworowe (LPG)",
+    "aliases": [
+      "gniazda zaworowe",
+      "wypalone zawory",
+      "komora spalania lpg",
+      "luzy zaworowe"
+    ],
+    "category": "lpg",
+    "short": "Uszkodzenie głowicy przez wyższą temperaturę spalania gazu.",
+    "explanation": "Gaz spala się w komorze spalania cieplej i bez „smarowania” benzyną. Przy źle wyregulowanej instalacji i braku kontroli luzów zaworowych zawory i gniazda mogą się wypalać – spada kompresja i silnik pracuje nierówno."
+  },
+  {
+    "term": "Hybryda (HSD) i bateria HV",
+    "aliases": [
+      "hybryda",
+      "hybrid",
+      "hsd",
+      "bateria hv",
+      "bateria trakcyjna"
+    ],
+    "category": "silnik",
+    "short": "Napęd łączący silnik spalinowy i elektryczny.",
+    "explanation": "W pełnych hybrydach (np. Toyota HSD) bateria wysokiego napięcia (HV) jest zwykle trwała, ale jej stan warto sprawdzić diagnostyką. Zapchany filtr wentylatora baterii przyspiesza jej zużycie."
+  },
+  {
+    "term": "LongLife",
+    "aliases": [
+      "longlife",
+      "long life",
+      "wydłużony interwał",
+      "wydluzony interwal"
+    ],
+    "category": "serwis",
+    "short": "Fabryczny wydłużony interwał wymiany oleju (nawet do 30 tys. km).",
+    "explanation": "Mechanicy zwykle zalecają wymianę co ok. 15 tys. km lub raz w roku – zbyt rzadka wymiana oleju przyspiesza zużycie turbosprężarki, łańcucha rozrządu i panewek."
+  },
+  {
+    "term": "Start/Stop",
+    "aliases": [
+      "start/stop",
+      "start-stop",
+      "i-stop",
+      "start stop"
+    ],
+    "category": "elektryka",
+    "short": "System gaszący silnik na postoju.",
+    "explanation": "Wymaga droższego akumulatora (EFB lub AGM). Niedziałający Start/Stop często oznacza słaby akumulator, a nie usterkę samego systemu."
+  },
+  {
+    "term": "Elektryczny hamulec postojowy (EPB)",
+    "aliases": [
+      "epb",
+      "elektryczny hamulec postojowy",
+      "elektryczny ręczny"
+    ],
+    "category": "elektryka",
+    "short": "Hamulec „ręczny” uruchamiany przyciskiem.",
+    "explanation": "Silniczki przy tylnych zaciskach mogą ulegać awarii; wymiana klocków wymaga trybu serwisowego w diagnostyce."
+  },
+  {
+    "term": "VIN",
+    "aliases": [
+      "vin",
+      "numer vin",
+      "numer nadwozia"
+    ],
+    "category": "dokumenty",
+    "short": "17-znakowy numer identyfikacyjny pojazdu.",
+    "explanation": "Znajduje się w dowodzie rejestracyjnym (pole E), na tabliczce znamionowej, na nadwoziu i zwykle pod przednią szybą. Nie zawiera liter I, O i Q. Pozwala sprawdzić Historię Pojazdu i historię serwisową."
+  },
+  {
+    "term": "Historia Pojazdu (CEPiK)",
+    "aliases": [
+      "historia pojazdu",
+      "cepik",
+      "cep",
+      "historiapojazdu"
+    ],
+    "category": "dokumenty",
+    "short": "Bezpłatna usługa gov.pl z danymi z Centralnej Ewidencji Pojazdów.",
+    "explanation": "Po podaniu numeru rejestracyjnego, VIN i daty pierwszej rejestracji pokazuje m.in. odczyty licznika z badań technicznych, liczbę właścicieli, status OC i rejestracji. Nie zawiera danych sprzed rejestracji w Polsce."
+  },
+  {
+    "term": "Karta pojazdu",
+    "aliases": [
+      "karta pojazdu"
+    ],
+    "category": "dokumenty",
+    "short": "Dawny dokument pojazdu – nie jest wydawana od 2020 r.",
+    "explanation": "Od 4 stycznia 2020 r. karty pojazdu nie są już wydawane. Jeśli auto ją ma, warto ją otrzymać przy zakupie razem z pozostałymi dokumentami."
+  },
+  {
+    "term": "Dowód rejestracyjny",
+    "aliases": [
+      "dowód rejestracyjny",
+      "dowod rejestracyjny",
+      "dowód",
+      "dowod"
+    ],
+    "category": "dokumenty",
+    "short": "Podstawowy dokument zarejestrowanego pojazdu.",
+    "explanation": "Zawiera m.in. numer rejestracyjny (pole A), datę pierwszej rejestracji (pole B), właściciela i VIN (pole E). Dane w umowie sprzedaży powinny się z nim zgadzać."
+  },
+  {
+    "term": "Badanie techniczne (przegląd)",
+    "aliases": [
+      "badanie techniczne",
+      "przegląd",
+      "przeglad",
+      "skp",
+      "stacja kontroli pojazdów"
+    ],
+    "category": "dokumenty",
+    "short": "Obowiązkowa okresowa kontrola stanu auta na stacji kontroli pojazdów.",
+    "explanation": "Nowe auto osobowe przechodzi pierwsze badanie przed upływem 3 lat, kolejne po 2 latach, potem co rok; auto z LPG – co rok. Diagnosta zapisuje stan licznika, który trafia do CEPiK."
+  },
+  {
+    "term": "OC",
+    "aliases": [
+      "oc",
+      "ubezpieczenie oc",
+      "polisa oc"
+    ],
+    "category": "ubezpieczenie",
+    "short": "Obowiązkowe ubezpieczenie odpowiedzialności cywilnej.",
+    "explanation": "Polisa przechodzi na kupującego razem z autem; można ją wypowiedzieć i kupić własną. Bez ważnego OC auto nie może poruszać się po drodze, także na jazdę próbną."
+  },
+  {
+    "term": "AC",
+    "aliases": [
+      "ac",
+      "autocasco",
+      "ubezpieczenie ac"
+    ],
+    "category": "ubezpieczenie",
+    "short": "Dobrowolne ubezpieczenie od szkód własnych i kradzieży.",
+    "explanation": "Jego koszt zależy od wartości auta, modelu (ryzyko kradzieży), wieku kierowcy i miejsca zamieszkania. W starszych, tanich autach często się nie opłaca."
+  },
+  {
+    "term": "UFG",
+    "aliases": [
+      "ufg",
+      "ubezpieczeniowy fundusz gwarancyjny"
+    ],
+    "category": "ubezpieczenie",
+    "short": "Ubezpieczeniowy Fundusz Gwarancyjny – m.in. baza polis OC.",
+    "explanation": "Na stronie UFG można sprawdzić, czy auto ma ważne OC. Właściciel może też pobrać informację o szkodach z polis OC/AC – warto poprosić sprzedawcę o taki wydruk."
+  },
+  {
+    "term": "Akcyza",
+    "aliases": [
+      "akcyza",
+      "podatek akcyzowy"
+    ],
+    "category": "podatki",
+    "short": "Podatek płacony przy sprowadzeniu auta do Polski.",
+    "explanation": "Wynosi 3,1% wartości auta z silnikiem do 2000 cm³ i 18,6% powyżej 2000 cm³; dla hybryd obowiązują stawki obniżone. Płaci go osoba, która sprowadza auto, przed rejestracją."
+  },
+  {
+    "term": "„Do opłat”",
+    "aliases": [
+      "do opłat",
+      "do oplat",
+      "nieopłacony",
+      "nieoplacony"
+    ],
+    "category": "podatki",
+    "short": "Auto sprowadzone, za które nie zapłacono jeszcze opłat w Polsce.",
+    "explanation": "Kupujący musi sam opłacić akcyzę (jeśli nie zapłacona), tłumaczenia dokumentów, badanie techniczne i rejestrację. Cena w ogłoszeniu nie obejmuje tych kosztów."
+  },
+  {
+    "term": "PCC",
+    "aliases": [
+      "pcc",
+      "pcc-3",
+      "podatek od czynności cywilnoprawnych"
+    ],
+    "category": "podatki",
+    "short": "Podatek 2% od zakupu auta od osoby prywatnej.",
+    "explanation": "Kupujący składa deklarację PCC-3 i płaci 2% wartości rynkowej auta w ciągu 14 dni od zakupu (zwolnienie przy wartości do 1000 zł). Przy zakupie na fakturę od firmy PCC się nie płaci."
+  },
+  {
+    "term": "Faktura VAT marża",
+    "aliases": [
+      "vat marża",
+      "vat marza",
+      "faktura marża",
+      "faktura marza"
+    ],
+    "category": "podatki",
+    "short": "Faktura od firmy sprzedającej używane auto bez naliczania VAT od całej ceny.",
+    "explanation": "Typowa u handlarzy i w komisach. Kupujący nie płaci PCC, ale nie odliczy VAT. Wystawia ją przedsiębiorca – w ogłoszeniu „prywatnym” to sygnał do wyjaśnienia, kto sprzedaje auto."
+  },
+  {
+    "term": "Faktura VAT 23%",
+    "aliases": [
+      "faktura vat 23%",
+      "vat 23%",
+      "fv 23"
+    ],
+    "category": "podatki",
+    "short": "Faktura z pełnym VAT od czynnego podatnika VAT.",
+    "explanation": "Zwykle przy sprzedaży aut firmowych i poleasingowych. Firma kupująca może odliczyć VAT; osoba prywatna płaci cenę brutto, ale bez PCC."
+  },
+  {
+    "term": "Rejestracja auta po zakupie",
+    "aliases": [
+      "rejestracja",
+      "przerejestrowanie",
+      "zgłoszenie zbycia"
+    ],
+    "category": "dokumenty",
+    "short": "Obowiązek zarejestrowania auta na nowego właściciela.",
+    "explanation": "Kupujący ma 30 dni na rejestrację auta, a sprzedający 30 dni na zgłoszenie zbycia w wydziale komunikacji; spóźnienie grozi karą."
+  },
+  {
+    "term": "Zastaw rejestrowy",
+    "aliases": [
+      "zastaw rejestrowy",
+      "zastaw",
+      "przewłaszczenie",
+      "przewlaszczenie"
+    ],
+    "category": "dokumenty",
+    "short": "Obciążenie auta na rzecz wierzyciela (np. banku).",
+    "explanation": "Auto obciążone zastawem może zostać zajęte przez wierzyciela nawet po sprzedaży. Wpis można sprawdzić w rejestrze zastawów; auto w leasingu należy do leasingodawcy."
+  },
+  {
+    "term": "Rękojmia",
+    "aliases": [
+      "rękojmia",
+      "rekojmia"
+    ],
+    "category": "dokumenty",
+    "short": "Odpowiedzialność sprzedawcy za wady rzeczy sprzedanej.",
+    "explanation": "Między osobami prywatnymi można ją w umowie ograniczyć lub wyłączyć. Przy zakupie od przedsiębiorcy konsument ma uprawnienia z tytułu niezgodności towaru z umową, których nie da się wyłączyć."
+  },
+  {
+    "term": "Anglik / przekładka",
+    "aliases": [
+      "anglik",
+      "przekładka",
+      "przekladka",
+      "rhd"
+    ],
+    "category": "ogloszenie",
+    "short": "Auto z rynku z ruchem lewostronnym (kierownica po prawej).",
+    "explanation": "Przekładka to przeniesienie kierownicy na lewą stronę. Jakość przeróbki bywa różna, a wartość takich aut jest zwykle niższa – warto zapytać, kto ją wykonał i czy są dokumenty."
+  },
+  {
+    "term": "Szkoda całkowita",
+    "aliases": [
+      "szkoda całkowita",
+      "szkoda calkowita",
+      "salvage",
+      "copart",
+      "iaai"
+    ],
+    "category": "historia",
+    "short": "Szkoda, której naprawa według ubezpieczyciela się nie opłacała.",
+    "explanation": "Takie auta często trafiają na aukcje (np. w USA) i po naprawie do sprzedaży. Mogą być sprawne, ale wymagają bardzo dokładnej kontroli nadwozia, poduszek i dokumentacji naprawy."
+  },
+  {
+    "term": "Pomiar lakieru",
+    "aliases": [
+      "miernik lakieru",
+      "pomiar lakieru",
+      "grubość lakieru",
+      "grubosc lakieru",
+      "szpachla"
+    ],
+    "category": "ogledziny",
+    "short": "Sprawdzenie grubości powłoki lakieru miernikiem.",
+    "explanation": "Fabryczny lakier ma zwykle ok. 80–180 µm; wyraźnie wyższe wartości oznaczają ponowne lakierowanie, a bardzo wysokie (np. powyżej 300–500 µm) – możliwą szpachlę. Pojedyncze lakierowane elementy nie muszą oznaczać poważnej szkody."
+  },
+  {
+    "term": "Diagnostyka komputerowa (OBD)",
+    "aliases": [
+      "obd",
+      "diagnostyka",
+      "kody błędów",
+      "kody bledow"
+    ],
+    "category": "ogledziny",
+    "short": "Odczyt błędów i parametrów ze sterowników auta.",
+    "explanation": "Pozwala sprawdzić zapisane usterki, stan DPF, adaptacje skrzyni, korekty wtryskiwaczy i często przebieg zapisany w innych modułach niż licznik. Skasowane tuż przed oględzinami błędy też bywają widoczne (liczniki gotowości)."
+  },
+  {
+    "term": "Bezwypadkowy",
+    "aliases": [
+      "bezwypadkowy",
+      "bezwypadkowa",
+      "bezwypadkowe"
+    ],
+    "category": "ogloszenie",
+    "short": "Deklaracja, że auto nie miało wypadku.",
+    "explanation": "Nie ma jednej definicji – część sprzedawców uznaje za bezwypadkowe auto po drobnych naprawach. Deklarację warto potwierdzić pomiarem lakieru, oględzinami i wpisaniem do umowy."
+  }
+]

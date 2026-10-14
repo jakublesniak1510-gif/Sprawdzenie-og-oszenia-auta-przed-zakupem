@@ -16,6 +16,57 @@
     "tiguan i lift"
   ],
   "market_note": "Popularny kompaktowy SUV, często z napędem 4Motion i 2.0 TDI. Ceny orientacyjnie ok. 35–60 tys. zł (2026). Wersje z importu i dużymi przebiegami przeważają.",
+  "price_ranges": [
+    {
+      "years": [
+        2008,
+        2010
+      ],
+      "km_max": 260000,
+      "price_pln": [
+        29000,
+        39000
+      ],
+      "note": "1.4 TSI 150 KM (twincharger) w dolnej części widełek."
+    },
+    {
+      "years": [
+        2011,
+        2013
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        37000,
+        49000
+      ],
+      "note": "Po liftingu (2011); 4Motion +5–10%."
+    },
+    {
+      "years": [
+        2014,
+        2016
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        45000,
+        60000
+      ],
+      "note": "2.0 TDI 170/177 KM 4Motion z DSG w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 700–1400 zł/rok; AC ok. 1600–3500 zł/rok – popularne SUV-y bywają częściej kradzione, co podnosi AC w dużych miastach.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Olej w Haldexie co ok. 60 tys. km (ok. 300–600 zł), w DSG DQ250 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 TDI 140 KM 4Motion po liftingu 2011 z udokumentowanym serwisem Haldexa i DSG.",
+    "avoid": "1.4 TSI 150 KM (twincharger) bez historii i auta z zalanym wnętrzem (odpływy dachu).",
+    "sweet_spot_years": [
+      2011,
+      2016
+    ]
+  },
   "engines": [
     {
       "code": "2.0 TDI CR 110/140/170 KM (EA189)",

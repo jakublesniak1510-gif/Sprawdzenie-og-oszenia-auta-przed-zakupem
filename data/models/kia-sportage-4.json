@@ -16,6 +16,57 @@
     "sportage gt line iv"
   ],
   "market_note": "Jeden z najpopularniejszych SUV-ów w Polsce, dużo aut z polskich salonów. Ceny orientacyjnie ok. 60–110 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2015,
+        2017
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        58000,
+        76000
+      ],
+      "note": "1.6 GDI 2WD z manualem najtańszy; 2.0 CRDi AWD w górnej części widełek."
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        70000,
+        88000
+      ],
+      "note": "Po liftingu (2018); GT Line +5–10%."
+    },
+    {
+      "years": [
+        2020,
+        2021
+      ],
+      "km_max": 120000,
+      "price_pln": [
+        82000,
+        110000
+      ],
+      "note": "Mild hybrid 48 V i AWD powyżej środka widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 700–1400 zł/rok; AC ok. 1600–3500 zł/rok – popularne SUV-y bywają częściej kradzione, co podnosi AC w dużych miastach.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. Olej w skrzyni DCT/automatycznej warto wymieniać co ok. 60 tys. km (ok. 600–1200 zł)."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 GDI lub 1.7/1.6 CRDi z polskiego salonu z historią w ASO, po liftingu 2018.",
+    "avoid": "Egzemplarze z niejasną historią szkód (popularne w kradzieżach i naprawach powypadkowych) i DCT bez historii.",
+    "sweet_spot_years": [
+      2018,
+      2021
+    ]
+  },
   "engines": [
     {
       "code": "1.6 GDI 132 KM",

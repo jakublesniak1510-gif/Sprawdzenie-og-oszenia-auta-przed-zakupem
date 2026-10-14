@@ -1,0 +1,20 @@
+Historia Pojazdu – wynik wyszukiwania
+DANE FIKCYJNE – próbka testowa, przybliżony układ wyniku.
+
+VOLKSWAGEN GOLF, 2012, 1390 cm3, 90 kW, BENZYNA
+Nr rej.: XX 00002   VIN: TESTVW0K1L2345678
+
+Status: zarejestrowany | OC: aktualne | Badanie techniczne: aktualne
+
+Historia zdarzeń
+20.03.2012 – Pierwsza rejestracja pojazdu za granicą
+01.07.2014 – Pierwsza rejestracja w Polsce (pojazd sprowadzony)
+25.06.2015 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 98 400 km
+28.06.2016 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 121 050 km
+03.07.2017 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 143 900 km
+02.07.2018 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 162 300 km
+14.01.2019 – Zmiana właściciela
+05.07.2019 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 118 700 km
+06.07.2020 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 131 200 km
+09.07.2021 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 140 050 km
+11.07.2022 – Badanie techniczne, wynik pozytywny, odczyt drogomierza: 152 600 km

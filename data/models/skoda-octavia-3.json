@@ -25,6 +25,69 @@
     "octavia iii rs"
   ],
   "market_note": "Bardzo popularna w Polsce – dużo aut z polskich salonów, flot i taksówek. Ceny orientacyjnie ok. 35–75 tys. zł (2026). Przebiegi 250+ tys. km w 1.6/2.0 TDI są częste.",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        32000,
+        42000
+      ],
+      "note": "Poflotowe 1.6 TDI z przebiegiem 250+ tys. km w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        39000,
+        51000
+      ],
+      "note": "Kombi i sedan (liftback) zbliżone."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        48000,
+        63000
+      ],
+      "note": "Po liftingu (2017); 2.0 TDI o ok. 10–15% drożej niż 1.6 TDI."
+    },
+    {
+      "years": [
+        2019,
+        2020
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        58000,
+        76000
+      ],
+      "note": "RS i Scout o 20–30% drożej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Rozrząd 1.6/2.0 TDI z pompą ok. 1,3–2,3 tys. zł. Olej w DSG DQ250/DQ381 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 TSI EA211 lub 2.0 TDI 150 KM z manualem/DSG mokrym, z polskiego salonu i historią w ASO.",
+    "avoid": "Egzemplarze po taxi z przebiegiem „poprawionym” i DQ200 bez historii w autach z intensywną jazdą miejską.",
+    "sweet_spot_years": [
+      2015,
+      2020
+    ]
+  },
   "engines": [
     {
       "code": "1.6 TDI 90–115 KM (EA288)",

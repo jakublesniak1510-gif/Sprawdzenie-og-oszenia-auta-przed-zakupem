@@ -2,8 +2,9 @@
 
 import { after } from "next/server";
 import { revalidatePath } from "next/cache";
+import { track } from "@/lib/analytics";
 import { addFeedback, getReport, hasFeedback, resetErrorToPaid } from "@/lib/db";
-import { runGeneration } from "@/lib/generate";
+import { enqueueGeneration } from "@/lib/queue";
 
 export interface FeedbackState {
   ok: boolean;
@@ -18,11 +19,12 @@ export async function sendFeedback(_prev: FeedbackState, form: FormData): Promis
   if (helpful !== "tak" && helpful !== "nie") return { ok: false, message: "Wybierz „Tak” albo „Nie”." };
   if (hasFeedback(id)) return { ok: true, message: "Już mamy Twoją odpowiedź – dziękujemy!" };
   addFeedback(id, helpful === "tak", comment);
+  track("feedback", { report_id: id, pomogl: helpful === "tak", komentarz: !!comment });
   return { ok: true, message: "Dziękujemy! To pomaga nam ulepszać raporty." };
 }
 
 export async function retryGeneration(form: FormData): Promise<void> {
   const id = String(form.get("id") ?? "");
-  if (resetErrorToPaid(id)) after(() => runGeneration(id));
+  if (resetErrorToPaid(id)) after(() => enqueueGeneration(id));
   revalidatePath(`/raport/${id}`);
 }

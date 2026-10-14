@@ -1,0 +1,368 @@
+{
+  "id": "toyota-corolla-e16-e17",
+  "make": "Toyota",
+  "model": "Corolla",
+  "generation": "XI (E160/E170, sedan, 2013–2019)",
+  "years": [
+    2013,
+    2019
+  ],
+  "aliases": [
+    "corolla e17",
+    "corolla e170",
+    "corolla e16",
+    "corolla e160",
+    "corolla xi",
+    "toyota corolla e17",
+    "toyota corolla e170",
+    "toyota corolla xi",
+    "corolla e17 lift",
+    "corolla xi lift",
+    "corolla e18 sedan"
+  ],
+  "market_note": "Bardzo popularna w Polsce – dużo aut z polskich salonów, flot i taksówek (także z LPG). Ceny orientacyjnie ok. 31–60 tys. zł (2026). Przebiegi 250–400 tys. km po taxi nie są rzadkością.",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        30000,
+        39000
+      ],
+      "note": "Po taxi i z LPG zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        36000,
+        46000
+      ],
+      "note": "1.6 z Multidrive S nieznacznie drożej niż manual."
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "km_max": 170000,
+      "price_pln": [
+        44000,
+        60000
+      ],
+      "note": "Po liftingu (2016); wersje Comfort/Prestige z niskim przebiegiem w górnej części."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–380 zł. Brak paska rozrządu (łańcuch). Przy LPG regulacja luzów zaworowych co ok. 40–60 tys. km (ok. 500–1000 zł)."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 Valvematic z polskiego salonu z książką serwisową, najlepiej po liftingu 2016.",
+    "avoid": "Egzemplarze po taxi z niepotwierdzonym przebiegiem i 1.4 D-4D eksploatowane w mieście.",
+    "sweet_spot_years": [
+      2016,
+      2019
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.6 Valvematic 132 KM (1ZR-FAE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        132
+      ],
+      "aliases": [
+        "1.6 valvematic",
+        "1,6 valvematic",
+        "1.6 vvt-i",
+        "1.6 dual vvt-i",
+        "1.6 132",
+        "1.6 benzyna",
+        "1zr"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Silnik/sterownik systemu Valvematic",
+          "symptoms": "Kontrolka silnika, nierówna praca, ograniczenie obrotów, tryb awaryjny.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3500
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; obserwacja pracy na biegu jałowym i przy przyspieszaniu."
+        },
+        {
+          "title": "Wyciek z pompy wody",
+          "symptoms": "Ubytek płynu chłodzącego, różowy osad przy pompie, piszczenie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1100
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady zaschniętego płynu przy pompie."
+        },
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        }
+      ]
+    },
+    {
+      "code": "1.6 Valvematic z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        132
+      ],
+      "aliases": [
+        "1.6 lpg",
+        "1,6 lpg",
+        "1.6 gaz",
+        "1.6 valvematic lpg",
+        "1.6 b+lpg",
+        "1.6 benzyna+gaz"
+      ],
+      "timing": "łańcuch rozrządu (jak w wersji benzynowej)",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.33 Dual VVT-i 99 KM (1NR-FE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        99
+      ],
+      "aliases": [
+        "1.33 dual vvt-i",
+        "1,33 dual vvt-i",
+        "1.33 vvt-i",
+        "1.33",
+        "1,33",
+        "1nr"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        },
+        {
+          "title": "Zarastanie zaworu EGR i przepustnicy",
+          "symptoms": "Nierówne wolne obroty, przygasanie, kontrolka silnika.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1200
+          ],
+          "check_at_inspection": "Obserwacja wolnych obrotów, odczyt błędów."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "1.4 D-4D 90 KM (1ND-TV)",
+      "fuel": "diesel",
+      "power_hp": [
+        90
+      ],
+      "aliases": [
+        "1.4 d-4d",
+        "1,4 d-4d",
+        "1.4 d4d",
+        "1.4 diesel",
+        "1nd"
+      ],
+      "timing": "łańcuch rozrządu – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze (1.4 D-4D)",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia bezstopniowa Multidrive S (CVT)",
+      "symptoms": "Szarpnięcia, buczenie, „ślizganie” obrotów; skrzynia jest zwykle trwała, ale nie lubi zaniedbanego oleju.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna: płynne ruszanie, przyspieszanie ze stałym gazem; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Korozja i zapiekanie tylnych hamulców",
+      "symptoms": "Słabe hamowanie tylnej osi, nierówne zużycie klocków, grzanie się koła, rdzawe tarcze (częste w hybrydach, które rzadko używają hamulców ciernych).",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć tarcze i zaciski przez felgi; po jeździe próbnej sprawdzić, czy któreś koło nie jest wyraźnie cieplejsze; badanie skuteczności hamulców na stacji."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, amortyzatory, tuleje",
+      "symptoms": "Stuki, pływanie, nierówne zużycie opon; szybciej w autach z taxi.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    },
+    {
+      "title": "Multimedia i klimatyzacja",
+      "symptoms": "Zawieszanie się ekranu, problemy z kamerą, słabe chłodzenie.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Przetestować multimedia, kamerę i klimatyzację."
+    },
+    {
+      "title": "Zużycie wnętrza i podzespołów po intensywnej eksploatacji (taxi, flota)",
+      "symptoms": "Wytarty fotel kierowcy, kierownica i gałka zmiany biegów, luzy w zawieszeniu, zużyte sprzęgło – przy deklarowanym niskim przebiegu mogą wskazywać na wyższy rzeczywisty przebieg.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        4000
+      ],
+      "check_at_inspection": "Porównać zużycie wnętrza z deklarowanym przebiegiem, sprawdzić historię badań technicznych i ślady po taksometrze (otwory w desce, dodatkowe przewody)."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić, czy auto nie pracowało jako taxi lub w przewozie osób (ślady po taksometrze, kogucie, naklejkach; historia w CEPiK).",
+    "Porównać zużycie wnętrza z przebiegiem i potwierdzić przebieg w historii badań technicznych.",
+    "Przy LPG sprawdzić wpis w dowodzie, ważność butli i pracę na gazie po rozgrzaniu; zapytać o regulację luzów zaworowych.",
+    "W Multidrive S przyspieszać płynnie i dynamicznie – szarpanie, wycie lub poślizg do wyjaśnienia.",
+    "Obejrzeć tylne tarcze i zaciski (korozja) oraz sprawdzić, czy koła nie grzeją się po jeździe.",
+    "Sprawdzić zużycie oleju w 1.33/1.6 (dolewki między wymianami).",
+    "Zmierzyć lakier – auta flotowe często mają lakierowane zderzaki i drzwi."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu? Czy pracowało jako taxi lub w przewozie osób?",
+    "Czy jest książka serwisowa lub historia z ASO?",
+    "Czy instalacja LPG jest wpisana w dowodzie i kiedy była serwisowana?",
+    "Czy silnik bierze olej między wymianami?",
+    "Czy auto miało szkody i które elementy lakierowano?"
+  ],
+  "summary": "Corolla E17 to jedno z najtrwalszych aut w swojej klasie – 1.6 Valvematic i 1.33 dobrze znoszą duże przebiegi, także z poprawnie dobranym LPG. Największym ryzykiem jest przeszłość taxi lub floty z niepotwierdzonym przebiegiem. Wersje z Multidrive S wymagają sprawdzenia skrzyni.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

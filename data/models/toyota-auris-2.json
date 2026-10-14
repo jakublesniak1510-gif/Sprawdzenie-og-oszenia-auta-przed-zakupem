@@ -21,6 +21,57 @@
     "auris ii lift"
   ],
   "market_note": "Popularny kompakt, bardzo często hybryda z polskiego salonu i floty lub taxi. Ceny orientacyjnie ok. 35–65 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        32000,
+        41000
+      ],
+      "note": "Hybryda o ok. 10–15% drożej niż benzyna."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        39000,
+        51000
+      ],
+      "note": "Po liftingu (2015); Touring Sports nieznacznie drożej."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        47000,
+        63000
+      ],
+      "note": "Po taxi wyraźnie taniej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 250–400 zł. Hybryda: brak sprzęgła, dwumasy i rozrusznika, ale warto co ok. 2–3 lata kontrolować baterię HV i czyścić filtr wentylatora baterii."
+  },
+  "buy_advice": {
+    "best_pick": "1.8 Hybrid lub 1.6 Valvematic z polskiego salonu z książką serwisową.",
+    "avoid": "Hybrydy po taxi z niewiarygodnym przebiegiem i 1.4/2.0 D-4D eksploatowane w mieście.",
+    "sweet_spot_years": [
+      2015,
+      2018
+    ]
+  },
   "engines": [
     {
       "code": "1.8 Hybrid 136 KM (2ZR-FXE + e-CVT)",

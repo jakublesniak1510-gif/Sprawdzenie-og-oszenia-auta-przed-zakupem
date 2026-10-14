@@ -21,6 +21,69 @@
     "nowy 308 t9"
   ],
   "market_note": "Popularny kompakt, dużo aut z polskich salonów i flot. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Dominują 1.2 PureTech i 1.5/1.6 BlueHDi.",
+  "price_ranges": [
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        27000,
+        35000
+      ],
+      "note": "1.2 PureTech bez dokumentu wymiany paska w dolnej części widełek."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        33000,
+        42000
+      ],
+      "note": "SW zbliżony; GT Line +5–10%."
+    },
+    {
+      "years": [
+        2018,
+        2019
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        41000,
+        54000
+      ],
+      "note": "Po liftingu (2017); EAT8 i 1.5 BlueHDi w górnej części widełek."
+    },
+    {
+      "years": [
+        2020,
+        2021
+      ],
+      "km_max": 110000,
+      "price_pln": [
+        50000,
+        64000
+      ],
+      "note": "GT 2.0 BlueHDi powyżej widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części dostępne, ceny umiarkowane; olej z filtrem ok. 300–450 zł. 1.2 PureTech: tylko olej zgodny z normą producenta, kontrola paska rozrządu (wymiana ok. 2–3,5 tys. zł). AdBlue dolewane co kilka–kilkanaście tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "1.5/1.6 BlueHDi z manualem lub EAT8 i udokumentowanym serwisem, po liftingu 2017.",
+    "avoid": "1.2 PureTech bez faktury za kontrolę/wymianę paska i z historią dolewania oleju.",
+    "sweet_spot_years": [
+      2017,
+      2021
+    ]
+  },
   "engines": [
     {
       "code": "1.2 PureTech 110/130 KM (3-cylindrowy turbo)",

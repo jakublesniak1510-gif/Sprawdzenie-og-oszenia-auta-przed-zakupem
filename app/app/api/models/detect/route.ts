@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { detectModels, loadModels, modelLabel } from "@/lib/models";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -9,6 +10,8 @@ const Body = z.object({ text: z.string().max(30000).default(""), rocznik: z.numb
 
 /** Lista modeli z bazy + kandydaci rozpoznani z tekstu ogłoszenia (aliasy). */
 export async function POST(req: Request) {
+  const limited = rateLimit(req, "modelsDetect");
+  if (limited) return limited;
   const parsed = Body.safeParse(await req.json().catch(() => ({})));
   if (!parsed.success) return NextResponse.json({ error: "Nieprawidłowe dane" }, { status: 400 });
   const models = await loadModels();

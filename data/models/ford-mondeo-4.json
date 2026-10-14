@@ -20,6 +20,57 @@
     "mondeo iv fl"
   ],
   "market_note": "Duże, wygodne auto w cenie ok. 15–35 tys. zł (2026). Popularne 2.0 TDCi i 2.0 benzyna z LPG; wiele aut po flotach.",
+  "price_ranges": [
+    {
+      "years": [
+        2007,
+        2009
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        11000,
+        19000
+      ],
+      "note": "LPG i kombi zbliżone cenowo."
+    },
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 270000,
+      "price_pln": [
+        16000,
+        25000
+      ],
+      "note": "Po liftingu (2010); Titanium i 2.2 TDCi drożej."
+    },
+    {
+      "years": [
+        2012,
+        2014
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        21000,
+        34000
+      ],
+      "note": "Powershift i 2.0 EcoBoost w górnej części widełek przy dobrej historii."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–400 zł. Zawieszenie tylne wielowahaczowe – komplet tulei ok. 1–2 tys. zł z montażem."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 Duratec 145 KM (także z LPG) lub 2.0 TDCi z manualem i historią serwisową, po liftingu 2010.",
+    "avoid": "Egzemplarze z Powershift bez historii oleju i mocno skorodowane auta po flotach.",
+    "sweet_spot_years": [
+      2010,
+      2014
+    ]
+  },
   "engines": [
     {
       "code": "2.0 Duratec 145 KM",

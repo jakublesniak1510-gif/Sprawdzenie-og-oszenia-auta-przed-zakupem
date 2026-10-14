@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "questions-by-category.schema.json",
+  "title": "Uniwersalne pytania do sprzedawcy według kategorii czerwonych flag",
+  "type": "object",
+  "required": ["kategorie"],
+  "properties": {
+    "_opis": { "type": "string" },
+    "kategorie": {
+      "type": "object",
+      "description": "klucze = kategorie z red-flags.schema.json (wszystkie wymagane)",
+      "required": ["handlarz", "historia", "przebieg", "stan_techniczny", "dokumenty", "cena", "sprzecznosc", "zdjecia", "inne"],
+      "additionalProperties": false,
+      "patternProperties": {
+        "^[a-z_]+$": {
+          "type": "object",
+          "required": ["etykieta", "pytania"],
+          "additionalProperties": false,
+          "properties": {
+            "etykieta": { "type": "string" },
+            "pytania": { "type": "array", "items": { "type": "string" }, "minItems": 5, "maxItems": 8 }
+          }
+        }
+      }
+    }
+  }
+}

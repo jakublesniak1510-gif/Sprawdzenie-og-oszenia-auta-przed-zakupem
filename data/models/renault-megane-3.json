@@ -22,6 +22,57 @@
     "megane iii lift"
   ],
   "market_note": "Popularny i tani kompakt, wiele aut z importu, często z 1.5 dCi lub 1.6 16V (także z LPG). Ceny orientacyjnie ok. 12–28 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2008,
+        2010
+      ],
+      "km_max": 250000,
+      "price_pln": [
+        10000,
+        15000
+      ],
+      "note": "1.6 16V z LPG zbliżony do benzyny."
+    },
+    {
+      "years": [
+        2011,
+        2013
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        13000,
+        20000
+      ],
+      "note": "Po liftingu (2012); Grandtour nieznacznie drożej."
+    },
+    {
+      "years": [
+        2014,
+        2016
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        18000,
+        27000
+      ],
+      "note": "RS i coupe poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 550–1100 zł/rok; AC przy wartości auta poniżej ok. 20 tys. zł zwykle nieopłacalne.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 220–350 zł, rozrząd 1.6 16V z pompą ok. 800–1400 zł. 1.5 dCi – olej co 10–15 tys. km (panewki)."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 16V (także z LPG) lub 1.5 dCi 110 KM z udokumentowanym serwisem, po liftingu 2012.",
+    "avoid": "1.2 TCe bez informacji o zużyciu oleju i 1.5 dCi z nieznaną historią wymian oleju.",
+    "sweet_spot_years": [
+      2012,
+      2016
+    ]
+  },
   "engines": [
     {
       "code": "1.6 16V 100/110 KM (K4M)",

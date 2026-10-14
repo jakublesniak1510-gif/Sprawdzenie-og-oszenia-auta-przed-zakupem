@@ -3,7 +3,8 @@ import Link from "next/link";
 import { loadModels } from "@/lib/models";
 
 export const metadata: Metadata = {
-  title: "Typowe usterki popularnych aut",
+  title: "Typowe usterki popularnych aut – na co uważać przy zakupie",
+  alternates: { canonical: "/usterki" },
   description: "Na co uważać przy zakupie używanego auta: typowe usterki modeli i silników z orientacyjnymi kosztami napraw.",
 };
 // Lista czytana z data/models przy żądaniu (cache 1 h) – nowe pliki pojawiają się bez przebudowy.

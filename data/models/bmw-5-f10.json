@@ -24,6 +24,69 @@
     "f11 lci"
   ],
   "market_note": "Popularna duża limuzyna/kombi, głównie z importu i polskich leasingów. Ceny orientacyjnie ok. 50–100 tys. zł (2026). Wysokie koszty napraw elektroniki i zawieszenia.",
+  "price_ranges": [
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        40000,
+        56000
+      ],
+      "note": "520d N47 z tych lat zwykle w dolnej części widełek."
+    },
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 270000,
+      "price_pln": [
+        50000,
+        70000
+      ],
+      "note": "Touring F11 z pneumatyką i xDrive +5–10%."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 240000,
+      "price_pln": [
+        62000,
+        86000
+      ],
+      "note": "Po liftingu (LCI, od 2013); 530d/535d xDrive +15–20%."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        78000,
+        108000
+      ],
+      "note": "M550d/M5 poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 800–1800 zł/rok (duża moc podnosi składkę); AC ok. 2200–5000 zł/rok, wyraźnie wyżej w dużych miastach i dla wersji 4x4/mocnych.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem ok. 500–800 zł; interwał warto skrócić do 15 tys. km. Zawieszenie przednie (wahacze) ok. 2,5–5 tys. zł za komplet z montażem; miechy pneumatyki tył ok. 1,5–3 tys. zł. Elektronika i reflektory drogie."
+  },
+  "buy_advice": {
+    "best_pick": "520d B47 lub 530d N57 po liftingu (2014–2017) z udokumentowanym serwisem i olejem w skrzyni.",
+    "avoid": "520d N47 bez faktury za łańcuch rozrządu oraz egzemplarze z niejasnym przebiegiem z importu.",
+    "sweet_spot_years": [
+      2014,
+      2017
+    ]
+  },
   "engines": [
     {
       "code": "520d N47 (2010–2014)",

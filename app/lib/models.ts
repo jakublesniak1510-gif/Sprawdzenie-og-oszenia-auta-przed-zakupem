@@ -29,6 +29,17 @@ const EngineSchema = z.object({
 });
 export type Engine = z.infer<typeof EngineSchema>;
 
+/**
+ * Widełki cen rynkowych (dodawane przez pracownika B): rocznik od–do, opcjonalny maks. przebieg, cena od–do w zł.
+ * Pole opcjonalne i tolerancyjne – błędne widełki są ignorowane (`.catch`), a nie wykluczają całego modelu.
+ */
+export const PriceRangeSchema = z.object({
+  years: z.tuple([z.number(), z.number()]),
+  km_max: z.number().nullable().optional(),
+  price_pln: z.tuple([z.number(), z.number()]),
+});
+export type PriceRange = z.infer<typeof PriceRangeSchema>;
+
 export const CarModelSchema = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/),
   make: z.string(),
@@ -43,6 +54,7 @@ export const CarModelSchema = z.object({
   questions_for_seller: z.array(z.string()),
   summary: z.string(),
   sources_note: z.string().optional(),
+  price_ranges: z.array(PriceRangeSchema).optional().catch(undefined),
 });
 export type CarModel = z.infer<typeof CarModelSchema>;
 

@@ -1,0 +1,465 @@
+{
+  "id": "audi-a3-8v",
+  "make": "Audi",
+  "model": "A3",
+  "generation": "8V (2012–2020)",
+  "years": [
+    2012,
+    2020
+  ],
+  "aliases": [
+    "a3 8v",
+    "audi a3 8v",
+    "a3 sportback 8v",
+    "a3 8v sportback",
+    "a3 8v sedan",
+    "a3 limousine 8v",
+    "a3 8v lift",
+    "a3 8v cabrio",
+    "a3 iii",
+    "audi a3 iii",
+    "s3 8v"
+  ],
+  "market_note": "Popularny kompakt premium na platformie MQB (jak Golf VII), dużo aut z polskich salonów i importu. Ceny orientacyjnie ok. 40–90 tys. zł (2026). Dominują 1.4 TFSI, 1.6 TDI i 2.0 TDI, często z S tronic.",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 230000,
+      "price_pln": [
+        40000,
+        52000
+      ],
+      "note": "1.6 TDI poleasingowe w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        47000,
+        61000
+      ],
+      "note": "Sportback i sedan zbliżone; 2.0 TDI o ok. 10–15% drożej niż 1.6 TDI."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 170000,
+      "price_pln": [
+        57000,
+        74000
+      ],
+      "note": "Po liftingu (2016); S line, quattro i virtual cockpit w górnej części widełek."
+    },
+    {
+      "years": [
+        2019,
+        2020
+      ],
+      "km_max": 130000,
+      "price_pln": [
+        68000,
+        88000
+      ],
+      "note": "S3 i RS3 poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Rozrząd 1.6/2.0 TDI z pompą ok. 1,3–2,3 tys. zł; olej w S tronic DQ250 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 TFSI lub 2.0 TDI 150 KM z polskiego salonu i historią w ASO, najlepiej po liftingu (2016+).",
+    "avoid": "DQ200 bez historii w aucie miejskim, egzemplarze z importu po większych naprawach i S3 po modyfikacjach.",
+    "sweet_spot_years": [
+      2016,
+      2020
+    ]
+  },
+  "engines": [
+    {
+      "code": "1.4 TFSI 122–150 KM (EA211, także COD)",
+      "fuel": "benzyna",
+      "power_hp": [
+        122,
+        125,
+        140,
+        150
+      ],
+      "aliases": [
+        "1.4 tfsi",
+        "1,4 tfsi",
+        "1.4tfsi",
+        "1.4 tfsi cod",
+        "1.4 tfsi 150",
+        "1.4 tfsi 125",
+        "cxsa",
+        "czca",
+        "czea"
+      ],
+      "timing": "pasek zębaty (EA211) – kontrola wg serwisu, zwykle ok. 150–210 tys. km; ok. 1,2–2 tys. zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Wyciek z pompy wody / obudowy termostatu (plastikowy moduł)",
+          "symptoms": "Ubytek płynu chłodzącego, zapach słodkawego płynu, osad (biały/różowy) pod modułem pompy, kontrolka temperatury lub poziomu płynu.",
+          "mileage_km": "60–160 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu w zbiorniczku i ślady zaschniętego płynu w okolicy pompy (od strony skrzyni biegów) oraz pod autem. Zapytać, czy płyn był dolewany."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "System odłączania cylindrów ACT (wersje 140/150 KM)",
+          "symptoms": "Drgania przy niskim obciążeniu, błędy systemu, nierówna praca przy przejściu na 2 cylindry. Zdarza się rzadko.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            500,
+            2500
+          ],
+          "check_at_inspection": "Jazda ze stałą prędkością 50–80 km/h – na zegarach pojawia się informacja o trybie 2-cylindrowym; zwrócić uwagę na drgania. Odczyt błędów."
+        }
+      ]
+    },
+    {
+      "code": "1.6 TDI 105/110/116 KM (EA288)",
+      "fuel": "diesel",
+      "power_hp": [
+        105,
+        110,
+        116
+      ],
+      "aliases": [
+        "1.6 tdi",
+        "1,6 tdi",
+        "1.6tdi",
+        "1.6 tdi 110",
+        "1.6 tdi 116",
+        "clha",
+        "dbka"
+      ],
+      "timing": "pasek zębaty – ostrożnie co 150–180 tys. km; ok. 1,3–2,2 tys. zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Termostat / pompa cieczy – wycieki i niedogrzewanie",
+          "symptoms": "Silnik długo się nagrzewa, zimno z nawiewów, ubytek płynu.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            500,
+            1500
+          ],
+          "check_at_inspection": "Obserwować temperaturę płynu na jeździe próbnej (powinna szybko dojść do ok. 90°C i się utrzymać), sprawdzić poziom płynu i ślady wycieków."
+        }
+      ]
+    },
+    {
+      "code": "2.0 TDI 150/184 KM (EA288)",
+      "fuel": "diesel",
+      "power_hp": [
+        150,
+        184
+      ],
+      "aliases": [
+        "2.0 tdi",
+        "2,0 tdi",
+        "2.0tdi",
+        "2.0 tdi 150",
+        "2.0 tdi 184",
+        "crbc",
+        "cuna"
+      ],
+      "timing": "pasek zębaty – ok. 150–210 tys. km; ok. 1,4–2,3 tys. zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.0 TFSI 115/116 KM (3-cylindrowy, od 2016) i 1.5 TFSI 150 KM (EA211 evo, od 2017)",
+      "fuel": "benzyna",
+      "power_hp": [
+        115,
+        116,
+        150
+      ],
+      "aliases": [
+        "1.0 tfsi",
+        "1,0 tfsi",
+        "1.5 tfsi",
+        "1,5 tfsi",
+        "1.0tfsi",
+        "1.5tfsi",
+        "30 tfsi",
+        "35 tfsi"
+      ],
+      "timing": "pasek zębaty – wymiana wg serwisu, zwykle ok. 200 tys. km",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Szarpanie przy niskich obrotach w pierwszych tysiącach km po zimnym starcie („kangurowanie”)",
+          "symptoms": "Szarpanie i nierówne przyspieszanie przy niskich obrotach na zimnym silniku, typowe dla wczesnych egzemplarzy; producent wydawał aktualizacje oprogramowania.",
+          "mileage_km": "od nowości",
+          "severity": "niska",
+          "cost_pln": [
+            0,
+            1500
+          ],
+          "check_at_inspection": "Jazda na zimnym silniku w korku i ruszanie. Zapytać, czy wykonano aktualizacje oprogramowania w ASO."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Wyciek z pompy wody / obudowy termostatu (plastikowy moduł)",
+          "symptoms": "Ubytek płynu chłodzącego, zapach słodkawego płynu, osad (biały/różowy) pod modułem pompy, kontrolka temperatury lub poziomu płynu.",
+          "mileage_km": "60–160 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu w zbiorniczku i ślady zaschniętego płynu w okolicy pompy (od strony skrzyni biegów) oraz pod autem. Zapytać, czy płyn był dolewany."
+        }
+      ]
+    },
+    {
+      "code": "1.8 TFSI 180 KM / 2.0 TFSI 190–310 KM (EA888 gen3)",
+      "fuel": "benzyna",
+      "power_hp": [
+        180,
+        190,
+        220,
+        300,
+        310
+      ],
+      "aliases": [
+        "1.8 tfsi",
+        "1,8 tfsi",
+        "2.0 tfsi",
+        "2,0 tfsi",
+        "40 tfsi",
+        "s3"
+      ],
+      "timing": "łańcuch rozrządu – w gen3 trwalszy niż we wcześniejszych EA888",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Pompa wody / moduł termostatu (plastik)",
+          "symptoms": "Ubytek płynu, zapach płynu, przegrzewanie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1200,
+            2500
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy pompie."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Odma (separator oleju) i drobne wycieki",
+          "symptoms": "Syczenie, nierówna praca, ubytki oleju, błędy mieszanki.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            500,
+            1500
+          ],
+          "check_at_inspection": "Nasłuchiwać syczenia przy pracy, diagnostyka korekt mieszanki, sprawdzić wycieki."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia S tronic DQ200 (7-biegowa, suche sprzęgła) – mechatronika i sprzęgła",
+      "symptoms": "Szarpanie przy ruszaniu i przy zmianie 1–2, stuki przy zwalnianiu, migająca kontrolka skrzyni/PRND, tryb awaryjny (jazda tylko na wybranych biegach), brak możliwości wrzucenia biegu.",
+      "mileage_km": "80–200 tys. km (bywa wcześniej przy jeździe miejskiej)",
+      "severity": "wysoka",
+      "cost_pln": [
+        3000,
+        9000
+      ],
+      "check_at_inspection": "Jazda próbna od zimnego: ruszanie pod górkę, jazda w korku 1–2–1, cofanie i parkowanie. Odczyt błędów skrzyni i wartości adaptacji/zużycia sprzęgieł w diagnostyce. Zapytać o faktury za mechatronikę lub sprzęgło (regeneracja mechatroniki ok. 2,5–4,5 tys. zł, sprzęgło 3,5–6 tys. zł, nowa mechatronika więcej)."
+    },
+    {
+      "title": "Skrzynia S tronic DQ250 (6-biegowa, mokra; 2.0 TDI/TFSI, quattro) – olej i mechatronika",
+      "symptoms": "Opóźnione włączanie biegu, szarpnięcie przy redukcji, buczenie, błędy mechatroniki. Skrzynia wymaga wymiany oleju co ok. 60 tys. km – jej brak przyspiesza zużycie.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        900,
+        7000
+      ],
+      "check_at_inspection": "Zapytać o fakturę za wymianę oleju w DSG co ok. 60 tys. km. Na jeździe próbnej: płynność zmian w trybie D i S, kick-down, ruszanie. Diagnostyka – błędy skrzyni. Koszt: olej z filtrem ok. 900–1400 zł, regeneracja mechatroniki ok. 3–6 tys. zł."
+    },
+    {
+      "title": "Napęd quattro – sprzęgło Haldex (wersje quattro)",
+      "symptoms": "Brak dołączania tylnej osi, błędy napędu. Wymaga wymiany oleju (i filtra w nowszych generacjach) co ok. 60 tys. km.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        3000
+      ],
+      "check_at_inspection": "Zapytać o serwis Haldexa; ruszanie na luźnym podłożu; odczyt błędów modułu napędu."
+    },
+    {
+      "title": "Zawieszenie tylne i przednie – tuleje, łączniki, amortyzatory",
+      "symptoms": "Stuki z tyłu na poprzecznych nierównościach, pływanie, nierówne zużycie opon. W słabszych wersjach belka skrętna, w mocniejszych wielowahacz (więcej tulei).",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        2000
+      ],
+      "check_at_inspection": "Jazda po nierównościach, sprawdzenie zbieżności po zużyciu opon, na podnośniku – stan tulei i amortyzatorów."
+    },
+    {
+      "title": "MMI, wysuwany ekran i elektronika wyposażenia",
+      "symptoms": "Niedziałające wysuwanie ekranu MMI, zawieszanie systemu, błędy kamery, czujników i asystentów, problemy z virtual cockpit (po liftingu).",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        3500
+      ],
+      "check_at_inspection": "Przetestować MMI (wysuwanie ekranu, nawigacja, Bluetooth), kamerę, czujniki, światła LED i asystentów."
+    },
+    {
+      "title": "Klimatyzacja – skraplacz i sprężarka",
+      "symptoms": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Włączyć klimatyzację na maksimum i sprawdzić temperaturę z nawiewów po kilku minutach; obejrzeć skraplacz przez grill."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić pochodzenie auta i historię w ASO po VIN – w autach z polskich salonów zwykle łatwo ją uzyskać.",
+    "W S tronic DQ200 test w korku i na podjeździe, odczyt adaptacji sprzęgieł; w DQ250 faktura za olej co ok. 60 tys. km.",
+    "W dieslach sprawdzić stan DPF w diagnostyce i obejrzeć wydech pod kątem ingerencji.",
+    "Sprawdzić poziom płynu chłodzącego i ślady wycieków przy pompie wody (benzyny EA211 i EA888).",
+    "Zmierzyć lakier; zwrócić uwagę na przedni pas, maskę i błotniki.",
+    "Porównać wyposażenie z ogłoszenia z rzeczywistym (wiele wersji i pakietów S line) i sprawdzić, czy wszystkie funkcje działają.",
+    "Diagnostyką porównać przebieg z licznika z zapisami w modułach."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji?",
+    "Czy auto pochodzi z polskiego salonu czy z importu? Czy było w leasingu?",
+    "Czy jest historia serwisowa w ASO? Kiedy wymieniano olej w skrzyni S tronic i rozrząd?",
+    "Czy były naprawy skrzyni (sprzęgło, mechatronika)?",
+    "Czy auto miało szkody komunikacyjne i które elementy były lakierowane?",
+    "Czy DPF był czyszczony lub wymieniany (w dieslu)?"
+  ],
+  "summary": "A3 8V to dopracowany kompakt premium z trwałymi silnikami EA211 i EA288 – najlepiej wypadają 1.4 TFSI i 1.6/2.0 TDI z historią serwisową. Największe ryzyka to skrzynia DQ200, auta z importu po naprawach i niepotwierdzony przebieg. Wersje S3 i mocne 2.0 TFSI wymagają szczególnie starannej weryfikacji.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

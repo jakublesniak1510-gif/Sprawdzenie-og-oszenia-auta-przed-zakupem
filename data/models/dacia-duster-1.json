@@ -15,6 +15,57 @@
     "duster hs"
   ],
   "market_note": "Popularny, prosty SUV w cenie ok. 25–45 tys. zł (2026). Często z LPG (także fabrycznym) i w wersji 4x4. Kluczowa jest korozja.",
+  "price_ranges": [
+    {
+      "years": [
+        2010,
+        2012
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        19000,
+        27000
+      ],
+      "note": "Stan korozji podwozia mocno różnicuje cenę."
+    },
+    {
+      "years": [
+        2013,
+        2015
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        25000,
+        35000
+      ],
+      "note": "4x4 +3–5 tys. zł; fabryczne LPG zbliżone do benzyny."
+    },
+    {
+      "years": [
+        2016,
+        2017
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        32000,
+        44000
+      ],
+      "note": "Wersje Prestige i 1.5 dCi 4x4 w górnej części widełek."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i powszechnie dostępne (technika Renault); olej z filtrem ok. 250–400 zł, rozrząd z pompą 1.6 16V ok. 800–1400 zł. Przy LPG regulacja/filtry co ok. 15 tys. km (ok. 150–300 zł)."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 16V (także z fabrycznym LPG) lub 1.5 dCi 110 KM z udokumentowanym serwisem, po liftingu 2013.",
+    "avoid": "Egzemplarze z zaawansowaną korozją podwozia i 1.2 TCe bez informacji o zużyciu oleju.",
+    "sweet_spot_years": [
+      2013,
+      2017
+    ]
+  },
   "engines": [
     {
       "code": "1.6 16V 105/115 KM (K4M)",

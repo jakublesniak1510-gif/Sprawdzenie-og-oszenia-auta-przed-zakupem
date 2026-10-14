@@ -20,6 +20,57 @@
     "clio iv rs"
   ],
   "market_note": "Popularne auto miejskie, dużo z polskich salonów i floty. Ceny orientacyjnie ok. 22–40 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        19000,
+        26000
+      ],
+      "note": "0.9 TCe najczęstszy i najtańszy."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        24000,
+        31000
+      ],
+      "note": "Grandtour zbliżony; EDC +5%."
+    },
+    {
+      "years": [
+        2017,
+        2019
+      ],
+      "km_max": 130000,
+      "price_pln": [
+        29000,
+        41000
+      ],
+      "note": "Po liftingu (2016); RS poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 450–900 zł/rok; AC opłacalne raczej dla młodszych roczników (ok. 700–1500 zł/rok).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–380 zł. 1.5 dCi – olej co 10–15 tys. km (panewki); 1.2 TCe – kontrola poziomu oleju."
+  },
+  "buy_advice": {
+    "best_pick": "1.2 16V 75 KM lub 0.9 TCe z manualem po liftingu 2016.",
+    "avoid": "1.2 TCe 120 KM z EDC bez historii serwisowej i 1.5 dCi z wydłużonymi interwałami oleju.",
+    "sweet_spot_years": [
+      2016,
+      2019
+    ]
+  },
   "engines": [
     {
       "code": "0.9 TCe 90 KM (3-cylindrowy turbo)",

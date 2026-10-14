@@ -24,6 +24,69 @@
     "golf sportsvan"
   ],
   "market_note": "Bardzo popularny na rynku wtórnym, sporo aut poleasingowych z polskich salonów oraz sprowadzonych. Ceny orientacyjnie ok. 35–75 tys. zł (2026). Dużo egzemplarzy flotowych z 1.6 TDI i wysokimi przebiegami.",
+  "price_ranges": [
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 240000,
+      "price_pln": [
+        34000,
+        44000
+      ],
+      "note": "Poflotowe 1.6 TDI w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 220000,
+      "price_pln": [
+        41000,
+        54000
+      ],
+      "note": "Variant zbliżony; 2.0 TDI o ok. 10–15% drożej niż 1.6 TDI."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        51000,
+        66000
+      ],
+      "note": "Po liftingu (7.5); 1.5 TSI i DSG w górnej części widełek."
+    },
+    {
+      "years": [
+        2019,
+        2020
+      ],
+      "km_max": 140000,
+      "price_pln": [
+        60000,
+        78000
+      ],
+      "note": "GTI/GTD/R o 30–60% drożej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Rozrząd 1.6/2.0 TDI z pompą ok. 1,3–2,3 tys. zł. Olej w DSG DQ250 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "1.4 TSI EA211 lub 2.0 TDI z polskiego salonu i historią w ASO, najlepiej po liftingu (7.5).",
+    "avoid": "DQ200 bez historii w aucie miejskim i egzemplarze z importu z niejasną przeszłością.",
+    "sweet_spot_years": [
+      2015,
+      2019
+    ]
+  },
   "engines": [
     {
       "code": "1.4 TSI 122–150 KM (EA211, m.in. CMBA/CZCA/CHPA/CZEA)",

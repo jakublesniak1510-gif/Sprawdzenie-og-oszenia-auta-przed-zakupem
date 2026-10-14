@@ -1,0 +1,41 @@
+{
+  "plik": "d-import-pozna-rejestracja.txt",
+  "hipotetyczny_format": false,
+  "opis": "Auto sprowadzone: pierwsza rejestracja za granicą w 2013 r., w Polsce dopiero w 2021 r.; odczyty dopiero od badania przed rejestracją w kraju.",
+  "vin": "TESTBM0F3A0123456",
+  "odczyty": [
+    {
+      "data": "2021-11-16",
+      "km": 168230
+    },
+    {
+      "data": "2022-11-14",
+      "km": 184900
+    },
+    {
+      "data": "2023-11-13",
+      "km": 203450
+    },
+    {
+      "data": "2024-11-12",
+      "km": 219800
+    },
+    {
+      "data": "2025-11-17",
+      "km": 236100
+    }
+  ],
+  "pierwszaRejestracja": "2013-02-15",
+  "pierwszaRejestracjaPl": "2021-11-18",
+  "cofniecia": [],
+  "sygnaly": [
+    "import",
+    "brak_historii_przed_importem",
+    "zmiana_wlasciciela"
+  ],
+  "uwagi": [
+    "Pojazd sprowadzony – ok. 8 lat i 9 miesięcy użytkowania za granicą bez odczytów w CEPiK.",
+    "Pierwszy odczyt w Polsce (168 230 km) pochodzi z badania przed rejestracją; przebieg sprzed importu warto potwierdzić dokumentami z kraju pochodzenia lub raportem historii.",
+    "Po rejestracji w Polsce przebiegi rosną ok. 16–19 tys. km rocznie."
+  ]
+}

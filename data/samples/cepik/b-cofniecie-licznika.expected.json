@@ -1,0 +1,64 @@
+{
+  "plik": "b-cofniecie-licznika.txt",
+  "hipotetyczny_format": false,
+  "opis": "Wynik w układzie listy zdarzeń „data – opis”, data przed opisem. Auto sprowadzone; po zmianie właściciela kolejny odczyt jest niższy o 43 600 km.",
+  "vin": "TESTVW0K1L2345678",
+  "odczyty": [
+    {
+      "data": "2015-06-25",
+      "km": 98400
+    },
+    {
+      "data": "2016-06-28",
+      "km": 121050
+    },
+    {
+      "data": "2017-07-03",
+      "km": 143900
+    },
+    {
+      "data": "2018-07-02",
+      "km": 162300
+    },
+    {
+      "data": "2019-07-05",
+      "km": 118700
+    },
+    {
+      "data": "2020-07-06",
+      "km": 131200
+    },
+    {
+      "data": "2021-07-09",
+      "km": 140050
+    },
+    {
+      "data": "2022-07-11",
+      "km": 152600
+    }
+  ],
+  "pierwszaRejestracja": "2012-03-20",
+  "pierwszaRejestracjaPl": "2014-07-01",
+  "cofniecia": [
+    {
+      "z": {
+        "data": "2018-07-02",
+        "km": 162300
+      },
+      "na": {
+        "data": "2019-07-05",
+        "km": 118700
+      }
+    }
+  ],
+  "sygnaly": [
+    "cofniecie_przebiegu",
+    "import",
+    "zmiana_wlasciciela"
+  ],
+  "uwagi": [
+    "Spadek przebiegu o 43 600 km między badaniami 02.07.2018 i 05.07.2019 – do wyjaśnienia ze sprzedawcą; w historii brak adnotacji o wymianie drogomierza.",
+    "Spadek nastąpił po zmianie właściciela (14.01.2019).",
+    "Pojazd sprowadzony – pierwsza rejestracja za granicą 20.03.2012, w Polsce 01.07.2014; przebieg sprzed importu nieznany."
+  ]
+}

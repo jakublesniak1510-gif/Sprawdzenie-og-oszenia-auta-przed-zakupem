@@ -23,6 +23,69 @@
     "focus iii st"
   ],
   "market_note": "Popularny kompakt w cenie ok. 20–45 tys. zł (2026). Wersje z automatem Powershift wymagają szczególnej ostrożności.",
+  "price_ranges": [
+    {
+      "years": [
+        2011,
+        2012
+      ],
+      "km_max": 240000,
+      "price_pln": [
+        17000,
+        25000
+      ],
+      "note": "Powershift zwykle taniej z powodu ryzyka skrzyni."
+    },
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 210000,
+      "price_pln": [
+        22000,
+        31000
+      ],
+      "note": "1.0 EcoBoost z wczesnych roczników w dolnej części widełek."
+    },
+    {
+      "years": [
+        2015,
+        2016
+      ],
+      "km_max": 190000,
+      "price_pln": [
+        29000,
+        39000
+      ],
+      "note": "Po liftingu (od 2014); Titanium i kombi nieznacznie drożej."
+    },
+    {
+      "years": [
+        2017,
+        2018
+      ],
+      "km_max": 160000,
+      "price_pln": [
+        35000,
+        47000
+      ],
+      "note": "ST i RS poza widełkami."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–400 zł. 1.0 EcoBoost wymaga oleju zgodnego z normą Forda i wymiany paska w kąpieli olejowej wg producenta (ok. 2–4,5 tys. zł)."
+  },
+  "buy_advice": {
+    "best_pick": "1.6 Ti-VCT 105/125 KM lub 2.0 TDCi z manualem, po liftingu (2014–2018).",
+    "avoid": "Powershift DPS6 bez historii napraw i 1.0/1.6 EcoBoost z historią przegrzania.",
+    "sweet_spot_years": [
+      2014,
+      2018
+    ]
+  },
   "engines": [
     {
       "code": "1.6 Ti-VCT 85/105/125 KM",

@@ -25,6 +25,57 @@
     "ceed ii lift"
   ],
   "market_note": "Popularny kompakt, wiele egzemplarzy z polskich salonów, część jeszcze z historią 7-letniej gwarancji. Ceny orientacyjnie ok. 28–50 tys. zł (2026).",
+  "price_ranges": [
+    {
+      "years": [
+        2012,
+        2013
+      ],
+      "km_max": 200000,
+      "price_pln": [
+        24000,
+        32000
+      ],
+      "note": "Z polskiego salonu z historią serwisową +5–10%."
+    },
+    {
+      "years": [
+        2014,
+        2015
+      ],
+      "km_max": 180000,
+      "price_pln": [
+        30000,
+        39000
+      ],
+      "note": "SW i pro_cee'd zbliżone cenowo."
+    },
+    {
+      "years": [
+        2016,
+        2018
+      ],
+      "km_max": 150000,
+      "price_pln": [
+        37000,
+        50000
+      ],
+      "note": "Po liftingu (2015); GT/GT Line i aktywna gwarancja podnoszą cenę."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 600–1200 zł/rok; AC ok. 1200–2500 zł/rok zależnie od wartości auta i miejsca zamieszkania.",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Części tanie i dostępne; olej z filtrem ok. 250–400 zł. Silniki MPI bez hydraulicznej kasacji luzów – kontrola luzów przy LPG ok. 400–1000 zł."
+  },
+  "buy_advice": {
+    "best_pick": "1.4/1.6 MPI lub 1.6 CRDi z polskiego salonu z pełną historią w ASO (szansa na resztę gwarancji).",
+    "avoid": "DCT bez historii napraw i egzemplarze z niewyjaśnioną przerwą w serwisie gwarancyjnym.",
+    "sweet_spot_years": [
+      2015,
+      2018
+    ]
+  },
   "engines": [
     {
       "code": "1.4/1.6 MPI 100/120 KM (Gamma)",

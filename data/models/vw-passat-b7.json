@@ -18,6 +18,57 @@
     "passat 3c b7"
   ],
   "market_note": "Typowe auto flotowe – bardzo dużo egzemplarzy z przebiegami 250–400 tys. km, często z 2.0 TDI i DSG. Ceny orientacyjnie ok. 28–50 tys. zł (2026). Przebieg z ogłoszenia warto zawsze potwierdzać.",
+  "price_ranges": [
+    {
+      "years": [
+        2010,
+        2011
+      ],
+      "km_max": 330000,
+      "price_pln": [
+        25000,
+        34000
+      ],
+      "note": "Flotowe 2.0 TDI z przebiegiem 300+ tys. km w dolnej części widełek."
+    },
+    {
+      "years": [
+        2012,
+        2012
+      ],
+      "km_max": 300000,
+      "price_pln": [
+        30000,
+        40000
+      ],
+      "note": "Variant zbliżony do sedana."
+    },
+    {
+      "years": [
+        2013,
+        2014
+      ],
+      "km_max": 280000,
+      "price_pln": [
+        35000,
+        49000
+      ],
+      "note": "Alltrack i 4Motion o 10–15% drożej."
+    }
+  ],
+  "running_costs": {
+    "oc_ac_note": "OC zwykle ok. 650–1300 zł/rok; AC ok. 1500–3000 zł/rok (diesle flotowe i kombi bez większych dopłat).",
+    "service_interval_km": 15000,
+    "typical_parts_note": "Olej z filtrem w warsztacie ok. 350–550 zł; fabryczny interwał LongLife (do 30 tys. km) w praktyce warto skrócić do 15 tys. km. Rozrząd 2.0 TDI z pompą ok. 1,3–2,2 tys. zł. Olej w DSG DQ250 co ok. 60 tys. km."
+  },
+  "buy_advice": {
+    "best_pick": "2.0 TDI 140 KM lub 1.6 TDI z manualem albo DSG DQ250 z udokumentowaną wymianą oleju.",
+    "avoid": "1.8 TSI z problemem zużycia oleju i egzemplarze flotowe bez dokumentacji przebiegu.",
+    "sweet_spot_years": [
+      2012,
+      2014
+    ]
+  },
   "engines": [
     {
       "code": "2.0 TDI CR 140/170 KM (EA189, m.in. CFFB/CFGB)",
