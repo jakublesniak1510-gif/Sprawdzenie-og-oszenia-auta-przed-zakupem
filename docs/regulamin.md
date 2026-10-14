@@ -78,7 +78,7 @@ Obowiązuje od: [DO UZUPEŁNIENIA]
    | Szybkie sprawdzenie | bezpłatnie |
    | Raport jednego auta | 19 zł |
    | Raport rozszerzony (porównanie z ofertami, wzór umowy, checklista) | 29 zł |
-   | Kupon na 5 Raportów, ważny 30 dni | 49 zł |
+   | Kupon na 5 Raportów (w zakresie Raportu jednego auta), ważny 12 miesięcy od zakupu | 49 zł |
 
 3. Płatności obsługuje Stripe (Stripe Payments Europe, Limited). Dostępne metody: BLIK, Przelewy24, karta płatnicza. Dostępność metod może się zmieniać – aktualne są widoczne na stronie płatności.
 4. Umowa zostaje zawarta z chwilą potwierdzenia zamówienia przez Klienta (kliknięcie przycisku z obowiązkiem zapłaty, np. „Zamawiam i płacę”). Realizacja rozpoczyna się po zaksięgowaniu płatności.

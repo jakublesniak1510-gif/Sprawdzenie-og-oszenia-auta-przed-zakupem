@@ -190,3 +190,158 @@ Format: pion 9:16, napisy zawsze (większość ogląda bez dźwięku), tempo lek
 - [ ] Każdy sygnał ma pytanie lub sposób sprawdzenia.
 - [ ] Koszty napraw zgodne z bazą i oznaczone „orientacyjnie”.
 - [ ] Napisy zsynchronizowane, CTA na końcu, link w bio aktualny.
+
+---
+
+# Seria: szybki test na żywo
+
+5 scenariuszy po 30–45 s. Bohater (twórca) wkleja **fikcyjne** ogłoszenie do darmowego szybkiego testu (`/szybki-test`) i czyta wynik z ekranu. To najprostszy format do nagrania seryjnie: nagranie ekranu telefonu + twarz lub ręka w rogu. Pokazuje produkt bez obietnic – widz widzi, co dostanie za darmo.
+
+**Zasady dodatkowe dla tej serii** (oprócz zasad z początku dokumentu):
+
+- Ogłoszenie w makiecie i w polu tekstowym jest fikcyjne; etykieta „Ogłoszenie fikcyjne” przez cały film.
+- Na nagraniu ekranu nie może być prawdziwych danych (konto, e-mail, historia przeglądarki). Nagrywamy na koncie testowym.
+- Wynik na ekranie musi być **prawdziwym wynikiem aplikacji** dla tego tekstu (nie montujemy „ładniejszego” wyniku). Jeśli baza się zmieni, film nagrywamy ponownie albo dodajemy dopisek z datą.
+- Koszty czytamy jako widełki z bazy i mówimy „orientacyjnie”.
+- Werdykt silnika z bazy („ryzykowny”) mówimy jako „w naszej bazie oznaczony jako wymagający szczególnej uwagi” – bez straszenia.
+
+**Struktura (40 s):**
+
+| Czas | Element |
+|---|---|
+| 0–2 s | Hook: jedno zdanie z ogłoszenia na ekranie |
+| 2–6 s | Wklejenie tekstu, tap „Sprawdź za darmo” |
+| 6–30 s | Wynik: rozpoznany model → rzeczy do wyjaśnienia → 3 usterki z kosztami |
+| 30–36 s | Jedno zdanie wniosku: „co bym zrobił teraz” |
+| 36–40 s | CTA |
+
+Tempo lektora ok. 2,3 słowa/s – maks. ok. 90 słów.
+
+---
+
+## Szybki test 1 – „Rozrząd do wymiany przy 180 tysiącach”
+
+**Ogłoszenie (fikcyjne):** Peugeot 308 II 1.2 PureTech 130 KM, 2017, 121 000 km, 41 500 zł. „Rozrząd do wymiany przy 180 tys., auto jeździ bez zarzutu. VIN na prośbę.”
+
+**Hook (0–2 s):** „‘Rozrząd do wymiany przy 180 tysiącach.’ Sprawdźmy, co mówi baza.”
+
+**Lektor:**
+„Wklejam, sprawdzam. Model rozpoznany: Peugeot 308 druga generacja, silnik 1.2 PureTech. W naszej bazie to silnik wymagający szczególnej uwagi. Pierwsza rzecz do wyjaśnienia: brak VIN – poproś o niego od razu. Trzy usterki z bazy: pasek rozrządu pracujący w oleju – orientacyjnie od 2 do 15 tysięcy złotych, zależnie od skutków. Zużycie oleju – od 3 do 10 tysięcy. I nagar na zaworach. Co bym zrobił? Zapytał o faktury za wymianę paska i o to, ile oleju auto bierze między wymianami.”
+
+**Ekran:** makieta ogłoszenia → wklejenie → wynik szybkiego testu (karta modelu z etykietą werdyktu, flaga „Brak VIN”, 3 usterki z widełkami) → dymek z pytaniem do sprzedawcy.
+
+**CTA:** A.
+
+---
+
+## Szybki test 2 – „Drobna stłuczka, klima do nabicia”
+
+**Ogłoszenie (fikcyjne):** Ford Focus III 1.0 EcoBoost 125 KM, 2015, 138 000 km, 27 900 zł. „Po drobnej stłuczce, naprawiony. Klima do nabicia. Zadbany.”
+
+**Hook:** „Dwa zdania w ogłoszeniu, które zawsze kopiuję do wiadomości do sprzedawcy.”
+
+**Lektor:**
+„Focus trzy, litrowy EcoBoost. Szybki test zaznacza dwie rzeczy do wyjaśnienia. ‘Po drobnej stłuczce’ – zapytaj, które elementy były naprawiane i czy są zdjęcia albo faktura. ‘Klima do nabicia’ – może to być tylko czynnik, a może nieszczelność albo sprężarka. Z bazy dla tego silnika: przegrzanie przez wyciek płynu chłodzącego – orientacyjnie od 500 złotych do 12 tysięcy, zależnie od skutków. Pasek rozrządu w oleju – 2 do 4,5 tysiąca. Wniosek: przy tym silniku pytam o historię płynu chłodzącego, zanim pojadę.”
+
+**Ekran:** makieta → wynik z dwiema flagami (waga „średnia”) → 3 usterki → plansza „pytanie: czy płyn chłodzący trzeba było dolewać?”.
+
+**CTA:** C.
+
+---
+
+## Szybki test 3 – „Bateria hybrydy w super stanie”
+
+**Ogłoszenie (fikcyjne):** Toyota Auris II 1.8 Hybrid, 2015, 194 000 km, 46 900 zł. „Pierwszy właściciel w kraju. Bateria hybrydowa w super stanie, auto bezawaryjne.”
+
+**Hook:** „‘Bateria w super stanie’ – co na to szybki test?”
+
+**Lektor:**
+„Auris hybryda, 194 tysiące. Model rozpoznany, silnik w bazie oznaczony jako polecany. Rzecz do wyjaśnienia: ‘pierwszy właściciel w kraju’ – czyli auto sprowadzone, wcześniejsza historia jest za granicą. Trzy usterki z bazy: zużycie baterii trakcyjnej – orientacyjnie od 3 do 15 tysięcy złotych. Zapchany wentylator chłodzenia baterii – 200 do 800 złotych. Pompa chłodzenia falownika. Co robię? Proszę o diagnostykę baterii na oględzinach i pytam, kiedy czyszczono wentylator. ‘Super stan’ to opinia – diagnostyka to dane.”
+
+**Ekran:** makieta → wynik (zielona etykieta „polecany”, flaga „niska”) → 3 usterki → ikona diagnostyki.
+
+**CTA:** A.
+
+---
+
+## Szybki test 4 – „Łańcuch wymieniony, faktura marża”
+
+**Ogłoszenie (fikcyjne):** BMW 320d E90, 2009, 236 000 km, 29 900 zł. „Rozrząd wymieniony (łańcuch). Faktura VAT marża. Zamiana możliwa.”
+
+**Hook:** „W tym silniku zdanie o łańcuchu jest warte więcej niż zdjęcia.”
+
+**Lektor:**
+„BMW E90, 320d z 2009 roku – baza rozpoznaje silnik N47. Najważniejsza usterka w bazie: łańcuch rozrządu z tyłu silnika – orientacyjnie 5 do 9 tysięcy złotych. Dlatego ‘rozrząd wymieniony’ to świetna informacja – pod warunkiem, że jest faktura z datą i przebiegiem. Druga rzecz: ‘faktura VAT marża’ – zapytaj, czy sprzedaje firma. Wtedy jako konsument masz zwykle szersze uprawnienia. Do tego EGR i DPF z bazy. Wniosek: poproś o zdjęcie faktury za łańcuch, zanim pojedziesz.”
+
+**Ekran:** makieta → wynik (2 flagi, 3 usterki) → zakreślenie „faktura z datą i przebiegiem”.
+
+**CTA:** B.
+
+---
+
+## Szybki test 5 – „Modelu nie ma w bazie – i co wtedy?”
+
+**Ogłoszenie (fikcyjne):** auto spoza naszej bazy (np. kompakt marki, której jeszcze nie opisaliśmy), 2018, 96 000 km. „Rezerwacja po wpłacie zaliczki 500 zł. Auto na miejscu za tydzień.”
+
+**Hook:** „Wklejam auto, którego nie mamy w bazie. Zobaczcie, co się stanie.”
+
+**Lektor:**
+„Pokażę coś, czego narzędzia zwykle nie pokazują. Tego modelu nie mamy w bazie – i test mówi to wprost: brak w bazie, nie podajemy typowych usterek. Nie zgadujemy. Ale ogłoszenie i tak da się sprawdzić. Flaga o wysokiej wadze: zaliczka przed obejrzeniem auta. Moja zasada: zero złotych, zanim zobaczysz auto, dokumenty i osobę, która może je sprzedać. Druga rzecz: brak VIN – poproś o niego. Uczciwy wynik jest lepszy niż ładny.”
+
+**Ekran:** makieta → komunikat „Brak w bazie – zasady ogólne” (wyraźnie) → flaga „Zaliczka przed obejrzeniem” (wysoka) → plansza „0 zł przed oględzinami”.
+
+**CTA:** A.
+
+**Uwaga:** w makiecie nie używamy prawdziwej marki i modelu, których nie mamy w bazie, jeśli mogłoby to sugerować, że model jest problematyczny. Lepiej „Kompakt X, 2018”.
+
+---
+
+# Seria: Golf vs Octavia vs Astra – którego szukać?
+
+3 scenariusze po 40–45 s, oparte wyłącznie na `data/models/vw-golf-7.json`, `skoda-octavia-3.json` i `opel-astra-j.json`. Ton: porównanie, nie ranking. Nie mówimy, że któryś model jest zły – mówimy, co sprawdzić w każdym. Ceny rynkowe z pól `market_note` (orientacyjnie, 2026). Na ekranie w rogu: „Koszty orientacyjne, niezależny warsztat, 2026”.
+
+## Porównanie 1 – „1.6 TDI czy 1.7 CDTI?”
+
+**Hook (0–2 s):** „Golf i Octavia z dieslem 1.6 TDI mają ten sam silnik. Serio.”
+
+**Lektor:**
+„Golf siódmy i Octavia trzecia z 1.6 TDI to ten sam silnik EA288, w naszej bazie oznaczony jako polecany. Te same rzeczy do sprawdzenia: zawór EGR – orientacyjnie 800 do 3500 złotych, filtr DPF – 700 do 5 tysięcy, koło dwumasowe ze sprzęgłem – 3 do 5,5 tysiąca. Pasek rozrządu – ostrożnie co 150 do 180 tysięcy. Astra J to starsza generacja z 1.7 CDTI – podobne punkty, pasek co 120 do 150 tysięcy, ale cena wejścia niższa: orientacyjnie 18 do 35 tysięcy, wobec 35 do 75 za Golfa i Octavię. Wniosek: między Golfem a Octavią wybieraj egzemplarz, nie znaczek.”
+
+**Ekran:** trzy kolumny (Golf / Octavia / Astra) → wspólne usterki podświetlone w dwóch pierwszych → widełki cen z bazy → plansza „egzemplarz > znaczek”.
+
+**CTA:** A.
+
+---
+
+## Porównanie 2 – „1.4 TSI czy 1.4 Turbo?”
+
+**Hook:** „Pasek czy łańcuch? Dwa silniki 1.4 turbo, dwa różne zestawy pytań.”
+
+**Lektor:**
+„Golf i Octavia: 1.4 TSI z rodziny EA211 – w bazie polecany. Rozrząd na pasku, wymiana zwykle 150 do 210 tysięcy, orientacyjnie 1,2 do 2 tysięcy złotych. Typowe: wyciek z plastikowego modułu pompy wody – 800 do 1800 złotych, i nagar na zaworach. Astra J: 1.4 Turbo – w bazie neutralny. Rozrząd na łańcuchu, zwykle trwały. Do sprawdzenia: turbosprężarka i jej zawór upustowy – 800 do 3500 złotych, pompa wody, membrana odmy. W TSI pytam o fakturę za pasek, w Astrze – nasłuchuję turbo i pytam o olej.”
+
+**Ekran:** dwie karty silników z ikoną „pasek” / „łańcuch” → po 3 usterki z widełkami → dwa dymki z pytaniami.
+
+**CTA:** C.
+
+---
+
+## Porównanie 3 – „Skrzynia, przeszłość, gaz – trzy różne pułapki”
+
+**Hook:** „Każdy z tych trzech kompaktów ma inną rzecz, o którą pytam najpierw.”
+
+**Lektor:**
+„Golf: automaty to często siedmiobiegowa DSG z suchymi sprzęgłami – orientacyjnie 3 do 9 tysięcy złotych, jeśli coś się dzieje. Pytam o naprawy i robię test w korku. Octavia: w bazie notujemy, że sporo aut pochodzi z flot i taksówek, a przebiegi ponad 250 tysięcy w dieslach są częste. Pytam o historię użytkowania i porównuję zużycie wnętrza z licznikiem. Astra J: ręczna skrzynia M32 – łożyska, 1,5 do 4,5 tysiąca; są też wersje z fabrycznym LPG – pytam o regulację luzów zaworowych. Trzy auta, trzy różne pierwsze pytania.”
+
+**Ekran:** trzy plansze po kolei: ikona skrzyni DSG / ikona „taxi/flota” / ikona skrzyni + butli LPG → widełki → plansza „trzy pierwsze pytania” (do zrzutu ekranu).
+
+**CTA:** A + „Wklej swoje ogłoszenie – podpowiemy pierwsze pytanie dla twojego modelu.”
+
+---
+
+## Checklista dla serii „szybki test” i „porównania”
+
+- [ ] Wynik na ekranie to prawdziwy wynik aplikacji dla fikcyjnego tekstu (nagrany, nie zmontowany).
+- [ ] Koszty i werdykty zgodne z aktualną wersją `data/models/` (sprawdzić w dniu publikacji).
+- [ ] Porównania modeli bez słów „gorszy”, „unikaj”, „bubel” – tylko „co sprawdzić”.
+- [ ] Etykieta „Ogłoszenie fikcyjne” i „Koszty orientacyjne” widoczne.

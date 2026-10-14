@@ -1,0 +1,254 @@
+{
+  "podsumowanie": {
+    "ocena": "srednie",
+    "uzasadnienie": "Ogłoszenie jest konkretne, VIN jest podany, a przebieg z ogłoszenia pasuje do tempa z badań technicznych. Do wyjaśnienia są trzy rzeczy: jeden odczyt z badania w 2023 r. niższy od poprzedniego, brak dokumentu wymiany rozrządu przy 224 000 km i historia auta sprzed sprowadzenia z Niemiec w 2021 r. Skrzynia DSG7 przy tym przebiegu wymaga sprawdzenia na jeździe próbnej i w diagnostyce.",
+    "zalecenie": "Zanim pojedziesz, wyślij sprzedawcy pytania z raportu – najważniejsze o odczyt z 2023 r. i fakturę za rozrząd. Jeśli odpowiedzi są przekonujące, umów oględziny z niezależnym mechanikiem z diagnostyką skrzyni DSG i pomiarem lakieru. Rozważ raport historii z zagranicy po VIN, bo auto do 2021 r. jeździło w Niemczech."
+  },
+  "rozpoznany_pojazd": {
+    "marka": "Volkswagen",
+    "model": "Golf",
+    "generacja": "VII (2012–2020)",
+    "silnik": "1.6 TDI 90–115 KM (EA288, m.in. CLHA/CXXB)",
+    "pewnosc": "wysoka",
+    "w_bazie": true
+  },
+  "czerwone_flagi": [
+    {
+      "tytul": "Odczyt z badania w 2023 r. niższy niż rok wcześniej",
+      "opis": "W Historii Pojazdu odczyt z 16.10.2023 (164 870 km) jest o 3 080 km niższy niż z 17.10.2022 (167 950 km). Kolejne odczyty znowu rosną równo, ok. 14 tys. km rocznie. Do wyjaśnienia ze sprzedawcą – możliwe przyczyny to m.in. błąd wpisu na stacji kontroli albo wymiana zestawu wskaźników.",
+      "waga": "wysoka",
+      "pytanie_do_sprzedawcy": "W historii badań odczyt z 2023 r. jest niższy niż z 2022 r. – czy wymieniano zegary lub licznik albo czy wie Pan/Pani, skąd ta różnica? Czy jest na to dokument?"
+    },
+    {
+      "tytul": "„Rozrząd robiony” – bez daty i przebiegu",
+      "opis": "Przy 224 000 km wymiana paska rozrządu jest w tym silniku zwykle już za autem (producent podaje ok. 210 tys. km, ostrożnie 150–180 tys. km). Ogłoszenie nie podaje, kiedy i przy jakim przebiegu ją wykonano. Do wyjaśnienia ze sprzedawcą – najlepiej fakturą. Bez dokumentu warto doliczyć orientacyjnie 1,3–2,2 tys. zł na wymianę.",
+      "waga": "srednia",
+      "pytanie_do_sprzedawcy": "Kiedy i przy jakim przebiegu wymieniono rozrząd (z pompą wody)? Czy może Pan/Pani przesłać zdjęcie faktury?"
+    },
+    {
+      "tytul": "Deklaracja „bezwypadkowy” – warto potwierdzić pomiarem lakieru",
+      "opis": "Ogłoszenie deklaruje brak szkód. Na zdjęciu przodu maska wydaje się minimalnie jaśniejsza niż błotnik – to może być tylko światło. Warto potwierdzić deklarację miernikiem grubości lakieru, szczególnie na przednim pasie, błotnikach i masce.",
+      "waga": "srednia",
+      "pytanie_do_sprzedawcy": "Czy jakiekolwiek elementy były lakierowane lub wymieniane – także przed sprowadzeniem auta do Polski?"
+    },
+    {
+      "tytul": "„Pierwszy właściciel w kraju” – historia sprzed 2021 r. poza polską bazą",
+      "opis": "Auto zostało sprowadzone z Niemiec i zarejestrowane w Polsce w 2021 r. przy przebiegu 152 300 km. Polska Historia Pojazdu nie pokazuje przebiegów ani serwisu sprzed importu. Do wyjaśnienia ze sprzedawcą, czy ma dokumenty z Niemiec (książka serwisowa, wydruk z ASO, faktury).",
+      "waga": "niska",
+      "pytanie_do_sprzedawcy": "Czy ma Pan/Pani książkę serwisową albo wydruk historii z ASO z okresu przed sprowadzeniem auta?"
+    },
+    {
+      "tytul": "Badanie techniczne ważne do 13.10.2026",
+      "opis": "Według Historii Pojazdu badanie techniczne kończy się 13.10.2026. Przy zakupie po tej dacie trzeba będzie wykonać nowe badanie. To informacja organizacyjna, warto ją uwzględnić przy ustalaniu terminu.",
+      "waga": "niska",
+      "pytanie_do_sprzedawcy": "Czy przed sprzedażą planuje Pan/Pani wykonać kolejne badanie techniczne?"
+    }
+  ],
+  "przebieg": {
+    "deklarowany_km": 224000,
+    "odczyty": [
+      {
+        "data": "2021-10-18",
+        "km": 152300
+      },
+      {
+        "data": "2022-10-17",
+        "km": 167950
+      },
+      {
+        "data": "2023-10-16",
+        "km": 164870
+      },
+      {
+        "data": "2024-10-14",
+        "km": 196410
+      },
+      {
+        "data": "2025-10-13",
+        "km": 210880
+      }
+    ],
+    "wniosek": "Od pierwszego badania w Polsce (10.2021) do ostatniego (10.2025) przybyło 58 580 km, czyli średnio ok. 14 600 km rocznie. Przebieg z ogłoszenia (224 000 km) jest o 13 120 km wyższy niż ostatni odczyt, co pasuje do tego tempa. Jeden odczyt – z 16.10.2023 – jest niższy od poprzedniego o 3 080 km; do wyjaśnienia ze sprzedawcą.",
+    "uwagi": [
+      "Brak odczytów sprzed października 2021 r. – auto było wtedy zarejestrowane w Niemczech. Pierwszy odczyt w Polsce to 152 300 km.",
+      "Pomijając odczyt z 2023 r., przyrosty są równe: ok. 15,7 tys. km (2021–2022), ok. 14,2 tys. km rocznie (2022–2024), ok. 14,5 tys. km (2024–2025).",
+      "Przebieg ok. 224 000 km to typowy zakres wymiany paska rozrządu, koła dwumasowego i serwisu DPF w tym silniku – sprawdź dokumenty."
+    ]
+  },
+  "typowe_usterki": [
+    {
+      "tytul": "Skrzynia DSG DQ200 (7-biegowa, suche sprzęgła) – mechatronika i zespół sprzęgieł",
+      "objawy": "Szarpanie przy ruszaniu i przy zmianie 1–2, stuki przy zwalnianiu, migająca kontrolka skrzyni, tryb awaryjny (jazda tylko na wybranych biegach).",
+      "koszt_pln_od": 3000,
+      "koszt_pln_do": 9000,
+      "waga": "wysoka",
+      "jak_sprawdzic": "Jazda próbna od zimnego: ruszanie pod górkę, jazda w korku 1–2–1, cofanie i parkowanie. W diagnostyce odczyt błędów skrzyni i adaptacji sprzęgieł. Zapytaj o faktury za mechatronikę lub sprzęgło."
+    },
+    {
+      "tytul": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+      "objawy": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator pracujący po zgaszeniu silnika, wyższe spalanie przy jeździe miejskiej.",
+      "koszt_pln_od": 700,
+      "koszt_pln_do": 5000,
+      "waga": "srednia",
+      "jak_sprawdzic": "W diagnostyce sprawdź zapełnienie filtra (masa sadzy) i liczbę regeneracji. Obejrzyj wydech – ślady cięcia i spawania obudowy filtra są do wyjaśnienia. Zapytaj, czy filtr był czyszczony."
+    },
+    {
+      "tytul": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+      "objawy": "Kontrolka silnika, szarpanie na niskich obrotach, spadek mocy, czarny dym. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+      "koszt_pln_od": 800,
+      "koszt_pln_do": 3500,
+      "waga": "srednia",
+      "jak_sprawdzic": "Diagnostyka – błędy EGR. Sprawdź, czy płyn chłodzący nie jest dolewany „na oko”, czy ze spalin nie czuć płynu i czy na ciepłym silniku nie ma białego dymu."
+    },
+    {
+      "tytul": "Termostat / pompa cieczy – wycieki i niedogrzewanie",
+      "objawy": "Silnik długo się nagrzewa, zimno z nawiewów, ubytek płynu.",
+      "koszt_pln_od": 500,
+      "koszt_pln_do": 1500,
+      "waga": "niska",
+      "jak_sprawdzic": "Na jeździe próbnej temperatura płynu powinna szybko dojść do ok. 90°C i się utrzymać. Sprawdź poziom płynu i ślady wycieków."
+    },
+    {
+      "tytul": "Klimatyzacja – skraplacz i sprężarka",
+      "objawy": "Słabe chłodzenie, sprężarka załącza się z hałasem; skraplacz z przodu bywa uszkadzany przez kamienie.",
+      "koszt_pln_od": 800,
+      "koszt_pln_do": 3500,
+      "waga": "srednia",
+      "jak_sprawdzic": "Włącz klimatyzację na maksimum i po kilku minutach sprawdź temperaturę z nawiewów; obejrzyj skraplacz przez grill."
+    },
+    {
+      "tytul": "Zawieszenie tylne i przednie – tuleje, łączniki, amortyzatory",
+      "objawy": "Stuki z tyłu na poprzecznych nierównościach, pływanie, nierówne zużycie opon. W słabszych wersjach belka skrętna, w mocniejszych wielowahacz (więcej tulei).",
+      "koszt_pln_od": 400,
+      "koszt_pln_do": 2000,
+      "waga": "niska",
+      "jak_sprawdzic": "Jazda po nierównościach, sprawdzenie zużycia opon; na podnośniku – stan tulei i amortyzatorów."
+    }
+  ],
+  "zdjecia": {
+    "uwagi": [
+      "Na zdjęciu zegarów licznik pokazuje ok. 224 000 km – zgodnie z ogłoszeniem; nie widać zapalonych kontrolek.",
+      "Kierownica i boczek fotela kierowcy nie mają wyraźnych przetarć. Przy ponad 220 tys. km to dobry stan – na oględzinach porównaj go z przebiegiem i zapytaj, czy coś było wymieniane.",
+      "Na zdjęciu przodu maska wydaje się minimalnie jaśniejsza niż lewy błotnik. To może być odbicie światła – zmierz lakier na miejscu.",
+      "Komora silnika jest czysta, bez widocznych wycieków. Zbyt dokładnie umyty silnik bywa trudniejszy do oceny – zapytaj, kiedy był myty.",
+      "Tablica rejestracyjna jest zasłonięta – to częsta praktyka; numer będzie potrzebny do Historii Pojazdu i sprawdzenia OC w UFG."
+    ]
+  },
+  "porownanie_cen": {
+    "wiersze": [
+      {
+        "zrodlo": "to ogłoszenie",
+        "cena": 39900,
+        "rocznik": 2015,
+        "przebieg_km": 224000,
+        "wyposazenie": "Comfortline, DSG7, nawigacja, klimatyzacja dwustrefowa, czujniki P/T",
+        "uwaga": "Sprowadzony w 2021 r.; serwis w ASO deklarowany, bez dokumentów w ogłoszeniu"
+      },
+      {
+        "zrodlo": "oferta 1",
+        "cena": 42500,
+        "rocznik": 2015,
+        "przebieg_km": 198000,
+        "wyposazenie": "Comfortline, skrzynia manualna",
+        "uwaga": "Polski salon, faktury serwisowe; skrzynia manualna zamiast DSG"
+      },
+      {
+        "zrodlo": "oferta 2",
+        "cena": 37800,
+        "rocznik": 2014,
+        "przebieg_km": 241000,
+        "wyposazenie": "Trendline, DSG7",
+        "uwaga": "Starszy, wyższy przebieg, uboższa wersja, brak informacji o serwisie"
+      },
+      {
+        "zrodlo": "oferta 3",
+        "cena": 44900,
+        "rocznik": 2016,
+        "przebieg_km": 176000,
+        "wyposazenie": "Highline, DSG7",
+        "uwaga": "Młodszy, niższy przebieg, bogatsza wersja, polski salon z książką serwisową"
+      }
+    ],
+    "wniosek": "Cena 39 900 zł jest zbliżona do podobnych ofert i mieści się między autem starszym z wyższym przebiegiem (37 800 zł) a egzemplarzami z udokumentowaną historią (42 500–44 900 zł). Wyższy przebieg i brak dokumentów rozrządu oraz historii sprzed 2021 r. to rzeczowe argumenty w negocjacjach – np. równowartość wymiany rozrządu (orientacyjnie 1,3–2,2 tys. zł), jeśli sprzedawca nie pokaże faktury."
+  },
+  "pytania_do_sprzedawcy": [
+    "Odczyt z badania w 2023 r. (164 870 km) jest niższy niż z 2022 r. (167 950 km) – czy wymieniano zegary lub licznik? Czy jest na to dokument?",
+    "Kiedy i przy jakim przebiegu wymieniono rozrząd? Czy razem z pompą wody? Czy jest faktura?",
+    "Czy skrzynia DSG była naprawiana (sprzęgło, mechatronika)? Czy są na to faktury?",
+    "Czy ma Pan/Pani książkę serwisową lub wydruk z ASO, także z okresu w Niemczech?",
+    "Czy jakiekolwiek elementy były lakierowane lub wymieniane? Czy auto miało szkody przed sprowadzeniem?",
+    "Czy filtr DPF był czyszczony lub wymieniany? Czy zapalała się kontrolka DPF?",
+    "Czy płyn chłodzący trzeba było dolewać między przeglądami?",
+    "Czy mogę przyjechać na zimny silnik (nieuruchamiany od rana)?",
+    "Czy zgodzi się Pan/Pani na diagnostykę komputerową i podnośnik w wybranym przeze mnie warsztacie?",
+    "Na kogo jest zarejestrowane auto i czy sprzedaje Pan/Pani na podstawie umowy jako właściciel wpisany w dowodzie?"
+  ],
+  "checklista_ogledzin": [
+    {
+      "obszar": "Dokumenty",
+      "punkty": [
+        "VIN w dowodzie rejestracyjnym zgodny z tabliczką znamionową i numerem pod szybą",
+        "Sprzedający wpisany w dowodzie jako właściciel; brak współwłaściciela albo jego obecność przy umowie",
+        "Faktura lub wpis o wymianie rozrządu – data i przebieg",
+        "Dokumenty z Niemiec: książka serwisowa, wydruk z ASO, umowa zakupu z 2021 r.",
+        "OC sprawdzone w UFG; badanie techniczne ważne do 13.10.2026"
+      ]
+    },
+    {
+      "obszar": "Nadwozie i lakier",
+      "punkty": [
+        "Pomiar grubości lakieru na każdym elemencie, szczególnie maska, przedni pas i błotniki",
+        "Równe szczeliny wokół maski i przednich błotników",
+        "Daty produkcji szyb i reflektorów – jedna nowsza część do wyjaśnienia",
+        "Progi, nadkola i wnęka koła zapasowego bez korozji i śladów napraw"
+      ]
+    },
+    {
+      "obszar": "Silnik (na zimno)",
+      "punkty": [
+        "Silnik zimny przy przyjeździe – dotknij bloku",
+        "Poziom płynu chłodzącego i ślady zaschniętego płynu przy pompie i termostacie",
+        "Olej na bagnecie nie powyżej maksimum i nie pachnie paliwem",
+        "Rozruch: równa praca, brak białego i czarnego dymu",
+        "Wydech: brak śladów cięcia i spawania przy obudowie DPF"
+      ]
+    },
+    {
+      "obszar": "Skrzynia DSG7",
+      "punkty": [
+        "Ruszanie powoli kilka razy, także pod górkę – bez szarpnięć i drgań",
+        "Jazda w korku 1–2–1 – płynne zmiany przy zwalnianiu",
+        "Cofanie i parkowanie – bez stuków i opóźnień",
+        "Brak migającej kontrolki skrzyni i komunikatów o trybie awaryjnym"
+      ]
+    },
+    {
+      "obszar": "Jazda próbna",
+      "punkty": [
+        "Temperatura płynu szybko dochodzi do ok. 90°C i się utrzymuje",
+        "Przyspieszanie od niskich obrotów bez szarpania i spadków mocy",
+        "Nierówności: brak stuków z przodu i z tyłu",
+        "Klimatyzacja chłodzi po kilku minutach; ogrzewanie grzeje",
+        "Nawigacja, Bluetooth, czujniki parkowania i podgrzewanie foteli działają"
+      ]
+    },
+    {
+      "obszar": "Diagnostyka komputerowa",
+      "punkty": [
+        "Błędy silnika, skrzyni i systemów bezpieczeństwa (także zapisane w pamięci)",
+        "Adaptacja i zużycie sprzęgieł DSG",
+        "Zapełnienie DPF (masa sadzy) i liczba regeneracji",
+        "Przebieg zapisany w modułach (np. skrzyni, ABS) porównany z licznikiem"
+      ]
+    }
+  ],
+  "dokumenty_do_sprawdzenia": [
+    "Dowód rejestracyjny – zgodność VIN z tabliczką i numerem nabitym na nadwoziu",
+    "Karta pojazdu, jeśli była wydana",
+    "Dokument nabycia przez sprzedającego (umowa lub faktura z 2021 r.) – czy sprzedający jest właścicielem",
+    "Polisa OC i sprawdzenie OC w UFG",
+    "Książka serwisowa, wydruk z ASO, faktury – szczególnie rozrząd, DSG i DPF",
+    "Wynik Historii Pojazdu z gov.pl – zgodność danych z ogłoszeniem i dowodem",
+    "Przy imporcie: dokumenty z Niemiec i potwierdzenie zapłaty akcyzy (wystarczy kopia lub zdjęcie)"
+  ]
+}
