@@ -88,6 +88,14 @@ liczba_zdjec: ${req.zdjecia.length}
             1,
           )
         : "brak trafień heurystyk"
+    }${
+      req.heurystykiDoOceny?.length
+        ? `\nDo samodzielnej oceny (bez trafień tekstowych – zgłoś tylko, jeśli dane to uzasadniają):\n${JSON.stringify(
+            req.heurystykiDoOceny.map((f) => ({ id: f.id, dlaczego: f.explanation, waga: f.severity, neutral_wording: f.neutral_wording, pytanie: f.question_for_seller ?? null })),
+            null,
+            1,
+          )}`
+        : ""
     }\n</wstepne_flagi>`,
   );
 

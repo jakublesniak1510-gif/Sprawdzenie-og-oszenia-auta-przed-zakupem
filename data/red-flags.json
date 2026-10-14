@@ -406,7 +406,7 @@
       "szkoda calkowita",
       "po szkodzie całkowitej",
       "po szkodzie calkowitej",
-      "/(?<!\\p{L})(?<!nie\\s)(uszkodzon[ya]|zalan[ya])(?!\\p{L})/iu"
+      "/(?<!\\p{L})(?<!nie\\s)(uszkodzon[yae]|zalan[yae])(?!\\p{L})/iu"
     ],
     "explanation": "Auto ma za sobą poważną szkodę lub zalanie. Takie auta mogą mieć ukryte problemy z konstrukcją lub elektryką; cena powinna to uwzględniać.",
     "severity": "wysoka",

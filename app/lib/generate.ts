@@ -28,6 +28,7 @@ export async function buildAiRequest(input: StoredInput, oferta: OfferId, images
     model,
     silnikKod,
     flagi: matchRedFlags(input.tekst_ogloszenia, flags),
+    heurystykiDoOceny: flags.filter((f) => f.patterns.length === 0),
     zdjecia: images.map((d) => d.replace(/^data:image\/jpeg;base64,/, "")),
   };
 }

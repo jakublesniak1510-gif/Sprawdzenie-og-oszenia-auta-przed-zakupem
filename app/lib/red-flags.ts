@@ -47,28 +47,63 @@ export async function loadRedFlags(): Promise<RedFlag[]> {
 }
 
 function stripPl(s: string): string {
-  return s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/ł/g, "l");
+  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/ł/g, "l");
 }
 
-export function matchRedFlags(text: string, flags: RedFlag[]): (RedFlag & { trafienie: string })[] {
+/** Wzorzec z bazy: „/treść/flagi” = wyrażenie regularne, wszystko inne = zwykła fraza (dopasowanie literalne). */
+const REGEX_LITERAL = /^\/(.+)\/([a-z]*)$/s;
+/** VIN: 17 znaków bez I, O, Q (wzorzec z data/README.md). */
+export const VIN_RE = /\b[a-hj-npr-z0-9]{17}\b/i;
+export const BRAK_VIN_ID = "brak-vin";
+
+const regexCache = new Map<string, RegExp | null>();
+function compilePattern(p: string): RegExp | null | undefined {
+  const m = REGEX_LITERAL.exec(p);
+  if (!m) return undefined; // zwykła fraza
+  if (!regexCache.has(p)) {
+    try {
+      regexCache.set(p, new RegExp(m[1], m[2]));
+    } catch (e) {
+      console.warn(`[red-flags] Pomijam błędny regex ${p}: ${(e as Error).message}`);
+      regexCache.set(p, null);
+    }
+  }
+  return regexCache.get(p);
+}
+
+export type RedFlagHit = RedFlag & { trafienie: string };
+
+/**
+ * Dopasowuje heurystyki do tekstu ogłoszenia:
+ * - regexy z bazy („/…/iu”) – na oryginalnym tekście małymi literami (same obsługują polskie znaki i zaprzeczenia),
+ * - frazy – literalnie jako fragment, po zdjęciu polskich znaków z obu stron,
+ * - flaga „brak-vin” – także gdy w tekście nie ma 17-znakowego VIN-u,
+ * - flagi z pustym `patterns` nie są zgłaszane mechanicznie (ocenia je model).
+ */
+export function matchRedFlags(text: string, flags: RedFlag[]): RedFlagHit[] {
   const lower = text.toLowerCase();
   const plain = stripPl(text);
-  const hits: (RedFlag & { trafienie: string })[] = [];
+  const hits: RedFlagHit[] = [];
   for (const f of flags) {
     for (const p of f.patterns) {
+      const re = compilePattern(p);
       let hit: string | null = null;
-      try {
-        const re = new RegExp(p, "iu");
-        hit = re.exec(lower)?.[0] ?? re.exec(plain)?.[0] ?? null;
-      } catch {
+      if (re === undefined) {
         const needle = stripPl(p);
-        if (plain.includes(needle)) hit = p;
+        if (needle && plain.includes(needle)) hit = p;
+      } else if (re) {
+        re.lastIndex = 0;
+        hit = re.exec(lower)?.[0] ?? null;
       }
       if (hit) {
         hits.push({ ...f, trafienie: hit });
         break;
       }
     }
+  }
+  const vinFlag = flags.find((f) => f.id === BRAK_VIN_ID);
+  if (vinFlag && !VIN_RE.test(text) && !hits.some((h) => h.id === BRAK_VIN_ID)) {
+    hits.push({ ...vinFlag, trafienie: "brak 17-znakowego VIN w treści ogłoszenia" });
   }
   return hits;
 }
