@@ -8,8 +8,9 @@ import { FeedbackForm } from "@/components/report/FeedbackForm";
 import { PrintButton } from "@/components/report/PrintButton";
 import { PrintHeader } from "@/components/report/PrintHeader";
 import { ReportView } from "@/components/report/ReportView";
-import { getReport, hasFeedback, markPaid, parseInput, parseReport } from "@/lib/db";
-import { checkSessionPaid, paymentsSkipped } from "@/lib/payments";
+import { getReport, hasFeedback, parseInput, parseReport } from "@/lib/db";
+import { confirmReportReturn } from "@/lib/payment-flow";
+import { paymentsSkipped } from "@/lib/payments";
 import { enqueueGeneration } from "@/lib/queue";
 import { retryGeneration } from "./actions";
 
@@ -31,20 +32,14 @@ export default async function RaportPage({
   let row = getReport(id);
   if (!row) notFound();
 
-  // Powrót ze Stripe: jeśli webhook jeszcze nie dotarł, sprawdzamy sesję bezpośrednio.
+  // Powrót ze Stripe: jeśli webhook jeszcze nie dotarł, sprawdzamy sesję bezpośrednio (kwota, zdarzenie, generowanie – lib/payment-flow).
   const sessionId = typeof sp.session_id === "string" ? sp.session_id : null;
-  // Powrót z e-maila „Czy kupiłeś?” (link jednego kliknięcia) – zamiast formularza pokazujemy podziękowanie.
-  const fbRaw = sp.feedback ?? sp.kupil ?? sp.odp;
-  const feedbackParam = fbRaw === "tak" || fbRaw === "nie" ? fbRaw : null;
-  if (row.status === "pending_payment" && sessionId && !paymentsSkipped() && sessionId === row.stripe_session_id) {
-    try {
-      const s = await checkSessionPaid(sessionId);
-      if (s.paid && s.reportId === id) markPaid(id);
-    } catch (e) {
-      console.warn("[stripe] Nie udało się sprawdzić sesji:", (e as Error).message);
-    }
+  if ((row.status === "pending_payment" || row.status === "expired") && sessionId && !paymentsSkipped() && sessionId === row.stripe_session_id) {
+    await confirmReportReturn(id, sessionId);
     row = getReport(id)!;
   }
+  // Odpowiedź z e-maila „Kupiłeś to auto?” (/api/reports/<id>/kupil → ?kupil=tak|nie#opinia); zapisana już w bazie.
+  const kupilParam = sp.kupil === "tak" || sp.kupil === "nie" ? sp.kupil : row.kupil === 1 ? "tak" : row.kupil === 0 ? "nie" : null;
   // Opłacony, ale generowanie nie wystartowało (np. restart serwera) – uruchamiamy. Idempotentne.
   if (row.status === "paid") after(() => enqueueGeneration(id));
 
@@ -95,16 +90,15 @@ export default async function RaportPage({
       <div className="space-y-4 py-8">
         <h1 className="text-2xl font-bold">Nie udało się wygenerować raportu</h1>
         <p className="text-slate-700">
-          Przepraszamy – wystąpił błąd po naszej stronie. Płatność jest zachowana; możesz spróbować ponownie. Jeśli problem
-          się powtarza, skontaktuj się z nami, podając numer raportu: <code className="text-xs">{id}</code>.
+          {row.error ?? "Przepraszamy – wystąpił błąd po naszej stronie."} Numer raportu: <code className="text-xs">{id}</code>.
         </p>
-        {process.env.NODE_ENV !== "production" && row.error && (
-          <pre className="whitespace-pre-wrap rounded-lg bg-slate-100 p-3 text-xs text-slate-700">{row.error}</pre>
+        {/* „Spróbuj ponownie” działa tylko dla opłaconych raportów (resetErrorToPaid). */}
+        {(row.paid_at || row.coupon_code || row.attempts > 0) && (
+          <form action={retryGeneration}>
+            <input type="hidden" name="id" value={id} />
+            <button className="rounded-xl bg-brand-700 px-6 py-3 font-bold text-white hover:bg-brand-900">Spróbuj ponownie</button>
+          </form>
         )}
-        <form action={retryGeneration}>
-          <input type="hidden" name="id" value={id} />
-          <button className="rounded-xl bg-brand-700 px-6 py-3 font-bold text-white">Spróbuj ponownie</button>
-        </form>
       </div>
     );
   }
@@ -166,15 +160,15 @@ export default async function RaportPage({
         </section>
       )}
 
-      <section className="no-print rounded-2xl bg-white p-4 shadow-sm sm:p-5">
-        {feedbackParam ? (
-          <p className="text-sm font-semibold text-emerald-800" role="status">
-            Dziękujemy za odpowiedź{feedbackParam === "tak" ? " – powodzenia z autem!" : " – trzymamy kciuki za kolejne ogłoszenie."} To pomaga
-            nam ulepszać raporty.
+      <section id="opinia" className="no-print scroll-mt-16 rounded-2xl bg-white p-4 shadow-sm sm:p-5" aria-label="Opinia o raporcie">
+        {kupilParam && (
+          <p className="mb-3 rounded-lg bg-emerald-50 p-3 text-sm font-semibold text-emerald-900" role="status">
+            {kupilParam === "tak"
+              ? "Dziękujemy – zapisaliśmy, że kupiłeś to auto. Powodzenia! Napisz, co się potwierdziło, a co nie."
+              : "Dziękujemy – zapisaliśmy, że nie kupiłeś tego auta. Daj znać, czy raport pomógł w decyzji."}
           </p>
-        ) : (
-          <FeedbackForm reportId={id} alreadySent={hasFeedback(id)} />
         )}
+        <FeedbackForm reportId={id} alreadySent={hasFeedback(id)} kupil={kupilParam} />
       </section>
 
       <p className="no-print text-center text-sm">

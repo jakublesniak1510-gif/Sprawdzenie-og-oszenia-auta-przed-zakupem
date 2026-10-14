@@ -104,7 +104,8 @@ function itemsToPairs(s: LandingSection | null): { title: string; text: string }
   // lista „**Tytuł** – opis” albo „Tytuł: opis”
   return s.bullets.map((b) => {
     const m = /^\*\*(.+?)\*\*\s*[–—:-]?\s*(.*)$/s.exec(b) ?? /^([^:–—]{3,60})\s*[:–—]\s*(.+)$/s.exec(b);
-    return m ? { title: m[1].trim(), text: m[2].trim() } : { title: b, text: "" };
+    const text = m ? m[2].trim() : "";
+    return m ? { title: m[1].trim(), text: text.charAt(0).toUpperCase() + text.slice(1) } : { title: b, text: "" };
   });
 }
 

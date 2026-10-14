@@ -26,6 +26,10 @@ describe("teksty z raportu", () => {
     expect(s[0]).toBe(PRZYKLAD_RAPORT.podsumowanie.zalecenie);
     expect(s.at(-1)).toMatch(/mechanika/);
     expect(nextSteps({ ...PRZYKLAD_RAPORT, przebieg: null }).some((x) => x.includes("VIN"))).toBe(true);
+    // zalecenie już mówi o VIN i mechaniku → bez powtórzeń
+    const dup = nextSteps({ ...PRZYKLAD_RAPORT, przebieg: null, podsumowanie: { ...PRZYKLAD_RAPORT.podsumowanie, zalecenie: "Poproś o VIN. Umów mechanika." } });
+    expect(dup.filter((x) => x.includes("VIN"))).toHaveLength(1);
+    expect(dup.filter((x) => /mechanik/.test(x))).toHaveLength(1);
   });
   it("spis treści zależy od sekcji i pakietu", () => {
     expect(reportToc(PRZYKLAD_RAPORT, "raport_plus").map((t) => t.id)).toContain("ceny");

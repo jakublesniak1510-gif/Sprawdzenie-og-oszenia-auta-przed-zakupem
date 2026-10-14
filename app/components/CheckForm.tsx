@@ -742,7 +742,7 @@ export function CheckForm({
               <div className="flex gap-2">
                 <input
                   id="cf-kupon"
-                  className={`${inputCls} font-mono uppercase`}
+                  className={`${inputCls} font-mono uppercase placeholder:normal-case`}
                   value={kupon}
                   onChange={(e) => {
                     setKupon(e.target.value);

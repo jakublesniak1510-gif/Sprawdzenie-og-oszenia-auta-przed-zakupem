@@ -46,12 +46,12 @@ export function questionsMessage(r: Report, fallbackName?: string): string {
 export function nextSteps(r: Report): string[] {
   const steps = [r.podsumowanie.zalecenie.trim()];
   const noHistory = !r.przebieg || r.przebieg.odczyty.length === 0;
-  if (noHistory)
+  if (noHistory && !/\bVIN\b/.test(steps[0]))
     steps.push(
       "Poproś sprzedawcę o VIN, numer rejestracyjny i datę pierwszej rejestracji, a potem sprawdź auto bezpłatnie w usłudze Historia Pojazdu na gov.pl.",
     );
   if (r.pytania_do_sprzedawcy.length) steps.push("Wyślij sprzedawcy pytania z raportu – przycisk „Skopiuj pytania” jest w sekcji pytań.");
-  steps.push("Przed zakupem umów oględziny u niezależnego mechanika lub na stacji diagnostycznej.");
+  if (!/mechanik/i.test(steps[0])) steps.push("Przed zakupem umów oględziny u niezależnego mechanika lub na stacji diagnostycznej.");
   return steps;
 }
 

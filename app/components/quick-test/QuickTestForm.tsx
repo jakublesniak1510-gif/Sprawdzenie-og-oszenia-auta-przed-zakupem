@@ -65,7 +65,7 @@ export function QuickTestForm({ initialText = "" }: { initialText?: string }) {
           />
           <span id="qt-tekst-hint" className="mt-1 flex justify-between gap-2 text-xs text-slate-600">
             <span>Telefonów i danych sprzedawcy nie zapisujemy.</span>
-            <span className={`tabular-nums ${len > 0 && len < MIN_QUICK_TEXT ? "font-semibold text-amber-800" : ""}`}>{len} znaków</span>
+            <span className={`shrink-0 whitespace-nowrap tabular-nums ${len > 0 && len < MIN_QUICK_TEXT ? "font-semibold text-amber-800" : ""}`}>{len} znaków</span>
           </span>
         </label>
         <fieldset>
