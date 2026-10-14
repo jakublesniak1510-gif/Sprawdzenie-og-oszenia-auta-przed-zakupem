@@ -1,0 +1,376 @@
+{
+  "id": "toyota-auris-2",
+  "make": "Toyota",
+  "model": "Auris",
+  "generation": "II (E180, 2012–2018)",
+  "years": [
+    2012,
+    2018
+  ],
+  "aliases": [
+    "auris 2",
+    "auris ii",
+    "auris e18",
+    "auris e180",
+    "toyota auris 2",
+    "toyota auris ii",
+    "auris ii hybrid",
+    "auris 2 hybrid",
+    "auris touring sports",
+    "auris ii kombi",
+    "auris ii lift"
+  ],
+  "market_note": "Popularny kompakt, bardzo często hybryda z polskiego salonu i floty lub taxi. Ceny orientacyjnie ok. 35–65 tys. zł (2026).",
+  "engines": [
+    {
+      "code": "1.8 Hybrid 136 KM (2ZR-FXE + e-CVT)",
+      "fuel": "hybryda",
+      "power_hp": [
+        136
+      ],
+      "aliases": [
+        "1.8 hybrid",
+        "1,8 hybrid",
+        "1.8 hsd",
+        "hybrid",
+        "hybryda",
+        "1.8 hybryda"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zapchany wentylator i kanał chłodzenia baterii trakcyjnej (HV)",
+          "symptoms": "Głośna praca wentylatora pod tylną kanapą, częstsze uruchamianie silnika spalinowego, komunikat o konieczności serwisu baterii, przegrzewanie baterii.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            200,
+            800
+          ],
+          "check_at_inspection": "Obejrzeć kratkę wlotu powietrza przy tylnej kanapie (kurz, sierść), posłuchać wentylatora; zapytać o czyszczenie. Diagnostyka – temperatury modułów baterii."
+        },
+        {
+          "title": "Degradacja baterii trakcyjnej (HV)",
+          "symptoms": "Szybkie rozładowywanie i ładowanie baterii, słabsze przyspieszenie, wyższe spalanie, komunikat o usterce układu hybrydowego.",
+          "mileage_km": "200–350 tys. km lub ok. 12–15 lat",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            15000
+          ],
+          "check_at_inspection": "Diagnostyka hybrydy – napięcia modułów baterii, różnice między blokami, kody usterek. Na jeździe próbnej obserwować wskaźnik naładowania baterii. Regeneracja ok. 3–6 tys. zł, nowa bateria znacznie drożej."
+        },
+        {
+          "title": "Pompa cieczy chłodzącej falownik (inwerter)",
+          "symptoms": "Komunikat o usterce układu hybrydowego, ograniczenie mocy, przegrzewanie falownika.",
+          "mileage_km": "120–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            1400
+          ],
+          "check_at_inspection": "Na pracującym aucie (READY) sprawdzić, czy płyn w zbiorniczku falownika krąży; odczyt błędów hybrydy."
+        },
+        {
+          "title": "Zarastanie układu EGR i kolektora dolotowego",
+          "symptoms": "Nierówna praca, drgania przy uruchamianiu silnika spalinowego, kontrolka silnika.",
+          "mileage_km": "150–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            2500
+          ],
+          "check_at_inspection": "Obserwacja płynności włączania silnika spalinowego, odczyt błędów; zapytać o czyszczenie EGR."
+        },
+        {
+          "title": "Akumulator 12 V (hybryda)",
+          "symptoms": "Auto nie przechodzi w tryb READY, błędy elektroniki, rozładowanie po postoju.",
+          "mileage_km": "co ok. 5–8 lat",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Sprawdzić datę akumulatora i napięcie; zapytać o problemy z uruchamianiem po postoju."
+        }
+      ]
+    },
+    {
+      "code": "1.33 Dual VVT-i 99 KM (1NR-FE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        99
+      ],
+      "aliases": [
+        "1.33 dual vvt-i",
+        "1,33 dual vvt-i",
+        "1.33 vvt-i",
+        "1.33",
+        "1,33",
+        "1nr"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        },
+        {
+          "title": "Zarastanie zaworu EGR i przepustnicy",
+          "symptoms": "Nierówne wolne obroty, przygasanie, kontrolka silnika.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1200
+          ],
+          "check_at_inspection": "Obserwacja wolnych obrotów, odczyt błędów."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "1.6 Valvematic 132 KM (1ZR-FAE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        132
+      ],
+      "aliases": [
+        "1.6 valvematic",
+        "1,6 valvematic",
+        "1.6 vvt-i",
+        "1.6 benzyna",
+        "1,6 benzyna",
+        "1zr"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Silnik/sterownik systemu Valvematic",
+          "symptoms": "Kontrolka silnika, nierówna praca, ograniczenie obrotów, tryb awaryjny.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3500
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; obserwacja pracy na biegu jałowym i przy przyspieszaniu."
+        },
+        {
+          "title": "Wyciek z pompy wody",
+          "symptoms": "Ubytek płynu chłodzącego, różowy osad przy pompie, piszczenie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1100
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady zaschniętego płynu przy pompie."
+        },
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        }
+      ]
+    },
+    {
+      "code": "1.4 D-4D 90 KM (1ND-TV)",
+      "fuel": "diesel",
+      "power_hp": [
+        90
+      ],
+      "aliases": [
+        "1.4 d-4d",
+        "1,4 d-4d",
+        "1.4 d4d",
+        "1nd"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze (1.4 D-4D)",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        }
+      ]
+    },
+    {
+      "code": "2.0 D-4D 124 KM (1AD-FTV)",
+      "fuel": "diesel",
+      "power_hp": [
+        124
+      ],
+      "aliases": [
+        "2.0 d-4d",
+        "2,0 d-4d",
+        "2.0 d4d",
+        "1ad"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Ubytek płynu chłodzącego / uszczelka pod głowicą",
+          "symptoms": "Ubytek płynu bez widocznego wycieku, bąble w zbiorniczku, przegrzewanie. Dotyczyło głównie starszych diesli Toyoty, w nowszych zdarza się rzadziej.",
+          "mileage_km": "150–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            7000
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu, bąble po rozgrzaniu, zapytać o dolewki płynu."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Korozja i zapiekanie tylnych hamulców",
+      "symptoms": "Słabe hamowanie tylnej osi, nierówne zużycie klocków, grzanie się koła, rdzawe tarcze (częste w hybrydach, które rzadko używają hamulców ciernych).",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć tarcze i zaciski przez felgi; po jeździe próbnej sprawdzić, czy któreś koło nie jest wyraźnie cieplejsze; badanie skuteczności hamulców na stacji."
+    },
+    {
+      "title": "Skrzynia bezstopniowa Multidrive S (CVT)",
+      "symptoms": "Szarpnięcia, buczenie, „ślizganie” obrotów; skrzynia jest zwykle trwała, ale nie lubi zaniedbanego oleju.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna: płynne ruszanie, przyspieszanie ze stałym gazem; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, amortyzatory, tuleje",
+      "symptoms": "Stuki, pływanie, nierówne zużycie opon; szybciej w autach z taxi.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    },
+    {
+      "title": "Multimedia i klimatyzacja",
+      "symptoms": "Zawieszanie się ekranu, problemy z kamerą, słabe chłodzenie.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Przetestować multimedia, kamerę i klimatyzację."
+    }
+  ],
+  "inspection_tips": [
+    "W hybrydzie diagnostyka układu hybrydowego (bateria HV, falownik) – to najważniejszy punkt oględzin.",
+    "Sprawdzić kratkę wentylatora baterii HV przy tylnej kanapie.",
+    "Ustalić, czy auto było taksówką (tylna kanapa, podsufitka, ślady po montażu taksometru, bardzo wysoki przebieg w Historii Pojazdu).",
+    "Obejrzeć tylne tarcze i zaciski pod kątem korozji.",
+    "W dieslach sprawdzić DPF w diagnostyce i płyn chłodzący.",
+    "Porównać przebieg z historią serwisową ASO."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Czy auto jest z polskiego salonu?",
+    "Czy auto było używane jako taksówka lub flotowo?",
+    "Czy była kontrola baterii hybrydowej i czyszczony wentylator?",
+    "Czy jest historia serwisowa w ASO?",
+    "Czy auto miało szkody?"
+  ],
+  "summary": "Auris II jest bardzo trwały; najlepszy wybór to 1.8 Hybrid lub benzynowe 1.33/1.6 z udokumentowaną historią. Diesle są mniej polecane ze względu na DPF i EGR. Główne ryzyka to przeszłość w taxi i kondycja baterii HV.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

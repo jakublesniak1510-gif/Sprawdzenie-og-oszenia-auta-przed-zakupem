@@ -1,0 +1,404 @@
+{
+  "id": "ford-focus-2",
+  "make": "Ford",
+  "model": "Focus",
+  "generation": "II (Mk2, 2004–2011)",
+  "years": [
+    2004,
+    2011
+  ],
+  "aliases": [
+    "focus 2",
+    "focus ii",
+    "focus mk2",
+    "ford focus 2",
+    "ford focus ii",
+    "ford focus mk2",
+    "focus 2 kombi",
+    "focus ii kombi",
+    "focus mk2 lift",
+    "focus ii fl",
+    "focus 2 sedan",
+    "focus cc"
+  ],
+  "market_note": "Bardzo popularny kompakt w cenie ok. 7–18 tys. zł (2026). Dużo egzemplarzy z LPG i wysokimi przebiegami. Dobrze się prowadzi, ale wymaga sprawdzenia korozji.",
+  "engines": [
+    {
+      "code": "1.6 16V Duratec 100 KM / 1.6 Ti-VCT 115 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        100,
+        115
+      ],
+      "aliases": [
+        "1.6 16v",
+        "1,6 16v",
+        "1.6 duratec",
+        "1.6 ti-vct",
+        "1.6 tivct",
+        "1.6 benzyna",
+        "1,6 benzyna"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 100–120 tys. km lub 6–8 lat; ok. 800–1400 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewka zapłonowa (moduł) i świece",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, często przy wilgotnej pogodzie.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            800
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów."
+        },
+        {
+          "title": "Obudowa termostatu (plastik) i termostat",
+          "symptoms": "Ubytek płynu, wilgotne ślady przy obudowie, słabe ogrzewanie.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu."
+        },
+        {
+          "title": "Koła zmiennych faz rozrządu (Ti-VCT)",
+          "symptoms": "Grzechotanie z rozrządu po zimnym starcie, błędy faz rozrządu, nierówna praca.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuchiwanie od strony rozrządu; odczyt błędów."
+        },
+        {
+          "title": "Luzy zaworowe (silnik bez hydraulicznej kasacji luzów)",
+          "symptoms": "Klekotanie z głowicy lub, przy zbyt małych luzach, wypalanie zaworów – szczególnie istotne przy LPG.",
+          "mileage_km": "co ok. 100 tys. km (z LPG częściej)",
+          "severity": "srednia",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Zapytać o regulację luzów zaworowych; nasłuchiwać klekotania na ciepłym silniku."
+        }
+      ]
+    },
+    {
+      "code": "1.6 16V z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        100,
+        115
+      ],
+      "aliases": [
+        "1.6 lpg",
+        "1,6 lpg",
+        "1.6 gaz",
+        "1.6 b+lpg",
+        "1.6 benzyna+gaz"
+      ],
+      "timing": "jak 1.6 benzyna – pasek co ok. 100–120 tys. km; regularna kontrola luzów zaworowych",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.8/2.0 Duratec 125/145 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        125,
+        145
+      ],
+      "aliases": [
+        "1.8 16v",
+        "1,8 16v",
+        "1.8 duratec",
+        "2.0 16v",
+        "2,0 16v",
+        "2.0 duratec",
+        "1.8 benzyna",
+        "2.0 benzyna"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Klapy kolektora dolotowego (zmienna długość dolotu)",
+          "symptoms": "Grzechotanie z kolektora dolotowego, kontrolka silnika, spadek mocy w średnim zakresie obrotów.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1500
+          ],
+          "check_at_inspection": "Nasłuchiwać grzechotania przy kolektorze na wolnych obrotach i przy dodawaniu gazu; odczyt błędów."
+        },
+        {
+          "title": "Cewka zapłonowa (moduł) i świece",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, często przy wilgotnej pogodzie.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            800
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów."
+        },
+        {
+          "title": "Poduszki silnika",
+          "symptoms": "Drgania na biegu jałowym i przy ruszaniu, stuki przy zmianie kierunku jazdy.",
+          "mileage_km": "120–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Ruszanie do przodu i do tyłu, obserwacja ruchów silnika przy otwartej masce (druga osoba)."
+        }
+      ]
+    },
+    {
+      "code": "1.6 TDCi 90/109 KM (DV6)",
+      "fuel": "diesel",
+      "power_hp": [
+        90,
+        109
+      ],
+      "aliases": [
+        "1.6 tdci",
+        "1,6 tdci",
+        "1.6tdci",
+        "1.6 tdci 109",
+        "1.6 tdci 90"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 120–150 tys. km; ok. 1–1,7 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Turbosprężarka – niedostateczne smarowanie (zapchane sitko/śruba przewodu olejowego)",
+          "symptoms": "Gwizd, spadek mocy, niebieski dym, olej w dolocie; nowe turbo potrafi szybko ulec awarii, jeśli nie wymieniono przewodu zasilającego z sitkiem.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            4500
+          ],
+          "check_at_inspection": "Pełne przyspieszenie, nasłuchiwanie gwizdu, ocena dymu. Zapytać, czy przy wymianie turbo wymieniono przewód zasilający olejem i olej z filtrem."
+        },
+        {
+          "title": "Nieszczelne podkładki wtryskiwaczy (nagar wokół wtryskiwaczy)",
+          "symptoms": "Zapach spalin w kabinie, „pykanie” spod pokrywy silnika, czarny nagar wokół wtryskiwaczy, trudny rozruch.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            2500
+          ],
+          "check_at_inspection": "Zdjąć pokrywę silnika (jeśli sprzedawca pozwoli) i obejrzeć okolice wtryskiwaczy; nasłuchiwać pykania na zimnym silniku."
+        },
+        {
+          "title": "Zużycie wałka rozrządu i popychaczy (zaniedbane wymiany oleju)",
+          "symptoms": "Spadek mocy, nierówna praca, stukanie z góry silnika, trudny rozruch.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            5000
+          ],
+          "check_at_inspection": "Zapytać o interwały wymiany oleju; nasłuchiwać stuków z głowicy."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        }
+      ]
+    },
+    {
+      "code": "1.8 TDCi 115 KM (Lynx)",
+      "fuel": "diesel",
+      "power_hp": [
+        115
+      ],
+      "aliases": [
+        "1.8 tdci",
+        "1,8 tdci",
+        "1.8tdci"
+      ],
+      "timing": "pasek zębaty – co ok. 120–150 tys. km; ok. 1,1–1,8 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Pompa wtryskowa wysokiego ciśnienia (wrażliwa na jakość paliwa)",
+          "symptoms": "Trudny rozruch, gaśnięcie, spadek mocy, opiłki w układzie paliwowym niszczące wtryskiwacze.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            7000
+          ],
+          "check_at_inspection": "Zimny i ciepły rozruch, jazda pod obciążeniem; diagnostyka ciśnienia na listwie. Zapytać o naprawy układu wtryskowego."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt dawek wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2800,
+            5000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Korozja – tylne nadkola, progi, elementy tylnego zawieszenia",
+      "symptoms": "Pęcherze lakieru na nadkolach, rdza na progach i wahaczach tylnych, skorodowane śruby regulacji zbieżności.",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3500
+      ],
+      "check_at_inspection": "Obejrzeć nadkola, progi, dno i tylne zawieszenie na podnośniku."
+    },
+    {
+      "title": "Zawieszenie tylne wielowahaczowe – tuleje i zapieczone śruby",
+      "symptoms": "Stuki z tyłu, nierówne zużycie opon tylnych, problem z ustawieniem zbieżności.",
+      "mileage_km": "120–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        500,
+        2000
+      ],
+      "check_at_inspection": "Zużycie opon tylnych po wewnętrznej stronie; ocena tulei na podnośniku."
+    },
+    {
+      "title": "Zamki drzwi",
+      "symptoms": "Drzwi nie zamykają się z pilota, kontrolka otwartych drzwi.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        700
+      ],
+      "check_at_inspection": "Sprawdzić zamykanie i otwieranie wszystkich drzwi pilotem i kluczykiem."
+    },
+    {
+      "title": "Podgrzewana przednia szyba i elektryka komfortu",
+      "symptoms": "Niedziałające grzanie szyby, wentylator nawiewu działający tylko na najwyższym biegu (rezystor).",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        2000
+      ],
+      "check_at_inspection": "Sprawdzić wszystkie biegi nawiewu, grzanie szyb i lusterek."
+    }
+  ],
+  "inspection_tips": [
+    "Dokładnie obejrzeć nadkola, progi i podwozie pod kątem rdzy.",
+    "W 1.6 TDCi obejrzeć okolice wtryskiwaczy (nagar) i zapytać o przewód zasilający turbo.",
+    "W LPG – wpis w dowodzie, butla, regulacja luzów zaworowych.",
+    "Sprawdzić zużycie opon tylnych (zawieszenie wielowahaczowe).",
+    "Zimny rozruch – grzechotanie Ti-VCT w benzynie, rozruch i dym w dieslu.",
+    "Porównać przebieg z Historią Pojazdu i zużyciem wnętrza."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji?",
+    "Kiedy wymieniano rozrząd i regulowano luzy zaworowe?",
+    "Kto montował LPG, kiedy był serwis i do kiedy jest ważna butla?",
+    "Czy w dieslu wymieniano turbosprężarkę lub wtryskiwacze?",
+    "Czy auto było naprawiane blacharsko z powodu korozji?"
+  ],
+  "summary": "Focus II jest tani, dobrze się prowadzi i ma proste benzynowe silniki – najlepsze to 1.6 16V i 1.8/2.0 Duratec, także z LPG. Diesle 1.6 TDCi i 1.8 TDCi potrafią być kosztowne. Kluczowa jest kontrola korozji.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

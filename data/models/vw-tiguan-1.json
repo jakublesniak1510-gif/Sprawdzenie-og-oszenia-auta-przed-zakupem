@@ -1,0 +1,263 @@
+{
+  "id": "vw-tiguan-1",
+  "make": "Volkswagen",
+  "model": "Tiguan",
+  "generation": "I (2007–2016)",
+  "years": [
+    2007,
+    2016
+  ],
+  "aliases": [
+    "tiguan i",
+    "tiguan mk1",
+    "vw tiguan i",
+    "volkswagen tiguan i",
+    "tiguan 5n",
+    "tiguan i lift"
+  ],
+  "market_note": "Popularny kompaktowy SUV, często z napędem 4Motion i 2.0 TDI. Ceny orientacyjnie ok. 35–60 tys. zł (2026). Wersje z importu i dużymi przebiegami przeważają.",
+  "engines": [
+    {
+      "code": "2.0 TDI CR 110/140/170 KM (EA189)",
+      "fuel": "diesel",
+      "power_hp": [
+        110,
+        140,
+        170
+      ],
+      "aliases": [
+        "2.0 tdi",
+        "2,0 tdi",
+        "2.0tdi",
+        "2.0 tdi cr",
+        "2.0 tdi 140",
+        "2.0 tdi 170"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co 120–150 tys. km lub 5–6 lat; ok. 1,4–2,3 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, kontrolka silnika.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka korekt wtryskiwaczy, test przelewów u mechanika."
+        }
+      ]
+    },
+    {
+      "code": "1.4 TSI 122/150 KM (EA111; 150 KM z turbo i kompresorem)",
+      "fuel": "benzyna",
+      "power_hp": [
+        122,
+        150
+      ],
+      "aliases": [
+        "1.4 tsi",
+        "1,4 tsi",
+        "1.4tsi",
+        "1.4 tsi 150",
+        "twincharger"
+      ],
+      "timing": "łańcuch (EA111) – wymiana po rozciągnięciu, ok. 2,5–5 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu i napinacz (EA111)",
+          "symptoms": "Grzechotanie przez 1–3 s po uruchomieniu zimnego silnika, kontrolka silnika, błędy korelacji wałka rozrządu i wału korbowego. W skrajnym przypadku przeskoczenie łańcucha i uszkodzenie zaworów.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Uruchomić silnik zimny (poprosić sprzedawcę, by nie grzał auta przed wizytą) i słuchać od strony rozrządu. W diagnostyce sprawdzić błędy i odchyłkę faz rozrządu. Zapytać o fakturę za wymianę łańcucha z napinaczem i prowadnicami."
+        },
+        {
+          "title": "Uszkodzenia tłoków / spadek kompresji (szczególnie wersja 150 KM z kompresorem)",
+          "symptoms": "Wypadanie zapłonów, nierówna praca, ubytek oleju, utrata mocy. Zdarza się przy agresywnej eksploatacji i złym paliwie.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            6000,
+            14000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania przed zakupem, odczyt błędów wypadania zapłonów, ocena dymu i zużycia oleju."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        }
+      ]
+    },
+    {
+      "code": "2.0 TSI 170/180/200 KM (EA888)",
+      "fuel": "benzyna",
+      "power_hp": [
+        170,
+        180,
+        200
+      ],
+      "aliases": [
+        "2.0 tsi",
+        "2,0 tsi",
+        "2.0tsi",
+        "2.0 tfsi"
+      ],
+      "timing": "łańcuch – kontrola napinacza przy grzechotaniu, wymiana ok. 3–5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (część wersji)",
+          "symptoms": "Ubytki oleju między wymianami, nagar, kontrolka poziomu oleju.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            12000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju, sprawdzić stan oleju i dym z wydechu."
+        },
+        {
+          "title": "Napinacz łańcucha rozrządu",
+          "symptoms": "Grzechotanie po zimnym starcie.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch i odczyt faz rozrządu w diagnostyce."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Sprzęgło Haldex napędu 4Motion – pompa i olej",
+      "symptoms": "Brak dołączania tylnej osi, komunikaty o napędzie, buksowanie przednich kół na śliskim. Zalecana wymiana oleju i filtra co ok. 60 tys. km.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        3000
+      ],
+      "check_at_inspection": "Zapytać o serwis Haldexa; ruszanie na luźnym podłożu; odczyt błędów modułu napędu."
+    },
+    {
+      "title": "Skrzynia DSG DQ250 (6-biegowa, mokra) – zaniedbana wymiana oleju, mechatronika",
+      "symptoms": "Opóźnione włączanie biegu, szarpnięcie przy redukcji, buczenie, błędy mechatroniki. Skrzynia wymaga wymiany oleju co ok. 60 tys. km – jej brak przyspiesza zużycie.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        900,
+        7000
+      ],
+      "check_at_inspection": "Zapytać o fakturę za wymianę oleju w DSG co ok. 60 tys. km. Na jeździe próbnej: płynność zmian w trybie D i S, kick-down, ruszanie. Diagnostyka – błędy skrzyni. Koszt: olej z filtrem ok. 900–1400 zł, regeneracja mechatroniki ok. 3–6 tys. zł."
+    },
+    {
+      "title": "Klasyczny automat 6-biegowy (część wczesnych wersji) – szarpnięcia",
+      "symptoms": "Twarde lub opóźnione przełożenia, szarpnięcie przy redukcji 3–2, poślizg.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna z różnymi obciążeniami; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Odpływy dachu panoramicznego i woda w kabinie",
+      "symptoms": "Mokra podsufitka, zawilgocone dywaniki, problemy z elektroniką pod fotelami.",
+      "severity": "srednia",
+      "cost_pln": [
+        200,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć podsufitkę przy słupkach A i C, podnieść dywaniki."
+    },
+    {
+      "title": "Zawieszenie i zawieszenie tylne – tuleje, łączniki",
+      "symptoms": "Stuki na nierównościach, nierówne zużycie opon.",
+      "mileage_km": "120–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        500,
+        2000
+      ],
+      "check_at_inspection": "Jazda po nierównej drodze, ocena luzów na podnośniku."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić, czy deklarowany napęd 4Motion rzeczywiście działa (diagnostyka, ruszanie na luźnym podłożu).",
+    "Obejrzeć podwozie pod kątem śladów jazdy w terenie (wgniecenia osłon, uszkodzone progi).",
+    "W 1.4 TSI 150 KM rozważyć pomiar ciśnienia sprężania.",
+    "Zimny rozruch – grzechotanie łańcucha w benzynach, dym i czas rozruchu w dieslach.",
+    "Zmierzyć lakier, zwłaszcza dolne partie drzwi i zderzaki.",
+    "Sprawdzić podsufitkę i dywaniki pod kątem przecieków (dach panoramiczny)."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji?",
+    "Czy był serwisowany Haldex (olej, filtr) i kiedy?",
+    "Kiedy wymieniano rozrząd i sprzęgło/dwumasę?",
+    "Czy wykonano akcję serwisową EA189 (aktualizacja oprogramowania po tzw. aferze spalinowej) i czy po niej były problemy z EGR/DPF?",
+    "Czy auto było używane do holowania przyczepy lub w terenie?"
+  ],
+  "summary": "Tiguan I jest wygodny i trwały w wersji 2.0 TDI z udokumentowanym serwisem. 1.4 TSI, zwłaszcza 150 KM z kompresorem, jest ryzykowny bez historii napraw. Przy 4Motion kluczowy jest stan sprzęgła Haldex.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

@@ -1,0 +1,403 @@
+{
+  "id": "renault-megane-3",
+  "make": "Renault",
+  "model": "Megane",
+  "generation": "III (2008–2016)",
+  "years": [
+    2008,
+    2016
+  ],
+  "aliases": [
+    "megane 3",
+    "megane iii",
+    "mégane 3",
+    "mégane iii",
+    "renault megane 3",
+    "renault megane iii",
+    "renault mégane iii",
+    "megane 3 kombi",
+    "megane iii grandtour",
+    "megane 3 grandtour",
+    "megane iii coupe",
+    "megane iii lift"
+  ],
+  "market_note": "Popularny i tani kompakt, wiele aut z importu, często z 1.5 dCi lub 1.6 16V (także z LPG). Ceny orientacyjnie ok. 12–28 tys. zł (2026).",
+  "engines": [
+    {
+      "code": "1.6 16V 100/110 KM (K4M)",
+      "fuel": "benzyna",
+      "power_hp": [
+        100,
+        110
+      ],
+      "aliases": [
+        "1.6 16v",
+        "1,6 16v",
+        "k4m",
+        "1.6 benzyna",
+        "1,6 benzyna"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 90–120 tys. km lub 5 lat; z pompą ok. 800–1400 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewki zapłonowe (K4M)",
+          "symptoms": "Szarpanie, praca na trzech cylindrach, migająca kontrolka silnika – częsta i niedroga usterka.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            200,
+            700
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów."
+        },
+        {
+          "title": "Pompa wody i pasek rozrządu – wymieniane razem",
+          "symptoms": "Wyciek płynu przy pompie, szum łożyska pompy; zerwanie paska rozrządu uszkadza zawory (silnik kolizyjny).",
+          "mileage_km": "co ok. 90–120 tys. km lub 5 lat",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            1400
+          ],
+          "check_at_inspection": "Zapytać o fakturę za rozrząd z pompą wody; obejrzeć okolice pompy pod kątem wycieku."
+        },
+        {
+          "title": "Zwiększone zużycie oleju i nierówna praca przy dużym przebiegu",
+          "symptoms": "Ubytki oleju, niebieskawy dym, falujące obroty (brudna przepustnica, czujnik ciśnienia w kolektorze).",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić poziom oleju i dym po rozruchu; obserwować wolne obroty na ciepłym silniku."
+        }
+      ]
+    },
+    {
+      "code": "1.6 16V z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        100,
+        110
+      ],
+      "aliases": [
+        "1.6 lpg",
+        "1,6 lpg",
+        "1.6 gaz",
+        "1.6 b+lpg",
+        "1.6 benzyna+gaz"
+      ],
+      "timing": "jak 1.6 16V – pasek co ok. 90–120 tys. km",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.5 dCi 90/106/110 KM (K9K)",
+      "fuel": "diesel",
+      "power_hp": [
+        90,
+        106,
+        110
+      ],
+      "aliases": [
+        "1.5 dci",
+        "1,5 dci",
+        "1.5dci",
+        "k9k",
+        "1.5 diesel"
+      ],
+      "timing": "pasek zębaty – co ok. 120–160 tys. km lub 6 lat; ok. 1–1,7 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Panewki wału korbowego (1.5 dCi K9K)",
+          "symptoms": "Stuk z dołu silnika, kontrolka ciśnienia oleju, w skrajnym przypadku obrócenie panewki i zatarcie. Ryzyko rośnie przy wydłużonych interwałach wymiany oleju i rozcieńczeniu oleju paliwem (DPF).",
+          "mileage_km": "150–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            4000,
+            9000
+          ],
+          "check_at_inspection": "Słuchać stuków z dołu silnika na ciepłym silniku; sprawdzić poziom i zapach oleju (paliwo). Zapytać o interwały wymiany oleju i ewentualną prewencyjną wymianę panewek."
+        },
+        {
+          "title": "Wtryskiwacze common rail (1.5 dCi)",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, wzrost poziomu oleju.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2800,
+            5000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.9 dCi 130 KM (F9Q)",
+      "fuel": "diesel",
+      "power_hp": [
+        130
+      ],
+      "aliases": [
+        "1.9 dci",
+        "1,9 dci",
+        "1.9dci",
+        "f9q"
+      ],
+      "timing": "pasek zębaty – co ok. 120 tys. km; ok. 1,1–1,8 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Turbosprężarka",
+          "symptoms": "Gwizd, spadek mocy, niebieski dym.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2000,
+            4000
+          ],
+          "check_at_inspection": "Pełne przyspieszenie, nasłuchiwanie gwizdu, ocena dymu."
+        }
+      ]
+    },
+    {
+      "code": "1.2 TCe 115/130 KM (H5Ft, od 2012)",
+      "fuel": "benzyna",
+      "power_hp": [
+        115,
+        130
+      ],
+      "aliases": [
+        "1.2 tce",
+        "1,2 tce",
+        "1.2tce",
+        "tce 115",
+        "tce 130",
+        "h5ft"
+      ],
+      "timing": "łańcuch – ryzyko rozciągnięcia przy problemach z olejem",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Nadmierne zużycie oleju (pierścienie tłokowe) – 1.2 TCe",
+          "symptoms": "Ubytek oleju nawet ok. 1 l na 1000 km, kontrolka poziomu oleju, nagar; jazda na zbyt niskim poziomie oleju grozi uszkodzeniem silnika.",
+          "mileage_km": "50–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            5000,
+            12000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju i ewentualną naprawę w ASO lub akcję serwisową; sprawdzić poziom oleju, dym, świece. Rozważyć test zużycia oleju przed zakupem."
+        },
+        {
+          "title": "Rozciągnięcie lub przeskoczenie łańcucha rozrządu (często jako skutek problemów z olejem)",
+          "symptoms": "Grzechotanie, błędy faz rozrządu, nierówna praca, w skrajnym przypadku uszkodzenie zaworów.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka faz rozrządu; zapytać o wymianę łańcucha."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia EDC (6-biegowa, suche sprzęgła) – sprzęgła i aktuatory",
+      "symptoms": "Szarpanie przy ruszaniu, drgania, opóźnione zmiany biegów, komunikat o usterce skrzyni, tryb awaryjny.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "wysoka",
+      "cost_pln": [
+        3000,
+        7000
+      ],
+      "check_at_inspection": "Jazda w korku, ruszanie pod górkę, cofanie; diagnostyka skrzyni; zapytać o wymianę sprzęgieł i aktuatorów."
+    },
+    {
+      "title": "Karta zbliżeniowa / czytnik karty i system keyless",
+      "symptoms": "Komunikat „karta nie wykryta”, problemy z uruchomieniem lub otwieraniem auta.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Kilkukrotnie uruchomić auto i otworzyć/zamknąć je kartą; sprawdzić obie karty (jeśli są)."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, tuleje, tylna belka",
+      "symptoms": "Stuki, pływanie, nierówne zużycie opon.",
+      "mileage_km": "100–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    },
+    {
+      "title": "Klimatyzacja – sprężarka, czujnik ciśnienia",
+      "symptoms": "Słabe chłodzenie lub brak załączania sprężarki.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        400,
+        3000
+      ],
+      "check_at_inspection": "Sprawdzić temperaturę z nawiewów."
+    },
+    {
+      "title": "Elektryka – oświetlenie, multimedia, czujniki",
+      "symptoms": "Przepalone żarówki, zawieszanie się nawigacji, błędy czujników.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        1500
+      ],
+      "check_at_inspection": "Przetestować wszystkie funkcje."
+    }
+  ],
+  "inspection_tips": [
+    "W 1.5 dCi sprawdzić poziom i zapach oleju oraz nasłuchiwać stuków z dołu silnika.",
+    "W 1.2 TCe zapytać o zużycie oleju i obejrzeć dym oraz świece.",
+    "W EDC jazda w korku i pod górkę.",
+    "Sprawdzić działanie karty i czytnika (kilka uruchomień).",
+    "W LPG – wpis w dowodzie, butla, praca na gazie.",
+    "Zmierzyć lakier i porównać przebieg z Historią Pojazdu."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji?",
+    "Kiedy wymieniano rozrząd z pompą wody?",
+    "Co ile wymieniany był olej w silniku (ważne w 1.5 dCi)?",
+    "Czy silnik 1.2 TCe zużywa olej i czy był naprawiany?",
+    "Kto montował LPG i kiedy był serwis instalacji?"
+  ],
+  "summary": "Megane III jest tani w zakupie i utrzymaniu; najbezpieczniejszy jest 1.6 16V (także z LPG). 1.5 dCi jest oszczędny, ale wymaga udokumentowanych częstych wymian oleju. 1.2 TCe i skrzynia EDC wymagają szczególnej ostrożności.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

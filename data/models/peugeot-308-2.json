@@ -1,0 +1,411 @@
+{
+  "id": "peugeot-308-2",
+  "make": "Peugeot",
+  "model": "308",
+  "generation": "II (T9, 2013–2021)",
+  "years": [
+    2013,
+    2021
+  ],
+  "aliases": [
+    "308 ii",
+    "308 t9",
+    "peugeot 308 ii",
+    "peugeot 308 t9",
+    "peugeot 308 2",
+    "308 sw ii",
+    "308 sw t9",
+    "308 ii lift",
+    "308 ii gt",
+    "308 2 gen",
+    "nowy 308 t9"
+  ],
+  "market_note": "Popularny kompakt, dużo aut z polskich salonów i flot. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Dominują 1.2 PureTech i 1.5/1.6 BlueHDi.",
+  "engines": [
+    {
+      "code": "1.2 PureTech 110/130 KM (3-cylindrowy turbo)",
+      "fuel": "benzyna",
+      "power_hp": [
+        110,
+        130
+      ],
+      "aliases": [
+        "1.2 puretech",
+        "1,2 puretech",
+        "1.2 pure tech",
+        "puretech 130",
+        "puretech 110",
+        "1.2 thp",
+        "1.2 e-thp"
+      ],
+      "timing": "pasek zębaty pracujący w oleju – degradacja; kontrola stanu i wymiana wcześniej niż fabryczny interwał; ok. 2–4,5 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Degradacja paska rozrządu w kąpieli olejowej",
+          "symptoms": "Fragmenty paska zatykają smok pompy oleju – kontrolka ciśnienia oleju, spadek ciśnienia, w skrajnym przypadku uszkodzenie silnika. Fragmenty mogą też trafić do pompy podciśnienia hamulców (twardy pedał hamulca).",
+          "mileage_km": "60–150 tys. km lub ok. 6–8 lat",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            15000
+          ],
+          "check_at_inspection": "Zapytać o pomiar/wymianę paska i czyszczenie smoka (faktura, data, przebieg). Sprawdzić komunikaty o ciśnieniu oleju i siłę na pedale hamulca na zgaszonym i pracującym silniku. Mechanik może zmierzyć szerokość paska przez wlew oleju."
+        },
+        {
+          "title": "Nadmierne zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytki oleju, kontrolka poziomu oleju, nagar, niebieskawy dym.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            10000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju, sprawdzić poziom i dym; rozważyć test zużycia oleju."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        }
+      ]
+    },
+    {
+      "code": "1.6 BlueHDi 100/120 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        100,
+        120
+      ],
+      "aliases": [
+        "1.6 bluehdi",
+        "1,6 bluehdi",
+        "1.6 blue hdi",
+        "bluehdi 120",
+        "bluehdi 100",
+        "1.6 hdi"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 150–180 tys. km lub 6–8 lat; ok. 1–1,8 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Układ AdBlue (zbiornik z pompą i grzałką, czujniki NOx)",
+          "symptoms": "Komunikat o awarii układu AdBlue z odliczaniem kilometrów do blokady uruchomienia, kontrolka silnika. Częsta usterka w dieslach BlueHDi.",
+          "mileage_km": "60–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            6000
+          ],
+          "check_at_inspection": "Sprawdzić, czy na zegarach nie ma komunikatu o AdBlue i odliczania; diagnostyka błędów SCR. Zapytać o naprawy zbiornika AdBlue (faktura)."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Nieszczelne podkładki wtryskiwaczy",
+          "symptoms": "Zapach spalin, „pykanie”, nagar wokół wtryskiwaczy.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            2500
+          ],
+          "check_at_inspection": "Obejrzeć okolice wtryskiwaczy, nasłuchiwać pykania na zimnym silniku."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2800,
+            5000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.5 BlueHDi 100/130 KM (od 2017)",
+      "fuel": "diesel",
+      "power_hp": [
+        100,
+        130
+      ],
+      "aliases": [
+        "1.5 bluehdi",
+        "1,5 bluehdi",
+        "1.5 blue hdi",
+        "bluehdi 130"
+      ],
+      "timing": "pasek rozrządu napędzający wałki i łańcuch – kontrola wg serwisu; zgłaszano przypadki rozciągania łańcucha wałków",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Układ AdBlue (zbiornik z pompą i grzałką, czujniki NOx)",
+          "symptoms": "Komunikat o awarii układu AdBlue z odliczaniem kilometrów do blokady uruchomienia, kontrolka silnika. Częsta usterka w dieslach BlueHDi.",
+          "mileage_km": "60–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            6000
+          ],
+          "check_at_inspection": "Sprawdzić, czy na zegarach nie ma komunikatu o AdBlue i odliczania; diagnostyka błędów SCR. Zapytać o naprawy zbiornika AdBlue (faktura)."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Łańcuch łączący wałki rozrządu (zdarzają się przypadki rozciągnięcia)",
+          "symptoms": "Grzechotanie z rozrządu, błędy faz rozrządu, kontrolka silnika.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka faz rozrządu; zapytać o akcje serwisowe w ASO."
+        }
+      ]
+    },
+    {
+      "code": "2.0 BlueHDi 150/180 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        150,
+        180
+      ],
+      "aliases": [
+        "2.0 bluehdi",
+        "2,0 bluehdi",
+        "2.0 blue hdi",
+        "bluehdi 150",
+        "bluehdi 180",
+        "2.0 hdi"
+      ],
+      "timing": "pasek zębaty – wymiana wg serwisu; ok. 1,2–2 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Układ AdBlue (zbiornik z pompą i grzałką, czujniki NOx)",
+          "symptoms": "Komunikat o awarii układu AdBlue z odliczaniem kilometrów do blokady uruchomienia, kontrolka silnika. Częsta usterka w dieslach BlueHDi.",
+          "mileage_km": "60–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2000,
+            6000
+          ],
+          "check_at_inspection": "Sprawdzić, czy na zegarach nie ma komunikatu o AdBlue i odliczania; diagnostyka błędów SCR. Zapytać o naprawy zbiornika AdBlue (faktura)."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.6 THP 125–270 KM (benzyna turbo)",
+      "fuel": "benzyna",
+      "power_hp": [
+        125,
+        156,
+        205,
+        225,
+        250,
+        270
+      ],
+      "aliases": [
+        "1.6 thp",
+        "1,6 thp",
+        "1.6thp",
+        "308 gt",
+        "308 gti",
+        "1.6 puretech 225"
+      ],
+      "timing": "łańcuch – skłonny do rozciągania; wymiana ok. 2,5–4,5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu",
+          "symptoms": "Grzechotanie po zimnym starcie, błędy faz rozrządu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            4500
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka faz rozrządu."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Zużycie oleju i pompa wody",
+          "symptoms": "Ubytki oleju, wycieki płynu, przegrzewanie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            6000
+          ],
+          "check_at_inspection": "Sprawdzić poziom oleju i płynu, ślady wycieków."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Elektryczny hamulec postojowy",
+      "symptoms": "Komunikat o awarii, brak zwolnienia lub zaciągnięcia.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        500,
+        1800
+      ],
+      "check_at_inspection": "Kilkukrotnie zaciągnąć i zwolnić hamulec; obserwować komunikaty."
+    },
+    {
+      "title": "Automat EAT6/EAT8 – zaniedbany olej",
+      "symptoms": "Szarpnięcia przy zmianach, opóźnione reakcje.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        7000
+      ],
+      "check_at_inspection": "Jazda próbna w mieście; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Zautomatyzowana skrzynia ETG6 (wybrane wersje)",
+      "symptoms": "Wolne, szarpane zmiany biegów, zużycie sprzęgła.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4500
+      ],
+      "check_at_inspection": "Jazda próbna w korku, ruszanie pod górkę."
+    },
+    {
+      "title": "Ekran dotykowy i elektronika",
+      "symptoms": "Zawieszanie się ekranu (sterowanie klimatyzacją w ekranie), niedziałające czujniki, błędy asystentów.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        3000
+      ],
+      "check_at_inspection": "Przetestować ekran, klimatyzację, czujniki, kamerę."
+    },
+    {
+      "title": "Zawieszenie przednie – łączniki, tuleje wahaczy",
+      "symptoms": "Stuki, nierówne zużycie opon.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów."
+    }
+  ],
+  "inspection_tips": [
+    "W 1.2 PureTech poprosić o dokument wymiany/pomiaru paska rozrządu – to kluczowy punkt.",
+    "W BlueHDi sprawdzić, czy nie ma komunikatu AdBlue ani odliczania do blokady.",
+    "Odczytać błędy, w tym ciśnienia oleju i układu SCR.",
+    "Przetestować ekran dotykowy (klimatyzacja sterowana z ekranu).",
+    "Zweryfikować przebieg w Historii Pojazdu i historii ASO.",
+    "Zmierzyć lakier i sprawdzić spasowanie przodu."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Czy auto jest z polskiego salonu?",
+    "Czy w 1.2 PureTech wymieniano pasek rozrządu i czyszczono smok oleju? Kiedy i przy jakim przebiegu?",
+    "Ile oleju silnik zużywa między wymianami?",
+    "Czy naprawiano układ AdBlue (diesel)?",
+    "Czy auto miało szkody?"
+  ],
+  "summary": "308 II jest wygodny i oszczędny, ale silnik 1.2 PureTech wymaga udokumentowanej kontroli paska rozrządu i zużycia oleju. Diesle BlueHDi są oszczędne, a typowym kosztem jest układ AdBlue. Najbezpieczniej kupować egzemplarz z historią w ASO.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

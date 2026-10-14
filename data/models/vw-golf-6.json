@@ -1,0 +1,398 @@
+{
+  "id": "vw-golf-6",
+  "make": "Volkswagen",
+  "model": "Golf",
+  "generation": "VI (2008–2013)",
+  "years": [
+    2008,
+    2013
+  ],
+  "aliases": [
+    "golf 6",
+    "golf vi",
+    "golf mk6",
+    "golf 6 gen",
+    "vw golf 6",
+    "vw golf vi",
+    "volkswagen golf 6",
+    "volkswagen golf vi",
+    "golf 5k",
+    "golf 6 variant",
+    "golf vi variant",
+    "golf 6 plus",
+    "golf plus 6"
+  ],
+  "market_note": "Jeden z najczęściej wystawianych kompaktów w Polsce, duża część sprowadzona z Niemiec i Holandii. Rynek pełen egzemplarzy po 200–300 tys. km z licznikiem budzącym wątpliwości – przebieg warto potwierdzać w historii z badań i w modułach sterujących. Ceny orientacyjnie ok. 17–35 tys. zł (2026), zależnie od silnika i stanu.",
+  "engines": [
+    {
+      "code": "1.4 TSI 122 KM (EA111, CAXA)",
+      "fuel": "benzyna",
+      "power_hp": [
+        122
+      ],
+      "aliases": [
+        "1.4 tsi",
+        "1,4 tsi",
+        "1.4tsi",
+        "1.4 tsi 122",
+        "caxa"
+      ],
+      "timing": "łańcuch (EA111) – brak stałego interwału; wymiana po rozciągnięciu, ok. 2,5–5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu i napinacz (EA111)",
+          "symptoms": "Grzechotanie przez 1–3 s po uruchomieniu zimnego silnika, kontrolka silnika, błędy korelacji wałka rozrządu i wału korbowego. W skrajnym przypadku przeskoczenie łańcucha i uszkodzenie zaworów.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Uruchomić silnik zimny (poprosić sprzedawcę, by nie grzał auta przed wizytą) i słuchać od strony rozrządu. W diagnostyce sprawdzić błędy i odchyłkę faz rozrządu. Zapytać o fakturę za wymianę łańcucha z napinaczem i prowadnicami."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "1.2 TSI 105 KM (EA111, CBZB)",
+      "fuel": "benzyna",
+      "power_hp": [
+        105
+      ],
+      "aliases": [
+        "1.2 tsi",
+        "1,2 tsi",
+        "1.2tsi",
+        "cbzb"
+      ],
+      "timing": "łańcuch (EA111) – problem z rozciąganiem częstszy niż w 1.4 TSI; wymiana ok. 2,5–4,5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Rozciągnięty łańcuch rozrządu i napinacz (EA111)",
+          "symptoms": "Grzechotanie przez 1–3 s po uruchomieniu zimnego silnika, kontrolka silnika, błędy korelacji wałka rozrządu i wału korbowego. W skrajnym przypadku przeskoczenie łańcucha i uszkodzenie zaworów.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Uruchomić silnik zimny (poprosić sprzedawcę, by nie grzał auta przed wizytą) i słuchać od strony rozrządu. W diagnostyce sprawdzić błędy i odchyłkę faz rozrządu. Zapytać o fakturę za wymianę łańcucha z napinaczem i prowadnicami."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Nierówna praca i szarpanie na niskich obrotach (sterowanie doładowaniem / przepustnica)",
+          "symptoms": "Falujące obroty, przygasanie przy ruszaniu, chwilowe spadki mocy, błędy doładowania.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            2500
+          ],
+          "check_at_inspection": "Jazda próbna z ruszaniem i lekkim przyspieszaniem od 1200–1500 obr./min; odczyt błędów silnika. Przyczyną bywa brudna przepustnica, nieszczelność dolotu lub nastawnik zaworu upustowego turbiny."
+        }
+      ]
+    },
+    {
+      "code": "1.6 TDI CR 90/105 KM (EA189, CAYC)",
+      "fuel": "diesel",
+      "power_hp": [
+        90,
+        105
+      ],
+      "aliases": [
+        "1.6 tdi",
+        "1,6 tdi",
+        "1.6tdi",
+        "1.6 tdi cr",
+        "1.6 tdi 105",
+        "cayc"
+      ],
+      "timing": "pasek zębaty – producent podaje do 210 tys. km, ostrożnie zaleca się 120–150 tys. km lub 5–6 lat; z pompą wody ok. 1,2–2 tys. zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Przepływomierz powietrza (MAF)",
+          "symptoms": "Spadek mocy, tryb awaryjny, kontrolka silnika, czasem dym przy przyspieszaniu.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Diagnostyka – wartości przepływu powietrza vs zadane, błędy MAF. Jazda z pełnym przyspieszeniem na 3 biegu."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "2.0 TDI CR 110/140/170 KM (EA189, m.in. CBAB/CFFB)",
+      "fuel": "diesel",
+      "power_hp": [
+        110,
+        140,
+        170
+      ],
+      "aliases": [
+        "2.0 tdi",
+        "2,0 tdi",
+        "2.0tdi",
+        "2.0 tdi cr",
+        "2,0 tdi cr",
+        "2.0 tdi 140",
+        "gtd",
+        "cbab",
+        "cffb"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co 120–150 tys. km lub 5–6 lat; z pompą wody ok. 1,3–2,2 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca na zimno, dymienie, stuki, zwiększone przelewy, kontrolka silnika.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch (czas kręcenia rozrusznikiem), praca na wolnych obrotach. Diagnostyka – korekty dawek wtryskiwaczy; u mechanika test przelewów."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.6 MPI 102 KM (8V)",
+      "fuel": "benzyna",
+      "power_hp": [
+        102
+      ],
+      "aliases": [
+        "1.6 mpi",
+        "1,6 mpi",
+        "1.6 8v",
+        "1.6 benzyna",
+        "1,6 benzyna"
+      ],
+      "timing": "pasek zębaty – co ok. 90–120 tys. km lub 5 lat, ok. 700–1200 zł z pompą",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        },
+        {
+          "title": "Brudna przepustnica i nieszczelności dolotu",
+          "symptoms": "Falujące obroty biegu jałowego, przygasanie przy zatrzymaniu, kontrolka silnika.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            200,
+            700
+          ],
+          "check_at_inspection": "Obserwacja wolnych obrotów na ciepłym silniku z włączoną klimatyzacją; odczyt korekt mieszanki."
+        },
+        {
+          "title": "Zwiększone zużycie oleju przy dużym przebiegu",
+          "symptoms": "Ubytek oleju między wymianami, niebieskawy dym po dłuższym postoju lub przy hamowaniu silnikiem.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić poziom i wygląd oleju, osad na końcówce wydechu, dym po odpaleniu. Uszczelniacze zaworów ok. 800–1500 zł, pierścienie znacznie drożej."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia DSG DQ200 (7-biegowa, suche sprzęgła) – mechatronika i zespół sprzęgieł",
+      "symptoms": "Szarpanie przy ruszaniu i przy zmianie 1–2, stuki przy zwalnianiu, migająca kontrolka skrzyni/PRND, tryb awaryjny (jazda tylko na wybranych biegach), brak możliwości wrzucenia biegu.",
+      "mileage_km": "80–200 tys. km (bywa wcześniej przy jeździe miejskiej)",
+      "severity": "wysoka",
+      "cost_pln": [
+        3000,
+        9000
+      ],
+      "check_at_inspection": "Jazda próbna od zimnego: ruszanie pod górkę, jazda w korku 1–2–1, cofanie i parkowanie. Odczyt błędów skrzyni i wartości adaptacji/zużycia sprzęgieł w diagnostyce. Zapytać o faktury za mechatronikę lub sprzęgło (regeneracja mechatroniki ok. 2,5–4,5 tys. zł, sprzęgło 3,5–6 tys. zł, nowa mechatronika więcej)."
+    },
+    {
+      "title": "Skrzynia DSG DQ250 (6-biegowa, mokra) – zaniedbana wymiana oleju, mechatronika",
+      "symptoms": "Opóźnione włączanie biegu, szarpnięcie przy redukcji, buczenie, błędy mechatroniki. Skrzynia wymaga wymiany oleju co ok. 60 tys. km – jej brak przyspiesza zużycie.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        900,
+        7000
+      ],
+      "check_at_inspection": "Zapytać o fakturę za wymianę oleju w DSG co ok. 60 tys. km. Na jeździe próbnej: płynność zmian w trybie D i S, kick-down, ruszanie. Diagnostyka – błędy skrzyni. Koszt: olej z filtrem ok. 900–1400 zł, regeneracja mechatroniki ok. 3–6 tys. zł."
+    },
+    {
+      "title": "Zawieszenie: tuleje wahaczy, łączniki stabilizatora, tylne wahacze wleczone",
+      "symptoms": "Stuki na nierównościach, pływanie przy hamowaniu, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1800
+      ],
+      "check_at_inspection": "Jazda po nierównej drodze z wyłączonym radiem; na podnośniku – luzy wahaczy i stan tulei; zużycie opon po wewnętrznej stronie."
+    },
+    {
+      "title": "Zamki drzwi (mikrostyki) i centralny zamek",
+      "symptoms": "Drzwi nie reagują na pilota, kontrolka otwartych drzwi przy zamkniętych, brak domykania.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        800
+      ],
+      "check_at_inspection": "Zamknąć i otworzyć auto pilotem i kluczykiem, sprawdzić każde drzwi z osobna oraz komunikaty na zegarach."
+    },
+    {
+      "title": "Woda w kabinie – zatkane odpływy podszybia i nieszczelności",
+      "symptoms": "Mokre dywaniki z przodu, zaparowane szyby, zapach stęchlizny, korozja złączy elektrycznych pod fotelami.",
+      "severity": "srednia",
+      "cost_pln": [
+        200,
+        1500
+      ],
+      "check_at_inspection": "Podnieść dywaniki przód i tył, sprawdzić wnękę koła zapasowego. Zapytać o czyszczenie odpływów."
+    },
+    {
+      "title": "Elektryka – Climatronic, czujniki, oświetlenie",
+      "symptoms": "Nie działający nawiew na jednym poziomie, błędy czujników parkowania, przepalone żarówki tablicy/świateł.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        1200
+      ],
+      "check_at_inspection": "Przejść wszystkie funkcje klimatyzacji (zimno/ciepło, nawiewy), czujniki parkowania, światła, szyby."
+    }
+  ],
+  "inspection_tips": [
+    "Uruchomić silnik zimny – w TSI słuchać grzechotania łańcucha, w TDI ocenić czas rozruchu i dym.",
+    "W wersji DSG przejechać odcinek w korku (1–2–1), ruszyć pod górkę i cofnąć – szarpanie to sygnał do diagnostyki skrzyni.",
+    "Podłączyć diagnostykę i porównać przebieg z licznika z zapisami w innych modułach (np. skrzynia, ABS) – rozbieżności do wyjaśnienia.",
+    "Zmierzyć lakier na całym nadwoziu – fabryczne wartości to zwykle ok. 80–160 µm; dużo wyższe sugerują lakierowanie lub szpachlę.",
+    "Porównać zużycie kierownicy, gałki zmiany biegów i boczka fotela kierowcy z deklarowanym przebiegiem.",
+    "W dieslu sprawdzić w diagnostyce stopień zapchania DPF i obejrzeć obudowę filtra pod kątem śladów cięcia.",
+    "Sprawdzić naklejkę z danymi auta w bagażniku (kody wyposażenia) – zgodność z ogłoszeniem.",
+    "Podnieść dywaniki i sprawdzić wilgoć w kabinie i bagażniku."
+  ],
+  "questions_for_seller": [
+    "Jaki jest numer VIN i data pierwszej rejestracji? Chcę sprawdzić historię w bezpłatnej usłudze Historia Pojazdu.",
+    "Kiedy i przy jakim przebiegu wymieniano rozrząd (pasek lub łańcuch)? Czy jest faktura?",
+    "Czy w aucie z DSG wymieniano sprzęgło lub mechatronikę, a w DQ250 – olej w skrzyni?",
+    "Czy wykonano akcję serwisową EA189 (aktualizacja oprogramowania po tzw. aferze spalinowej) i czy po niej były problemy z EGR/DPF?",
+    "Czy auto było sprowadzone? Jeśli tak – z jakiego kraju i czy są dokumenty z zagranicy (np. historia serwisowa)?",
+    "Czy któreś elementy nadwozia były lakierowane i dlaczego?"
+  ],
+  "summary": "Golf VI to solidny i tani w naprawach kompakt, ale większość egzemplarzy ma za sobą duże przebiegi. Najbezpieczniejsze wybory to 1.6 MPI (także pod LPG) i 1.6 TDI z udokumentowaną historią. Benzynowe TSI z serii EA111 kupuj tylko z dowodem wymiany łańcucha, a automat DSG DQ200 po sprawdzeniu adaptacji i jeździe w korku.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i biuletynów serwisowych. Koszty orientacyjne – niezależny warsztat, 2026."
+}

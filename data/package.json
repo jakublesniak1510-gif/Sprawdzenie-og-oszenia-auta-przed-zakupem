@@ -1,0 +1,14 @@
+{
+  "name": "sprawdz-ogloszenie-baza-wiedzy",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Kuratorowana baza wiedzy: typowe usterki modeli, czerwone flagi w ogłoszeniach, checklisty i wzory dokumentów.",
+  "scripts": {
+    "validate": "node validate.mjs"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1"
+  }
+}

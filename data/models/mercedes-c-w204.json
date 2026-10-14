@@ -1,0 +1,356 @@
+{
+  "id": "mercedes-c-w204",
+  "make": "Mercedes-Benz",
+  "model": "Klasa C",
+  "generation": "W204/S204 (2007–2014)",
+  "years": [
+    2007,
+    2014
+  ],
+  "aliases": [
+    "w204",
+    "s204",
+    "c204",
+    "mercedes w204",
+    "mercedes c w204",
+    "mercedes c klasa w204",
+    "c klasa w204",
+    "c-klasa w204",
+    "mercedes c204",
+    "c 200 cdi w204",
+    "c 220 cdi w204",
+    "c200 w204",
+    "c220 w204",
+    "w204 lift"
+  ],
+  "market_note": "Popularny i ceniony za komfort, głównie z importu. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Wersje z automatem 7G-Tronic przeważają.",
+  "engines": [
+    {
+      "code": "C180/C200 Kompressor i CGI (M271 / M271 EVO)",
+      "fuel": "benzyna",
+      "power_hp": [
+        156,
+        184
+      ],
+      "aliases": [
+        "c180",
+        "c200",
+        "c 180",
+        "c 200",
+        "m271",
+        "1.8 kompressor",
+        "1.8 cgi",
+        "kompressor",
+        "cgi"
+      ],
+      "timing": "łańcuch – skłonny do rozciągania, koła zmiennych faz; wymiana ok. 3–6 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Łańcuch rozrządu i koła zmiennych faz",
+          "symptoms": "Grzechotanie przez kilka sekund po zimnym starcie, błędy faz rozrządu.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuchiwanie od przodu silnika; diagnostyka faz."
+        },
+        {
+          "title": "Elektromagnes nastawnika wałka rozrządu – przeciekanie oleju do wiązki",
+          "symptoms": "Olej w złączu elektrozaworu wędruje wiązką do sterownika silnika; objawy: błędy faz, w skrajnym przypadku uszkodzenie sterownika.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            3500
+          ],
+          "check_at_inspection": "Obejrzeć złącza elektromagnesów z przodu głowicy pod kątem oleju; zapytać o wymianę magnesów."
+        },
+        {
+          "title": "Odma i wycieki oleju",
+          "symptoms": "Zwiększone zużycie oleju, wycieki z pokrywy zaworów, nierówna praca.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1500
+          ],
+          "check_at_inspection": "Obejrzeć silnik pod kątem wycieków; zapytać o dolewki oleju."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "C200/C220/C250 CDI OM646 (2007–2009)",
+      "fuel": "diesel",
+      "power_hp": [
+        136,
+        150,
+        170
+      ],
+      "aliases": [
+        "c200 cdi om646",
+        "c220 cdi om646",
+        "om646",
+        "2.1 cdi",
+        "2,1 cdi"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Nieszczelne podkładki wtryskiwaczy",
+          "symptoms": "Zapach spalin, „pykanie”, czarny nagar wokół wtryskiwaczy; zapieczone wtryskiwacze trudno wykręcić.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Zdjąć pokrywę silnika (za zgodą sprzedawcy), obejrzeć okolice wtryskiwaczy, nasłuchiwać pykania."
+        },
+        {
+          "title": "Kolektor dolotowy z klapami wirowymi",
+          "symptoms": "Kontrolka silnika, spadek mocy, wycieki oleju z kolektora.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2500
+          ],
+          "check_at_inspection": "Odczyt błędów, obejrzeć kolektor pod kątem wycieków."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "C180/C200/C220/C250 CDI OM651 (od 2009)",
+      "fuel": "diesel",
+      "power_hp": [
+        120,
+        136,
+        170,
+        204
+      ],
+      "aliases": [
+        "c200 cdi",
+        "c220 cdi",
+        "c250 cdi",
+        "c 220 cdi",
+        "c 200 cdi",
+        "om651",
+        "2.2 cdi",
+        "2,2 cdi",
+        "220 cdi om651"
+      ],
+      "timing": "łańcuch – zwykle trwały, kontrola przy grzechotaniu",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze (w części wczesnych wersji akcja serwisowa)",
+          "symptoms": "Nierówna praca, trudny rozruch, kontrolka silnika, w skrajnych przypadkach przelewanie paliwa.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Odczyt korekt wtryskiwaczy; sprawdzić w ASO po VIN, czy akcje serwisowe zostały wykonane."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "C320/C350 CDI OM642 (V6)",
+      "fuel": "diesel",
+      "power_hp": [
+        224,
+        231,
+        265
+      ],
+      "aliases": [
+        "c320 cdi",
+        "c350 cdi",
+        "om642",
+        "3.0 cdi",
+        "3,0 cdi",
+        "350 cdi",
+        "320 cdi"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Uszczelki chłodnicy oleju (w „V” silnika)",
+          "symptoms": "Wyciek oleju spływający po tylnej części bloku, olej w okolicy skrzyni biegów, zapach spalonego oleju.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2500,
+            5000
+          ],
+          "check_at_inspection": "Obejrzeć tył silnika od dołu (okolice połączenia ze skrzynią) pod kątem świeżego oleju."
+        },
+        {
+          "title": "Nastawnik klap kolektora dolotowego",
+          "symptoms": "Kontrolka silnika, błędy klap, spadek mocy.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            2500
+          ],
+          "check_at_inspection": "Odczyt błędów."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            6000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Automat 7G-Tronic (722.9) – płyta sterująca i czujniki prędkości",
+      "symptoms": "Szarpnięcia, opóźnione zmiany, tryb awaryjny (jazda na jednym biegu), błędy czujników.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4500
+      ],
+      "check_at_inspection": "Jazda próbna z różnym obciążeniem, manewry D–R, odczyt błędów skrzyni; zapytać o wymianę oleju."
+    },
+    {
+      "title": "Elektroniczna blokada kierownicy (ELV)",
+      "symptoms": "Brak możliwości uruchomienia auta, kierownica nie odblokowuje się.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        2500
+      ],
+      "check_at_inspection": "Kilkukrotnie uruchomić i zgasić auto; zapytać o wymianę lub emulator ELV."
+    },
+    {
+      "title": "Zawieszenie – wahacze przednie, tylne sprężyny",
+      "symptoms": "Stuki, pływanie, pęknięte sprężyny tylne, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3000
+      ],
+      "check_at_inspection": "Jazda po nierównościach, obejrzeć sprężyny i tuleje na podnośniku."
+    },
+    {
+      "title": "Korozja – klapa bagażnika, krawędzie drzwi, nadkola",
+      "symptoms": "Ogniska rdzy przy klamce/oświetleniu tablicy i krawędziach drzwi.",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3000
+      ],
+      "check_at_inspection": "Obejrzeć klapę bagażnika, krawędzie drzwi, nadkola."
+    },
+    {
+      "title": "Elektryka – COMAND/radio, klimatyzacja, czujniki",
+      "symptoms": "Zawieszanie się multimediów, niedziałające strefy klimatyzacji, błędy czujników.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        3000
+      ],
+      "check_at_inspection": "Przetestować wszystkie funkcje."
+    }
+  ],
+  "inspection_tips": [
+    "W benzynie M271 zimny rozruch i nasłuchiwanie łańcucha; obejrzeć złącza elektromagnesów pod kątem oleju.",
+    "W OM646 zdjąć pokrywę silnika i obejrzeć okolice wtryskiwaczy.",
+    "W 7G-Tronic jazda w mieście i manewry D–R; odczyt błędów skrzyni.",
+    "Kilka razy uruchomić i zgasić auto (ELV).",
+    "Obejrzeć klapę bagażnika i krawędzie drzwi pod kątem korozji.",
+    "Zweryfikować przebieg w diagnostyce i Historii Pojazdu; zmierzyć lakier."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Z jakiego kraju jest auto?",
+    "Czy wymieniano łańcuch rozrządu lub elektromagnesy nastawników (benzyna)?",
+    "Czy były naprawy wtryskiwaczy lub ich podkładek (diesel)?",
+    "Kiedy wymieniano olej w automacie?",
+    "Czy auto miało szkody i naprawy blacharskie?"
+  ],
+  "summary": "W204 jest komfortowy i trwały w nadwoziu; najrozsądniejsze są diesle OM651 i OM646 z historią serwisową oraz benzynowe M271 z wymienionym rozrządem. Należy sprawdzić automat, ELV i korozję klapy.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

@@ -1,0 +1,304 @@
+{
+  "id": "toyota-yaris-3",
+  "make": "Toyota",
+  "model": "Yaris",
+  "generation": "III (XP130, 2011–2020)",
+  "years": [
+    2011,
+    2020
+  ],
+  "aliases": [
+    "yaris 3",
+    "yaris iii",
+    "yaris xp130",
+    "toyota yaris 3",
+    "toyota yaris iii",
+    "yaris iii hybrid",
+    "yaris 3 hybrid",
+    "yaris iii lift",
+    "yaris 3 lift"
+  ],
+  "market_note": "Bardzo popularne auto miejskie, dużo egzemplarzy z polskich salonów i wersji hybrydowych. Ceny orientacyjnie ok. 25–55 tys. zł (2026). Hybrydy często po pracy w taxi lub flotach.",
+  "engines": [
+    {
+      "code": "1.0 VVT-i 69/72 KM (1KR-FE, 3-cylindrowy)",
+      "fuel": "benzyna",
+      "power_hp": [
+        69,
+        72
+      ],
+      "aliases": [
+        "1.0 vvt-i",
+        "1,0 vvt-i",
+        "1.0 vvti",
+        "1.0 benzyna",
+        "1,0 benzyna",
+        "1kr"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Wyciek z pompy wody",
+          "symptoms": "Ubytek płynu chłodzącego, różowy osad przy pompie, piszczenie.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1100
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady zaschniętego płynu przy pompie."
+        },
+        {
+          "title": "Drgania i zużyte poduszki silnika",
+          "symptoms": "Wyraźne drgania na biegu jałowym i przy ruszaniu, stuki przy zmianie kierunku jazdy.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Obserwacja drgań na postoju z klimatyzacją, ruszanie do przodu i do tyłu."
+        },
+        {
+          "title": "Sprzęgło – szybsze zużycie w jeździe miejskiej",
+          "symptoms": "Wysoko łapiące sprzęgło, ślizganie przy przyspieszaniu, szarpanie przy ruszaniu.",
+          "mileage_km": "100–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            1200,
+            2500
+          ],
+          "check_at_inspection": "Ruszanie na 2 biegu, przyspieszanie na wysokim biegu od niskich obrotów."
+        }
+      ]
+    },
+    {
+      "code": "1.33 Dual VVT-i 99 KM (1NR-FE)",
+      "fuel": "benzyna",
+      "power_hp": [
+        99
+      ],
+      "aliases": [
+        "1.33 dual vvt-i",
+        "1,33 dual vvt-i",
+        "1.33 vvt-i",
+        "1.33",
+        "1,33",
+        "1nr"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (pierścienie tłokowe)",
+          "symptoms": "Ubytek oleju między wymianami, kontrolka poziomu oleju, niebieskawy dym. Dotyczy części egzemplarzy, częściej starszych roczników.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; sprawdzić poziom i wygląd oleju, osad na końcówce wydechu."
+        },
+        {
+          "title": "Zarastanie zaworu EGR i przepustnicy",
+          "symptoms": "Nierówne wolne obroty, przygasanie, kontrolka silnika.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1200
+          ],
+          "check_at_inspection": "Obserwacja wolnych obrotów na ciepłym silniku, odczyt błędów."
+        },
+        {
+          "title": "Cewki zapłonowe i świece",
+          "symptoms": "Szarpanie przy przyspieszaniu, nierówna praca, migająca kontrolka silnika (wypadanie zapłonów).",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem na 3–4 biegu od niskich obrotów; odczyt błędów wypadania zapłonów. Zapytać, kiedy wymieniano świece."
+        }
+      ]
+    },
+    {
+      "code": "1.5 Hybrid 100 KM (1NZ-FXE + e-CVT)",
+      "fuel": "hybryda",
+      "power_hp": [
+        100
+      ],
+      "aliases": [
+        "1.5 hybrid",
+        "1,5 hybrid",
+        "1.5 hsd",
+        "hybrid",
+        "hybryda",
+        "1.5 hybryda"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Zapchany wentylator i kanał chłodzenia baterii trakcyjnej (HV)",
+          "symptoms": "Głośna praca wentylatora pod tylną kanapą, częstsze uruchamianie silnika spalinowego, komunikat o konieczności serwisu baterii, przegrzewanie baterii.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            200,
+            800
+          ],
+          "check_at_inspection": "Obejrzeć kratkę wlotu powietrza przy tylnej kanapie (kurz, sierść), posłuchać wentylatora; zapytać o czyszczenie. Diagnostyka – temperatury modułów baterii."
+        },
+        {
+          "title": "Degradacja baterii trakcyjnej (HV)",
+          "symptoms": "Szybkie rozładowywanie i ładowanie baterii, słabsze przyspieszenie, wyższe spalanie, komunikat o usterce układu hybrydowego.",
+          "mileage_km": "200–350 tys. km lub ok. 12–15 lat",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            15000
+          ],
+          "check_at_inspection": "Diagnostyka hybrydy – napięcia modułów baterii, różnice między blokami, kody usterek. Na jeździe próbnej obserwować wskaźnik naładowania baterii. Regeneracja ok. 3–6 tys. zł, nowa bateria znacznie drożej."
+        },
+        {
+          "title": "Pompa cieczy chłodzącej falownik (inwerter)",
+          "symptoms": "Komunikat o usterce układu hybrydowego, ograniczenie mocy, przegrzewanie falownika.",
+          "mileage_km": "120–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            1400
+          ],
+          "check_at_inspection": "Na pracującym aucie (READY) sprawdzić, czy płyn w zbiorniczku falownika krąży; odczyt błędów hybrydy."
+        },
+        {
+          "title": "Akumulator 12 V (hybryda)",
+          "symptoms": "Auto nie przechodzi w tryb READY, błędy elektroniki, rozładowanie po postoju.",
+          "mileage_km": "co ok. 5–8 lat",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Sprawdzić datę akumulatora i napięcie; zapytać o problemy z uruchamianiem po postoju."
+        }
+      ]
+    },
+    {
+      "code": "1.4 D-4D 90 KM (1ND-TV)",
+      "fuel": "diesel",
+      "power_hp": [
+        90
+      ],
+      "aliases": [
+        "1.4 d-4d",
+        "1,4 d-4d",
+        "1.4 d4d",
+        "1.4 diesel",
+        "1nd"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Wtryskiwacze (1.4 D-4D)",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Korozja i zapiekanie tylnych hamulców",
+      "symptoms": "Słabe hamowanie tylnej osi, nierówne zużycie klocków, grzanie się koła, rdzawe tarcze (częste w hybrydach, które rzadko używają hamulców ciernych).",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        1500
+      ],
+      "check_at_inspection": "Obejrzeć tarcze i zaciski przez felgi; po jeździe próbnej sprawdzić, czy któreś koło nie jest wyraźnie cieplejsze; badanie skuteczności hamulców na stacji."
+    },
+    {
+      "title": "Skrzynia bezstopniowa Multidrive S (CVT)",
+      "symptoms": "Szarpnięcia, buczenie, „ślizganie” obrotów; skrzynia jest zwykle trwała, ale nie lubi zaniedbanego oleju.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna: płynne ruszanie, przyspieszanie ze stałym gazem; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Zawieszenie – łączniki stabilizatora, amortyzatory, tuleje belki",
+      "symptoms": "Stuki na nierównościach, pływanie, nierówne zużycie opon.",
+      "mileage_km": "80–180 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        1200
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów na podnośniku."
+    },
+    {
+      "title": "Klimatyzacja i elektryka",
+      "symptoms": "Słabe chłodzenie, niedziałający ekran multimediów lub kamera, problemy z Bluetooth.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Sprawdzić klimatyzację na maksimum, multimedia i kamerę cofania."
+    }
+  ],
+  "inspection_tips": [
+    "W hybrydzie podłączyć diagnostykę z obsługą układu hybrydowego (stan baterii HV, błędy falownika).",
+    "Sprawdzić kratkę wentylatora baterii HV przy tylnej kanapie (zanieczyszczenia).",
+    "Ustalić, czy auto pracowało w taxi lub flocie (zużycie tylnej kanapy, ślady po montażu taksometru).",
+    "Ocenić stan tylnych tarcz i zacisków (korozja).",
+    "W benzynie zapytać o zużycie oleju i sprawdzić dym po rozruchu.",
+    "Porównać przebieg z Historią Pojazdu i historią serwisową ASO."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Czy auto jest z polskiego salonu?",
+    "Czy auto było używane jako taksówka lub w firmie?",
+    "Czy jest książka serwisowa lub historia w ASO? Czy wykonano kontrolę baterii hybrydowej?",
+    "Czy wymieniano akumulator 12 V, pompę falownika lub czyszczono wentylator baterii?",
+    "Ile oleju silnik zużywa między wymianami?"
+  ],
+  "summary": "Yaris III jest jednym z najbardziej niezawodnych aut miejskich; polecane są 1.0, 1.33 i hybryda, o ile historia jest udokumentowana. W hybrydach kluczowa jest kondycja baterii HV i chłodzenia. Ryzykiem jest przeszłość taksówkowa i zaniżony przebieg.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

@@ -1,0 +1,382 @@
+{
+  "id": "audi-a4-b8",
+  "make": "Audi",
+  "model": "A4",
+  "generation": "B8 (2007–2015)",
+  "years": [
+    2007,
+    2015
+  ],
+  "aliases": [
+    "a4 b8",
+    "audi a4 b8",
+    "a4 8k",
+    "audi a4 8k",
+    "a4 b8 avant",
+    "a4 b8 kombi",
+    "a4 b8 lift",
+    "a4 b8.5",
+    "a4 allroad b8",
+    "allroad b8"
+  ],
+  "market_note": "Bardzo popularna na rynku wtórnym, głównie z importu. Ceny orientacyjnie ok. 30–60 tys. zł (2026). Dużo egzemplarzy z 2.0 TDI, Multitronikiem i przebiegami 250+ tys. km.",
+  "engines": [
+    {
+      "code": "2.0 TDI CR 120–177 KM (EA189, m.in. CAGA/CAHA/CJCA/CGLC)",
+      "fuel": "diesel",
+      "power_hp": [
+        120,
+        136,
+        143,
+        150,
+        163,
+        170,
+        177
+      ],
+      "aliases": [
+        "2.0 tdi",
+        "2,0 tdi",
+        "2.0tdi",
+        "2.0 tdi cr",
+        "2,0 tdi cr",
+        "2.0 tdi 143",
+        "2.0 tdi 177",
+        "caga",
+        "caha",
+        "cjca",
+        "cglc"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co 120–150 tys. km; ok. 1,5–2,5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Napęd pompy oleju (wałek sześciokątny modułu wałków wyrównoważających)",
+          "symptoms": "Zużycie sześciokątnego wałka napędzającego pompę oleju prowadzi do spadku ciśnienia oleju i zatarcia silnika – często bez wcześniejszych objawów.",
+          "mileage_km": "150–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            1500,
+            3500
+          ],
+          "check_at_inspection": "Zapytać o prewencyjną wymianę wałka i pompy oleju (faktura). Przy kontrolce ciśnienia oleju – nie kontynuować jazdy. Mechanik może ocenić ryzyko na podstawie kodu silnika."
+        },
+        {
+          "title": "Wtryskiwacze piezoelektryczne",
+          "symptoms": "Trudny rozruch, nierówna praca, szarpanie, kontrolka silnika.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy, test przelewów."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.8 TFSI 120/160/170 KM (EA888)",
+      "fuel": "benzyna",
+      "power_hp": [
+        120,
+        160,
+        170
+      ],
+      "aliases": [
+        "1.8 tfsi",
+        "1,8 tfsi",
+        "1.8tfsi",
+        "1.8 tfsi 160",
+        "cdha",
+        "cabb"
+      ],
+      "timing": "łańcuch – napinacz we wcześniejszych wersjach problematyczny; ok. 3–5 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Nadmierne zużycie oleju (pierścienie tłokowe, EA888 2. generacji)",
+          "symptoms": "Ubytek nawet 0,5–1 l oleju na 1000 km, kontrolka poziomu oleju, niebieskawy dym, nagar i wypadanie zapłonów. Dotyczy głównie roczników ok. 2008–2011.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            6000,
+            12000
+          ],
+          "check_at_inspection": "Zapytać, ile oleju dolewa sprzedawca i czy wymieniano tłoki/pierścienie (faktura). Obejrzeć końcówkę wydechu. Rozważyć test zużycia oleju przed zakupem."
+        },
+        {
+          "title": "Napinacz łańcucha rozrządu (starsze wersje)",
+          "symptoms": "Grzechotanie po zimnym starcie; przeskoczenie łańcucha grozi uszkodzeniem silnika.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt faz rozrządu w diagnostyce; zapytać o wymianę napinacza na wersję poprawioną."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        },
+        {
+          "title": "Pompa wody / termostat (plastikowa obudowa)",
+          "symptoms": "Ubytek płynu, przegrzewanie, zapach płynu.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            2200
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieków przy pompie."
+        }
+      ]
+    },
+    {
+      "code": "2.0 TFSI 180/211 KM (EA888)",
+      "fuel": "benzyna",
+      "power_hp": [
+        180,
+        211
+      ],
+      "aliases": [
+        "2.0 tfsi",
+        "2,0 tfsi",
+        "2.0tfsi",
+        "2.0 tfsi 211",
+        "cdnc",
+        "cdnb"
+      ],
+      "timing": "łańcuch – kontrola napinacza; ok. 3–5 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Nadmierne zużycie oleju (pierścienie tłokowe, EA888 2. generacji)",
+          "symptoms": "Ubytek nawet 0,5–1 l oleju na 1000 km, kontrolka poziomu oleju, niebieskawy dym, nagar i wypadanie zapłonów. Dotyczy głównie roczników ok. 2008–2011.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            6000,
+            12000
+          ],
+          "check_at_inspection": "Zapytać, ile oleju dolewa sprzedawca i czy wymieniano tłoki/pierścienie (faktura). Obejrzeć końcówkę wydechu. Rozważyć test zużycia oleju przed zakupem."
+        },
+        {
+          "title": "Napinacz łańcucha rozrządu (starsze wersje)",
+          "symptoms": "Grzechotanie po zimnym starcie; przeskoczenie łańcucha grozi uszkodzeniem silnika.",
+          "mileage_km": "80–200 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt faz rozrządu w diagnostyce; zapytać o wymianę napinacza na wersję poprawioną."
+        },
+        {
+          "title": "Zawór odmy (PCV) i separator oleju",
+          "symptoms": "Syczenie, nierówna praca, zwiększone zużycie oleju, błędy mieszanki.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Nasłuchiwać syczenia w komorze silnika, diagnostyka korekt mieszanki."
+        },
+        {
+          "title": "Nagar na zaworach dolotowych (wtrysk bezpośredni)",
+          "symptoms": "Nierówna praca na zimnym silniku, wypadanie zapłonów, spadek mocy, kontrolka silnika. Częściej przy krótkich trasach.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            2000
+          ],
+          "check_at_inspection": "Zimny rozruch i obserwacja wolnych obrotów (drgania, falowanie). Diagnostyka – licznik wypadania zapłonów na cylindrach. Zapytać o czyszczenie dolotu."
+        }
+      ]
+    },
+    {
+      "code": "2.7 TDI / 3.0 TDI V6",
+      "fuel": "diesel",
+      "power_hp": [
+        190,
+        204,
+        211,
+        240,
+        245
+      ],
+      "aliases": [
+        "2.7 tdi",
+        "2,7 tdi",
+        "3.0 tdi",
+        "3,0 tdi",
+        "3.0tdi",
+        "2.7tdi",
+        "v6 tdi"
+      ],
+      "timing": "łańcuchy rozrządu z tyłu silnika – wymiana bardzo droga (wymaga wyjęcia silnika lub skrzyni), ok. 6–12 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Napinacze i prowadnice łańcuchów rozrządu",
+          "symptoms": "Grzechotanie z tyłu silnika (od strony skrzyni) po zimnym starcie, błędy faz rozrządu.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            6000,
+            12000
+          ],
+          "check_at_inspection": "Zimny rozruch i nasłuchiwanie od strony grodzi; diagnostyka faz rozrządu."
+        },
+        {
+          "title": "Klapy kolektorów dolotowych i ich nastawnik",
+          "symptoms": "Kontrolka silnika, błędy klap wirowych, spadek mocy.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            2500
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce."
+        },
+        {
+          "title": "Wtryskiwacze piezoelektryczne",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            9000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt wtryskiwaczy."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            900,
+            6000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia Multitronic (CVT, napęd na przód)",
+      "symptoms": "Szarpanie przy ruszaniu, wycie, poślizg, tryb awaryjny, migające oznaczenia skrzyni; usterki łańcucha, sprzęgieł lub sterownika.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "wysoka",
+      "cost_pln": [
+        4000,
+        12000
+      ],
+      "check_at_inspection": "Jazda próbna: ruszanie, powolne toczenie się w korku, przyspieszanie ze stałym gazem, cofanie. Diagnostyka skrzyni i pytanie o wymianę oleju (co ok. 60 tys. km)."
+    },
+    {
+      "title": "Skrzynia S tronic DL501 (7-biegowa, wersje quattro i mocniejsze)",
+      "symptoms": "Szarpnięcia, stuki przy zmianie biegów, błędy mechatroniki.",
+      "mileage_km": "120–250 tys. km",
+      "severity": "wysoka",
+      "cost_pln": [
+        4000,
+        12000
+      ],
+      "check_at_inspection": "Jazda próbna w korku i dynamicznie; diagnostyka; faktury za olej w skrzyni."
+    },
+    {
+      "title": "Przednie zawieszenie wielowahaczowe",
+      "symptoms": "Stuki, luz na kierownicy, nierówne zużycie opon, ściąganie.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        3500
+      ],
+      "check_at_inspection": "Jazda po nierównościach i na zakrętach; ocena luzów na podnośniku; zużycie opon."
+    },
+    {
+      "title": "Elektroniczna blokada kolumny kierowniczej (ESL)",
+      "symptoms": "Brak możliwości uruchomienia auta, komunikat o blokadzie kierownicy.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        2500
+      ],
+      "check_at_inspection": "Kilkukrotnie uruchomić i zgasić auto; odczyt błędów modułu dostępu."
+    },
+    {
+      "title": "Elektryka i MMI, reflektory ksenonowe",
+      "symptoms": "Zawieszanie się MMI, niedziałające przyciski, ciemniejące lub migające ksenony (przetwornica, palnik).",
+      "severity": "niska",
+      "cost_pln": [
+        400,
+        3000
+      ],
+      "check_at_inspection": "Przetestować MMI, wszystkie przyciski, światła i doświetlanie zakrętów."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić typ skrzyni (manual, Multitronic, S tronic) – Multitronic wymaga szczególnie dokładnej jazdy próbnej.",
+    "W 2.0 TDI zapytać o wymianę wałka pompy oleju i rozrządu; w TFSI o zużycie oleju.",
+    "Diagnostyka: odczyt przebiegu z kilku modułów i porównanie z licznikiem; sprawdzenie błędów skrzyni.",
+    "Zmierzyć lakier, zwrócić uwagę na pas przedni, błotniki i progi.",
+    "Ocenić zużycie kierownicy i fotela kierowcy względem przebiegu.",
+    "W quattro sprawdzić równe zużycie opon na wszystkich kołach (różne opony szkodzą napędowi).",
+    "Sprawdzić MMI i elektrykę – naprawy są kosztowne."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Z jakiego kraju auto pochodzi?",
+    "Czy wymieniano wałek pompy oleju (2.0 TDI)?",
+    "Ile oleju dolewa Pan/Pani między wymianami (1.8/2.0 TFSI)?",
+    "Czy skrzynia automatyczna była naprawiana i kiedy wymieniano w niej olej?",
+    "Czy wykonano akcję serwisową EA189 (aktualizacja oprogramowania po tzw. aferze spalinowej) i czy po niej były problemy z EGR/DPF?",
+    "Czy auto miało szkody i czy są dokumenty naprawy?"
+  ],
+  "summary": "A4 B8 daje dużo komfortu za rozsądne pieniądze, ale wymaga starannego wyboru. Najbezpieczniejsze są 2.0 TDI z manualem i udokumentowaną wymianą pompy oleju oraz rozrządu. Benzynowe TFSI z lat ok. 2008–2011 mają skłonność do zużycia oleju, a Multitronic bywa kosztowny.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

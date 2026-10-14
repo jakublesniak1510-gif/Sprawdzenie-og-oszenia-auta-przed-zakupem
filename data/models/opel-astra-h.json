@@ -1,0 +1,412 @@
+{
+  "id": "opel-astra-h",
+  "make": "Opel",
+  "model": "Astra",
+  "generation": "H (2004–2014, w tym Astra Classic III)",
+  "years": [
+    2004,
+    2014
+  ],
+  "aliases": [
+    "astra h",
+    "astra iii",
+    "astra 3",
+    "opel astra h",
+    "opel astra iii",
+    "opel astra 3",
+    "astra h kombi",
+    "astra h gtc",
+    "astra h sedan",
+    "astra classic iii",
+    "astra h caravan",
+    "astra h twintop"
+  ],
+  "market_note": "Bardzo popularne tanie auto, często z LPG. Ceny orientacyjnie ok. 7–18 tys. zł (2026). Wiele egzemplarzy z wysokimi przebiegami i drobnymi usterkami elektryki.",
+  "engines": [
+    {
+      "code": "1.6 16V Twinport 105 KM (Z16XEP) / 1.6 115 KM (Z16XER)",
+      "fuel": "benzyna",
+      "power_hp": [
+        105,
+        115
+      ],
+      "aliases": [
+        "1.6 16v",
+        "1,6 16v",
+        "1.6 twinport",
+        "z16xep",
+        "z16xer",
+        "1.6 benzyna",
+        "1,6 benzyna"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 90 tys. km lub 5 lat (fabryczne interwały były dłuższe, zdarzały się wcześniejsze zerwania); ok. 700–1300 zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Klapy Twinport w kolektorze dolotowym (Z16XEP)",
+          "symptoms": "Kontrolka silnika, nierówna praca na wolnych obrotach, spadek mocy, błędy położenia klap.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; nasłuchiwanie terkotania przy kolektorze dolotowym."
+        },
+        {
+          "title": "Obudowa termostatu i termostat (silniki XER)",
+          "symptoms": "Ubytek płynu chłodzącego, wilgotne ślady przy obudowie termostatu, wahania temperatury, kontrolka.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu (prawa strona głowicy); obserwować temperaturę na jeździe próbnej."
+        },
+        {
+          "title": "Moduł zapłonowy (listwa cewek)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, praca na trzech cylindrach – często po deszczu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów; obejrzeć moduł pod kątem pęknięć i śladów przebicia."
+        },
+        {
+          "title": "Zawory elektromagnetyczne zmiennych faz rozrządu",
+          "symptoms": "Kontrolka silnika, błędy położenia wałków, nierówna praca na zimnym silniku, spadek mocy.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; obserwacja pracy na zimnym silniku. Częstsza wymiana oleju ogranicza problem."
+        }
+      ]
+    },
+    {
+      "code": "1.4 16V Twinport 90 KM (Z14XEP)",
+      "fuel": "benzyna",
+      "power_hp": [
+        90
+      ],
+      "aliases": [
+        "1.4 16v",
+        "1,4 16v",
+        "1.4 twinport",
+        "z14xep",
+        "1.4 benzyna",
+        "1,4 benzyna"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 90 tys. km lub 5 lat; ok. 700–1200 zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Klapy Twinport w kolektorze dolotowym",
+          "symptoms": "Kontrolka silnika, nierówna praca, spadek mocy.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce."
+        },
+        {
+          "title": "Obudowa termostatu i termostat (silniki XER)",
+          "symptoms": "Ubytek płynu chłodzącego, wilgotne ślady przy obudowie termostatu, wahania temperatury, kontrolka.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu (prawa strona głowicy); obserwować temperaturę na jeździe próbnej."
+        },
+        {
+          "title": "Moduł zapłonowy (listwa cewek)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, praca na trzech cylindrach – często po deszczu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów; obejrzeć moduł pod kątem pęknięć i śladów przebicia."
+        }
+      ]
+    },
+    {
+      "code": "1.4/1.6 16V z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        90,
+        105,
+        115
+      ],
+      "aliases": [
+        "1.6 lpg",
+        "1,6 lpg",
+        "1.4 lpg",
+        "1,4 lpg",
+        "1.6 gaz",
+        "1.6 benzyna+gaz",
+        "1.6 b+lpg",
+        "1.4 b+lpg"
+      ],
+      "timing": "jak wersja benzynowa – pasek co ok. 90 tys. km",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.7 CDTI 80–125 KM (m.in. Z17DTH/Z17DTR)",
+      "fuel": "diesel",
+      "power_hp": [
+        80,
+        100,
+        110,
+        125
+      ],
+      "aliases": [
+        "1.7 cdti",
+        "1,7 cdti",
+        "1.7cdti",
+        "z17dth",
+        "z17dtr"
+      ],
+      "timing": "pasek zębaty – co ok. 90–120 tys. km; ok. 1–1,7 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt dawek wtryskiwaczy, test przelewów u mechanika."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2800,
+            5000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "1.9 CDTI 100/120/150 KM (Z19DT/Z19DTH)",
+      "fuel": "diesel",
+      "power_hp": [
+        100,
+        120,
+        150
+      ],
+      "aliases": [
+        "1.9 cdti",
+        "1,9 cdti",
+        "1.9cdti",
+        "z19dt",
+        "z19dth"
+      ],
+      "timing": "pasek zębaty – co ok. 90–120 tys. km; ok. 1–1,8 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Klapy wirowe w kolektorze dolotowym (1.9 CDTI 16V)",
+          "symptoms": "Kontrolka silnika, tryb awaryjny, spadek mocy; uszkodzone klapy mogą w skrajnych przypadkach uszkodzić silnik.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            2000
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; zapytać, czy kolektor/klapy były wymieniane lub zaślepione (zaślepienie bywa niezgodne z homologacją)."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3000,
+            5500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Moduł CIM pod kierownicą (przełączniki zespolone)",
+      "symptoms": "Niedziałające kierunkowskazy, wycieraczki, sygnał lub przyciski na kierownicy; błędy poduszki powietrznej kierowcy.",
+      "mileage_km": "od ok. 8 lat użytkowania",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        1500
+      ],
+      "check_at_inspection": "Sprawdzić wszystkie funkcje przełączników przy kierownicy i przycisków na kole kierownicy; zwrócić uwagę na kontrolkę poduszek."
+    },
+    {
+      "title": "Elektrohydrauliczna pompa wspomagania",
+      "symptoms": "Zanik wspomagania, wycie pompy, kontrolka; często w okresie zimowym.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        2500
+      ],
+      "check_at_inspection": "Kręcić kierownicą na postoju od oporu do oporu – słuchać wycia i sprawdzać ciągłość wspomagania."
+    },
+    {
+      "title": "Wiązka elektryczna klapy bagażnika",
+      "symptoms": "Niedziałające oświetlenie tablicy, zamek klapy, kamera/czujniki; przetarte przewody w przejściu do klapy.",
+      "severity": "niska",
+      "cost_pln": [
+        200,
+        600
+      ],
+      "check_at_inspection": "Sprawdzić oświetlenie tablicy, otwieranie klapy z przycisku, tylną wycieraczkę."
+    },
+    {
+      "title": "Skrzynia manualna M32 (6-biegowa) – łożyska",
+      "symptoms": "Wycie lub buczenie skrzyni rosnące z prędkością, luz i drgania lewarka, wyskakiwanie biegów (najczęściej 5 lub 6), w skrajnych przypadkach rozpad łożysk.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4500
+      ],
+      "check_at_inspection": "Jazda próbna z nasłuchiwaniem wycia na 5 i 6 biegu, przy dodawaniu i odejmowaniu gazu; sprawdzić, czy lewarek nie „pracuje” na boki. Zapytać o regenerację skrzyni."
+    },
+    {
+      "title": "Skrzynia Easytronic (zautomatyzowana manualna)",
+      "symptoms": "Szarpanie, długie zmiany biegów, problem z wrzuceniem biegu, błędy aktuatora sprzęgła.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4000
+      ],
+      "check_at_inspection": "Jazda próbna w korku i pod górkę; diagnostyka; zapytać o adaptację i wymianę aktuatora."
+    },
+    {
+      "title": "Korozja – nadkola, progi, dolne krawędzie drzwi",
+      "symptoms": "Pęcherze lakieru i ogniska rdzy, szczególnie w autach z dużym przebiegiem i po zimach bez mycia podwozia.",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        3000
+      ],
+      "check_at_inspection": "Obejrzeć nadkola, progi i krawędzie drzwi; sprawdzić podwozie na podnośniku."
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić wszystkie funkcje przełączników przy kierownicy (moduł CIM).",
+    "Kręcić kierownicą na postoju – zanik wspomagania lub wycie pompy to drogi problem.",
+    "W wersji z LPG – wpis w dowodzie, data butli, jazda na gazie pod obciążeniem.",
+    "Na jeździe próbnej z M32 nasłuchiwać wycia na 5 i 6 biegu.",
+    "Obejrzeć nadkola, progi i podwozie pod kątem korozji.",
+    "Sprawdzić płyn chłodzący (osad oleju) i wycieki przy obudowie termostatu.",
+    "Porównać przebieg z Historią Pojazdu – auta są tanie i często mają cofnięte liczniki."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji?",
+    "Kiedy wymieniano pasek rozrządu? Czy jest faktura?",
+    "Kto i kiedy montował LPG, kiedy był serwis instalacji, do kiedy ważna jest butla?",
+    "Czy były naprawy wspomagania kierownicy lub modułu CIM?",
+    "Czy auto ma ślady korozji naprawiane blacharsko?"
+  ],
+  "summary": "Astra H to tanie i proste auto; najrozsądniejsze są benzynowe 1.4/1.6 (także z dobrą instalacją LPG) z regularnie wymienianym paskiem. Diesle 1.7 i 1.9 CDTI są dynamiczne, ale potrafią generować koszty (EGR, DPF, klapy wirowe, skrzynia M32). Typowe bolączki to elektryka (CIM), wspomaganie i korozja.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}

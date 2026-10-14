@@ -1,0 +1,340 @@
+{
+  "id": "bmw-5-f10",
+  "make": "BMW",
+  "model": "Seria 5",
+  "generation": "F10/F11 (2010–2017)",
+  "years": [
+    2010,
+    2017
+  ],
+  "aliases": [
+    "f10",
+    "f11",
+    "bmw f10",
+    "bmw f11",
+    "bmw 5 f10",
+    "bmw seria 5 f10",
+    "bmw 5er f10",
+    "520d f10",
+    "530d f10",
+    "525d f10",
+    "520d f11",
+    "530d f11",
+    "f10 lci",
+    "f11 lci"
+  ],
+  "market_note": "Popularna duża limuzyna/kombi, głównie z importu i polskich leasingów. Ceny orientacyjnie ok. 50–100 tys. zł (2026). Wysokie koszty napraw elektroniki i zawieszenia.",
+  "engines": [
+    {
+      "code": "520d N47 (2010–2014)",
+      "fuel": "diesel",
+      "power_hp": [
+        184
+      ],
+      "aliases": [
+        "520d n47",
+        "n47"
+      ],
+      "timing": "łańcuch z tyłu silnika – ryzyko rozciągania; wymiana ok. 5–9 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Łańcuch rozrządu z tyłu silnika (N47) – rozciąganie, prowadnice",
+          "symptoms": "Metaliczne grzechotanie/świst od strony skrzyni biegów, nasilające się przy odpuszczaniu gazu i na ciepłym silniku; zerwanie łańcucha niszczy silnik. Wymiana wymaga wyjęcia silnika.",
+          "mileage_km": "100–250 tys. km (szczególnie roczniki ok. 2007–2011)",
+          "severity": "wysoka",
+          "cost_pln": [
+            5000,
+            9000
+          ],
+          "check_at_inspection": "Na ciepłym silniku nasłuchiwać od strony grodzi (najlepiej z pomocą drugiej osoby podnoszącej obroty do ok. 2000 obr./min i puszczającej gaz). Zapytać o fakturę za wymianę łańcucha z prowadnicami."
+        },
+        {
+          "title": "Chłodnica i zawór EGR (w tym akcja serwisowa producenta)",
+          "symptoms": "Zapach spalin/płynu, ubytek płynu chłodzącego, kontrolka silnika, spadek mocy. Producent prowadził akcję serwisową dotyczącą chłodnic EGR w części silników wysokoprężnych.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić po VIN w ASO, czy akcja serwisowa EGR została wykonana; kontrola poziomu płynu chłodzącego; odczyt błędów EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            7000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "518d/520d B47 (od ok. 2014)",
+      "fuel": "diesel",
+      "power_hp": [
+        150,
+        190
+      ],
+      "aliases": [
+        "520d",
+        "518d",
+        "b47",
+        "2.0d",
+        "2,0d"
+      ],
+      "timing": "łańcuch – zwykle trwalszy niż w N47",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Chłodnica i zawór EGR (w tym akcja serwisowa producenta)",
+          "symptoms": "Zapach spalin/płynu, ubytek płynu chłodzącego, kontrolka silnika, spadek mocy. Producent prowadził akcję serwisową dotyczącą chłodnic EGR w części silników wysokoprężnych.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić po VIN w ASO, czy akcja serwisowa EGR została wykonana; kontrola poziomu płynu chłodzącego; odczyt błędów EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            7000
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "525d/530d/535d N57 (3.0 R6)",
+      "fuel": "diesel",
+      "power_hp": [
+        218,
+        245,
+        258,
+        313
+      ],
+      "aliases": [
+        "530d",
+        "525d",
+        "535d",
+        "n57",
+        "3.0d",
+        "3,0d"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Chłodnica i zawór EGR (w tym akcja serwisowa producenta)",
+          "symptoms": "Zapach spalin/płynu, ubytek płynu chłodzącego, kontrolka silnika, spadek mocy. Producent prowadził akcję serwisową dotyczącą chłodnic EGR w części silników wysokoprężnych.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić po VIN w ASO, czy akcja serwisowa EGR została wykonana; kontrola poziomu płynu chłodzącego; odczyt błędów EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            6000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Klapy wirowe i nastawnik kolektora dolotowego",
+          "symptoms": "Kontrolka silnika, błędy klap, spadek mocy.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            2500
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce."
+        },
+        {
+          "title": "Wycieki oleju – uszczelka obudowy filtra oleju i pokrywy zaworów",
+          "symptoms": "Zapach spalonego oleju, olej na pasku osprzętu i pod silnikiem; wyciek z obudowy filtra może uszkodzić pasek osprzętu i zostać wciągnięty pod koło pasowe.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            1800
+          ],
+          "check_at_inspection": "Obejrzeć okolice obudowy filtra oleju, pokrywy zaworów i pasek osprzętu; sprawdzić, czy spod auta nie kapie olej."
+        }
+      ]
+    },
+    {
+      "code": "520i/528i N20 (2.0 turbo)",
+      "fuel": "benzyna",
+      "power_hp": [
+        184,
+        245
+      ],
+      "aliases": [
+        "520i",
+        "528i",
+        "n20",
+        "2.0i"
+      ],
+      "timing": "łańcuch – wczesne roczniki z problematycznymi prowadnicami; ok. 4–8 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Łańcuch rozrządu i prowadnice (N20, zwłaszcza wczesne roczniki)",
+          "symptoms": "Wysoki świst lub grzechotanie z przodu silnika, błędy faz rozrządu; pęknięcie prowadnicy grozi zerwaniem łańcucha.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            4000,
+            8000
+          ],
+          "check_at_inspection": "Nasłuchiwać świstu na wolnych obrotach i przy dodawaniu gazu; diagnostyka faz rozrządu; zapytać o wymianę łańcucha i prowadnic."
+        },
+        {
+          "title": "Elektryczna pompa wody i termostat",
+          "symptoms": "Komunikat o przegrzaniu, ograniczenie mocy, wentylator pracujący na maksimum; awaria pompy często bez ostrzeżenia.",
+          "mileage_km": "100–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3200
+          ],
+          "check_at_inspection": "Odczyt błędów pompy wody w diagnostyce, obserwacja temperatury na jeździe próbnej; zapytać o wymianę pompy i termostatu."
+        },
+        {
+          "title": "Wycieki oleju – uszczelka obudowy filtra oleju i pokrywy zaworów",
+          "symptoms": "Zapach spalonego oleju, olej na pasku osprzętu i pod silnikiem; wyciek z obudowy filtra może uszkodzić pasek osprzętu i zostać wciągnięty pod koło pasowe.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            1800
+          ],
+          "check_at_inspection": "Obejrzeć okolice obudowy filtra oleju, pokrywy zaworów i pasek osprzętu; sprawdzić, czy spod auta nie kapie olej."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Automat ZF 8HP – zaniedbana wymiana oleju",
+      "symptoms": "Szarpnięcia przy redukcji, twarde zmiany, opóźnione wrzucanie D/R. Skrzynia jest trwała, ale producentowy „olej na całe życie” w praktyce warto wymieniać co ok. 80–120 tys. km.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1200,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna z hamowaniem do zera i ponownym przyspieszaniem, manewry D–R; zapytać o wymianę oleju w skrzyni (koszt ok. 1,2–2 tys. zł)."
+    },
+    {
+      "title": "Skrzynia rozdzielcza xDrive – serwomotor i sprzęgło",
+      "symptoms": "Szarpanie przy ciasnym skręcie, komunikat o napędzie 4x4, zgrzyty. Różne rozmiary lub zużycie opon na osiach przyspieszają awarię.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        5000
+      ],
+      "check_at_inspection": "Ciasne manewry na parkingu (czy nie ma „hamowania” kół), odczyt błędów; sprawdzić, czy opony na obu osiach są tego samego rozmiaru i podobnie zużyte."
+    },
+    {
+      "title": "Pneumatyczne zawieszenie tylnej osi (Touring/F11) – miechy, kompresor",
+      "symptoms": "Opadanie tyłu po postoju, komunikat o zawieszeniu, długo pracujący kompresor.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        4000
+      ],
+      "check_at_inspection": "Obejrzeć auto po nocnym postoju (czy tył nie opadł), zapytać o wymiany miechów; odczyt błędów."
+    },
+    {
+      "title": "Przednie zawieszenie dwuwahaczowe – wahacze, tuleje",
+      "symptoms": "Drgania kierownicy przy hamowaniu, stuki, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1200,
+        4000
+      ],
+      "check_at_inspection": "Hamowanie z ok. 100 km/h, ocena wahaczy na podnośniku."
+    },
+    {
+      "title": "Elektronika – iDrive (CIC/NBT), kamery, asystenci, elektryczny hamulec postojowy",
+      "symptoms": "Zawieszanie się iDrive, niedziałające kamery, błędy EPB i asystentów.",
+      "severity": "srednia",
+      "cost_pln": [
+        500,
+        5000
+      ],
+      "check_at_inspection": "Przetestować wszystkie funkcje i odczytać pamięć błędów."
+    },
+    {
+      "title": "Aktywny układ kierowniczy (Integral Active Steering – wersje wyposażone)",
+      "symptoms": "Komunikat o awarii układu kierowniczego, nienaturalna praca kierownicy.",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        8000
+      ],
+      "check_at_inspection": "Odczyt błędów, jazda próbna z manewrami."
+    }
+  ],
+  "inspection_tips": [
+    "W 520d ustalić typ silnika (N47 do ok. 2014, B47 później); w N47 nasłuchiwać łańcucha.",
+    "W Touringu sprawdzić, czy tył nie opada po postoju.",
+    "Pełna diagnostyka – auto ma wiele modułów, a błędy elektroniki są kosztowne.",
+    "Zweryfikować przebieg w kluczyku, modułach i Historii Pojazdu.",
+    "Sprawdzić akcję serwisową EGR po VIN w ASO.",
+    "Zmierzyć lakier i spasowanie przodu (częste naprawy po kolizjach)."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Czy auto jest z polskiego salonu lub leasingu?",
+    "Czy wymieniano łańcuch rozrządu (N47) lub wykonano akcję EGR?",
+    "Kiedy wymieniano olej w automacie?",
+    "Czy były naprawy zawieszenia pneumatycznego lub elektroniki?",
+    "Czy auto miało szkody?"
+  ],
+  "summary": "F10/F11 to komfortowe i dopracowane auto, ale drogie w naprawach. Najlepsze są 530d N57 i 520d B47 z historią serwisową. Koszty potrafią generować elektronika, zawieszenie i – w N47 – rozrząd.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

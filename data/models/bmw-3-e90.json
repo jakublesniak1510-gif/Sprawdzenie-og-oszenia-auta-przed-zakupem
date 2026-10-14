@@ -1,0 +1,365 @@
+{
+  "id": "bmw-3-e90",
+  "make": "BMW",
+  "model": "Seria 3",
+  "generation": "E90/E91/E92/E93 (2005–2013)",
+  "years": [
+    2005,
+    2013
+  ],
+  "aliases": [
+    "e90",
+    "e91",
+    "e92",
+    "e93",
+    "bmw e90",
+    "bmw e91",
+    "bmw e92",
+    "bmw e93",
+    "bmw 3 e90",
+    "bmw seria 3 e90",
+    "bmw 3er e90",
+    "320d e90",
+    "318i e90",
+    "320i e90",
+    "320d e91",
+    "e90 lci",
+    "e91 lci"
+  ],
+  "market_note": "Bardzo popularna, często sprowadzana z Niemiec; ceny orientacyjnie ok. 18–45 tys. zł (2026). Dużo egzemplarzy po intensywnej eksploatacji, tuningu i z cofniętymi licznikami.",
+  "engines": [
+    {
+      "code": "318d/320d N47 (2007–2012), 143/177/184 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        143,
+        177,
+        184
+      ],
+      "aliases": [
+        "320d",
+        "318d",
+        "316d",
+        "n47",
+        "2.0d",
+        "2.0 d",
+        "2,0d"
+      ],
+      "timing": "łańcuch z tyłu silnika – ryzyko rozciągania; wymiana ok. 5–9 tys. zł",
+      "verdict": "ryzykowny",
+      "faults": [
+        {
+          "title": "Łańcuch rozrządu z tyłu silnika (N47) – rozciąganie, prowadnice",
+          "symptoms": "Metaliczne grzechotanie/świst od strony skrzyni biegów, nasilające się przy odpuszczaniu gazu i na ciepłym silniku; zerwanie łańcucha niszczy silnik. Wymiana wymaga wyjęcia silnika.",
+          "mileage_km": "100–250 tys. km (szczególnie roczniki ok. 2007–2011)",
+          "severity": "wysoka",
+          "cost_pln": [
+            5000,
+            9000
+          ],
+          "check_at_inspection": "Na ciepłym silniku nasłuchiwać od strony grodzi (najlepiej z pomocą drugiej osoby podnoszącej obroty do ok. 2000 obr./min i puszczającej gaz). Zapytać o fakturę za wymianę łańcucha z prowadnicami."
+        },
+        {
+          "title": "Chłodnica i zawór EGR (w tym akcja serwisowa producenta)",
+          "symptoms": "Zapach spalin/płynu, ubytek płynu chłodzącego, kontrolka silnika, spadek mocy. Producent prowadził akcję serwisową dotyczącą chłodnic EGR w części silników wysokoprężnych.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1000,
+            4000
+          ],
+          "check_at_inspection": "Sprawdzić po VIN w ASO, czy akcja serwisowa EGR została wykonana; kontrola poziomu płynu chłodzącego; odczyt błędów EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "320d M47 (2005–2007), 163 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        163
+      ],
+      "aliases": [
+        "320d m47",
+        "m47",
+        "320d 163"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Klapy wirowe w kolektorze dolotowym",
+          "symptoms": "Urwanie klapy lub jej osi może spowodować poważne uszkodzenie silnika; wcześniej bywa kontrolka i spadek mocy.",
+          "mileage_km": "150–300 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            600,
+            15000
+          ],
+          "check_at_inspection": "Zapytać, czy klapy były wymienione lub usunięte (i czy oprogramowanie zostało dostosowane); obejrzeć kolektor dolotowy."
+        },
+        {
+          "title": "Turbosprężarka",
+          "symptoms": "Gwizd, spadek mocy, niebieski dym, olej w dolocie.",
+          "mileage_km": "200–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            2000,
+            4500
+          ],
+          "check_at_inspection": "Pełne przyspieszenie, nasłuchiwanie gwizdu, ocena dymu."
+        },
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        }
+      ]
+    },
+    {
+      "code": "318i/320i N46 (2005–2007) / N43 (2007–2011), 129–170 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        129,
+        136,
+        143,
+        150,
+        170
+      ],
+      "aliases": [
+        "318i",
+        "320i",
+        "316i",
+        "n46",
+        "n43",
+        "2.0i",
+        "2,0i"
+      ],
+      "timing": "łańcuch – N46 skłonny do rozciągania; wymiana ok. 3–5 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zwiększone zużycie oleju (uszczelniacze zaworów, pierścienie) – N46",
+          "symptoms": "Ubytek oleju, niebieski dym po postoju i przy hamowaniu silnikiem, kontrolka poziomu oleju.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            8000
+          ],
+          "check_at_inspection": "Zapytać o dolewki oleju; obserwować dym po rozruchu i przy przyspieszaniu po zjeździe z hamowaniem silnikiem."
+        },
+        {
+          "title": "Rozciągnięty łańcuch rozrządu",
+          "symptoms": "Grzechotanie, błędy faz rozrządu, nierówna praca.",
+          "mileage_km": "120–220 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            3000,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka faz rozrządu."
+        },
+        {
+          "title": "Cewki, wtryskiwacze i czujnik NOx (N43)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, kontrolka silnika; w N43 wtrysk bezpośredni z katalizatorem NOx bywa kosztowny.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            4000
+          ],
+          "check_at_inspection": "Odczyt błędów wypadania zapłonów i czujnika NOx; jazda pod obciążeniem."
+        },
+        {
+          "title": "Wycieki oleju – uszczelka obudowy filtra oleju i pokrywy zaworów",
+          "symptoms": "Zapach spalonego oleju, olej na pasku osprzętu i pod silnikiem; wyciek z obudowy filtra może uszkodzić pasek osprzętu i zostać wciągnięty pod koło pasowe.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            1800
+          ],
+          "check_at_inspection": "Obejrzeć okolice obudowy filtra oleju, pokrywy zaworów i pasek osprzętu; sprawdzić, czy spod auta nie kapie olej."
+        }
+      ]
+    },
+    {
+      "code": "325i/330i N52 / N53 (6-cylindrowe)",
+      "fuel": "benzyna",
+      "power_hp": [
+        218,
+        258,
+        272
+      ],
+      "aliases": [
+        "325i",
+        "330i",
+        "323i",
+        "n52",
+        "n53",
+        "2.5i",
+        "3.0i"
+      ],
+      "timing": "łańcuch – zwykle trwały",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Elektryczna pompa wody i termostat",
+          "symptoms": "Komunikat o przegrzaniu, ograniczenie mocy, wentylator pracujący na maksimum; awaria pompy często bez ostrzeżenia.",
+          "mileage_km": "100–180 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            3200
+          ],
+          "check_at_inspection": "Odczyt błędów pompy wody w diagnostyce, obserwacja temperatury na jeździe próbnej; zapytać o wymianę pompy i termostatu."
+        },
+        {
+          "title": "Wycieki oleju – uszczelka obudowy filtra oleju i pokrywy zaworów",
+          "symptoms": "Zapach spalonego oleju, olej na pasku osprzętu i pod silnikiem; wyciek z obudowy filtra może uszkodzić pasek osprzętu i zostać wciągnięty pod koło pasowe.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            500,
+            1800
+          ],
+          "check_at_inspection": "Obejrzeć okolice obudowy filtra oleju, pokrywy zaworów i pasek osprzętu; sprawdzić, czy spod auta nie kapie olej."
+        },
+        {
+          "title": "Wtryskiwacze piezo i czujnik NOx (N53)",
+          "symptoms": "Nierówna praca, wypadanie zapłonów, kontrolka; części drogie.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            6000
+          ],
+          "check_at_inspection": "Odczyt błędów, obserwacja pracy na zimnym silniku."
+        },
+        {
+          "title": "Hydrauliczne popychacze i VANOS",
+          "symptoms": "Klekotanie po zimnym starcie, nierówna praca, błędy faz.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Zimny rozruch, diagnostyka faz rozrządu."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Automat ZF 6HP – zaniedbany olej, mechatronika, tuleje",
+      "symptoms": "Szarpnięcia przy zmianach 1–2 i 2–3, opóźnione D/R, tryb awaryjny.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1200,
+        7000
+      ],
+      "check_at_inspection": "Jazda próbna z hamowaniem do zera i ruszaniem, manewry D–R; zapytać o wymianę oleju."
+    },
+    {
+      "title": "Skrzynia rozdzielcza xDrive – serwomotor i sprzęgło",
+      "symptoms": "Szarpanie przy ciasnym skręcie, komunikat o napędzie 4x4, zgrzyty. Różne rozmiary lub zużycie opon na osiach przyspieszają awarię.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        5000
+      ],
+      "check_at_inspection": "Ciasne manewry na parkingu (czy nie ma „hamowania” kół), odczyt błędów; sprawdzić, czy opony na obu osiach są tego samego rozmiaru i podobnie zużyte."
+    },
+    {
+      "title": "Przednie zawieszenie – tuleje wahaczy, sworznie",
+      "symptoms": "Drgania kierownicy przy hamowaniu z prędkości, stuki, nierówne zużycie opon.",
+      "mileage_km": "100–200 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        2500
+      ],
+      "check_at_inspection": "Hamowanie z ok. 100 km/h (drgania kierownicy), ocena tulei na podnośniku."
+    },
+    {
+      "title": "Elektryka – moduł świateł, CAS, rejestracja akumulatora",
+      "symptoms": "Niedziałające światła po rozładowaniu akumulatora, problemy z uruchomieniem, błędy po wymianie akumulatora bez rejestracji.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2000
+      ],
+      "check_at_inspection": "Sprawdzić wszystkie światła i komunikaty Check Control; zapytać o wymianę i rejestrację akumulatora."
+    },
+    {
+      "title": "Opony run-flat i twarde zawieszenie",
+      "symptoms": "Twarda jazda, hałas, wysokie koszty opon; po zamianie na zwykłe opony brak koła zapasowego.",
+      "severity": "niska",
+      "cost_pln": [
+        1200,
+        3500
+      ],
+      "check_at_inspection": "Sprawdzić typ i stan opon, obecność zestawu naprawczego."
+    }
+  ],
+  "inspection_tips": [
+    "W 320d N47 na ciepłym silniku nasłuchiwać łańcucha od strony grodzi – to najważniejszy punkt oględzin.",
+    "Diagnostyka BMW-specyficzna: odczyt przebiegu z kluczyka i modułów, błędy pamięci, historia serwisowa zapisana w aucie.",
+    "Obejrzeć silnik pod kątem wycieków oleju (obudowa filtra, pokrywa zaworów).",
+    "Ocenić ślady tuningu (podniesiona moc, usunięte DPF/EGR) – mogą oznaczać problemy na przeglądzie.",
+    "Zmierzyć lakier – egzemplarze z importu często są po kolizjach.",
+    "W xDrive sprawdzić opony na obu osiach i zachowanie przy ciasnych manewrach.",
+    "Porównać zużycie kierownicy (skóra łatwo się wyciera) i fotela z przebiegiem."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Z jakiego kraju jest auto?",
+    "Czy w 320d wymieniano łańcuch rozrządu? Czy jest faktura?",
+    "Czy silnik był modyfikowany (chip, usunięty DPF/EGR, klapy wirowe)?",
+    "Kiedy wymieniano olej w automatycznej skrzyni?",
+    "Czy auto miało szkody i czy są dokumenty naprawy?"
+  ],
+  "summary": "E90 daje dużo frajdy z jazdy, ale wymaga starannego wyboru. Najbezpieczniejsze są benzynowe 6-cylindrowe N52 i diesle z udokumentowaną wymianą łańcucha. 320d N47 bez historii rozrządu to ryzyko kosztownej naprawy; częste są też modyfikacje i cofnięte liczniki.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej, typowych zgłoszeń użytkowników i akcji serwisowych producenta. Koszty orientacyjne – niezależny warsztat, 2026."
+}

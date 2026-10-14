@@ -1,0 +1,368 @@
+{
+  "id": "opel-insignia-a",
+  "make": "Opel",
+  "model": "Insignia",
+  "generation": "A (2008–2017)",
+  "years": [
+    2008,
+    2017
+  ],
+  "aliases": [
+    "insignia a",
+    "insignia i",
+    "opel insignia a",
+    "opel insignia i",
+    "insignia a kombi",
+    "insignia sports tourer a",
+    "insignia a sedan",
+    "insignia a lift",
+    "insignia country tourer a",
+    "insignia opc a"
+  ],
+  "market_note": "Bardzo popularna duża rodzinna limuzyna/kombi, często po flotach. Ceny orientacyjnie ok. 20–45 tys. zł (2026). Dominuje 2.0 CDTI, popularne też 1.8 z LPG.",
+  "engines": [
+    {
+      "code": "2.0 CDTI 110–170 KM",
+      "fuel": "diesel",
+      "power_hp": [
+        110,
+        130,
+        140,
+        160,
+        163,
+        170
+      ],
+      "aliases": [
+        "2.0 cdti",
+        "2,0 cdti",
+        "2.0cdti",
+        "a20dth",
+        "a20dtj",
+        "2.0 cdti ecoflex"
+      ],
+      "timing": "pasek zębaty – co ok. 120–150 tys. km lub 5–6 lat; ok. 1,3–2,2 tys. zł",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zawór EGR i chłodnica spalin – zanieczyszczenie, nieszczelność",
+          "symptoms": "Kontrolka silnika, szarpanie przy niskich obrotach, spadek mocy, czarny dym, błędy przepływu EGR. Nieszczelna chłodnica EGR może powodować ubytek płynu chłodzącego bez widocznego wycieku i biały dym.",
+          "mileage_km": "100–220 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            3000
+          ],
+          "check_at_inspection": "Diagnostyka (błędy EGR, rzeczywisty vs zadany przepływ). Kontrola poziomu płynu chłodzącego (czy nie jest uzupełniany „na oko”), zapach płynu ze spalin, biały dym na ciepłym silniku. Zapytać o czyszczenie lub wymianę EGR."
+        },
+        {
+          "title": "Filtr cząstek stałych DPF/FAP – zapchanie, częste regeneracje",
+          "symptoms": "Kontrolka DPF lub silnika, spadek mocy, tryb awaryjny, wentylator chłodnicy pracujący po zgaszeniu silnika, podwyższone spalanie, częste wypalanie przy jeździe miejskiej. Zdarza się, że filtr jest usunięty (niezgodne z przepisami, problem na badaniu technicznym).",
+          "mileage_km": "120–250 tys. km (szybciej przy jeździe miejskiej)",
+          "severity": "srednia",
+          "cost_pln": [
+            700,
+            5000
+          ],
+          "check_at_inspection": "W diagnostyce sprawdzić stopień zapełnienia filtra (masa sadzy), datę/liczbę regeneracji i różnicę ciśnień. Zapytać, czy filtr był czyszczony lub wymieniany. Obejrzeć układ wydechowy – ślady cięcia i spawania obudowy filtra mogą wskazywać na jego usunięcie. Czyszczenie ok. 700–1500 zł, nowy zamiennik ok. 2,5–5 tys. zł."
+        },
+        {
+          "title": "Rozcieńczanie oleju paliwem przy częstych regeneracjach DPF",
+          "symptoms": "Rosnący poziom oleju, zapach paliwa w oleju; zaniedbanie przyspiesza zużycie panewek i turbosprężarki.",
+          "mileage_km": "100–250 tys. km",
+          "severity": "wysoka",
+          "cost_pln": [
+            300,
+            8000
+          ],
+          "check_at_inspection": "Sprawdzić bagnetem, czy poziom oleju nie jest powyżej maksimum i czy olej nie pachnie paliwem. Zapytać o interwały wymiany oleju."
+        },
+        {
+          "title": "Koło dwumasowe i sprzęgło",
+          "symptoms": "Metaliczne stuki i drgania na biegu jałowym (znikają po wciśnięciu sprzęgła), wibracje przy ruszaniu, szarpanie przy niskich obrotach, ślizganie się sprzęgła przy przyspieszaniu na wysokim biegu.",
+          "mileage_km": "150–250 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            3500,
+            6500
+          ],
+          "check_at_inspection": "Na ciepłym silniku: zgasić i uruchomić silnik kilka razy (stuk przy gaszeniu), posłuchać na luzie z wciśniętym i puszczonym sprzęgłem. Ruszanie na 2 biegu bez gazu, przyspieszanie od ok. 1500 obr./min na 4–5 biegu – obroty nie mogą rosnąć szybciej niż prędkość."
+        },
+        {
+          "title": "Wtryskiwacze common rail",
+          "symptoms": "Trudny rozruch, nierówna praca, dymienie, stuki.",
+          "mileage_km": "180–300 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            1500,
+            5000
+          ],
+          "check_at_inspection": "Zimny rozruch, odczyt korekt dawek wtryskiwaczy, test przelewów u mechanika."
+        }
+      ]
+    },
+    {
+      "code": "1.8 16V 140 KM (A18XER)",
+      "fuel": "benzyna",
+      "power_hp": [
+        140
+      ],
+      "aliases": [
+        "1.8 16v",
+        "1,8 16v",
+        "1.8 benzyna",
+        "1,8 benzyna",
+        "a18xer",
+        "1.8 ecotec"
+      ],
+      "timing": "pasek zębaty – zalecana wymiana co ok. 90 tys. km lub 5 lat; ok. 900–1500 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Obudowa termostatu i termostat (silniki XER)",
+          "symptoms": "Ubytek płynu chłodzącego, wilgotne ślady przy obudowie termostatu, wahania temperatury, kontrolka.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieku przy obudowie termostatu (prawa strona głowicy); obserwować temperaturę na jeździe próbnej."
+        },
+        {
+          "title": "Nieszczelna uszczelka chłodnicy oleju / obudowy filtra oleju",
+          "symptoms": "Wycieki oleju z przodu silnika, olej w płynie chłodzącym (brązowy osad w zbiorniczku) lub płyn w oleju.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            400,
+            1500
+          ],
+          "check_at_inspection": "Obejrzeć zbiorniczek płynu (osad, oleista warstwa) i korek wlewu oleju (majonez); szukać wycieków z przodu silnika."
+        },
+        {
+          "title": "Zawory elektromagnetyczne zmiennych faz rozrządu",
+          "symptoms": "Kontrolka silnika, błędy położenia wałków, nierówna praca na zimnym silniku, spadek mocy.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Odczyt błędów w diagnostyce; obserwacja pracy na zimnym silniku. Częstsza wymiana oleju ogranicza problem."
+        },
+        {
+          "title": "Moduł zapłonowy (listwa cewek)",
+          "symptoms": "Szarpanie, wypadanie zapłonów, migająca kontrolka silnika, praca na trzech cylindrach – często po deszczu.",
+          "mileage_km": "80–180 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            900
+          ],
+          "check_at_inspection": "Przyspieszanie pod obciążeniem, odczyt błędów wypadania zapłonów; obejrzeć moduł pod kątem pęknięć i śladów przebicia."
+        }
+      ]
+    },
+    {
+      "code": "1.8 16V z instalacją LPG",
+      "fuel": "lpg",
+      "power_hp": [
+        140
+      ],
+      "aliases": [
+        "1.8 lpg",
+        "1,8 lpg",
+        "1.8 gaz",
+        "1.8 b+lpg",
+        "1.8 benzyna+gaz"
+      ],
+      "timing": "jak 1.8 16V – pasek co ok. 90 tys. km",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Reduktor (parownik) instalacji LPG",
+          "symptoms": "Szarpanie na gazie, przełączanie na benzynę, wycieki płynu z reduktora, zapach gazu w komorze silnika, błędy sterownika LPG.",
+          "mileage_km": "co ok. 80–150 tys. km na gazie",
+          "severity": "srednia",
+          "cost_pln": [
+            300,
+            1200
+          ],
+          "check_at_inspection": "Poprosić o odpalenie i jazdę na gazie przez co najmniej 15 min (również pod obciążeniem). Powąchać w komorze silnika i przy butli. Zapytać o markę instalacji, datę montażu i serwis (wymiana filtrów fazy lotnej i ciekłej)."
+        },
+        {
+          "title": "Wtryskiwacze gazowe i filtry LPG",
+          "symptoms": "Nierówna praca na gazie, „dziury” przy przyspieszaniu, zwiększone spalanie gazu, stukanie wtryskiwaczy (typowe, ale głośność rośnie ze zużyciem).",
+          "mileage_km": "60–150 tys. km na gazie",
+          "severity": "niska",
+          "cost_pln": [
+            300,
+            1000
+          ],
+          "check_at_inspection": "Jazda próbna na gazie: przyspieszanie od niskich obrotów, równa praca na biegu jałowym. Zapytać o ostatnią kalibrację i wymianę filtrów."
+        },
+        {
+          "title": "Wypalanie gniazd zaworowych / konieczność regulacji luzów zaworowych",
+          "symptoms": "Utrata kompresji, nierówna praca na zimnym silniku, wypadanie zapłonów, trudny rozruch. Ryzyko rośnie przy źle wyregulowanej instalacji i silnikach bez hydraulicznej kasacji luzów.",
+          "mileage_km": "100–250 tys. km na gazie",
+          "severity": "wysoka",
+          "cost_pln": [
+            400,
+            5000
+          ],
+          "check_at_inspection": "Pomiar ciśnienia sprężania (u mechanika) przy dużym przebiegu na gazie. Odczyt korekt paliwowych na benzynie. Zapytać o regulację luzów zaworowych (jeśli silnik jej wymaga). Regulacja luzów ok. 400–900 zł, remont głowicy 2,5–5 tys. zł."
+        },
+        {
+          "title": "Butla LPG – ważność homologacji i wpis w dowodzie",
+          "symptoms": "Butla ma ważność ok. 10 lat od produkcji; po tym terminie auto nie przejdzie badania technicznego bez wymiany butli. Instalacja musi być wpisana do dowodu rejestracyjnego.",
+          "severity": "niska",
+          "cost_pln": [
+            800,
+            1800
+          ],
+          "check_at_inspection": "Odczytać datę produkcji na tabliczce butli, sprawdzić adnotację o LPG w dowodzie rejestracyjnym i datę ostatniego badania technicznego (badanie auta z LPG jest coroczne)."
+        }
+      ]
+    },
+    {
+      "code": "1.4 Turbo 140 KM (A14NET, od ok. 2013) i 1.6 Turbo 170/180 KM",
+      "fuel": "benzyna",
+      "power_hp": [
+        140,
+        170,
+        180
+      ],
+      "aliases": [
+        "1.4 turbo",
+        "1,4 turbo",
+        "1.4t",
+        "a14net",
+        "1.6 turbo",
+        "1,6 turbo",
+        "1.6t",
+        "a16let"
+      ],
+      "timing": "1.4 Turbo – łańcuch, zwykle trwały; w 1.6 Turbo typ napędu rozrządu i interwał potwierdzić w dokumentacji serwisowej",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Membrana odmy w pokrywie zaworów (1.4 Turbo)",
+          "symptoms": "Świst lub gwizd z silnika, nierówna praca, olej w przewodach dolotowych, zwiększone zużycie oleju, błędy mieszanki.",
+          "mileage_km": "60–150 tys. km",
+          "severity": "niska",
+          "cost_pln": [
+            400,
+            1000
+          ],
+          "check_at_inspection": "Na wolnych obrotach nasłuchiwać świstu przy pokrywie zaworów; po zdjęciu korka wlewu oleju na pracującym silniku silne zasysanie lub świst sugeruje uszkodzenie."
+        },
+        {
+          "title": "Pompa wody i przewody chłodzenia",
+          "symptoms": "Ubytki płynu, osad przy pompie, zapach płynu po jeździe.",
+          "mileage_km": "80–160 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            600,
+            1400
+          ],
+          "check_at_inspection": "Sprawdzić poziom płynu, ślady wycieku przy pompie i pod autem."
+        },
+        {
+          "title": "Turbosprężarka – zawór upustowy (wastegate) i wycieki oleju",
+          "symptoms": "Grzechotanie z okolic turbosprężarki przy odpuszczaniu gazu, spadek mocy, wycieki oleju z przewodów zasilających.",
+          "mileage_km": "100–200 tys. km",
+          "severity": "srednia",
+          "cost_pln": [
+            800,
+            3500
+          ],
+          "check_at_inspection": "Nasłuchiwać grzechotania przy odpuszczaniu gazu na ciepłym silniku; sprawdzić wycieki przy turbinie."
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia manualna M32 (6-biegowa) – łożyska",
+      "symptoms": "Wycie lub buczenie skrzyni rosnące z prędkością, luz i drgania lewarka, wyskakiwanie biegów (najczęściej 5 lub 6), w skrajnych przypadkach rozpad łożysk.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1500,
+        4500
+      ],
+      "check_at_inspection": "Jazda próbna z nasłuchiwaniem wycia na 5 i 6 biegu, przy dodawaniu i odejmowaniu gazu; sprawdzić, czy lewarek nie „pracuje” na boki. Zapytać o regenerację skrzyni."
+    },
+    {
+      "title": "Automat 6-biegowy – szarpnięcia, zużyty olej",
+      "symptoms": "Twarde lub opóźnione zmiany biegów, szarpnięcia przy redukcji, poślizg.",
+      "mileage_km": "150–250 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        1000,
+        8000
+      ],
+      "check_at_inspection": "Jazda próbna w mieście i w trasie, kick-down; zapytać o wymianę oleju w skrzyni."
+    },
+    {
+      "title": "Elektryczny hamulec postojowy",
+      "symptoms": "Komunikat o awarii, brak zwolnienia lub zaciągnięcia.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        500,
+        1500
+      ],
+      "check_at_inspection": "Kilkukrotnie zaciągnąć i zwolnić hamulec."
+    },
+    {
+      "title": "Napęd 4x4 – sprzęgło tylnej osi (wersje 4x4)",
+      "symptoms": "Komunikaty o napędzie, buksowanie przednich kół, hałas z tylnego mostu.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "srednia",
+      "cost_pln": [
+        800,
+        4000
+      ],
+      "check_at_inspection": "Diagnostyka modułu napędu, ruszanie na luźnym podłożu, nasłuchiwanie wycia z tyłu."
+    },
+    {
+      "title": "Zawieszenie – tuleje wahaczy przednich i tylnych",
+      "symptoms": "Stuki, pływanie, nierówne zużycie opon.",
+      "mileage_km": "120–220 tys. km",
+      "severity": "niska",
+      "cost_pln": [
+        600,
+        2500
+      ],
+      "check_at_inspection": "Jazda po nierównościach, ocena luzów na podnośniku, zużycie opon."
+    },
+    {
+      "title": "Elektryka – radio/nawigacja, oświetlenie, klimatyzacja",
+      "symptoms": "Zawieszanie się multimediów, niedziałające strefy klimatyzacji, wilgoć w reflektorach.",
+      "severity": "niska",
+      "cost_pln": [
+        300,
+        2500
+      ],
+      "check_at_inspection": "Przetestować wszystkie funkcje i nawiewy."
+    }
+  ],
+  "inspection_tips": [
+    "Zakładać, że auto mogło pracować we flocie – zweryfikować przebieg w Historii Pojazdu i w diagnostyce.",
+    "W 2.0 CDTI sprawdzić poziom i zapach oleju oraz stan DPF w diagnostyce.",
+    "Na jeździe próbnej nasłuchiwać wycia skrzyni M32 na 5–6 biegu.",
+    "Sprawdzić działanie EPB i ewentualnie napędu 4x4.",
+    "W LPG – wpis w dowodzie, butla, praca na gazie.",
+    "Zmierzyć lakier, zwrócić uwagę na zderzaki i drzwi."
+  ],
+  "questions_for_seller": [
+    "Jaki jest VIN i data pierwszej rejestracji? Czy auto było flotowe?",
+    "Kiedy wymieniano rozrząd, sprzęgło i dwumasę?",
+    "Czy DPF i EGR były czyszczone lub wymieniane?",
+    "Czy skrzynia biegów była naprawiana?",
+    "Kto montował LPG i kiedy był ostatni serwis instalacji?"
+  ],
+  "summary": "Insignia A oferuje dużo miejsca za rozsądną cenę; najmniej ryzykowne jest 1.8 16V (także z LPG). 2.0 CDTI jest popularne, ale wymaga sprawdzenia DPF, EGR i rozcieńczenia oleju. Skrzynia M32 i wysokie przebiegi flotowe to główne ryzyka.",
+  "sources_note": "Opracowanie na podstawie ogólnodostępnej wiedzy warsztatowej i typowych zgłoszeń użytkowników. Koszty orientacyjne – niezależny warsztat, 2026."
+}
