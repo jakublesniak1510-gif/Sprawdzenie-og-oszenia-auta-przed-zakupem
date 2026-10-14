@@ -13,7 +13,9 @@ import {
   type StoredInput,
 } from "./db";
 import { dropImages, getImages } from "./image-cache";
+import { COMPUTED_FLAG_IDS, computeFlags } from "./computed-flags";
 import { getModel } from "./models";
+import { loadQuestionsByCategory, questionsForCategories } from "./questions";
 import { sendReportReadyEmail } from "./notifications";
 import type { GenerationOutcome } from "./queue";
 import { loadRedFlags, matchRedFlags } from "./red-flags";
@@ -35,6 +37,18 @@ export async function buildAiRequest(input: StoredInput, oferta: OfferId, images
   const odczyty = dedupeSort([...cepik.odczyty, ...manual]);
 
   const flags = await loadRedFlags();
+  const trafione = matchRedFlags(input.tekst_ogloszenia, flags);
+  const obliczone = computeFlags(
+    { tekst: input.tekst_ogloszenia, cena: input.cena_pln, przebieg: input.przebieg_km, rocznik: input.rocznik, model, trafione },
+    flags,
+  );
+  const flagi = [...trafione, ...obliczone];
+  const computedIds = new Set<string>(COMPUTED_FLAG_IDS);
+  const pytaniaKategorii = questionsForCategories(
+    await loadQuestionsByCategory(),
+    flagi.map((f) => f.category),
+    [...flagi.flatMap((f) => (f.question_for_seller ? [f.question_for_seller] : [])), ...(model?.questions_for_seller ?? [])],
+  );
   return {
     oferta,
     tekstOgloszenia: input.tekst_ogloszenia,
@@ -46,8 +60,10 @@ export async function buildAiRequest(input: StoredInput, oferta: OfferId, images
     podobneOferty: input.podobne_oferty,
     model,
     silnikKod,
-    flagi: matchRedFlags(input.tekst_ogloszenia, flags),
-    heurystykiDoOceny: flags.filter((f) => f.patterns.length === 0),
+    flagi,
+    // Flagi bez wzorców ocenia model – z wyjątkiem tych liczonych przez aplikację (computed-flags).
+    heurystykiDoOceny: flags.filter((f) => f.patterns.length === 0 && !computedIds.has(f.id)),
+    pytaniaKategorii,
     zdjecia: images.map((d) => d.replace(/^data:image\/jpeg;base64,/, "")),
   };
 }

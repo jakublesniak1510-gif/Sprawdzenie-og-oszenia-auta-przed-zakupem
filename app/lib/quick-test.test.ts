@@ -83,3 +83,16 @@ describe("szybki test", () => {
     expect(QuickTestInputSchema.parse({ tekst: "x".repeat(40), cena: "" }).cena).toBeNull();
   });
 });
+
+describe("szybki test – flagi liczone przez aplikację", () => {
+  it("niska cena i nietypowy przebieg trafiają do flag (treść z bazy flag)", () => {
+    const extra: RedFlag[] = [
+      ...flags,
+      { id: "cena-ponizej-widelek", category: "cena", patterns: [], explanation: "", severity: "srednia", neutral_wording: "Cena niższa od typowej.", question_for_seller: "Skąd cena?" },
+      { id: "przebieg-roczny-nietypowy", category: "przebieg", patterns: [], explanation: "", severity: "niska", neutral_wording: "Przebieg nietypowy.", question_for_seller: "Jak użytkowane?" },
+    ];
+    const r = quickTest(input({ tekst: TEXT, cena: 20000, przebieg: 15000, rocznik: 2015 }), [withPrices], extra);
+    expect(r.flagi.map((f) => f.id)).toEqual(expect.arrayContaining(["cena-ponizej-widelek", "przebieg-roczny-nietypowy"]));
+    expect(r.flagi.find((f) => f.id === "cena-ponizej-widelek")!.opis).toBe("Cena niższa od typowej.");
+  });
+});

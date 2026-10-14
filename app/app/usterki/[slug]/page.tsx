@@ -82,7 +82,7 @@ function FaultList({ faults }: { faults: Fault[] }) {
           <p className="mt-1 text-sm text-slate-700">{f.symptoms}</p>
           <p className="mt-1 text-sm">
             <span className="font-semibold">Koszt:</span> <span className="tabular-nums">{cost(f)}</span>
-            {f.mileage_km && <> · zwykle przy {f.mileage_km} km</>}
+            {f.mileage_km && <> · zwykle przy {/km\s*$/i.test(f.mileage_km) ? f.mileage_km : `${f.mileage_km} km`}</>}
           </p>
           <p className="mt-1 text-sm">
             <span className="font-semibold">Jak sprawdzić:</span> {f.check_at_inspection}

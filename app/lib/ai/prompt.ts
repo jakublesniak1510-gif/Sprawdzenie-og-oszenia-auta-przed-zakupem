@@ -106,6 +106,16 @@ liczba_zdjec: ${req.zdjecia.length}
     }\n</wstepne_flagi>`,
   );
 
+  if (req.pytaniaKategorii?.length) {
+    parts.push(
+      `<pytania_uzupelniajace>\nUniwersalne pytania do sprzedawcy dla kategorii trafionych flag (już bez pytań z flag i z bazy modelu). Wybierz z nich najwyżej 1–3 pasujące do ogłoszenia; nie powtarzaj pytań o to samo innymi słowami.\n${JSON.stringify(
+        req.pytaniaKategorii,
+        null,
+        1,
+      )}\n</pytania_uzupelniajace>`,
+    );
+  }
+
   parts.push("Przeanalizuj powyższe dane i zapisz raport, wywołując narzędzie zapisz_raport dokładnie raz.");
   return parts.join("\n\n");
 }

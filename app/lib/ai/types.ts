@@ -17,6 +17,8 @@ export interface AiReportRequest {
   model: CarModel | null;
   silnikKod: string | null;
   flagi: (RedFlag & { trafienie: string })[];
+  /** Uniwersalne pytania z kategorii trafionych flag (bez pytań, które już padły) – data/questions-by-category.json. */
+  pytaniaKategorii?: { kategoria: string; etykieta: string; pytania: string[] }[];
   /** Heurystyki bez wzorców tekstowych (puste `patterns`) – do oceny przez model, nie zgłaszane mechanicznie. */
   heurystykiDoOceny?: RedFlag[];
   /** Zdjęcia JPEG jako base64 (bez prefiksu data:). Nigdy nie zapisywane na dysku. */

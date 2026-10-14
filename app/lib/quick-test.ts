@@ -1,6 +1,9 @@
 import { z } from "zod";
 import { anonymizeText } from "./anonymize";
-import { detectModels, loadModels, modelLabel, type CarModel, type Fault, type PriceRange } from "./models";
+import { computeFlags, matchPriceRange } from "./computed-flags";
+import { detectModels, loadModels, modelLabel, type CarModel, type Fault } from "./models";
+
+export { matchPriceRange };
 import { VIN_RE, loadRedFlags, matchRedFlags, type RedFlag } from "./red-flags";
 
 /**
@@ -47,23 +50,6 @@ export function topFaults(model: CarModel, engineCode: string | null, n = 3): Fa
     .map((x) => x.f);
 }
 
-/** Widełki pasujące do rocznika (i przebiegu, jeśli podany). Przy kilku pasujących pasmach przebiegu – najwęższe. */
-export function matchPriceRange(ranges: PriceRange[] | undefined, rocznik: number | null, przebieg: number | null): [number, number] | null {
-  if (!ranges?.length || !rocznik) return null;
-  const byYear = ranges.filter((r) => rocznik >= Math.min(...r.years) && rocznik <= Math.max(...r.years));
-  if (!byYear.length) return null;
-  if (przebieg !== null) {
-    const fitting = byYear
-      .filter((r) => r.km_max === null || r.km_max === undefined || przebieg <= r.km_max)
-      .sort((a, b) => (a.km_max ?? Infinity) - (b.km_max ?? Infinity));
-    if (fitting.length) return [Math.min(...fitting[0].price_pln), Math.max(...fitting[0].price_pln)];
-    // przebieg większy niż każde pasmo – bierzemy pasmo o największym km_max (najtańsze)
-    const last = [...byYear].sort((a, b) => (b.km_max ?? Infinity) - (a.km_max ?? Infinity))[0];
-    return [Math.min(...last.price_pln), Math.max(...last.price_pln)];
-  }
-  return [Math.min(...byYear.map((r) => Math.min(...r.price_pln))), Math.max(...byYear.map((r) => Math.max(...r.price_pln)))];
-}
-
 export function priceVerdict(model: CarModel | null, cena: number | null, rocznik: number | null, przebieg: number | null): QuickTestResult["cena"] {
   if (!model) return { pozycja: "brak_danych", komentarz: "Nie rozpoznaliśmy modelu z naszej bazy, więc nie porównujemy ceny." };
   if (!model.price_ranges?.length) return { pozycja: "brak_danych", komentarz: `Nie mamy jeszcze widełek cenowych dla modelu ${modelLabel(model)}.` };
@@ -100,7 +86,9 @@ export function quickTest(input: QuickTestInput, models: CarModel[], flags: RedF
   const det = detectModels(tekst, models, rocznik)[0] ?? null;
   const model = det ? models.find((m) => m.id === det.modelId) ?? null : null;
 
-  const flagi = matchRedFlags(tekst, flags)
+  const trafione = matchRedFlags(tekst, flags);
+  const obliczone = computeFlags({ tekst, cena, przebieg, rocznik, model, trafione }, flags);
+  const flagi = [...trafione, ...obliczone]
     .sort((a, b) => SEV[a.severity] - SEV[b.severity])
     .map((f) => ({ id: f.id, kategoria: f.category, waga: f.severity, opis: f.neutral_wording, pytanie: f.question_for_seller ?? null }));
 

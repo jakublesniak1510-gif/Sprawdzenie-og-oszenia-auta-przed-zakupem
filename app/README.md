@@ -69,6 +69,12 @@ Parser CEPiK (`lib/cepik.ts`, `parseCepik`) wyciąga z wklejonej historii odczyt
 wyrejestrowanie, brak aktualnego OC/badania…); uwagi trafiają do promptu. Testy na próbkach `data/samples/cepik/*.txt`
 (oczekiwany wynik w `*.expected.json`).
 
+Flagi liczone przez aplikację (`lib/computed-flags.ts`, wspólne dla szybkiego testu i raportu): `cena-ponizej-widelek`
+(cena > 15% poniżej `price_ranges` przy przebiegu ≤ `km_max`), `opis-idealny-cena-niska`, `przebieg-roczny-nietypowy`
+(< 6 tys. lub > 40 tys. km/rok) i `vin-vs-model` (WMI z VIN jawnie wskazuje inną markę; nieznany WMI = brak oceny).
+Do promptu trafiają też pytania z `data/questions-by-category.json` dla kategorii trafionych flag (bez powtórzeń);
+`getGlossary()` (`lib/glossary.ts`) zwraca `data/glossary.json` do tooltipów.
+
 ### Odporność generowania
 
 - Licznik prób (`reports.attempts`, max 3). Błąd przejściowy (limit API, 5xx, sieć) → powrót do `paid` i ponowienie po
