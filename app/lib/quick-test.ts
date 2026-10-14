@@ -1,6 +1,7 @@
 import { z } from "zod";
 import { anonymizeText } from "./anonymize";
 import { computeFlags, matchPriceRange } from "./computed-flags";
+import { AUTOMAT_NOTE, faultContext, filterCommonFaults } from "./fault-filter";
 import { detectModels, loadModels, modelLabel, type CarModel, type Fault } from "./models";
 
 export { matchPriceRange };
@@ -39,10 +40,16 @@ export interface QuickTestResult {
 const SEV: Record<Waga, number> = { wysoka: 0, srednia: 1, niska: 2 };
 const zl = (n: number) => `${Math.round(n).toLocaleString("pl-PL")} zł`;
 
-/** Usterki do pokazania: wybrany silnik (jeśli rozpoznany) + wspólne, posortowane wg wagi, potem kosztu. */
-export function topFaults(model: CarModel, engineCode: string | null, n = 3): Fault[] {
+/**
+ * Usterki do pokazania: wybrany silnik (jeśli rozpoznany) + wspólne przefiltrowane wg skrzyni i paliwa
+ * (lib/fault-filter.ts), posortowane wg wagi, potem kosztu. Przy nieznanej skrzyni usterki automatu dostają dopisek.
+ */
+export function topFaults(model: CarModel, engineCode: string | null, n = 3, text = ""): Fault[] {
   const engine = engineCode ? model.engines.find((e) => e.code === engineCode) : undefined;
-  const pool = [...(engine?.faults ?? []), ...model.common_faults];
+  const common = filterCommonFaults(model.common_faults, faultContext(text, model, engineCode)).map((x) =>
+    x.tylkoAutomat ? { ...x.fault, title: `${x.fault.title} ${AUTOMAT_NOTE}` } : x.fault,
+  );
+  const pool = [...(engine?.faults ?? []), ...common];
   return pool
     .map((f, i) => ({ f, i }))
     .sort((a, b) => SEV[a.f.severity] - SEV[b.f.severity] || b.f.cost_pln[1] - a.f.cost_pln[1] || a.i - b.i)
@@ -93,7 +100,7 @@ export function quickTest(input: QuickTestInput, models: CarModel[], flags: RedF
     .map((f) => ({ id: f.id, kategoria: f.category, waga: f.severity, opis: f.neutral_wording, pytanie: f.question_for_seller ?? null }));
 
   const usterki_top3 = model
-    ? topFaults(model, det!.engineCode).map((f) => ({
+    ? topFaults(model, det!.engineCode, 3, tekst).map((f) => ({
         tytul: f.title,
         objawy: f.symptoms,
         waga: f.severity,

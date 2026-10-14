@@ -75,7 +75,8 @@ describe("szybki test", () => {
   });
 
   it("topFaults bez silnika = tylko usterki wspólne", () => {
-    expect(topFaults(base, null).every((f) => base.common_faults.includes(f))).toBe(true);
+    const common = base.common_faults.map((f) => f.title);
+    expect(topFaults(base, null).every((f) => common.includes(f.title.replace(" (dotyczy wersji z automatem)", "")))).toBe(true);
   });
 
   it("walidacja wejścia", () => {

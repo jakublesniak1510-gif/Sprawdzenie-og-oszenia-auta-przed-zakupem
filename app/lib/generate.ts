@@ -14,6 +14,7 @@ import {
 } from "./db";
 import { dropImages, getImages } from "./image-cache";
 import { COMPUTED_FLAG_IDS, computeFlags } from "./computed-flags";
+import { modelForListing } from "./fault-filter";
 import { getModel } from "./models";
 import { loadQuestionsByCategory, questionsForCategories } from "./questions";
 import { sendReportReadyEmail } from "./notifications";
@@ -26,8 +27,10 @@ export const CLIENT_ERROR_MESSAGE =
   "Nie udało się wygenerować raportu mimo kilku prób. Płatność jest zachowana – spróbuj ponownie albo napisz do nas, podając numer raportu.";
 
 export async function buildAiRequest(input: StoredInput, oferta: OfferId, images: string[]): Promise<AiReportRequest> {
-  const model = input.model_id ? await getModel(input.model_id) : null;
-  const silnikKod = model && input.silnik_kod && model.engines.some((e) => e.code === input.silnik_kod) ? input.silnik_kod : null;
+  const baseModel = input.model_id ? await getModel(input.model_id) : null;
+  const silnikKod = baseModel && input.silnik_kod && baseModel.engines.some((e) => e.code === input.silnik_kod) ? input.silnik_kod : null;
+  // Usterki wspólne bez tych, które nie dotyczą skrzyni/paliwa z ogłoszenia (np. DSG przy manualu, DPF przy benzynie).
+  const model = baseModel ? modelForListing(baseModel, input.tekst_ogloszenia, silnikKod) : null;
 
   const manual = input.odczyty_reczne.flatMap((r) => {
     const d = normalizeDate(r.data);
