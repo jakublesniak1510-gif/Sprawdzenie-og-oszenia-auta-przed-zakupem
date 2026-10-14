@@ -36,6 +36,10 @@ export interface ReportRow {
   feedback_followup_sent_at: string | null;
   /** Odpowiedź z e-maila „Kupiłeś to auto?”: 1 = tak, 0 = nie, null = brak. */
   kupil: number | null;
+  /** Liczba ręcznych ponowień („Spróbuj ponownie”), max MAX_MANUAL_RETRIES. */
+  manual_retries: number;
+  /** Płatność rozpoczęta, ale jeszcze nie potwierdzona (np. Przelewy24 – sesja complete + unpaid). */
+  payment_pending_at: string | null;
 }
 
 export interface StoredInput extends ReportInput {
@@ -46,6 +50,7 @@ export interface StoredInput extends ReportInput {
 
 export const RETENTION_DAYS = 30;
 export const MAX_GENERATION_ATTEMPTS = 3;
+export const MAX_MANUAL_RETRIES = 1;
 
 declare global {
   // eslint-disable-next-line no-var
@@ -63,6 +68,8 @@ export function getDb(): Database.Database {
   const db = new Database(file);
   db.pragma("journal_mode = WAL");
   db.pragma("busy_timeout = 5000");
+  // Usunięte dane są nadpisywane zerami (RODO: skasowane ogłoszenia nie zostają w wolnych stronach pliku).
+  db.pragma("secure_delete = ON");
   db.pragma("foreign_keys = ON");
   migrate(db);
   globalThis.__sprawdzDb = db;
@@ -101,6 +108,8 @@ const REPORT_EXTRA_COLUMNS: [string, string][] = [
   ["payment_followup_sent_at", "TEXT"],
   ["feedback_followup_sent_at", "TEXT"],
   ["kupil", "INTEGER"],
+  ["manual_retries", "INTEGER NOT NULL DEFAULT 0"],
+  ["payment_pending_at", "TEXT"],
 ];
 
 function columns(db: Database.Database, table: string): Set<string> {
@@ -172,10 +181,26 @@ function migrate(db: Database.Database) {
       created_at TEXT NOT NULL
     );
 
-    -- Idempotencja webhooka Stripe.
+    -- Idempotencja webhooka Stripe (duplikat = zdarzenie z ustawionym processed_at).
     CREATE TABLE IF NOT EXISTS stripe_events (
       id TEXT PRIMARY KEY,
-      received_at TEXT NOT NULL
+      received_at TEXT NOT NULL,
+      processed_at TEXT
+    );
+
+    -- Limit e-maili przypominających na adres (ochrona przed wysyłką na cudzy adres). Adres jako skrót SHA-256.
+    CREATE TABLE IF NOT EXISTS email_log (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      email_hash TEXT NOT NULL,
+      kind TEXT NOT NULL,
+      sent_at TEXT NOT NULL
+    );
+    CREATE INDEX IF NOT EXISTS email_log_hash ON email_log(email_hash, sent_at);
+
+    -- Drobne ustawienia/stan (np. data ostatniego VACUUM).
+    CREATE TABLE IF NOT EXISTS meta (
+      key TEXT PRIMARY KEY,
+      value TEXT NOT NULL
     );
 
     -- Zużycie Claude API (koszt szacowany z lib/ai/pricing.ts). Bez FK – statystyka ma przetrwać usunięcie raportu.
@@ -206,6 +231,11 @@ function migrate(db: Database.Database) {
       salt TEXT NOT NULL
     );
   `);
+  if (!columns(db, "stripe_events").has("processed_at")) {
+    db.exec(`ALTER TABLE stripe_events ADD COLUMN processed_at TEXT`);
+    // Zdarzenia sprzed migracji były obsłużone w chwili zapisu.
+    db.exec(`UPDATE stripe_events SET processed_at = received_at WHERE processed_at IS NULL`);
+  }
 }
 
 export const nowIso = () => new Date().toISOString();
@@ -295,18 +325,33 @@ export function saveReportError(id: string, message: string) {
 
 /**
  * Ponowienie po błędzie (przycisk „spróbuj ponownie”): error → paid.
- * Daje dokładnie jedną dodatkową próbę (attempts = MAX - 1), żeby klikanie nie generowało kosztów bez końca.
+ * Najwyżej MAX_MANUAL_RETRIES razy na raport (kolumna manual_retries) i jedna próba generowania na ponowienie
+ * (attempts = MAX - 1) – klikanie nie może generować płatnych wywołań AI bez końca.
  * Tylko dla raportów opłaconych (paid_at) – błąd przed płatnością nie może dać darmowego raportu.
  */
 export function resetErrorToPaid(id: string): boolean {
   return (
     getDb()
       .prepare(
-        `UPDATE reports SET status = 'paid', attempts = MIN(attempts, ?)
-         WHERE id = ? AND status = 'error' AND (paid_at IS NOT NULL OR attempts > 0)`,
+        `UPDATE reports SET status = 'paid', attempts = MIN(attempts, ?), manual_retries = manual_retries + 1
+         WHERE id = ? AND status = 'error' AND (paid_at IS NOT NULL OR attempts > 0) AND manual_retries < ?`,
       )
-      .run(MAX_GENERATION_ATTEMPTS - 1, id).changes === 1
+      .run(MAX_GENERATION_ATTEMPTS - 1, id, MAX_MANUAL_RETRIES).changes === 1
   );
+}
+
+/** Czy raport może jeszcze zostać ponowiony ręcznie (do UI: pokazać przycisk czy kontakt). */
+export function canRetryManually(row: ReportRow): boolean {
+  return row.status === "error" && (row.manual_retries ?? 0) < MAX_MANUAL_RETRIES && (!!row.paid_at || row.attempts > 0);
+}
+
+export function clearPaymentPending(id: string) {
+  getDb().prepare(`UPDATE reports SET payment_pending_at = NULL WHERE id = ?`).run(id);
+}
+
+/** Płatność w toku (P24: sesja zakończona, pieniądze jeszcze niepotwierdzone). */
+export function markPaymentPending(id: string) {
+  getDb().prepare(`UPDATE reports SET payment_pending_at = COALESCE(payment_pending_at, ?) WHERE id = ? AND status IN ('pending_payment','expired')`).run(nowIso(), id);
 }
 
 /**
@@ -362,6 +407,32 @@ export function deleteReport(id: string) {
 export function deleteOldStripeEvents(days = 30): number {
   const cutoff = new Date(Date.now() - days * 24 * 3600_000).toISOString();
   return getDb().prepare(`DELETE FROM stripe_events WHERE received_at < ?`).run(cutoff).changes;
+}
+
+/** RODO: kasuje e-mail kupującego z kuponów wygasłych, wyczerpanych lub starszych niż 30 dni. */
+export function scrubCouponEmails(now = Date.now()): number {
+  const iso = new Date(now).toISOString();
+  const cutoff = new Date(now - 30 * 24 * 3600_000).toISOString();
+  return getDb()
+    .prepare(`UPDATE coupons SET email = NULL WHERE email IS NOT NULL AND (expires_at <= ? OR uses_left = 0 OR created_at < ?)`)
+    .run(iso, cutoff).changes;
+}
+
+export function getMeta(key: string): string | null {
+  return (getDb().prepare(`SELECT value FROM meta WHERE key = ?`).get(key) as { value: string } | undefined)?.value ?? null;
+}
+
+export function setMeta(key: string, value: string) {
+  getDb().prepare(`INSERT INTO meta (key, value) VALUES (?, ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value`).run(key, value);
+}
+
+/** VACUUM najwyżej raz na `everyDays` dni (zwalnia miejsce i fizycznie usuwa skasowane dane). true = wykonano. */
+export function vacuumIfDue(everyDays = 7, now = Date.now()): boolean {
+  const last = getMeta("last_vacuum_at");
+  if (last && now - Date.parse(last) < everyDays * 24 * 3600_000) return false;
+  getDb().exec("VACUUM");
+  setMeta("last_vacuum_at", new Date(now).toISOString());
+  return true;
 }
 
 /** Kasuje wygasłe raporty (feedback kasuje się kaskadowo). Zwraca liczbę usuniętych. */

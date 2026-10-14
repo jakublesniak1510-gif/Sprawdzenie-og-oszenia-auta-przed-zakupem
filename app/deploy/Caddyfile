@@ -9,8 +9,10 @@ twojadomena.pl, www.twojadomena.pl {
 	}
 	encode zstd gzip
 
-	# Caddy nadpisuje X-Forwarded-For prawdziwym IP klienta – aplikacja ufa mu dzięki TRUST_PROXY=1.
+	# Aplikacja (TRUST_PROXY=1) bierze IP klienta z X-Real-IP ustawianego tutaj (klient nie może go podrobić),
+	# a gdy go brak – z OSTATNIEGO elementu X-Forwarded-For (dopisanego przez Caddy).
 	reverse_proxy 127.0.0.1:3000 {
+		header_up X-Real-IP {client_ip}
 		# Generowanie raportu trwa w tle – żądania HTTP są krótkie, domyślne timeouty wystarczą.
 		health_uri /api/health
 		health_interval 30s

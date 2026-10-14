@@ -2,12 +2,19 @@ import { NextResponse } from "next/server";
 
 /** Limit body POST /api/reports: 8 zdjęć × ~400 KB (base64 ≈ +33%) + tekst. */
 export const REPORTS_MAX_BODY_BYTES = 6 * 1024 * 1024;
+/** Limit dla małych endpointów JSON (rozpoznanie modelu, kupony). */
+export const SMALL_JSON_MAX_BYTES = 64 * 1024;
 
 export type JsonBody = { ok: true; data: unknown } | { ok: false; response: NextResponse };
 
 const tooLarge = (max: number) =>
   NextResponse.json(
-    { error: `Za duże dane (limit ${Math.round(max / 1024 / 1024)} MB). Dodaj mniej zdjęć albo zmniejsz ich rozdzielczość.` },
+    {
+      error:
+        max >= 1024 * 1024
+          ? `Za duże dane (limit ${Math.round(max / 1024 / 1024)} MB). Dodaj mniej zdjęć albo zmniejsz ich rozdzielczość.`
+          : `Za duże dane (limit ${Math.round(max / 1024)} KB).`,
+    },
     { status: 413 },
   );
 

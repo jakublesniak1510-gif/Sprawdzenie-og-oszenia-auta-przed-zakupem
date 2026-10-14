@@ -21,6 +21,8 @@ export interface EmailVars {
   link_tak?: string;
   link_nie?: string;
   data_waznosci?: string;
+  /** Do kiedy trzymamy zdjęcia (przypomnienie o płatności). */
+  zdjecia_do?: string;
   kod?: string;
   liczba_raportow?: string;
   model?: string;
@@ -63,6 +65,8 @@ Dzień dobry,
 zacząłeś zamawiać raport o ogłoszeniu auta, ale płatność nie została dokończona. Dane z ogłoszenia czekają – wystarczy dokończyć płatność (BLIK, Przelewy24 lub karta), a raport przygotujemy w kilka minut.
 
 [Dokończ płatność]({{link}})
+
+Zdjęcia z ogłoszenia przechowujemy najwyżej 48 godzin (do {{zdjecia_do}}) – po tym czasie raport powstanie bez nich.
 
 Jeśli to auto już Cię nie interesuje – zignoruj tę wiadomość. Dane wygasną automatycznie.`,
 
@@ -145,7 +149,7 @@ export function splitSubject(md: string): { subject: string | null; body: string
 const escapeHtml = (s: string) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
 
 /** Zmienne, które aplikacja zna (mogą być puste, np. brak modelu). Każda inna w treści = ostrzeżenie w logu. */
-export const KNOWN_VARS = new Set(["link", "link_tak", "link_nie", "data_waznosci", "kod", "liczba_raportow", "model"]);
+export const KNOWN_VARS = new Set(["link", "link_tak", "link_nie", "data_waznosci", "zdjecia_do", "kod", "liczba_raportow", "model"]);
 
 export function substitute(tpl: string, vars: Record<string, string | undefined>, escape = false): string {
   return tpl.replace(/\{\{\s*([a-z_]+)\s*\}\}/gi, (_, k: string) => {
@@ -198,7 +202,12 @@ export function renderEmail(kind: EmailKind, vars: EmailVars): RenderedEmail {
       /* zostaje treść wbudowana */
     }
   }
-  const { subject: rawSubject, body } = splitSubject(md);
+  const { subject: rawSubject, body: rawBody } = splitSubject(md);
+  let body = rawBody;
+  // Informacja o 48 h na zdjęcia musi być w przypomnieniu o płatności – dopisujemy, jeśli treść z content/ jej nie ma.
+  if (kind === "platnosc_niedokonczona" && !/\{\{\s*zdjecia_do\s*\}\}|48\s*(h|godz)/i.test(body)) {
+    body += "\n\nZdjęcia z ogłoszenia przechowujemy najwyżej 48 godzin (do {{zdjecia_do}}) – po tym czasie raport powstanie bez nich.";
+  }
   const v: Record<string, string | undefined> = { ...vars };
   const subject = substitute(rawSubject ?? defaultSubject(kind), v).replace(/\s+/g, " ").trim();
   const text = substitute(mdToText(body), v);
@@ -213,6 +222,11 @@ function defaultSubject(kind: EmailKind): string {
     czy_kupiles: "Kupiłeś to auto?",
     kupon_pakiet: "Twój kod na raporty",
   }[kind];
+}
+
+/** Data i godzina „DD.MM.RRRR, GG:MM” (Europe/Warsaw). */
+export function formatDateTimePl(iso: string): string {
+  return new Date(iso).toLocaleString("pl-PL", { timeZone: "Europe/Warsaw", day: "2-digit", month: "2-digit", year: "numeric", hour: "2-digit", minute: "2-digit" });
 }
 
 /** Data jako DD.MM.RRRR (strefa Europe/Warsaw). */

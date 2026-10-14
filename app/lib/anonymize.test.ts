@@ -97,7 +97,47 @@ describe("anonymize – statystyki i pełne ogłoszenie", () => {
     const r = anonymize(
       "Sprzedam Golfa. Tel 600 700 800, mail a@b.pl, WX 12345, www.auto.pl\nKontakt: Jan Kowalski",
     );
-    expect(r.stats).toEqual({ telefon: 1, email: 1, nrRej: 1, link: 1, kontakt: 1 });
+    expect(r.stats).toEqual({ telefon: 1, email: 1, nrRej: 1, link: 1, kontakt: 1, adres: 0 });
     expect(r.text).not.toMatch(/600|a@b|12345|Kowalski/);
+  });
+});
+
+describe("anonymize – przypadki z przeglądu bezpieczeństwa", () => {
+  it.each([
+    ["Auto zadbane. Kontakt: Jan Kowalski, tel. 600 700 800", "Auto zadbane. Kontakt: [kontakt]"],
+    ["Stan dobry.\nKontakt\nJan Kowalski\nZapraszam", "Stan dobry.\nKontakt\n[kontakt]\nZapraszam"],
+    ["Kontakt Jan Kowalski", "Kontakt [kontakt]"],
+    ["Jan Kowalski, tel 600 700 800", "[kontakt], tel [telefon]"],
+    ["dzwonić do pan Marek", "dzwonić do [kontakt]"],
+    ["Proszę pytać pan Marek wieczorem", "Proszę pytać [kontakt] wieczorem"],
+    ["Zapraszam, Marek", "Zapraszam, [kontakt]"],
+    ["Auto w garażu (Tomek)", "Auto w garażu ([kontakt])"],
+    ["601-234-567 Krzysztof", "[telefon] [kontakt]"],
+    ["Marek Nowak\nOsoba prywatna", "[kontakt]\nOsoba prywatna"],
+    ["Jan\nNa OLX od 2015", "[kontakt]\nNa OLX od 2015"],
+    ["nr rej. wx1234a", "nr rej. [nr rej]"],
+    ["tablice po 5a123", "tablice [nr rej]"],
+    ["mail jan(at)wp(dot)pl", "mail [email]"],
+    ["jan [at] o2 [kropka] pl", "[email]"],
+    ["+49 151 23456789", "[telefon]"],
+    ["dzwoń 601/234/567", "dzwoń [telefon]"],
+    ["dzwoń 601_234_567", "dzwoń [telefon]"],
+    ["Odbiór: ul. Kwiatowa 12, 00-950 Warszawa", "Odbiór: [adres]"],
+    ["profil fb.me/janek", "profil [link]"],
+    ["insta @janek_auta", "insta [kontakt]"],
+  ])("%s", (input, expected) => {
+    expect(anonymizeText(input)).toBe(expected);
+  });
+
+  it.each([
+    "Volkswagen Golf 1.6 TDI Comfortline",
+    "silnik EA189",
+    "Skoda Octavia III 2.0 TDI, Mercedes C W204",
+    "Seat Leon (2015), Opel Adam 1.4, 601 km do serwisu",
+    "Pierwsza rejestracja 2015, klimatyzacja automatyczna",
+    "Pozdrawiam serdecznie",
+    "VIN: WVWZZZAUZFW123456",
+  ])("nie wycina: %s", (t) => {
+    expect(anonymizeText(t)).toBe(t);
   });
 });

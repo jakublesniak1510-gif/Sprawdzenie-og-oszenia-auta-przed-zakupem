@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { formatCouponCode } from "@/lib/coupons";
 import { maskEmail } from "@/lib/email";
 import { getPackageCoupon } from "@/lib/payment-flow";
+import { rateLimit } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -10,7 +11,9 @@ export const dynamic = "force-dynamic";
  * Kod kuponu po zakupie pakietu. Weryfikuje sesję w Stripe (opłacona, pakiet, kwota) – dopiero wtedy zwraca kod.
  * 202 = płatność jeszcze nie potwierdzona (np. Przelewy24) – odpytaj ponownie za kilka sekund.
  */
-export async function GET(_req: Request, ctx: { params: Promise<{ sessionId: string }> }) {
+export async function GET(req: Request, ctx: { params: Promise<{ sessionId: string }> }) {
+  const limited = rateLimit(req, "couponSession");
+  if (limited) return limited;
   const { sessionId } = await ctx.params;
   if (!/^cs_[A-Za-z0-9_]{10,200}$/.test(sessionId)) return NextResponse.json({ error: "Nieprawidłowa sesja." }, { status: 400 });
   try {

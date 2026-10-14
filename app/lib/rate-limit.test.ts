@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it } from "vitest";
-import { LIMITS, TokenBucketLimiter, clientIp, limiter, rateLimit } from "./rate-limit";
+import { LIMITS, TokenBucketLimiter, clientIp, ipKey, limiter, peekToken, rateLimit, takeToken } from "./rate-limit";
 
 const req = (ip?: string) => new Request("http://localhost/api/reports", { method: "POST", headers: ip ? { "x-forwarded-for": ip } : {} });
 
@@ -34,9 +34,34 @@ describe("clientIp", () => {
   it("ignoruje x-forwarded-for bez TRUST_PROXY", () => {
     expect(clientIp(req("1.2.3.4"))).toBe("local");
   });
-  it("bierze pierwszy element x-forwarded-for przy TRUST_PROXY=1", () => {
+  it("przy TRUST_PROXY=1 bierze OSTATNI element x-forwarded-for (dopisany przez nasze proxy)", () => {
     process.env.TRUST_PROXY = "1";
-    expect(clientIp(req("1.2.3.4, 10.0.0.1"))).toBe("1.2.3.4");
+    expect(clientIp(req("6.6.6.6, 1.2.3.4"))).toBe("1.2.3.4"); // pierwszy element mógł podać klient
+    expect(clientIp(req("1.2.3.4"))).toBe("1.2.3.4");
+  });
+  it("X-Real-IP (ustawiany przez Caddy) ma pierwszeństwo", () => {
+    process.env.TRUST_PROXY = "1";
+    const r = new Request("http://localhost/", { headers: { "x-forwarded-for": "6.6.6.6, 7.7.7.7", "x-real-ip": "5.5.5.5" } });
+    expect(clientIp(r)).toBe("5.5.5.5");
+  });
+});
+
+describe("ipKey – IPv6 per /64", () => {
+  it("adresy z jednej podsieci /64 mają wspólny klucz", () => {
+    expect(ipKey("2001:db8:1:2:aaaa::1")).toBe(ipKey("2001:db8:1:2:bbbb:cccc:dddd:eeee"));
+    expect(ipKey("2001:db8:1:2::1")).toBe("2001:0db8:0001:0002::/64");
+    expect(ipKey("2001:db8:1:3::1")).not.toBe(ipKey("2001:db8:1:2::1"));
+    expect(ipKey("1.2.3.4")).toBe("1.2.3.4");
+    expect(ipKey("::ffff:1.2.3.4")).toBe("1.2.3.4");
+  });
+  it("limit liczony wspólnie dla całego /64", () => {
+    for (let i = 0; i < LIMITS.reports.limit; i++) expect(takeToken("reports", `2001:db8:9:9::${i + 1}`)).toBe(0);
+    expect(takeToken("reports", "2001:db8:9:9::ffff")).toBeGreaterThan(0);
+  });
+  it("peekToken nie zużywa tokenu", () => {
+    expect(peekToken("adminAuthFail", "9.9.9.1")).toBe(0);
+    for (let i = 0; i < LIMITS.adminAuthFail.limit; i++) takeToken("adminAuthFail", "9.9.9.1");
+    expect(peekToken("adminAuthFail", "9.9.9.1")).toBeGreaterThan(0);
   });
 });
 

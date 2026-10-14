@@ -1,6 +1,6 @@
 import type { Report } from "../report-schema";
 import { normalize, type Fault } from "../models";
-import { ClaudeProvider } from "./claude";
+import { AiError, ClaudeProvider } from "./claude";
 import { MockProvider } from "./mock";
 import type { AiProvider, AiReportRequest } from "./types";
 import { recordAiUsage } from "./usage";
@@ -80,8 +80,23 @@ export function postProcess(report: Report, req: AiReportRequest): Report {
   return r;
 }
 
-export async function generateReport(req: AiReportRequest, opts: { reportId?: string } = {}): Promise<Report> {
-  const provider = getProvider();
-  const raw = await provider.generate(req, { onUsage: (u) => recordAiUsage(opts.reportId ?? null, u) });
-  return postProcess(raw, req);
+export const PHOTOS_FAILED_NOTE = "Zdjęć nie udało się przetworzyć – raport powstał bez ich analizy. Obejrzyj zdjęcia w ogłoszeniu samodzielnie.";
+
+/**
+ * Generuje raport. Gdy API odrzuci zdjęcie (AiError.imageError), ponawia raz BEZ zdjęć i dopisuje do raportu uwagę,
+ * że zdjęć nie udało się przetworzyć.
+ */
+export async function generateReport(req: AiReportRequest, opts: { reportId?: string; provider?: AiProvider } = {}): Promise<Report> {
+  const provider = opts.provider ?? getProvider();
+  const onUsage = (u: Parameters<typeof recordAiUsage>[1]) => recordAiUsage(opts.reportId ?? null, u);
+  try {
+    return postProcess(await provider.generate(req, { onUsage }), req);
+  } catch (e) {
+    if (!(e instanceof AiError && e.imageError && req.zdjecia.length > 0)) throw e;
+    console.warn(`[ai] Zdjęcia odrzucone przez API (${e.message}) – ponawiam bez zdjęć.`);
+    const noPhotos = { ...req, zdjecia: [] };
+    const r = postProcess(await provider.generate(noPhotos, { onUsage }), noPhotos);
+    r.zdjecia = { uwagi: [PHOTOS_FAILED_NOTE] };
+    return r;
+  }
 }

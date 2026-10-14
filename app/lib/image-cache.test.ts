@@ -6,7 +6,7 @@ import { cleanupImages, dataUrlBytes, decrypt, dropImages, encrypt, getImages, i
 import { tempDir } from "./test-utils";
 
 const KEY = "a".repeat(64);
-const jpeg = (extra: string) => Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), Buffer.from(extra)]);
+const jpeg = (extra: string) => Buffer.concat([Buffer.from([0xff, 0xd8, 0xff, 0xe0]), Buffer.from(extra), Buffer.from([0xff, 0xd9])]);
 const dataUrl = (b: Buffer) => `data:image/jpeg;base64,${b.toString("base64")}`;
 
 beforeEach(() => {
@@ -102,6 +102,11 @@ describe("putImages / getImages / dropImages", () => {
 describe("walidacja zdjęć", () => {
   it("rozpoznaje JPEG po magic bytes", () => {
     expect(isJpegDataUrl(dataUrl(jpeg("x")))).toBe(true);
+    expect(isJpegDataUrl(dataUrl(jpeg("x".repeat(500))))).toBe(true);
+    // obcięty plik (brak FF D9 na końcu) – odrzucony
+    expect(isJpegDataUrl(dataUrl(Buffer.from([0xff, 0xd8, 0xff, 0xe0, 1, 2, 3, 4, 5])))).toBe(false);
+    // końcowe zera po FF D9 (niektóre aparaty) – akceptujemy
+    expect(isJpegDataUrl(dataUrl(Buffer.concat([jpeg("abc"), Buffer.alloc(7)])))).toBe(true);
     expect(isJpegDataUrl(dataUrl(Buffer.from("\x89PNG\r\n\x1a\n")))).toBe(false);
     expect(isJpegDataUrl(`data:image/jpeg;base64,${Buffer.from("<svg onload=alert(1)>").toString("base64")}`)).toBe(false);
   });

@@ -17,7 +17,8 @@ export type EventName =
   | "raport_blad"
   | "feedback"
   | "pakiet_kupiony"
-  | "kupon_uzyty";
+  | "kupon_uzyty"
+  | "podwojna_platnosc";
 
 export type EventProps = Record<string, string | number | boolean | null | undefined>;
 

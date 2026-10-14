@@ -42,7 +42,8 @@ const nextConfig: NextConfig = {
   turbopack: { root: path.join(process.cwd(), "..") },
   poweredByHeader: false,
   experimental: {
-    serverActions: { bodySizeLimit: "12mb" },
+    // Akcje serwerowe przyjmują tylko małe formularze (opinia, ponowienie) – zdjęcia idą przez POST /api/reports.
+    serverActions: { bodySizeLimit: "100kb" },
   },
   async headers() {
     return [{ source: "/:path*", headers: securityHeaders }];

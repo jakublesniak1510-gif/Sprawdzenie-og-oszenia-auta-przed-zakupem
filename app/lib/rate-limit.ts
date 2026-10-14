@@ -1,14 +1,14 @@
 import { NextResponse } from "next/server";
-import { clientIp } from "./client-ip";
+import { clientIp, clientIpFromHeaders, ipKey } from "./client-ip";
 
-export { clientIp };
+export { clientIp, clientIpFromHeaders, ipKey };
 
 /**
  * Prosty rate limit w pamięci procesu: token bucket per (nazwa limitu, IP).
  * Wystarcza przy jednym procesie Node (Docker na VPS). Przy kilku instancjach – przenieść do Redis.
  *
- * IP klienta: pierwszy element `x-forwarded-for`, ale TYLKO gdy TRUST_PROXY=1 (za Caddy/nginx, które ten
- * nagłówek nadpisują). Bez TRUST_PROXY nagłówek może podrobić każdy, więc wszyscy dzielą jeden kubełek „local”.
+ * IP klienta: lib/client-ip.ts (X-Real-IP / ostatni element X-Forwarded-For, tylko przy TRUST_PROXY=1);
+ * IPv6 liczone per prefiks /64. Bez TRUST_PROXY wszyscy dzielą jeden kubełek „local”.
  */
 
 export interface LimitRule {
@@ -24,6 +24,10 @@ export const LIMITS = {
   szybkiTest: { limit: 20, windowMs: 10 * 60_000 },
   couponCheck: { limit: 20, windowMs: 10 * 60_000 },
   couponBuy: { limit: 10, windowMs: 10 * 60_000 },
+  couponSession: { limit: 10, windowMs: 10 * 60_000 },
+  retryGeneration: { limit: 3, windowMs: 10 * 60_000 },
+  adminAuthFail: { limit: 10, windowMs: 10 * 60_000 },
+  boughtAnswer: { limit: 20, windowMs: 10 * 60_000 },
 } satisfies Record<string, LimitRule>;
 
 interface Bucket {
@@ -52,6 +56,15 @@ export class TokenBucketLimiter {
     return Math.max(1, Math.ceil((1 - b.tokens) / rate / 1000));
   }
 
+  /** Jak `take`, ale bez zużycia tokenu: 0 = jest token, inaczej sekundy do odczekania. */
+  peek(key: string, rule: LimitRule, now = Date.now()): number {
+    const b = this.buckets.get(key);
+    if (!b) return 0;
+    const rate = rule.limit / rule.windowMs;
+    const tokens = Math.min(rule.limit, b.tokens + (now - b.updated) * rate);
+    return tokens >= 1 ? 0 : Math.max(1, Math.ceil((1 - tokens) / rate / 1000));
+  }
+
   /** Usuwa kubełki, które i tak byłyby już pełne (ochrona pamięci). */
   private sweep(now: number) {
     if (now - this.lastSweep < 60_000) return;
@@ -77,17 +90,30 @@ function minutesPl(sec: number): string {
   return `${m} min`;
 }
 
+/** Pobiera token dla limitu i IP (IPv6 liczone per /64). 0 = przepuść, inaczej sekundy do odczekania. */
+export function takeToken(name: keyof typeof LIMITS, ip: string): number {
+  if (process.env.RATE_LIMIT_DISABLED === "1") return 0;
+  return limiter().take(`${name}|${ipKey(ip)}`, LIMITS[name]);
+}
+
+/** Sprawdza limit bez zużycia tokenu. */
+export function peekToken(name: keyof typeof LIMITS, ip: string): number {
+  if (process.env.RATE_LIMIT_DISABLED === "1") return 0;
+  return limiter().peek(`${name}|${ipKey(ip)}`, LIMITS[name]);
+}
+
+export function tooManyRequests(wait: number): NextResponse {
+  return NextResponse.json(
+    { error: `Zbyt wiele zapytań. Spróbuj ponownie za ${minutesPl(wait)}.` },
+    { status: 429, headers: { "Retry-After": String(wait) } },
+  );
+}
+
 /**
  * Sprawdza limit. Zwraca `null` (przepuść) albo gotową odpowiedź 429 po polsku z nagłówkiem Retry-After.
  * Użycie: `const limited = rateLimit(req, "reports"); if (limited) return limited;`
  */
 export function rateLimit(req: Request, name: keyof typeof LIMITS): NextResponse | null {
-  if (process.env.RATE_LIMIT_DISABLED === "1") return null;
-  const rule = LIMITS[name];
-  const wait = limiter().take(`${name}|${clientIp(req)}`, rule);
-  if (wait === 0) return null;
-  return NextResponse.json(
-    { error: `Zbyt wiele zapytań. Spróbuj ponownie za ${minutesPl(wait)}.` },
-    { status: 429, headers: { "Retry-After": String(wait) } },
-  );
+  const wait = takeToken(name, clientIp(req));
+  return wait === 0 ? null : tooManyRequests(wait);
 }

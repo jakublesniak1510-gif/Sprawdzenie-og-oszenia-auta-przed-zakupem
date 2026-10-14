@@ -126,6 +126,14 @@ export async function createPackageCheckoutSession(args: { baseUrl: string; emai
   return { id: session.id, url: session.url, amountGr: p.cenaGr };
 }
 
+/** Zwrot całej płatności sesji Checkout. null = sesja bez payment_intent (nic do zwrotu). */
+export async function refundCheckoutSession(s: Stripe.Checkout.Session, reason: string): Promise<string | null> {
+  const pi = typeof s.payment_intent === "string" ? s.payment_intent : s.payment_intent?.id;
+  if (!pi) return null;
+  const r = await stripe().refunds.create({ payment_intent: pi, reason: "duplicate", metadata: { opis: reason.slice(0, 450), sesja: s.id } });
+  return r.id;
+}
+
 export async function retrieveCheckoutSession(sessionId: string): Promise<Stripe.Checkout.Session> {
   return stripe().checkout.sessions.retrieve(sessionId);
 }

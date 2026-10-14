@@ -17,6 +17,8 @@ export function CouponResult({ sessionId }: { sessionId: string }) {
   const [data, setData] = useState<Paid | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [tries, setTries] = useState(0);
+  // Odpytywanie z rosnącym odstępem (3 s → 60 s) – API ma limit 10 zapytań / 10 min; przy 429 czekamy Retry-After.
+  const [waitMs, setWaitMs] = useState(0);
 
   useEffect(() => {
     if (data || error) return;
@@ -27,20 +29,29 @@ export function CouponResult({ sessionId }: { sessionId: string }) {
           const res = await fetch(`/api/coupons/${encodeURIComponent(sessionId)}`, { cache: "no-store" });
           const j = (await res.json().catch(() => ({}))) as Partial<Paid> & { error?: string };
           if (cancelled) return;
+          const next = Math.min(60_000, 3000 * 2 ** tries);
           if (res.status === 200 && j.kod) setData(j as Paid);
-          else if (res.status === 202) setTries((n) => n + 1);
-          else setError(j.error ?? "Nie udało się sprawdzić płatności.");
+          else if (res.status === 202) {
+            setWaitMs(next);
+            setTries((n) => n + 1);
+          } else if (res.status === 429) {
+            setWaitMs(Math.max(next, Number(res.headers.get("Retry-After") || 60) * 1000));
+            setTries((n) => n + 1);
+          } else setError(j.error ?? "Nie udało się sprawdzić płatności.");
         } catch {
-          if (!cancelled) setTries((n) => n + 1);
+          if (!cancelled) {
+            setWaitMs(Math.min(60_000, 3000 * 2 ** tries));
+            setTries((n) => n + 1);
+          }
         }
       },
-      tries === 0 ? 0 : 3000,
+      tries === 0 ? 0 : waitMs,
     );
     return () => {
       cancelled = true;
       clearTimeout(t);
     };
-  }, [sessionId, tries, data, error]);
+  }, [sessionId, tries, data, error, waitMs]);
 
   if (error)
     return (
@@ -53,7 +64,7 @@ export function CouponResult({ sessionId }: { sessionId: string }) {
       <div className="space-y-3 py-6 text-center" aria-live="polite">
         <div className="mx-auto h-10 w-10 animate-spin rounded-full border-4 border-brand-100 border-t-brand-600" aria-hidden />
         <p className="font-semibold">Czekamy na potwierdzenie płatności…</p>
-        {tries > 20 && <p className="text-sm text-slate-600">To trwa dłużej niż zwykle (np. Przelewy24). Strona sprawdza dalej – nie zamykaj jej.</p>}
+        {tries > 5 && <p className="text-sm text-slate-600">To trwa dłużej niż zwykle (np. Przelewy24). Strona sprawdza dalej – nie zamykaj jej.</p>}
       </div>
     );
 

@@ -3,10 +3,25 @@ import { beforeEach, describe, expect, it, vi } from "vitest";
 
 const enqueued: string[] = [];
 vi.mock("./queue", () => ({ enqueueGeneration: vi.fn(async (id: string) => void enqueued.push(id)) }));
+const refunds: string[] = [];
+const retrieved: Record<string, unknown> = {};
+vi.mock("./payments", async (orig) => ({
+  ...(await orig<typeof import("./payments")>()),
+  refundCheckoutSession: vi.fn(async (s: { id: string }) => {
+    refunds.push(s.id);
+    return "re_test";
+  }),
+  retrieveCheckoutSession: vi.fn(async (id: string) => {
+    if (!retrieved[id]) throw Object.assign(new Error("No such checkout.session"), { code: "resource_missing", statusCode: 404 });
+    return retrieved[id];
+  }),
+}));
 
 import { getCouponBySession } from "./coupons";
 import { createReport, getDb, getReport, setStripeSession, type StoredInput } from "./db";
-import { processStripeEvent } from "./stripe-webhook";
+import { confirmReportReturn, getPackageCoupon } from "./payment-flow";
+import { retrieveCheckoutSession } from "./payments";
+import { claimStripeEvent, processStripeEvent } from "./stripe-webhook";
 import { useTempDb } from "./test-utils";
 
 process.env.EMAIL_PROVIDER = "none";
@@ -23,6 +38,9 @@ function event(id: string, type: string, obj: Stripe.Checkout.Session): Stripe.E
 beforeEach(() => {
   useTempDb();
   enqueued.length = 0;
+  refunds.length = 0;
+  for (const k of Object.keys(retrieved)) delete retrieved[k];
+  vi.mocked(retrieveCheckoutSession).mockClear();
 });
 
 describe("webhook Stripe", () => {
@@ -83,5 +101,88 @@ describe("webhook Stripe", () => {
   it("pakiet ze złą kwotą → brak kuponu", async () => {
     await processStripeEvent(event("evt_10", "checkout.session.completed", session({ id: "cs_test_pak2", amount_total: 100, metadata: { kind: "pakiet5", amount_gr: "4900" } })));
     expect(getCouponBySession("cs_test_pak2")).toBeNull();
+  });
+});
+
+describe("webhook – processed_at, płatność w toku, podwójna płatność", () => {
+  it("zdarzenie przyjęte, ale nieobsłużone do końca, może być obsłużone ponownie; po obsłudze – duplikat", async () => {
+    expect(claimStripeEvent("evt_x")).toBe(true);
+    expect(claimStripeEvent("evt_x")).toBe(true); // processed_at puste (np. awaria w trakcie) → ponowna obsługa
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_a", 1900);
+    const ev = event("evt_x", "checkout.session.completed", session({ metadata: { report_id: r.id } }));
+    expect((await processStripeEvent(ev)).result).toBe("ok");
+    expect(getDb().prepare(`SELECT processed_at FROM stripe_events WHERE id = 'evt_x'`).get()).toEqual({ processed_at: expect.any(String) });
+    expect(await processStripeEvent(ev)).toEqual({ received: true, duplicate: true });
+  });
+
+  it("P24: completed + unpaid → płatność w toku; async_payment_failed → można płacić ponownie", async () => {
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_a", 1900);
+    const unpaid = session({ payment_status: "unpaid", metadata: { report_id: r.id } });
+    expect((await processStripeEvent(event("evt_p1", "checkout.session.completed", unpaid))).result).toBe("w_toku");
+    expect(getReport(r.id)).toMatchObject({ status: "pending_payment", payment_pending_at: expect.any(String) });
+    await processStripeEvent(event("evt_p2", "checkout.session.async_payment_failed", unpaid));
+    expect(getReport(r.id)!.payment_pending_at).toBeNull();
+  });
+
+  it("druga opłacona sesja tego samego raportu → zwrot, zdarzenie podwojna_platnosc, jedno generowanie", async () => {
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_1", 1900);
+    await processStripeEvent(event("evt_d1", "checkout.session.completed", session({ id: "cs_test_1", metadata: { report_id: r.id } })));
+    setStripeSession(r.id, "cs_test_2", 1900);
+    const res = await processStripeEvent(event("evt_d2", "checkout.session.completed", session({ id: "cs_test_2", metadata: { report_id: r.id } })));
+    expect(res.result).toBe("duplikat_platnosci");
+    expect(refunds).toEqual(["cs_test_2"]);
+    expect(enqueued).toEqual([r.id]);
+    const ev = getDb().prepare(`SELECT props_json FROM events WHERE name = 'podwojna_platnosc'`).get() as { props_json: string };
+    expect(JSON.parse(ev.props_json)).toMatchObject({ report_id: r.id, zwrot: "zlecony" });
+  });
+
+  it("AUTO_REFUND_DUPLICATE=0 → bez automatycznego zwrotu (tylko alert)", async () => {
+    process.env.AUTO_REFUND_DUPLICATE = "0";
+    try {
+      const r = createReport({ input, offer: "raport" });
+      setStripeSession(r.id, "cs_test_1", 1900);
+      await processStripeEvent(event("evt_e1", "checkout.session.completed", session({ id: "cs_test_1", metadata: { report_id: r.id } })));
+      await processStripeEvent(event("evt_e2", "checkout.session.completed", session({ id: "cs_test_3", metadata: { report_id: r.id } })));
+      expect(refunds).toEqual([]);
+    } finally {
+      delete process.env.AUTO_REFUND_DUPLICATE;
+    }
+  });
+});
+
+describe("confirmReportReturn (strona powrotu ze Stripe)", () => {
+  it("cudzy session_id → false, bez zapytania do Stripe", async () => {
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_own", 1900);
+    expect(await confirmReportReturn(r.id, "cs_test_foreign")).toBe(false);
+    expect(retrieveCheckoutSession).not.toHaveBeenCalled();
+    expect(getReport(r.id)!.status).toBe("pending_payment");
+  });
+
+  it("sesja z metadanymi innego raportu → false", async () => {
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_own", 1900);
+    retrieved.cs_test_own = session({ id: "cs_test_own", metadata: { report_id: "00000000-0000-4000-8000-000000000000" } });
+    expect(await confirmReportReturn(r.id, "cs_test_own")).toBe(false);
+    expect(getReport(r.id)!.status).toBe("pending_payment");
+  });
+
+  it("własna opłacona sesja → true i generowanie", async () => {
+    const r = createReport({ input, offer: "raport" });
+    setStripeSession(r.id, "cs_test_own", 1900);
+    retrieved.cs_test_own = session({ id: "cs_test_own", metadata: { report_id: r.id } });
+    expect(await confirmReportReturn(r.id, "cs_test_own")).toBe(true);
+    expect(enqueued).toEqual([r.id]);
+  });
+});
+
+describe("getPackageCoupon – cache „nie znaleziono”", () => {
+  it("nieistniejąca sesja: drugie zapytanie w ciągu 60 s nie trafia do Stripe", async () => {
+    expect(await getPackageCoupon("cs_test_missing_123")).toBeNull();
+    expect(await getPackageCoupon("cs_test_missing_123")).toBeNull();
+    expect(retrieveCheckoutSession).toHaveBeenCalledTimes(1);
   });
 });

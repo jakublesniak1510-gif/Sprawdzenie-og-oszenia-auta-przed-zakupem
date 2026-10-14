@@ -82,8 +82,16 @@ Do promptu trafiają też pytania z `data/questions-by-category.json` dla katego
   szczegóły w logu serwera i w zdarzeniu `raport_blad` (panel admina). Zdjęcia są wtedy usuwane.
 - Wznowienie po restarcie: `instrumentation.ts` → `lib/startup.ts` przy starcie oznacza raporty `generating` starsze
   niż 10 min jako `paid` i wrzuca wszystkie `paid` do kolejki; to samo robi watchdog co 5 min.
-- Blokady produkcyjne: przy `NODE_ENV=production` serwer **nie wystartuje**, jeśli `DEV_SKIP_PAYMENT=1`, `AI_MOCK=1`
-  albo brak `IMAGE_ENCRYPTION_KEY` (obejście tylko świadomie: `ALLOW_UNSAFE_PROD=1`).
+- Blokady produkcyjne: przy `NODE_ENV=production` serwer **nie wystartuje** (proces kończy się kodem 1), jeśli
+  `DEV_SKIP_PAYMENT=1`, `AI_MOCK=1`, `RATE_LIMIT_DISABLED=1`, brak `IMAGE_ENCRYPTION_KEY`, pusty `APP_URL` albo
+  `APP_URL`/`NEXT_PUBLIC_BASE_URL` wskazuje na localhost (obejście tylko świadomie: `ALLOW_UNSAFE_PROD=1`).
+- Płatności: sesja Stripe zakończona, ale nieopłacona (Przelewy24 czeka na bank) = „płatność w toku” – link
+  „dokończ płatność” nie tworzy drugiej sesji, przypomnienie nie idzie. Gdyby mimo to ten sam raport opłacono dwa razy,
+  druga płatność jest automatycznie zwracana (`AUTO_REFUND_DUPLICATE=1`, domyślnie) + alert w logu i zdarzenie
+  `podwojna_platnosc`. Webhook: zdarzenie jest duplikatem dopiero po pełnej obsłudze (`stripe_events.processed_at`).
+- „Spróbuj ponownie”: najwyżej jedno ręczne ponowienie na raport (`reports.manual_retries`) i 3 kliknięcia / 10 min / IP.
+- Zdjęcia: JPEG sprawdzany po bajtach początku (FF D8 FF) i końca (FF D9). Gdy Claude odrzuci zdjęcie (400), raport
+  generuje się ponownie bez zdjęć z uwagą „Zdjęć nie udało się przetworzyć”.
 - Nagłówki bezpieczeństwa (CSP, X-Frame-Options, Referrer-Policy, Permissions-Policy, HSTS) – `next.config.ts`.
 
 ### Koszty Claude API (prompt caching)
@@ -101,16 +109,18 @@ liczony z cennika `lib/ai/pricing.ts` – zaktualizuj przy zmianie cen). Sprawdz
 | `POST /api/szybki-test` | darmowy szybki test bez AI: `{tekst, cena?, przebieg?, rocznik?}` → `{rozpoznany, flagi[], usterki_top3[], cena: {pozycja: ponizej\|w_normie\|powyzej\|brak_danych, komentarz}, brak_vin, nastepny_krok}`. Limit 20 / 10 min / IP |
 | `POST /api/reports` | zamówienie raportu (formularz `/sprawdz`), pole `coupon` opcjonalne |
 | `GET /api/reports/<id>/zaplac` | wznowienie płatności (link z e-maila i ze strony raportu) |
-| `GET /api/reports/<id>/kupil?odp=tak\|nie` | odpowiedź z e-maila „Kupiłeś to auto?” → zapis + przekierowanie do opinii |
+| `GET /api/reports/<id>/kupil?odp=tak\|nie` | strona „Kupiłeś to auto?” z dwoma przyciskami (GET nic nie zapisuje – skanery poczty); `POST` zapisuje odpowiedź i przekierowuje do opinii |
 | `POST /api/models/detect` | rozpoznanie modelu z tekstu (limit 30 / min / IP) |
 | `POST /api/coupons/check` | walidacja kodu `{code, oferta?}` → `{valid, message}` (bez liczby użyć) |
 | `POST /api/coupons/buy` | zakup pakietu 5 raportów `{email?}` → `{redirect}` (Stripe Checkout) |
-| `GET /api/coupons/<sessionId>` | kod z opłaconego pakietu (weryfikacja w Stripe); 202 = płatność w toku |
+| `GET /api/coupons/<sessionId>` | kod z opłaconego pakietu (weryfikacja w Stripe); 202 = płatność w toku. Limit 10 / 10 min / IP, nieistniejące sesje w cache na 60 s |
 | `POST /api/stripe/webhook` | webhook Stripe |
 | `GET /api/health` | healthcheck (sprawdza bazę) |
 
-Przekroczenie limitu → `429` z komunikatem po polsku i nagłówkiem `Retry-After`. Za reverse proxy ustaw `TRUST_PROXY=1`
-(IP z pierwszego elementu `X-Forwarded-For`); bez tego wszyscy klienci dzielą jeden limit.
+Przekroczenie limitu → `429` z komunikatem po polsku i nagłówkiem `Retry-After`. Za reverse proxy ustaw `TRUST_PROXY=1`:
+IP bierzemy z `X-Real-IP` (Caddy: `header_up X-Real-IP {client_ip}`), a gdy go brak – z OSTATNIEGO elementu
+`X-Forwarded-For` (wcześniejsze może podrobić klient). IPv6 liczymy per prefiks /64. Bez `TRUST_PROXY` wszyscy klienci
+dzielą jeden limit. Małe endpointy JSON (`models/detect`, `coupons/*`) przyjmują najwyżej 64 KB, akcje serwerowe 100 KB.
 
 ## E-mail
 
@@ -125,7 +135,7 @@ Nadawca `EMAIL_FROM`, opcjonalnie `EMAIL_REPLY_TO`. E-mail klienta jest opcjonal
 | E-mail | Kiedy |
 |---|---|
 | Raport gotowy (link + data ważności) | od razu po wygenerowaniu |
-| Nie dokończono płatności (link „dokończ płatność”) | `npm run followup`: 2–48 h po utworzeniu nieopłaconego zamówienia |
+| Nie dokończono płatności (link „dokończ płatność”, info o 48 h na zdjęcia) | `npm run followup`: 2–40 h po zamówieniu, tylko gdy sesja Stripe nie jest zakończona (P24 w toku → bez przypomnienia), e-mail w Stripe (jeśli znany) zgadza się z podanym i adres nie dostał przypomnienia w ciągu 24 h |
 | Kupiłeś to auto? (przyciski tak/nie) | `npm run followup`: 7 dni po raporcie, jeśli nie było opinii |
 | Kod z pakietu 5 raportów | po opłaceniu pakietu |
 
@@ -133,7 +143,9 @@ Treści: jeśli istnieje `content/emails/*.md` (np. `raport-gotowy.md`, `platnos
 `kupon-pakiet.md`) – są źródłem; w przeciwnym razie treść wbudowana (`lib/email-templates.ts`). Temat: pierwsza linia
 `temat: …`, nagłówek YAML albo `# Nagłówek`. Zmienne: `{{link}}`, `{{data_waznosci}}`, `{{link_tak}}`, `{{link_nie}}`,
 `{{kod}}`, `{{liczba_raportow}}`, `{{model}}` – nieznana zmienna zostaje pusta i trafia do logu jako ostrzeżenie.
-Każdy e-mail wysyłamy najwyżej raz na raport (kolumny `*_sent_at`).
+Każdy e-mail wysyłamy najwyżej raz na raport (kolumny `*_sent_at`); przypomnienia o płatności dodatkowo najwyżej
+1 / adres / 24 h (tabela `email_log`, adres jako SHA-256). Przypomnienie o płatności zawsze zawiera informację, że
+zdjęcia trzymamy 48 h (`{{zdjecia_do}}`; jeśli treść z `content/emails` jej nie ma – dopisujemy ją automatycznie).
 
 ## Kupony i pakiet 5 raportów
 
@@ -149,7 +161,8 @@ Każdy e-mail wysyłamy najwyżej raz na raport (kolumny `*_sent_at`).
 ## Panel admina
 
 `/admin` – Basic Auth z `ADMIN_USER` / `ADMIN_PASSWORD` (`proxy.ts` – w Next 16 dawne `middleware.ts`); bez tych
-zmiennych panel zwraca 404. Zawiera: lejek z 7 i 30 dni (szybkie testy → raporty → opłacone → wygenerowane), przychód
+zmiennych panel zwraca 404. Hasło porównywane w stałym czasie (SHA-256 + `timingSafeEqual`, UTF-8); po 10 błędnych
+hasłach z jednego IP w 10 min – `429` (także dla poprawnego hasła, do odnowienia limitu). Zawiera: lejek z 7 i 30 dni (szybkie testy → raporty → opłacone → wygenerowane), przychód
 (raporty i pakiety), szacowany koszt AI i tokeny, średni czas generowania, odpowiedzi „czy kupiłeś?”, ostatnie 20 opinii,
 ostatnie błędy generowania i listę kuponów.
 
@@ -182,6 +195,11 @@ plik `*umowa*.md` w `data/` (strona `/umowa`). Regulamin i polityka – `docs/re
   (`IMAGE_ENCRYPTION_KEY`), po raporcie są kasowane; nieużyte – po 48 h (`npm run cleanup`).
 - Raporty i dane wejściowe wygasają po 30 dniach (`npm run cleanup`).
 - Analityka bez cookies, IP tylko jako dzienny skrót. Logi e-maili z zamaskowanym adresem.
+- Anonimizacja wycina też: imię i nazwisko w środku linii po „Kontakt:”, w linii po „Kontakt”, obok telefonu,
+  „pan Marek”, „Zapraszam, Marek”, „(Tomek)”, bloki profilu z OLX, adresy (ul./al./os. + kod), e-maile z „(at)/(dot)/[kropka]”,
+  telefony zagraniczne i z `/`/`_`, profile `@nick`, `fb.me/…`, tablice małymi literami po „nr rej./tablice/blachy”.
+- SQLite z `secure_delete=ON`; `cleanup` raz w tygodniu robi `VACUUM` i kasuje e-maile kupujących z kuponów
+  wygasłych/wyczerpanych/starszych niż 30 dni.
 
 ## Docker
 
@@ -236,7 +254,8 @@ docker compose logs -f app
 6. **HTTPS**: `sudo cp deploy/Caddyfile /etc/caddy/Caddyfile`, zamień `twojadomena.pl` na swoją domenę,
    `sudo systemctl reload caddy`. Certyfikat Let's Encrypt pojawi się sam po pierwszym wejściu.
 7. **Stripe**: Dashboard → Developers → Webhooks → endpoint `https://twojadomena.pl/api/stripe/webhook`, zdarzenia
-   `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.expired`; sekret `whsec_…`
+   `checkout.session.completed`, `checkout.session.async_payment_succeeded`, `checkout.session.async_payment_failed`,
+   `checkout.session.expired`; sekret `whsec_…`
    do `.env`, potem `docker compose up -d`. Włącz BLIK i Przelewy24 w Payment methods.
 8. **E-mail**: zweryfikuj domenę nadawcy u dostawcy (rekordy SPF/DKIM w DNS), ustaw `EMAIL_FROM`.
 9. **Aktualizacja**: `git pull && docker compose up -d --build` (migracje bazy wykonują się same przy starcie).

@@ -1,7 +1,7 @@
 import Database from "better-sqlite3";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { createReport, getDb, getReport, markExpired, resetDbForTests, setBought, type StoredInput } from "./db";
+import { createReport, getDb, getReport, markExpired, resetDbForTests, scrubCouponEmails, setBought, vacuumIfDue, type StoredInput } from "./db";
 import { tempDir, useTempDb } from "./test-utils";
 
 describe("migracja bazy z rundy 1", () => {
@@ -46,5 +46,29 @@ describe("odpowiedź „czy kupiłeś?”", () => {
     expect(setBought(r.id, true)).toBe(true);
     expect(setBought(r.id, false)).toBe(false);
     expect(getReport(r.id)!.kupil).toBe(1);
+  });
+});
+
+describe("sprzątanie: e-maile kuponów i VACUUM", () => {
+  it("zeruje e-mail w kuponach wyczerpanych, wygasłych i starszych niż 30 dni; aktywne zostają", () => {
+    useTempDb();
+    const db = getDb();
+    const ins = db.prepare(`INSERT INTO coupons (code, uses_left, offer, expires_at, created_at, email) VALUES (?, ?, 'raport', ?, ?, ?)`);
+    const future = "2999-01-01T00:00:00.000Z";
+    ins.run("AAAAAAAA", 0, future, new Date().toISOString(), "a@x.pl");
+    ins.run("BBBBBBBB", 3, "2000-01-01T00:00:00.000Z", new Date().toISOString(), "b@x.pl");
+    ins.run("CCCCCCCC", 3, future, new Date(Date.now() - 31 * 864e5).toISOString(), "c@x.pl");
+    ins.run("DDDDDDDD", 3, future, new Date().toISOString(), "d@x.pl");
+    expect(scrubCouponEmails()).toBe(3);
+    expect(db.prepare(`SELECT code FROM coupons WHERE email IS NOT NULL`).all()).toEqual([{ code: "DDDDDDDD" }]);
+  });
+
+  it("VACUUM najwyżej raz na 7 dni; secure_delete włączone", () => {
+    useTempDb();
+    expect(getDb().pragma("secure_delete", { simple: true })).toBe(1);
+    const now = Date.now();
+    expect(vacuumIfDue(7, now)).toBe(true);
+    expect(vacuumIfDue(7, now + 864e5)).toBe(false);
+    expect(vacuumIfDue(7, now + 8 * 864e5)).toBe(true);
   });
 });

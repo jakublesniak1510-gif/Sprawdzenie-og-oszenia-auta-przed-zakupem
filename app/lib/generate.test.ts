@@ -68,10 +68,26 @@ describe("generateNow – licznik prób", () => {
     expect(JSON.parse(ev.props_json).powod).toMatch(/529/);
     // przycisk „spróbuj ponownie” daje dokładnie jedną dodatkową próbę
     expect(resetErrorToPaid(id)).toBe(true);
-    expect(getReport(id)).toMatchObject({ status: "paid", attempts: 2 });
+    expect(getReport(id)).toMatchObject({ status: "paid", attempts: 2, manual_retries: 1 });
     behaviour.mode = "ok";
     await generateNow(id);
     expect(getReport(id)!.status).toBe("done");
+  });
+
+  it("wielokrotne klikanie „Spróbuj ponownie” → najwyżej 1 ręczne ponowienie (brak pętli płatnych wywołań AI)", async () => {
+    behaviour.mode = "fatal";
+    const id = paidReport();
+    await generateNow(id);
+    expect(getReport(id)!.status).toBe("error");
+    let generations = 0;
+    for (let click = 0; click < 10; click++) {
+      if (resetErrorToPaid(id)) {
+        generations++;
+        await generateNow(id);
+      }
+    }
+    expect(generations).toBe(1);
+    expect(getReport(id)).toMatchObject({ status: "error", manual_retries: 1 });
   });
 
   it("błąd nie do ponowienia (odmowa) → od razu error", async () => {

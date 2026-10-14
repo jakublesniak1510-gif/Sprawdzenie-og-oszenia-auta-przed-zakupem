@@ -1,9 +1,9 @@
 import type Stripe from "stripe";
 import { track } from "./analytics";
 import { createCoupon, getCouponBySession, type CouponRow } from "./coupons";
-import { getDb, getReport, markExpired, markPaid, nowIso } from "./db";
+import { clearPaymentPending, getDb, getReport, markExpired, markPaid, markPaymentPending, nowIso } from "./db";
 import { sendPackageCouponEmail } from "./notifications";
-import { PACKAGE, getOffer, packageOffer, retrieveCheckoutSession, type CheckoutKind } from "./payments";
+import { PACKAGE, getOffer, packageOffer, refundCheckoutSession, retrieveCheckoutSession, type CheckoutKind } from "./payments";
 import { enqueueGeneration } from "./queue";
 
 /**
@@ -12,7 +12,7 @@ import { enqueueGeneration } from "./queue";
  */
 
 export type PaidOutcome =
-  | { ok: true; kind: "raport"; reportId: string; newlyPaid: boolean }
+  | { ok: true; kind: "raport"; reportId: string; newlyPaid: boolean; duplicate?: boolean }
   | { ok: true; kind: "pakiet5"; coupon: CouponRow; newlyCreated: boolean }
   | { ok: false; reason: string };
 
@@ -73,12 +73,61 @@ export async function handlePaidSession(s: Stripe.Checkout.Session, source: "web
     console.error(`[platnosc] Sesja ${s.id} raportu ${reportId}: ${mismatch} – raport NIE został oznaczony jako opłacony.`);
     return { ok: false, reason: mismatch };
   }
-  recordPayment(s, "raport", reportId);
+  const fresh = recordPayment(s, "raport", reportId);
+  if (fresh) {
+    // Druga opłacona sesja tego samego raportu (np. klient zapłacił w starej i nowej sesji, albo raport był już z kuponu).
+    const others = getDb()
+      .prepare(`SELECT stripe_session_id FROM payments WHERE report_id = ? AND stripe_session_id <> ?`)
+      .all(reportId, s.id) as { stripe_session_id: string }[];
+    if (others.length > 0 || row.coupon_code) {
+      await handleDuplicatePayment(s, reportId, others.map((o) => o.stripe_session_id));
+      return { ok: true, kind: "raport", reportId, newlyPaid: false, duplicate: true };
+    }
+  }
   const newlyPaid = markPaid(reportId);
   if (newlyPaid) track("platnosc_oplacona", { rodzaj: row.offer, kwota_gr: s.amount_total ?? 0, zrodlo: source, report_id: reportId });
-  const fresh = getReport(reportId);
-  if (fresh?.status === "paid") void enqueueGeneration(reportId);
+  if (getReport(reportId)?.status === "paid") void enqueueGeneration(reportId);
   return { ok: true, kind: "raport", reportId, newlyPaid };
+}
+
+/**
+ * Podwójna płatność za ten sam raport: alert w logu, zdarzenie `podwojna_platnosc` i – gdy AUTO_REFUND_DUPLICATE
+ * nie jest „0” (domyślnie włączone) – automatyczny zwrot drugiej płatności przez Stripe.
+ */
+async function handleDuplicatePayment(s: Stripe.Checkout.Session, reportId: string, otherSessions: string[]) {
+  console.error(
+    `[ALERT][platnosc] Podwójna płatność za raport ${reportId}: sesja ${s.id} (${s.amount_total} gr), wcześniej: ${otherSessions.join(", ") || "kupon"}.`,
+  );
+  const auto = process.env.AUTO_REFUND_DUPLICATE !== "0";
+  let zwrot = "wylaczony";
+  if (auto) {
+    try {
+      const r = await refundCheckoutSession(s, `Podwójna płatność za raport ${reportId}`);
+      zwrot = r ? "zlecony" : "brak_payment_intent";
+    } catch (e) {
+      zwrot = "blad";
+      console.error(`[ALERT][platnosc] Zwrot sesji ${s.id} nie powiódł się – zrób go ręcznie w Stripe:`, (e as Error).message);
+    }
+  }
+  track("podwojna_platnosc", { report_id: reportId, sesja: s.id, kwota_gr: s.amount_total ?? 0, zwrot });
+}
+
+/** checkout.session.completed z payment_status=unpaid (np. Przelewy24) – płatność w toku, bez przypomnień i nowych sesji. */
+export function handlePendingSession(s: Stripe.Checkout.Session): boolean {
+  if (sessionKind(s) !== "raport" || s.payment_status === "paid") return false;
+  const reportId = s.metadata?.report_id ?? s.client_reference_id;
+  if (!reportId) return false;
+  markPaymentPending(reportId);
+  return true;
+}
+
+/** checkout.session.async_payment_failed – płatność odrzucona, klient może zapłacić ponownie. */
+export function handleFailedAsyncSession(s: Stripe.Checkout.Session): boolean {
+  if (sessionKind(s) !== "raport") return false;
+  const reportId = s.metadata?.report_id ?? s.client_reference_id;
+  if (!reportId) return false;
+  clearPaymentPending(reportId);
+  return true;
 }
 
 /** Sesja wygasła (klient nie zapłacił w 24 h): pending_payment → expired. */
@@ -108,16 +157,40 @@ export async function confirmReportReturn(reportId: string, sessionId: string): 
   }
 }
 
+declare global {
+  // eslint-disable-next-line no-var
+  var __sprawdzCouponMiss: Map<string, number> | undefined;
+}
+/** Krótki cache „nie znaleziono” (60 s) – ogranicza odpytywanie Stripe o nieistniejące/obce sesje. */
+const missCache = () => (globalThis.__sprawdzCouponMiss ??= new Map());
+export const COUPON_MISS_TTL_MS = 60_000;
+
 /**
  * Kod z pakietu po powrocie ze Stripe (`/pakiet/dziekujemy?session_id=…`). Weryfikuje sesję w Stripe;
  * jeśli webhook jeszcze nie utworzył kuponu – tworzy go (idempotentnie). null = sesja nieopłacona / nie pakiet.
+ * Sesje nieistniejące lub niebędące pakietem są zapamiętywane na 60 s (bez kolejnych zapytań do Stripe).
  */
-export async function getPackageCoupon(sessionId: string): Promise<CouponRow | null> {
+export async function getPackageCoupon(sessionId: string, retrieve = retrieveCheckoutSession): Promise<CouponRow | null> {
   if (!/^cs_[A-Za-z0-9_]+$/.test(sessionId)) return null;
   const existing = getCouponBySession(sessionId);
   if (existing) return existing;
-  const s = await retrieveCheckoutSession(sessionId);
-  if (sessionKind(s) !== "pakiet5") return null;
+  const miss = missCache().get(sessionId);
+  if (miss && miss > Date.now()) return null;
+  let s: Stripe.Checkout.Session;
+  try {
+    s = await retrieve(sessionId);
+  } catch (e) {
+    const code = (e as { code?: string; statusCode?: number }).code ?? "";
+    if (code === "resource_missing" || (e as { statusCode?: number }).statusCode === 404) {
+      missCache().set(sessionId, Date.now() + COUPON_MISS_TTL_MS);
+      return null;
+    }
+    throw e;
+  }
+  if (sessionKind(s) !== "pakiet5") {
+    missCache().set(sessionId, Date.now() + COUPON_MISS_TTL_MS);
+    return null;
+  }
   const r = await handlePaidSession(s, "powrot");
   return r.ok && r.kind === "pakiet5" ? r.coupon : null;
 }

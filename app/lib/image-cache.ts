@@ -152,11 +152,23 @@ export function cleanupImages(maxAgeHours = IMAGE_MAX_AGE_HOURS, now = Date.now(
 
 /* ---------- walidacja zdjęć ---------- */
 
-/** Sprawdza magic bytes JPEG (FF D8 FF) w data URL. */
+/**
+ * Sprawdza JPEG po bajtach: początek FF D8 FF i znacznik końca FF D9 (dopuszczamy końcowe bajty zerowe,
+ * które dopisują niektóre aparaty). Obcięte lub podmienione pliki odrzucamy.
+ */
 export function isJpegDataUrl(dataUrl: string): boolean {
   if (!dataUrl.startsWith(PREFIX)) return false;
-  const head = Buffer.from(dataUrl.slice(PREFIX.length, PREFIX.length + 8), "base64");
-  return head.length >= 3 && head[0] === 0xff && head[1] === 0xd8 && head[2] === 0xff;
+  const b64 = dataUrl.slice(PREFIX.length);
+  if (b64.length < 8) return false;
+  const head = Buffer.from(b64.slice(0, 8), "base64");
+  if (!(head.length >= 3 && head[0] === 0xff && head[1] === 0xd8 && head[2] === 0xff)) return false;
+  // Ostatnie 64 znaki base64 (wyrównane do 4) = do 48 bajtów końcówki.
+  const tailStart = Math.max(0, b64.length - 64 - (b64.length % 4));
+  let tail = Buffer.from(b64.slice(tailStart), "base64");
+  let end = tail.length;
+  while (end > 0 && tail[end - 1] === 0x00) end--;
+  tail = tail.subarray(0, end);
+  return tail.length >= 2 && tail[tail.length - 2] === 0xff && tail[tail.length - 1] === 0xd9;
 }
 
 /** Rozmiar zdekodowanego zdjęcia w bajtach (bez dekodowania). */

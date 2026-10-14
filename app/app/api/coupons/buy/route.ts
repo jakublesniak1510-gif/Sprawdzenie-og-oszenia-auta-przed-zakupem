@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { SMALL_JSON_MAX_BYTES, readJsonLimited } from "@/lib/http";
 import { z } from "zod";
 import { track } from "@/lib/analytics";
 import { baseUrlFrom, createPackageCheckoutSession, packageOffer, stripeConfigured } from "@/lib/payments";
@@ -16,7 +17,9 @@ const Body = z.object({ email: z.string().email().max(200).nullable().optional()
 export async function POST(req: Request) {
   const limited = rateLimit(req, "couponBuy");
   if (limited) return limited;
-  const parsed = Body.safeParse((await req.json().catch(() => ({}))) ?? {});
+  const body = await readJsonLimited(req, SMALL_JSON_MAX_BYTES);
+  if (!body.ok) return body.response;
+  const parsed = Body.safeParse(body.data ?? {});
   if (!parsed.success) return NextResponse.json({ error: "Nieprawidłowy adres e-mail." }, { status: 400 });
   if (!stripeConfigured()) return NextResponse.json({ error: "Płatności są chwilowo niedostępne." }, { status: 503 });
   try {

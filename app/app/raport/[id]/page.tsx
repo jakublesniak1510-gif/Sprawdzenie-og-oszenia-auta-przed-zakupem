@@ -8,7 +8,7 @@ import { FeedbackForm } from "@/components/report/FeedbackForm";
 import { PrintButton } from "@/components/report/PrintButton";
 import { PrintHeader } from "@/components/report/PrintHeader";
 import { ReportView } from "@/components/report/ReportView";
-import { getReport, hasFeedback, parseInput, parseReport } from "@/lib/db";
+import { canRetryManually, getReport, hasFeedback, parseInput, parseReport } from "@/lib/db";
 import { confirmReportReturn } from "@/lib/payment-flow";
 import { paymentsSkipped } from "@/lib/payments";
 import { enqueueGeneration } from "@/lib/queue";
@@ -62,18 +62,21 @@ export default async function RaportPage({
 
   if (row.status === "pending_payment" || row.status === "paid" || row.status === "generating") {
     const waitingForPayment = row.status === "pending_payment";
+    const paymentInProgress = !!row.payment_pending_at || sp.platnosc === "w_toku";
     return (
       <div className="space-y-4 py-8 text-center">
         <AutoRefresh ms={3000} />
         <div className="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-brand-100 border-t-brand-600" aria-hidden />
         <h1 className="text-2xl font-bold">{waitingForPayment ? "Czekamy na potwierdzenie płatności…" : "Przygotowujemy Twój raport…"}</h1>
         <p className="text-slate-600">
-          {waitingForPayment
+          {waitingForPayment && paymentInProgress
+            ? "Płatność jest w toku – bank jeszcze jej nie potwierdził (przy Przelewy24 może to potrwać do kilkunastu minut). Nie płać ponownie; strona odświeży się sama."
+            : waitingForPayment
             ? "Zwykle trwa to kilka sekund. Strona odświeży się sama."
             : "Analizujemy ogłoszenie, przebiegi i bazę usterek. Zwykle 1–3 minuty. Strona odświeży się sama."}
         </p>
         <p className="text-xs text-slate-600">Zapisz ten adres – raport będzie dostępny pod nim przez 30 dni (do {expires}).</p>
-        {waitingForPayment && !paymentsSkipped() && (
+        {waitingForPayment && !paymentInProgress && !paymentsSkipped() && (
           <p className="text-sm">
             Płatność przerwana?{" "}
             <a href={`/api/reports/${id}/zaplac`} className="font-semibold text-brand-700 underline">
@@ -92,12 +95,18 @@ export default async function RaportPage({
         <p className="text-slate-700">
           {row.error ?? "Przepraszamy – wystąpił błąd po naszej stronie."} Numer raportu: <code className="text-xs">{id}</code>.
         </p>
-        {/* „Spróbuj ponownie” działa tylko dla opłaconych raportów (resetErrorToPaid). */}
-        {(row.paid_at || row.coupon_code || row.attempts > 0) && (
+        {/* „Spróbuj ponownie” – tylko opłacone raporty i najwyżej jedno ręczne ponowienie (resetErrorToPaid). */}
+        {canRetryManually(row) ? (
           <form action={retryGeneration}>
             <input type="hidden" name="id" value={id} />
             <button className="rounded-xl bg-brand-700 px-6 py-3 font-bold text-white hover:bg-brand-900">Spróbuj ponownie</button>
           </form>
+        ) : (
+          (row.paid_at || row.attempts > 0) && (
+            <p className="text-sm text-slate-700">
+              Ponowna próba też się nie udała. Napisz do nas, podając numer raportu – przygotujemy raport ręcznie albo zwrócimy pieniądze.
+            </p>
+          )
         )}
       </div>
     );

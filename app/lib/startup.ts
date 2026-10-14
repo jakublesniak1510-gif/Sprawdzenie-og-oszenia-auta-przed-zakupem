@@ -14,6 +14,16 @@ export class UnsafeProductionConfigError extends Error {
   }
 }
 
+/** localhost / 127.x / 0.0.0.0 / ::1 / *.local. */
+export function isLocalUrl(url: string): boolean {
+  try {
+    const h = new URL(url).hostname.replace(/^\[|\]$/g, "");
+    return h === "localhost" || h.endsWith(".localhost") || h.endsWith(".local") || h === "0.0.0.0" || h === "::1" || /^127\./.test(h);
+  } catch {
+    return true; // nieparsowalny adres traktujemy jak błędny
+  }
+}
+
 /** Zwraca listę problemów; rzuca wyjątek w produkcji, chyba że ALLOW_UNSAFE_PROD=1. */
 export function checkProductionSafety(env: NodeJS.ProcessEnv = process.env): string[] {
   if (env.NODE_ENV !== "production") return [];
@@ -21,6 +31,11 @@ export function checkProductionSafety(env: NodeJS.ProcessEnv = process.env): str
   if (env.DEV_SKIP_PAYMENT === "1") problems.push("DEV_SKIP_PAYMENT=1 (raporty bez płatności)");
   if (env.AI_MOCK === "1") problems.push("AI_MOCK=1 (atrapa AI zamiast prawdziwych raportów)");
   if (!env.IMAGE_ENCRYPTION_KEY) problems.push("brak IMAGE_ENCRYPTION_KEY (szyfrowanie zdjęć) – wygeneruj: openssl rand -hex 32");
+  if (env.RATE_LIMIT_DISABLED === "1") problems.push("RATE_LIMIT_DISABLED=1 (brak ochrony przed nadużyciami)");
+  if (!env.APP_URL || isLocalUrl(env.APP_URL)) problems.push(`APP_URL ${env.APP_URL ? `wskazuje na ${env.APP_URL}` : "jest pusty"} – ustaw publiczny adres (https://…), inaczej linki w e-mailach i powroty ze Stripe nie zadziałają`);
+  if (env.NEXT_PUBLIC_BASE_URL !== undefined && (!env.NEXT_PUBLIC_BASE_URL || isLocalUrl(env.NEXT_PUBLIC_BASE_URL))) {
+    problems.push(`NEXT_PUBLIC_BASE_URL ${env.NEXT_PUBLIC_BASE_URL ? `wskazuje na ${env.NEXT_PUBLIC_BASE_URL}` : "jest pusty"} – ustaw publiczny adres albo usuń zmienną (użyty zostanie APP_URL)`);
+  }
   if (problems.length === 0) return [];
   if (env.ALLOW_UNSAFE_PROD === "1") {
     console.warn(`[UWAGA] ALLOW_UNSAFE_PROD=1 – start mimo problemów:\n- ${problems.join("\n- ")}`);

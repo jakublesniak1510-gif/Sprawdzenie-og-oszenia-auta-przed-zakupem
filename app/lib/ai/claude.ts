@@ -39,10 +39,17 @@ export class AiError extends Error {
   constructor(
     message: string,
     public readonly retryable = false,
+    /** true = API odrzuciło zdjęcie (400 „invalid image” itp.) – można ponowić bez zdjęć. */
+    public readonly imageError = false,
   ) {
     super(message);
     this.name = "AiError";
   }
+}
+
+/** Czy błąd 400 dotyczy przesłanego obrazu (uszkodzony/nieobsługiwany plik). */
+export function isImageErrorMessage(msg: string): boolean {
+  return /image|obraz|media_type|base64/i.test(msg);
 }
 
 function buildTool(): Anthropic.Beta.BetaTool {
@@ -112,7 +119,7 @@ export class ClaudeProvider implements AiProvider {
       return await this.client.beta.messages.stream(params).finalMessage();
     } catch (e) {
       if (e instanceof Anthropic.AuthenticationError) throw new AiError("Błędny lub brakujący klucz ANTHROPIC_API_KEY.");
-      if (e instanceof Anthropic.BadRequestError) throw new AiError(`Błędne żądanie do Claude API: ${e.message}`);
+      if (e instanceof Anthropic.BadRequestError) throw new AiError(`Błędne żądanie do Claude API: ${e.message}`, false, isImageErrorMessage(e.message));
       if (e instanceof Anthropic.RateLimitError) throw new AiError("Przekroczony limit zapytań do Claude API – spróbuj za chwilę.", true);
       if (e instanceof Anthropic.APIError) throw new AiError(`Błąd Claude API (${e.status ?? "?"}): ${e.message}`, true);
       throw e;
