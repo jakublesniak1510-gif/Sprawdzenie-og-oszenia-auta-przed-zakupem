@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Czerwone flagi w ogłoszeniach – heurystyki tekstowe",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "category", "patterns", "explanation", "severity", "neutral_wording"],
+    "properties": {
+      "id": { "type": "string" },
+      "category": { "type": "string", "enum": ["handlarz", "historia", "przebieg", "stan_techniczny", "dokumenty", "cena", "sprzecznosc", "zdjecia", "inne"] },
+      "patterns": { "type": "array", "items": { "type": "string" }, "description": "frazy/regexy (małe litery, bez polskich znaków i z nimi)" },
+      "explanation": { "type": "string", "description": "dlaczego to budzi wątpliwość" },
+      "severity": { "type": "string", "enum": ["niska", "srednia", "wysoka"] },
+      "neutral_wording": { "type": "string", "description": "jak to opisać w raporcie BEZ oskarżania sprzedawcy – 'do wyjaśnienia ze sprzedawcą'" },
+      "question_for_seller": { "type": "string" }
+    }
+  }
+}

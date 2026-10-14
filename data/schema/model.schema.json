@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "model.schema.json",
+  "title": "Baza typowych usterek – jeden model (generacja)",
+  "type": "object",
+  "required": ["id", "make", "model", "generation", "years", "aliases", "engines", "common_faults", "inspection_tips", "questions_for_seller", "summary"],
+  "properties": {
+    "id": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "slug, np. vw-golf-7" },
+    "make": { "type": "string" },
+    "model": { "type": "string" },
+    "generation": { "type": "string", "description": "np. VII (2012–2020)" },
+    "years": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2 },
+    "aliases": { "type": "array", "items": { "type": "string" }, "description": "małe litery, warianty z ogłoszeń: 'golf 7', 'golf vii', 'golf mk7'" },
+    "market_note": { "type": "string", "description": "krótko: pozycja na rynku PL, typowe ceny, na co uważać ogólnie" },
+    "engines": {
+      "type": "array",
+      "minItems": 2,
+      "items": {
+        "type": "object",
+        "required": ["code", "fuel", "aliases", "faults"],
+        "properties": {
+          "code": { "type": "string", "description": "np. 1.6 TDI CR (CLHA/CXXB)" },
+          "fuel": { "type": "string", "enum": ["benzyna", "diesel", "lpg", "hybryda", "elektryk"] },
+          "power_hp": { "type": "array", "items": { "type": "integer" } },
+          "aliases": { "type": "array", "items": { "type": "string" } },
+          "timing": { "type": "string", "description": "rozrząd: pasek/łańcuch, interwał, koszt" },
+          "verdict": { "type": "string", "enum": ["polecany", "neutralny", "ryzykowny"] },
+          "faults": {
+            "type": "array",
+            "minItems": 2,
+            "items": { "$ref": "#/$defs/fault" }
+          }
+        }
+      }
+    },
+    "common_faults": { "type": "array", "items": { "$ref": "#/$defs/fault" }, "description": "usterki niezależne od silnika: zawieszenie, elektryka, nadwozie, skrzynie (DSG!), korozja" },
+    "inspection_tips": { "type": "array", "items": { "type": "string" }, "description": "konkretne rzeczy do sprawdzenia na oględzinach tego modelu" },
+    "questions_for_seller": { "type": "array", "items": { "type": "string" } },
+    "summary": { "type": "string", "description": "2–4 zdania: ogólna ocena, najlepsze i najgorsze warianty" },
+    "sources_note": { "type": "string", "description": "skąd wiedza (ogólnie: fora, serwisy, doświadczenie warsztatowe) – bez linków do konkretnych stron" }
+  },
+  "$defs": {
+    "fault": {
+      "type": "object",
+      "required": ["title", "symptoms", "severity", "cost_pln", "check_at_inspection"],
+      "properties": {
+        "title": { "type": "string" },
+        "symptoms": { "type": "string" },
+        "mileage_km": { "type": "string", "description": "orientacyjnie kiedy, np. '150–250 tys.'" },
+        "severity": { "type": "string", "enum": ["niska", "srednia", "wysoka"] },
+        "cost_pln": { "type": "array", "items": { "type": "integer" }, "minItems": 2, "maxItems": 2, "description": "[od, do] w PLN, ceny warsztat niezależny 2026" },
+        "check_at_inspection": { "type": "string", "description": "jak to sprawdzić przed zakupem" }
+      }
+    }
+  }
+}
