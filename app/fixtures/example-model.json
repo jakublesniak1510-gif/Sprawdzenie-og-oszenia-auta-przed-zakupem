@@ -1,0 +1,92 @@
+{
+  "id": "vw-golf-7",
+  "make": "Volkswagen",
+  "model": "Golf",
+  "generation": "VII (2012–2020)",
+  "years": [2012, 2020],
+  "aliases": ["golf 7", "golf vii", "golf mk7", "golf 7 lift", "golf vii fl", "vw golf 7", "volkswagen golf 7"],
+  "market_note": "PLIK PRZYKŁADOWY DO TESTÓW APLIKACJI – właściwa baza powstaje w data/models/. Jeden z najpopularniejszych kompaktów na rynku wtórnym, dużo egzemplarzy sprowadzonych z Niemiec, często po flotach.",
+  "engines": [
+    {
+      "code": "1.6 TDI CR (CLHA/CXXB)",
+      "fuel": "diesel",
+      "power_hp": [90, 105, 110, 115],
+      "aliases": ["1.6 tdi", "1,6 tdi", "1.6tdi", "clha", "cxxb"],
+      "timing": "pasek, wymiana co 4–5 lat lub 150–210 tys. km, ok. 1200–1800 zł z pompą wody",
+      "verdict": "neutralny",
+      "faults": [
+        {
+          "title": "Zapchany filtr DPF przy jeździe miejskiej",
+          "symptoms": "Kontrolka DPF, częste wypalanie, spadek mocy, tryb awaryjny",
+          "mileage_km": "120–200 tys.",
+          "severity": "srednia",
+          "cost_pln": [800, 4500],
+          "check_at_inspection": "Odczyt błędów i stopnia zapełnienia DPF w diagnostyce; zapytać o profil jazdy poprzedniego właściciela"
+        },
+        {
+          "title": "Zawór EGR i chłodnica EGR",
+          "symptoms": "Nierówna praca, błędy EGR, szarpanie przy niskich obrotach",
+          "mileage_km": "150–250 tys.",
+          "severity": "srednia",
+          "cost_pln": [900, 2500],
+          "check_at_inspection": "Diagnostyka komputerowa, jazda próbna na niskich obrotach"
+        }
+      ]
+    },
+    {
+      "code": "1.4 TSI (CMBA/CZCA)",
+      "fuel": "benzyna",
+      "power_hp": [122, 125, 140, 150],
+      "aliases": ["1.4 tsi", "1,4 tsi", "1.4tsi", "cmba", "czca", "czda"],
+      "timing": "pasek (EA211), wymiana zalecana ok. 5 lat lub 200 tys. km, ok. 1000–1500 zł",
+      "verdict": "polecany",
+      "faults": [
+        {
+          "title": "Nieszczelność obudowy termostatu / pompy wody",
+          "symptoms": "Ubytek płynu chłodniczego, zapach płynu, przegrzewanie",
+          "mileage_km": "80–180 tys.",
+          "severity": "srednia",
+          "cost_pln": [700, 1600],
+          "check_at_inspection": "Sprawdzić poziom płynu i ślady wycieków w okolicy termostatu (lewa strona silnika)"
+        },
+        {
+          "title": "Zużycie zaworu wastegate turbosprężarki",
+          "symptoms": "Grzechotanie przy zimnym silniku, spadek mocy, błąd ciśnienia doładowania",
+          "mileage_km": "120–200 tys.",
+          "severity": "niska",
+          "cost_pln": [500, 2500],
+          "check_at_inspection": "Słuchać silnika na zimnym rozruchu, diagnostyka komputerowa"
+        }
+      ]
+    }
+  ],
+  "common_faults": [
+    {
+      "title": "Skrzynia DSG7 (DQ200) – mechatronika i sprzęgło",
+      "symptoms": "Szarpanie przy ruszaniu, uderzenia przy zmianie 1–2, tryb awaryjny",
+      "mileage_km": "100–200 tys.",
+      "severity": "wysoka",
+      "cost_pln": [2500, 7000],
+      "check_at_inspection": "Jazda próbna w korku i ruszanie pod górę, odczyt adaptacji sprzęgła w diagnostyce"
+    },
+    {
+      "title": "Wyświetlacz / moduł multimediów",
+      "symptoms": "Zawieszanie się radia, niedziałający ekran dotykowy",
+      "severity": "niska",
+      "cost_pln": [300, 2500],
+      "check_at_inspection": "Przetestować ekran, Bluetooth i kamerę cofania"
+    }
+  ],
+  "inspection_tips": [
+    "Sprawdzić historię serwisową DSG (wymiana oleju co 60 tys. km w DSG6/DQ250)",
+    "Zmierzyć grubość lakieru na dachu i słupkach – auta flotowe bywają po naprawach",
+    "Sprawdzić zużycie kierownicy, gałki zmiany biegów i fotela kierowcy względem przebiegu"
+  ],
+  "questions_for_seller": [
+    "Czy auto ma skrzynię DSG i kiedy był wymieniany olej w skrzyni?",
+    "Kiedy był wymieniany rozrząd i czy jest na to faktura?",
+    "Czy filtr DPF był czyszczony lub wymieniany?"
+  ],
+  "summary": "PRZYKŁAD. Udany kompakt z szeroką ofertą części. Najbezpieczniejsze są wersje 1.4 TSI z manualną skrzynią; wersje z DSG7 wymagają dokładnej jazdy próbnej i diagnostyki.",
+  "sources_note": "Plik testowy aplikacji – treść poglądowa, nie zastępuje bazy z data/models/."
+}

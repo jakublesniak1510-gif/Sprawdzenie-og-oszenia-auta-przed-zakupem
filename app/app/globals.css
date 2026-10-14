@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-50: #eef4ff;
+  --color-brand-100: #dbe6fe;
+  --color-brand-600: #1d4ed8;
+  --color-brand-700: #1e40af;
+  --color-brand-900: #172554;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #f8fafc;
+  color: #0f172a;
+}
+
+/* Treść markdown (regulamin, polityka, umowa) */
+.prose-md h1 { font-size: 1.5rem; font-weight: 700; margin: 1.25rem 0 0.75rem; }
+.prose-md h2 { font-size: 1.2rem; font-weight: 700; margin: 1.25rem 0 0.5rem; }
+.prose-md h3 { font-size: 1.05rem; font-weight: 600; margin: 1rem 0 0.5rem; }
+.prose-md p { margin: 0.5rem 0; line-height: 1.6; }
+.prose-md ul { list-style: disc; padding-left: 1.25rem; margin: 0.5rem 0; }
+.prose-md ol { list-style: decimal; padding-left: 1.25rem; margin: 0.5rem 0; }
+.prose-md li { margin: 0.25rem 0; }
+.prose-md a { color: var(--color-brand-700); text-decoration: underline; }
+.prose-md table { border-collapse: collapse; width: 100%; margin: 0.75rem 0; font-size: 0.9rem; }
+.prose-md th, .prose-md td { border: 1px solid #cbd5e1; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+.prose-md hr { margin: 1.5rem 0; border-color: #e2e8f0; }
+
+/* Wydruk: czysto, bez nawigacji i elementów interaktywnych */
+@page {
+  size: A4;
+  margin: 14mm 12mm;
+}
+
+@media print {
+  body {
+    background: #fff !important;
+    color: #000;
+    font-size: 11pt;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-card {
+    box-shadow: none !important;
+    border: 1px solid #cbd5e1 !important;
+  }
+  .print-avoid {
+    break-inside: avoid;
+  }
+  h2, h3 {
+    break-after: avoid;
+  }
+  .print-break-before {
+    break-before: page;
+  }
+  a {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
